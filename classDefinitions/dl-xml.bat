@@ -5,7 +5,7 @@ FOR /f %%A IN ('scoop') DO (
     SET "VAR1=%%A"
     if "!VAR1:%pattern%=!" == "!VAR1!" (
         @echo "Scoop is not installed go to website scoop.sh"
-        @pause
+        REM @pause
         goto:eof
     ) else (
         GOTO CHECK-CURL
@@ -25,7 +25,7 @@ FOR /f %%A IN ('scoop') DO (
             curl -L -o master.zip https://github.com/godotengine/godot/zipball/master/
             7z e master.zip */doc/classes/*.xml
             @echo "XML definitions of the godot api downloaded SUCCESSFULLY"
-            @pause
+            REM @pause
             DEL master.zip
             goto:eof
         )

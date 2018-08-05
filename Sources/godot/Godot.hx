@@ -1,17 +1,17 @@
 package godot;
 
 // ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/@GDScript.hpp')
-@:native('@GDScript')
+@:include('godot-cpp/include/gen/GDScript.hpp')
+@:native('GDScript')
 @:unreflective
 @:structAccess
-extern class @GDScript {
+extern class GDScript {
     public Color8(r8:Int, g8:Int, b8:Int, a8:Int):Color
     public ColorN(name:String, alpha:Float):Color
     public abs(s:Float):Float
     public acos(s:Float):Float
     public asin(s:Float):Float
-    public assert(condition:Bool):void
+    public assert(condition:Bool):Void
     public atan(s:Float):Float
     public atan2(x:Float, y:Float):Float
     public bytes2var(bytes:PoolByteArray):Variant
@@ -33,7 +33,7 @@ extern class @GDScript {
     public fmod(x:Float, y:Float):Float
     public fposmod(x:Float, y:Float):Float
     public funcref(instance:Object, funcname:String):FuncRef
-    public get_stack():void
+    public get_stack():Void
     public hash(var:Variant):Int
     public inst2dict(inst:Object):Dictionary
     public instance_from_id(instance_id:Int):Object
@@ -53,23 +53,23 @@ extern class @GDScript {
     public polar2cartesian(r:Float, th:Float):Vector2
     public pow(x:Float, y:Float):Float
     public preload(path:String):Resource
-    public print():void
-    public print_debug():void
-    public print_stack():void
-    public printerr():void
-    public printraw():void
-    public prints():void
-    public printt():void
+    public print():Void
+    public print_debug():Void
+    public print_stack():Void
+    public printerr():Void
+    public printraw():Void
+    public prints():Void
+    public printt():Void
     public rad2deg(rad:Float):Float
     public rand_range(from:Float, to:Float):Float
     public rand_seed(seed:Int):Array
     public randf():Float
     public randi():Int
-    public randomize():void
+    public randomize():Void
     public range():Array
     public range_lerp(value:Float, istart:Float, istop:Float, ostart:Float, ostop:Float):Float
     public round(s:Float):Float
-    public seed(seed:Int):void
+    public seed(seed:Int):Void
     public sign(s:Float):Float
     public sin(s:Float):Float
     public sinh(s:Float):Float
@@ -92,27 +92,27 @@ extern class @GDScript {
 
 }
 // ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/@GlobalScope.hpp')
-@:native('@GlobalScope')
+@:include('godot-cpp/include/gen/GlobalScope.hpp')
+@:native('GlobalScope')
 @:unreflective
 @:structAccess
-extern class @GlobalScope {
+extern class GlobalScope {
 
 }
 // ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/@NativeScript.hpp')
-@:native('@NativeScript')
+@:include('godot-cpp/include/gen/NativeScript.hpp')
+@:native('NativeScript')
 @:unreflective
 @:structAccess
-extern class @NativeScript {
+extern class NativeScript {
 
 }
 // ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/@VisualScript.hpp')
-@:native('@VisualScript')
+@:include('godot-cpp/include/gen/VisualScript.hpp')
+@:native('VisualScript')
 @:unreflective
 @:structAccess
-extern class @VisualScript {
+extern class VisualScript {
 
 }
 // ------------------version:3.1-----------------------------
@@ -120,8 +120,8 @@ extern class @VisualScript {
 @:native('AABB')
 @:unreflective
 @:structAccess
-extern class AABB {
-    public AABB(position:Vector3, size:Vector3):Aabb
+extern class Aabb {
+    public Aabb(position:Vector3, size:Vector3):Aabb
     public encloses(with:Aabb):Bool
     public expand(to_point:Vector3):Aabb
     public get_area():Float
@@ -154,8 +154,8 @@ extern class AcceptDialog extends WindowDialog {
     public add_cancel(name:String):Button
     public get_label():Label
     public get_ok():Button
-    public register_text_enter(line_edit:Node):void
-action:String, 
+    public register_text_enter(line_edit:Node):Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/AnimatedSprite.hpp')
@@ -164,8 +164,8 @@ action:String,
 @:structAccess
 extern class AnimatedSprite extends Node2D {
     public is_playing():Bool
-    public play(anim:String):void
-    public stop():void
+    public play(anim:String):Void
+    public stop():Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -175,8 +175,8 @@ extern class AnimatedSprite extends Node2D {
 @:structAccess
 extern class AnimatedSprite3D extends SpriteBase3D {
     public is_playing():Bool
-    public play(anim:String):void
-    public stop():void
+    public play(anim:String):Void
+    public stop():Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -196,30 +196,30 @@ extern class Animation extends Resource {
     public add_track(type:Int, at_position:Int):Int
     public animation_track_get_key_animation(idx:Int, key_idx:Int):String
     public animation_track_insert_key(track:Int, time:Float, animation:String):Int
-    public animation_track_set_key_animation(idx:Int, key_idx:Int, animation:String):void
+    public animation_track_set_key_animation(idx:Int, key_idx:Int, animation:String):Void
     public audio_track_get_key_end_offset(idx:Int, key_idx:Int):Float
     public audio_track_get_key_start_offset(idx:Int, key_idx:Int):Float
     public audio_track_get_key_stream(idx:Int, key_idx:Int):Resource
     public audio_track_insert_key(track:Int, time:Float, stream:Resource, start_offset:Float, end_offset:Float):Int
-    public audio_track_set_key_end_offset(idx:Int, key_idx:Int, offset:Float):void
-    public audio_track_set_key_start_offset(idx:Int, key_idx:Int, offset:Float):void
-    public audio_track_set_key_stream(idx:Int, key_idx:Int, stream:Resource):void
+    public audio_track_set_key_end_offset(idx:Int, key_idx:Int, offset:Float):Void
+    public audio_track_set_key_start_offset(idx:Int, key_idx:Int, offset:Float):Void
+    public audio_track_set_key_stream(idx:Int, key_idx:Int, stream:Resource):Void
     public bezier_track_get_key_in_handle(idx:Int, key_idx:Int):Vector2
     public bezier_track_get_key_out_handle(idx:Int, key_idx:Int):Vector2
     public bezier_track_get_key_value(idx:Int, key_idx:Int):Float
     public bezier_track_insert_key(track:Int, time:Float, value:Float, in_handle:Vector2, out_handle:Vector2):Int
     public bezier_track_interpolate(track:Int, time:Float):Float
-    public bezier_track_set_key_in_handle(idx:Int, key_idx:Int, in_handle:Vector2):void
-    public bezier_track_set_key_out_handle(idx:Int, key_idx:Int, out_handle:Vector2):void
-    public bezier_track_set_key_value(idx:Int, key_idx:Int, value:Float):void
-    public clear():void
-    public copy_track(track:Int, to_animation:Animation):void
+    public bezier_track_set_key_in_handle(idx:Int, key_idx:Int, in_handle:Vector2):Void
+    public bezier_track_set_key_out_handle(idx:Int, key_idx:Int, out_handle:Vector2):Void
+    public bezier_track_set_key_value(idx:Int, key_idx:Int, value:Float):Void
+    public clear():Void
+    public copy_track(track:Int, to_animation:Animation):Void
     public find_track(path:NodePath):Int
     public get_track_count():Int
     public method_track_get_key_indices(idx:Int, time_sec:Float, delta:Float):PoolIntArray
     public method_track_get_name(idx:Int, key_idx:Int):String
     public method_track_get_params(idx:Int, key_idx:Int):Array
-    public remove_track(idx:Int):void
+    public remove_track(idx:Int):Void
     public track_find_key(idx:Int, time:Float, exact:Bool):Int
     public track_get_interpolation_loop_wrap(idx:Int):Bool
     public track_get_interpolation_type(idx:Int):Int
@@ -229,26 +229,26 @@ extern class Animation extends Resource {
     public track_get_key_value(idx:Int, key_idx:Int):Variant
     public track_get_path(idx:Int):NodePath
     public track_get_type(idx:Int):Int
-    public track_insert_key(idx:Int, time:Float, key:Variant, transition:Float):void
+    public track_insert_key(idx:Int, time:Float, key:Variant, transition:Float):Void
     public track_is_enabled(idx:Int):Bool
     public track_is_imported(idx:Int):Bool
-    public track_move_down(idx:Int):void
-    public track_move_up(idx:Int):void
-    public track_remove_key(idx:Int, key_idx:Int):void
-    public track_remove_key_at_position(idx:Int, position:Float):void
-    public track_set_enabled(idx:Int, enabled:Bool):void
-    public track_set_imported(idx:Int, imported:Bool):void
-    public track_set_interpolation_loop_wrap(idx:Int, interpolation:Bool):void
-    public track_set_interpolation_type(idx:Int, interpolation:Int):void
-    public track_set_key_transition(idx:Int, key_idx:Int, transition:Float):void
-    public track_set_key_value(idx:Int, key:Int, value:Variant):void
-    public track_set_path(idx:Int, path:NodePath):void
-    public track_swap(idx:Int, with_idx:Int):void
+    public track_move_down(idx:Int):Void
+    public track_move_up(idx:Int):Void
+    public track_remove_key(idx:Int, key_idx:Int):Void
+    public track_remove_key_at_position(idx:Int, position:Float):Void
+    public track_set_enabled(idx:Int, enabled:Bool):Void
+    public track_set_imported(idx:Int, imported:Bool):Void
+    public track_set_interpolation_loop_wrap(idx:Int, interpolation:Bool):Void
+    public track_set_interpolation_type(idx:Int, interpolation:Int):Void
+    public track_set_key_transition(idx:Int, key_idx:Int, transition:Float):Void
+    public track_set_key_value(idx:Int, key:Int, value:Variant):Void
+    public track_set_path(idx:Int, path:NodePath):Void
+    public track_swap(idx:Int, with_idx:Int):Void
     public transform_track_insert_key(idx:Int, time:Float, location:Vector3, rotation:Quat, scale:Vector3):Int
     public transform_track_interpolate(idx:Int, time_sec:Float):Array
     public value_track_get_key_indices(idx:Int, time_sec:Float, delta:Float):PoolIntArray
     public value_track_get_update_mode(idx:Int):Int
-    public value_track_set_update_mode(idx:Int, mode:Int):void
+    public value_track_set_update_mode(idx:Int, mode:Int):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -257,9 +257,9 @@ extern class Animation extends Resource {
 @:unreflective
 @:structAccess
 extern class AnimationNode extends Resource {
-    public _parent_set(parent:Object):void
-    public add_input(name:String):void
-    public blend_animation(animation:String, time:Float, delta:Float, seeked:Bool, blend:Float):void
+    public _parent_set(parent:Object):Void
+    public add_input(name:String):Void
+    public blend_animation(animation:String, time:Float, delta:Float, seeked:Bool, blend:Float):Void
     public blend_input(input_index:Int, time:Float, seek:Bool, blend:Float, filter:Int, optimize:Bool):Float
     public blend_node(node:AnimationNode, time:Float, seek:Bool, blend:Float, filter:Int, optimize:Bool):Float
     public get_caption():String
@@ -272,11 +272,11 @@ extern class AnimationNode extends Resource {
     public get_tree():AnimationTree
     public has_filter():String
     public is_path_filtered(path:NodePath):Bool
-    public process(time:Float, seek:Bool):void
-    public remove_input(index:Int):void
-    public set_filter_path(path:NodePath, enable:Bool):void
-    public set_parent(parent:Object):void
-    public set_position(position:Vector2):void
+    public process(time:Float, seek:Bool):Void
+    public remove_input(index:Int):Void
+    public set_filter_path(path:NodePath, enable:Bool):Void
+    public set_parent(parent:Object):Void
+    public set_position(position:Vector2):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -326,13 +326,13 @@ extern class AnimationNodeBlend3 extends AnimationNode {
 @:unreflective
 @:structAccess
 extern class AnimationNodeBlendSpace1D extends AnimationRootNode {
-    public add_blend_point(node:AnimationRootNode, pos:Float, at_index:Int):void
+    public add_blend_point(node:AnimationRootNode, pos:Float, at_index:Int):Void
     public get_blend_point_count():Int
     public get_blend_point_node(point:Int):AnimationRootNode
     public get_blend_point_position(point:Int):Float
-    public remove_blend_point(point:Int):void
-    public set_blend_point_node(point:Int, node:AnimationRootNode):void
-    public set_blend_point_position(point:Int, pos:Float):void
+    public remove_blend_point(point:Int):Void
+    public set_blend_point_node(point:Int, node:AnimationRootNode):Void
+    public set_blend_point_position(point:Int, pos:Float):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -341,17 +341,17 @@ extern class AnimationNodeBlendSpace1D extends AnimationRootNode {
 @:unreflective
 @:structAccess
 extern class AnimationNodeBlendSpace2D extends AnimationRootNode {
-    public add_blend_point(node:AnimationRootNode, pos:Vector2, at_index:Int):void
-    public add_triangle(x:Int, y:Int, z:Int, at_index:Int):void
+    public add_blend_point(node:AnimationRootNode, pos:Vector2, at_index:Int):Void
+    public add_triangle(x:Int, y:Int, z:Int, at_index:Int):Void
     public get_blend_point_count():Int
     public get_blend_point_node(point:Int):AnimationRootNode
     public get_blend_point_position(point:Int):Vector2
     public get_triangle_count():Int
     public get_triangle_point(triangle:Int, point:Int):Int
-    public remove_blend_point(point:Int):void
-    public remove_triangle(triangle:Int):void
-    public set_blend_point_node(point:Int, node:AnimationRootNode):void
-    public set_blend_point_position(point:Int, pos:Vector2):void
+    public remove_blend_point(point:Int):Void
+    public remove_triangle(triangle:Int):Void
+    public set_blend_point_node(point:Int, node:AnimationRootNode):Void
+    public set_blend_point_position(point:Int, pos:Vector2):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -360,13 +360,13 @@ extern class AnimationNodeBlendSpace2D extends AnimationRootNode {
 @:unreflective
 @:structAccess
 extern class AnimationNodeBlendTree extends AnimationRootNode {
-    public add_node(name:String, node:AnimationNode):void
-    public connect_node(input_node:String, input_index:Int, output_node:String):void
-    public disconnect_node(input_node:String, input_index:Int):void
+    public add_node(name:String, node:AnimationNode):Void
+    public connect_node(input_node:String, input_index:Int, output_node:String):Void
+    public disconnect_node(input_node:String, input_index:Int):Void
     public get_node(name:String):AnimationNode
     public has_node(name:String):Bool
-    public remove_node(name:String):void
-    public rename_node(name:String, new_name:String):void
+    public remove_node(name:String):Void
+    public rename_node(name:String, new_name:String):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -377,9 +377,9 @@ extern class AnimationNodeBlendTree extends AnimationRootNode {
 extern class AnimationNodeOneShot extends AnimationNode {
     public get_mix_mode():Int
     public is_active():Bool
-    public set_mix_mode(mode:Int):void
-    public start():void
-    public stop():void
+    public set_mix_mode(mode:Int):Void
+    public start():Void
+    public stop():Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -396,8 +396,8 @@ extern class AnimationNodeOutput extends AnimationNode {
 @:unreflective
 @:structAccess
 extern class AnimationNodeStateMachine extends AnimationRootNode {
-    public add_node(name:String, node:AnimationNode):void
-    public add_transition(from:String, to:String, transition:AnimationNodeStateMachineTransition):void
+    public add_node(name:String, node:AnimationNode):Void
+    public add_transition(from:String, to:String, transition:AnimationNodeStateMachineTransition):Void
     public get_current_node():String
     public get_end_node():String
     public get_graph_offset():Vector2
@@ -410,17 +410,17 @@ extern class AnimationNodeStateMachine extends AnimationRootNode {
     public get_transition_to(idx:Int):String
     public get_travel_path():PoolStringArray
     public has_node(name:String):Bool
-    public has_transition(from:String, to:String, arg2:AnimationNodeStateMachineTransition):void
+    public has_transition(from:String, to:String, arg2:AnimationNodeStateMachineTransition):Void
     public is_playing():Bool
-    public remove_node(name:String):void
-    public remove_transition(from:String, to:String):void
-    public remove_transition_by_index(idx:Int):void
-    public rename_node(name:String, new_name:String):void
-    public set_end_node(name:String):void
-    public set_graph_offset(name:Vector2):void
-    public set_start_node(name:String):void
-    public start(node:String):void
-    public stop():void
+    public remove_node(name:String):Void
+    public remove_transition(from:String, to:String):Void
+    public remove_transition_by_index(idx:Int):Void
+    public rename_node(name:String, new_name:String):Void
+    public set_end_node(name:String):Void
+    public set_graph_offset(name:Vector2):Void
+    public set_start_node(name:String):Void
+    public start(node:String):Void
+    public stop():Void
     public travel(to_node:String):Bool
 
 }
@@ -463,11 +463,11 @@ extern class AnimationNodeTransition extends AnimationNode {
 @:structAccess
 extern class AnimationPlayer extends Node {
     public add_animation(name:String, animation:Animation):Int
-    public advance(delta:Float):void
+    public advance(delta:Float):Void
     public animation_get_next(anim_from:String):String
-    public animation_set_next(anim_from:String, anim_to:String):void
-    public clear_caches():void
-    public clear_queue():void
+    public animation_set_next(anim_from:String, anim_to:String):Void
+    public clear_caches():Void
+    public clear_queue():Void
     public find_animation(animation:Animation):String
     public get_animation(name:String):Animation
     public get_animation_list():PoolStringArray
@@ -475,15 +475,15 @@ extern class AnimationPlayer extends Node {
     public get_playing_speed():Float
     public has_animation(name:String):Bool
     public is_playing():Bool
-    public play(name:String, custom_blend:Float, custom_speed:Float, from_end:Bool):void
-    public play_backwards(name:String, custom_blend:Float):void
-    public queue(name:String):void
-    public remove_animation(name:String):void
-    public rename_animation(name:String, newname:String):void
-    public seek(seconds:Float, update:Bool):void
-    public set_blend_time(anim_from:String, anim_to:String, sec:Float):void
-    public stop(reset:Bool):void
-old_name:String, new_name:String, anim_name:String, anim_name:String, 
+    public play(name:String, custom_blend:Float, custom_speed:Float, from_end:Bool):Void
+    public play_backwards(name:String, custom_blend:Float):Void
+    public queue(name:String):Void
+    public remove_animation(name:String):Void
+    public rename_animation(name:String, newname:String):Void
+    public seek(seconds:Float, update:Bool):Void
+    public set_blend_time(anim_from:String, anim_to:String, sec:Float):Void
+    public stop(reset:Bool):Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/AnimationRootNode.hpp')
@@ -516,63 +516,63 @@ extern class AnimationTree extends Node {
 @:unreflective
 @:structAccess
 extern class AnimationTreePlayer extends Node {
-    public add_node(type:Int, id:String):void
-    public advance(delta:Float):void
+    public add_node(type:Int, id:String):Void
+    public advance(delta:Float):Void
     public animation_node_get_animation(id:String):Animation
     public animation_node_get_master_animation(id:String):String
     public animation_node_get_position(id:String):Float
-    public animation_node_set_animation(id:String, animation:Animation):void
-    public animation_node_set_filter_path(id:String, path:NodePath, enable:Bool):void
-    public animation_node_set_master_animation(id:String, source:String):void
+    public animation_node_set_animation(id:String, animation:Animation):Void
+    public animation_node_set_filter_path(id:String, path:NodePath, enable:Bool):Void
+    public animation_node_set_master_animation(id:String, source:String):Void
     public are_nodes_connected(id:String, dst_id:String, dst_input_idx:Int):Bool
     public blend2_node_get_amount(id:String):Float
-    public blend2_node_set_amount(id:String, blend:Float):void
-    public blend2_node_set_filter_path(id:String, path:NodePath, enable:Bool):void
+    public blend2_node_set_amount(id:String, blend:Float):Void
+    public blend2_node_set_filter_path(id:String, path:NodePath, enable:Bool):Void
     public blend3_node_get_amount(id:String):Float
-    public blend3_node_set_amount(id:String, blend:Float):void
+    public blend3_node_set_amount(id:String, blend:Float):Void
     public blend4_node_get_amount(id:String):Vector2
-    public blend4_node_set_amount(id:String, blend:Vector2):void
+    public blend4_node_set_amount(id:String, blend:Vector2):Void
     public connect_nodes(id:String, dst_id:String, dst_input_idx:Int):Int
-    public disconnect_nodes(id:String, dst_input_idx:Int):void
+    public disconnect_nodes(id:String, dst_input_idx:Int):Void
     public get_node_list():PoolStringArray
     public mix_node_get_amount(id:String):Float
-    public mix_node_set_amount(id:String, ratio:Float):void
+    public mix_node_set_amount(id:String, ratio:Float):Void
     public node_exists(node:String):Bool
     public node_get_input_count(id:String):Int
     public node_get_input_source(id:String, idx:Int):String
     public node_get_position(id:String):Vector2
     public node_get_type(id:String):Int
     public node_rename(node:String, new_name:String):Int
-    public node_set_position(id:String, screen_position:Vector2):void
+    public node_set_position(id:String, screen_position:Vector2):Void
     public oneshot_node_get_autorestart_delay(id:String):Float
     public oneshot_node_get_autorestart_random_delay(id:String):Float
     public oneshot_node_get_fadein_time(id:String):Float
     public oneshot_node_get_fadeout_time(id:String):Float
     public oneshot_node_has_autorestart(id:String):Bool
     public oneshot_node_is_active(id:String):Bool
-    public oneshot_node_set_autorestart(id:String, enable:Bool):void
-    public oneshot_node_set_autorestart_delay(id:String, delay_sec:Float):void
-    public oneshot_node_set_autorestart_random_delay(id:String, rand_sec:Float):void
-    public oneshot_node_set_fadein_time(id:String, time_sec:Float):void
-    public oneshot_node_set_fadeout_time(id:String, time_sec:Float):void
-    public oneshot_node_set_filter_path(id:String, path:NodePath, enable:Bool):void
-    public oneshot_node_start(id:String):void
-    public oneshot_node_stop(id:String):void
-    public recompute_caches():void
-    public remove_node(id:String):void
-    public reset():void
+    public oneshot_node_set_autorestart(id:String, enable:Bool):Void
+    public oneshot_node_set_autorestart_delay(id:String, delay_sec:Float):Void
+    public oneshot_node_set_autorestart_random_delay(id:String, rand_sec:Float):Void
+    public oneshot_node_set_fadein_time(id:String, time_sec:Float):Void
+    public oneshot_node_set_fadeout_time(id:String, time_sec:Float):Void
+    public oneshot_node_set_filter_path(id:String, path:NodePath, enable:Bool):Void
+    public oneshot_node_start(id:String):Void
+    public oneshot_node_stop(id:String):Void
+    public recompute_caches():Void
+    public remove_node(id:String):Void
+    public reset():Void
     public timescale_node_get_scale(id:String):Float
-    public timescale_node_set_scale(id:String, scale:Float):void
-    public timeseek_node_seek(id:String, seconds:Float):void
-    public transition_node_delete_input(id:String, input_idx:Int):void
+    public timescale_node_set_scale(id:String, scale:Float):Void
+    public timeseek_node_seek(id:String, seconds:Float):Void
+    public transition_node_delete_input(id:String, input_idx:Int):Void
     public transition_node_get_current(id:String):Int
     public transition_node_get_input_count(id:String):Int
     public transition_node_get_xfade_time(id:String):Float
     public transition_node_has_input_auto_advance(id:String, input_idx:Int):Bool
-    public transition_node_set_current(id:String, input_idx:Int):void
-    public transition_node_set_input_auto_advance(id:String, input_idx:Int, enable:Bool):void
-    public transition_node_set_input_count(id:String, count:Int):void
-    public transition_node_set_xfade_time(id:String, time_sec:Float):void
+    public transition_node_set_current(id:String, input_idx:Int):Void
+    public transition_node_set_input_auto_advance(id:String, input_idx:Int, enable:Bool):Void
+    public transition_node_set_input_count(id:String, count:Int):Void
+    public transition_node_set_xfade_time(id:String, time_sec:Float):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -587,9 +587,9 @@ extern class Area extends CollisionObject {
     public get_overlapping_bodies():Array
     public overlaps_area(area:Node):Bool
     public overlaps_body(body:Node):Bool
-    public set_collision_layer_bit(bit:Int, value:Bool):void
-    public set_collision_mask_bit(bit:Int, value:Bool):void
-area:Object, area:Object, area_id:Int, area:Object, area_shape:Int, self_shape:Int, area_id:Int, area:Object, area_shape:Int, self_shape:Int, body:Object, body:Object, body_id:Int, body:Object, body_shape:Int, area_shape:Int, body_id:Int, body:Object, body_shape:Int, area_shape:Int, 
+    public set_collision_layer_bit(bit:Int, value:Bool):Void
+    public set_collision_mask_bit(bit:Int, value:Bool):Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/Area2D.hpp')
@@ -603,9 +603,9 @@ extern class Area2D extends CollisionObject2D {
     public get_overlapping_bodies():Array
     public overlaps_area(area:Node):Bool
     public overlaps_body(body:Node):Bool
-    public set_collision_layer_bit(bit:Int, value:Bool):void
-    public set_collision_mask_bit(bit:Int, value:Bool):void
-area:Object, area:Object, area_id:Int, area:Object, area_shape:Int, self_shape:Int, area_id:Int, area:Object, area_shape:Int, self_shape:Int, body:Object, body:Object, body_id:Int, body:Object, body_shape:Int, area_shape:Int, body_id:Int, body:Object, body_shape:Int, area_shape:Int, 
+    public set_collision_layer_bit(bit:Int, value:Bool):Void
+    public set_collision_mask_bit(bit:Int, value:Bool):Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/core/Array.hpp')
@@ -655,15 +655,15 @@ extern class Array {
 @:unreflective
 @:structAccess
 extern class ArrayMesh extends Mesh {
-    public add_blend_shape(name:String):void
-    public add_surface_from_arrays(primitive:Int, arrays:Array, blend_shapes:Array, compress_flags:Int):void
-    public center_geometry():void
-    public clear_blend_shapes():void
+    public add_blend_shape(name:String):Void
+    public add_surface_from_arrays(primitive:Int, arrays:Array, blend_shapes:Array, compress_flags:Int):Void
+    public center_geometry():Void
+    public clear_blend_shapes():Void
     public get_blend_shape_count():Int
     public get_blend_shape_name(index:Int):String
     public get_surface_count():Int
     public lightmap_unwrap(arg0:Transform, arg1:Float):Int
-    public regen_normalmaps():void
+    public regen_normalmaps():Void
     public surface_find_by_name(name:String):Int
     public surface_get_array_index_len(surf_idx:Int):Int
     public surface_get_array_len(surf_idx:Int):Int
@@ -673,10 +673,10 @@ extern class ArrayMesh extends Mesh {
     public surface_get_material(surf_idx:Int):Material
     public surface_get_name(surf_idx:Int):String
     public surface_get_primitive_type(surf_idx:Int):Int
-    public surface_remove(surf_idx:Int):void
-    public surface_set_material(surf_idx:Int, material:Material):void
-    public surface_set_name(surf_idx:Int, name:String):void
-    public surface_update_region(surf_idx:Int, offset:Int, data:PoolByteArray):void
+    public surface_remove(surf_idx:Int):Void
+    public surface_set_material(surf_idx:Int, material:Material):Void
+    public surface_set_name(surf_idx:Int, name:String):Void
+    public surface_update_region(surf_idx:Int, offset:Int, data:PoolByteArray):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -711,7 +711,7 @@ extern class ARVRController extends Spatial {
     public get_joystick_axis(axis:Int):Float
     public get_joystick_id():Int
     public is_button_pressed(button:Int):Int
-button:Int, button:Int, 
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/ARVRInterface.hpp')
@@ -725,7 +725,7 @@ extern class ARVRInterface extends Reference {
     public get_tracking_status():Int
     public initialize():Bool
     public is_stereo():Bool
-    public uninitialize():void
+    public uninitialize():Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -759,7 +759,7 @@ extern class ARVRPositionalTracker extends Object {
 @:unreflective
 @:structAccess
 extern class ARVRServer extends Object {
-    public center_on_hmd(rotation_mode:Int, keep_height:Bool):void
+    public center_on_hmd(rotation_mode:Int, keep_height:Bool):Void
     public find_interface(name:String):ARVRInterface
     public get_hmd_transform():Transform
     public get_interface(idx:Int):ARVRInterface
@@ -771,7 +771,7 @@ extern class ARVRServer extends Object {
     public get_reference_frame():Transform
     public get_tracker(idx:Int):ARVRPositionalTracker
     public get_tracker_count():Int
-interface_name:String, interface_name:String, tracker_name:String, type:Int, id:Int, tracker_name:String, type:Int, id:Int, 
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/AStar.hpp')
@@ -781,11 +781,11 @@ interface_name:String, interface_name:String, tracker_name:String, type:Int, id:
 extern class AStar extends Reference {
     public _compute_cost(from_id:Int, to_id:Int):Float
     public _estimate_cost(from_id:Int, to_id:Int):Float
-    public add_point(id:Int, position:Vector3, weight_scale:Float):void
+    public add_point(id:Int, position:Vector3, weight_scale:Float):Void
     public are_points_connected(id:Int, to_id:Int):Bool
-    public clear():void
-    public connect_points(id:Int, to_id:Int, bidirectional:Bool):void
-    public disconnect_points(id:Int, to_id:Int):void
+    public clear():Void
+    public connect_points(id:Int, to_id:Int, bidirectional:Bool):Void
+    public disconnect_points(id:Int, to_id:Int):Void
     public get_available_point_id():Int
     public get_closest_point(to_position:Vector3):Int
     public get_closest_position_in_segment(to_position:Vector3):Vector3
@@ -796,9 +796,9 @@ extern class AStar extends Reference {
     public get_point_weight_scale(id:Int):Float
     public get_points():Array
     public has_point(id:Int):Bool
-    public remove_point(id:Int):void
-    public set_point_position(id:Int, position:Vector3):void
-    public set_point_weight_scale(id:Int, weight_scale:Float):void
+    public remove_point(id:Int):Void
+    public set_point_position(id:Int, position:Vector3):Void
+    public set_point_weight_scale(id:Int, weight_scale:Float):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -889,7 +889,7 @@ extern class AudioEffectDistortion extends AudioEffect {
 extern class AudioEffectEQ extends AudioEffect {
     public get_band_count():Int
     public get_band_gain_db(band_idx:Int):Float
-    public set_band_gain_db(band_idx:Int, volume_db:Float):void
+    public set_band_gain_db(band_idx:Int, volume_db:Float):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -1018,8 +1018,8 @@ extern class AudioEffectStereoEnhance extends AudioEffect {
 @:unreflective
 @:structAccess
 extern class AudioServer extends Object {
-    public add_bus(at_position:Int):void
-    public add_bus_effect(bus_idx:Int, effect:AudioEffect, at_position:Int):void
+    public add_bus(at_position:Int):Void
+    public add_bus_effect(bus_idx:Int, effect:AudioEffect, at_position:Int):Void
     public generate_bus_layout():AudioBusLayout
     public get_bus_count():Int
     public get_bus_effect(bus_idx:Int, effect_idx:Int):AudioEffect
@@ -1038,22 +1038,22 @@ extern class AudioServer extends Object {
     public is_bus_effect_enabled(bus_idx:Int, effect_idx:Int):Bool
     public is_bus_mute(bus_idx:Int):Bool
     public is_bus_solo(bus_idx:Int):Bool
-    public lock():void
-    public move_bus(index:Int, to_index:Int):void
-    public remove_bus(index:Int):void
-    public remove_bus_effect(bus_idx:Int, effect_idx:Int):void
-    public set_bus_bypass_effects(bus_idx:Int, enable:Bool):void
-    public set_bus_count(amount:Int):void
-    public set_bus_effect_enabled(bus_idx:Int, effect_idx:Int, enabled:Bool):void
-    public set_bus_layout(bus_layout:AudioBusLayout):void
-    public set_bus_mute(bus_idx:Int, enable:Bool):void
-    public set_bus_name(bus_idx:Int, name:String):void
-    public set_bus_send(bus_idx:Int, send:String):void
-    public set_bus_solo(bus_idx:Int, enable:Bool):void
-    public set_bus_volume_db(bus_idx:Int, volume_db:Float):void
-    public set_device(arg0:String):void
-    public swap_bus_effects(bus_idx:Int, effect_idx:Int, by_effect_idx:Int):void
-    public unlock():void
+    public lock():Void
+    public move_bus(index:Int, to_index:Int):Void
+    public remove_bus(index:Int):Void
+    public remove_bus_effect(bus_idx:Int, effect_idx:Int):Void
+    public set_bus_bypass_effects(bus_idx:Int, enable:Bool):Void
+    public set_bus_count(amount:Int):Void
+    public set_bus_effect_enabled(bus_idx:Int, effect_idx:Int, enabled:Bool):Void
+    public set_bus_layout(bus_layout:AudioBusLayout):Void
+    public set_bus_mute(bus_idx:Int, enable:Bool):Void
+    public set_bus_name(bus_idx:Int, name:String):Void
+    public set_bus_send(bus_idx:Int, send:String):Void
+    public set_bus_solo(bus_idx:Int, enable:Bool):Void
+    public set_bus_volume_db(bus_idx:Int, volume_db:Float):Void
+    public set_device(arg0:String):Void
+    public swap_bus_effects(bus_idx:Int, effect_idx:Int, by_effect_idx:Int):Void
+    public unlock():Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -1080,9 +1080,9 @@ extern class AudioStreamPlayback extends Reference {
 @:structAccess
 extern class AudioStreamPlayer extends Node {
     public get_playback_position():Float
-    public play(from_position:Float):void
-    public seek(to_position:Float):void
-    public stop():void
+    public play(from_position:Float):Void
+    public seek(to_position:Float):Void
+    public stop():Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -1092,9 +1092,9 @@ extern class AudioStreamPlayer extends Node {
 @:structAccess
 extern class AudioStreamPlayer2D extends Node2D {
     public get_playback_position():Float
-    public play(from_position:Float):void
-    public seek(to_position:Float):void
-    public stop():void
+    public play(from_position:Float):Void
+    public seek(to_position:Float):Void
+    public stop():Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -1104,9 +1104,9 @@ extern class AudioStreamPlayer2D extends Node2D {
 @:structAccess
 extern class AudioStreamPlayer3D extends Spatial {
     public get_playback_position():Float
-    public play(from_position:Float):void
-    public seek(to_position:Float):void
-    public stop():void
+    public play(from_position:Float):Void
+    public seek(to_position:Float):Void
+    public stop():Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -1140,7 +1140,7 @@ extern class BackBufferCopy extends Node2D {
 @:structAccess
 extern class BakedLightmap extends VisualInstance {
     public bake(from_node:Node, create_visual_debug:Bool):Int
-    public debug_bake():void
+    public debug_bake():Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -1149,8 +1149,8 @@ extern class BakedLightmap extends VisualInstance {
 @:unreflective
 @:structAccess
 extern class BakedLightmapData extends Resource {
-    public add_user(path:NodePath, lightmap:Texture, instance:Int):void
-    public clear_users():void
+    public add_user(path:NodePath, lightmap:Texture, instance:Int):Void
+    public clear_users():Void
     public get_user_count():Int
     public get_user_lightmap(user_idx:Int):Texture
     public get_user_path(user_idx:Int):NodePath
@@ -1162,11 +1162,11 @@ extern class BakedLightmapData extends Resource {
 @:unreflective
 @:structAccess
 extern class BaseButton extends Control {
-    public _pressed():void
-    public _toggled(button_pressed:Bool):void
+    public _pressed():Void
+    public _toggled(button_pressed:Bool):Void
     public get_draw_mode():Int
     public is_hovered():Bool
-button_pressed:Bool, 
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/core/Basis.hpp')
@@ -1201,13 +1201,13 @@ extern class Basis {
 @:unreflective
 @:structAccess
 extern class BitMap extends Resource {
-    public create(size:Vector2):void
-    public create_from_image_alpha(image:Image, threshold:Float):void
+    public create(size:Vector2):Void
+    public create_from_image_alpha(image:Image, threshold:Float):Void
     public get_bit(position:Vector2):Bool
     public get_size():Vector2
     public get_true_bit_count():Int
-    public set_bit(position:Vector2, bit:Bool):void
-    public set_bit_rect(p_rect:Rect2, bit:Bool):void
+    public set_bit(position:Vector2, bit:Bool):Void
+    public set_bit_rect(p_rect:Rect2, bit:Bool):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -1216,10 +1216,10 @@ extern class BitMap extends Resource {
 @:unreflective
 @:structAccess
 extern class BitmapFont extends Font {
-    public add_char(character:Int, texture:Int, rect:Rect2, align:Vector2, advance:Float):void
-    public add_kerning_pair(char_a:Int, char_b:Int, kerning:Int):void
-    public add_texture(texture:Texture):void
-    public clear():void
+    public add_char(character:Int, texture:Int, rect:Rect2, align:Vector2, advance:Float):Void
+    public add_kerning_pair(char_a:Int, char_b:Int, kerning:Int):Void
+    public add_texture(texture:Texture):Void
+    public clear():Void
     public create_from_fnt(path:String):Int
     public get_char_size(char:Int, next:Int):Vector2
     public get_kerning_pair(char_a:Int, char_b:Int):Int
@@ -1233,7 +1233,7 @@ extern class BitmapFont extends Font {
 @:unreflective
 @:structAccess
 extern class Bone2D extends Node2D {
-    public apply_rest():void
+    public apply_rest():Void
     public get_index_in_skeleton():Int
     public get_skeleton_rest():Transform2D
 
@@ -1251,10 +1251,10 @@ extern class BoneAttachment extends Spatial {
 @:native('bool')
 @:unreflective
 @:structAccess
-extern class bool {
-    public bool(from:Int):Bool
-    public bool(from:Float):Bool
-    public bool(from:String):Bool
+extern class Bool {
+    public Bool(from:Int):Bool
+    public Bool(from:Float):Bool
+    public Bool(from:String):Bool
 
 }
 // ------------------version:3.1-----------------------------
@@ -1263,7 +1263,7 @@ extern class bool {
 @:unreflective
 @:structAccess
 extern class BoxContainer extends Container {
-    public add_spacer(begin:Bool):void
+    public add_spacer(begin:Bool):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -1297,16 +1297,16 @@ extern class ButtonGroup extends Resource {
 @:unreflective
 @:structAccess
 extern class Camera extends Spatial {
-    public clear_current(enable_next:Bool):void
+    public clear_current(enable_next:Bool):Void
     public get_camera_transform():Transform
     public is_position_behind(world_point:Vector3):Bool
-    public make_current():void
+    public make_current():Void
     public project_local_ray_normal(screen_point:Vector2):Vector3
     public project_position(screen_point:Vector2):Vector3
     public project_ray_normal(screen_point:Vector2):Vector3
     public project_ray_origin(screen_point:Vector2):Vector3
-    public set_orthogonal(size:Float, z_near:Float, z_far:Float):void
-    public set_perspective(fov:Float, z_near:Float, z_far:Float):void
+    public set_orthogonal(size:Float, z_near:Float, z_far:Float):Void
+    public set_perspective(fov:Float, z_near:Float, z_far:Float):Void
     public unproject_position(world_point:Vector3):Vector2
 
 }
@@ -1316,13 +1316,13 @@ extern class Camera extends Spatial {
 @:unreflective
 @:structAccess
 extern class Camera2D extends Node2D {
-    public align():void
-    public clear_current():void
-    public force_update_scroll():void
+    public align():Void
+    public clear_current():Void
+    public force_update_scroll():Void
     public get_camera_position():Vector2
     public get_camera_screen_center():Vector2
-    public make_current():void
-    public reset_smoothing():void
+    public make_current():Void
+    public reset_smoothing():Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -1331,27 +1331,27 @@ extern class Camera2D extends Node2D {
 @:unreflective
 @:structAccess
 extern class CanvasItem extends Node {
-    public _draw():void
+    public _draw():Void
     public draw_char(font:Font, position:Vector2, char:String, next:String, modulate:Color):Float
-    public draw_circle(position:Vector2, radius:Float, color:Color):void
-    public draw_colored_polygon(points:PoolVector2Array, color:Color, uvs:PoolVector2Array, texture:Texture, normal_map:Texture, antialiased:Bool):void
-    public draw_line(from:Vector2, to:Vector2, color:Color, width:Float, antialiased:Bool):void
-    public draw_mesh(mesh:Mesh, texture:Texture, normal_map:Texture):void
-    public draw_multiline(points:PoolVector2Array, color:Color, width:Float, antialiased:Bool):void
-    public draw_multiline_colors(points:PoolVector2Array, colors:PoolColorArray, width:Float, antialiased:Bool):void
-    public draw_multimesh(mesh:Mesh, texture:Texture, normal_map:Texture):void
-    public draw_polygon(points:PoolVector2Array, colors:PoolColorArray, uvs:PoolVector2Array, texture:Texture, normal_map:Texture, antialiased:Bool):void
-    public draw_polyline(points:PoolVector2Array, color:Color, width:Float, antialiased:Bool):void
-    public draw_polyline_colors(points:PoolVector2Array, colors:PoolColorArray, width:Float, antialiased:Bool):void
-    public draw_primitive(points:PoolVector2Array, colors:PoolColorArray, uvs:PoolVector2Array, texture:Texture, width:Float, normal_map:Texture):void
-    public draw_rect(rect:Rect2, color:Color, filled:Bool):void
-    public draw_set_transform(position:Vector2, rotation:Float, scale:Vector2):void
-    public draw_set_transform_matrix(xform:Transform2D):void
-    public draw_string(font:Font, position:Vector2, text:String, modulate:Color, clip_w:Int):void
-    public draw_style_box(style_box:StyleBox, rect:Rect2):void
-    public draw_texture(texture:Texture, position:Vector2, modulate:Color, normal_map:Texture):void
-    public draw_texture_rect(texture:Texture, rect:Rect2, tile:Bool, modulate:Color, transpose:Bool, normal_map:Texture):void
-    public draw_texture_rect_region(texture:Texture, rect:Rect2, src_rect:Rect2, modulate:Color, transpose:Bool, normal_map:Texture, clip_uv:Bool):void
+    public draw_circle(position:Vector2, radius:Float, color:Color):Void
+    public draw_colored_polygon(points:PoolVector2Array, color:Color, uvs:PoolVector2Array, texture:Texture, normal_map:Texture, antialiased:Bool):Void
+    public draw_line(from:Vector2, to:Vector2, color:Color, width:Float, antialiased:Bool):Void
+    public draw_mesh(mesh:Mesh, texture:Texture, normal_map:Texture):Void
+    public draw_multiline(points:PoolVector2Array, color:Color, width:Float, antialiased:Bool):Void
+    public draw_multiline_colors(points:PoolVector2Array, colors:PoolColorArray, width:Float, antialiased:Bool):Void
+    public draw_multimesh(mesh:Mesh, texture:Texture, normal_map:Texture):Void
+    public draw_polygon(points:PoolVector2Array, colors:PoolColorArray, uvs:PoolVector2Array, texture:Texture, normal_map:Texture, antialiased:Bool):Void
+    public draw_polyline(points:PoolVector2Array, color:Color, width:Float, antialiased:Bool):Void
+    public draw_polyline_colors(points:PoolVector2Array, colors:PoolColorArray, width:Float, antialiased:Bool):Void
+    public draw_primitive(points:PoolVector2Array, colors:PoolColorArray, uvs:PoolVector2Array, texture:Texture, width:Float, normal_map:Texture):Void
+    public draw_rect(rect:Rect2, color:Color, filled:Bool):Void
+    public draw_set_transform(position:Vector2, rotation:Float, scale:Vector2):Void
+    public draw_set_transform_matrix(xform:Transform2D):Void
+    public draw_string(font:Font, position:Vector2, text:String, modulate:Color, clip_w:Int):Void
+    public draw_style_box(style_box:StyleBox, rect:Rect2):Void
+    public draw_texture(texture:Texture, position:Vector2, modulate:Color, normal_map:Texture):Void
+    public draw_texture_rect(texture:Texture, rect:Rect2, tile:Bool, modulate:Color, transpose:Bool, normal_map:Texture):Void
+    public draw_texture_rect_region(texture:Texture, rect:Rect2, src_rect:Rect2, modulate:Color, transpose:Bool, normal_map:Texture, clip_uv:Bool):Void
     public get_canvas():Rid
     public get_canvas_item():Rid
     public get_canvas_transform():Transform2D
@@ -1363,18 +1363,18 @@ extern class CanvasItem extends Node {
     public get_viewport_rect():Rect2
     public get_viewport_transform():Transform2D
     public get_world_2d():World2D
-    public hide():void
+    public hide():Void
     public is_local_transform_notification_enabled():Bool
     public is_set_as_toplevel():Bool
     public is_transform_notification_enabled():Bool
     public is_visible_in_tree():Bool
     public make_canvas_position_local(screen_point:Vector2):Vector2
     public make_input_local(event:InputEvent):InputEvent
-    public set_as_toplevel(enable:Bool):void
-    public set_notify_local_transform(enable:Bool):void
-    public set_notify_transform(enable:Bool):void
-    public show():void
-    public update():void
+    public set_as_toplevel(enable:Bool):Void
+    public set_notify_local_transform(enable:Bool):Void
+    public set_notify_transform(enable:Bool):Void
+    public show():Void
+    public update():Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -1492,24 +1492,24 @@ extern class ClassDB extends Object {
 @:unreflective
 @:structAccess
 extern class CollisionObject extends Spatial {
-    public _input_event(camera:Object, event:InputEvent, click_position:Vector3, click_normal:Vector3, shape_idx:Int):void
+    public _input_event(camera:Object, event:InputEvent, click_position:Vector3, click_normal:Vector3, shape_idx:Int):Void
     public create_shape_owner(owner:Object):Int
     public get_rid():Rid
     public get_shape_owners():Array
     public is_shape_owner_disabled(owner_id:Int):Bool
-    public remove_shape_owner(owner_id:Int):void
+    public remove_shape_owner(owner_id:Int):Void
     public shape_find_owner(shape_index:Int):Int
-    public shape_owner_add_shape(owner_id:Int, shape:Shape):void
-    public shape_owner_clear_shapes(owner_id:Int):void
+    public shape_owner_add_shape(owner_id:Int, shape:Shape):Void
+    public shape_owner_clear_shapes(owner_id:Int):Void
     public shape_owner_get_owner(owner_id:Int):Object
     public shape_owner_get_shape(owner_id:Int, shape_id:Int):Shape
     public shape_owner_get_shape_count(owner_id:Int):Int
     public shape_owner_get_shape_index(owner_id:Int, shape_id:Int):Int
     public shape_owner_get_transform(owner_id:Int):Transform
-    public shape_owner_remove_shape(owner_id:Int, shape_id:Int):void
-    public shape_owner_set_disabled(owner_id:Int, disabled:Bool):void
-    public shape_owner_set_transform(owner_id:Int, transform:Transform):void
-camera:Object, event:Object, click_position:Vector3, click_normal:Vector3, shape_idx:Int, 
+    public shape_owner_remove_shape(owner_id:Int, shape_id:Int):Void
+    public shape_owner_set_disabled(owner_id:Int, disabled:Bool):Void
+    public shape_owner_set_transform(owner_id:Int, transform:Transform):Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/CollisionObject2D.hpp')
@@ -1517,26 +1517,26 @@ camera:Object, event:Object, click_position:Vector3, click_normal:Vector3, shape
 @:unreflective
 @:structAccess
 extern class CollisionObject2D extends Node2D {
-    public _input_event(viewport:Object, event:InputEvent, shape_idx:Int):void
+    public _input_event(viewport:Object, event:InputEvent, shape_idx:Int):Void
     public create_shape_owner(owner:Object):Int
     public get_rid():Rid
     public get_shape_owners():Array
     public is_shape_owner_disabled(owner_id:Int):Bool
     public is_shape_owner_one_way_collision_enabled(owner_id:Int):Bool
-    public remove_shape_owner(owner_id:Int):void
+    public remove_shape_owner(owner_id:Int):Void
     public shape_find_owner(shape_index:Int):Int
-    public shape_owner_add_shape(owner_id:Int, shape:Shape2D):void
-    public shape_owner_clear_shapes(owner_id:Int):void
+    public shape_owner_add_shape(owner_id:Int, shape:Shape2D):Void
+    public shape_owner_clear_shapes(owner_id:Int):Void
     public shape_owner_get_owner(owner_id:Int):Object
     public shape_owner_get_shape(owner_id:Int, shape_id:Int):Shape2D
     public shape_owner_get_shape_count(owner_id:Int):Int
     public shape_owner_get_shape_index(owner_id:Int, shape_id:Int):Int
     public shape_owner_get_transform(owner_id:Int):Transform2D
-    public shape_owner_remove_shape(owner_id:Int, shape_id:Int):void
-    public shape_owner_set_disabled(owner_id:Int, disabled:Bool):void
-    public shape_owner_set_one_way_collision(owner_id:Int, enable:Bool):void
-    public shape_owner_set_transform(owner_id:Int, transform:Transform2D):void
-viewport:Object, event:Object, shape_idx:Int, 
+    public shape_owner_remove_shape(owner_id:Int, shape_id:Int):Void
+    public shape_owner_set_disabled(owner_id:Int, disabled:Bool):Void
+    public shape_owner_set_one_way_collision(owner_id:Int, enable:Bool):Void
+    public shape_owner_set_transform(owner_id:Int, transform:Transform2D):Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/CollisionPolygon.hpp')
@@ -1560,8 +1560,8 @@ extern class CollisionPolygon2D extends Node2D {
 @:unreflective
 @:structAccess
 extern class CollisionShape extends Spatial {
-    public make_convex_from_brothers():void
-    public resource_changed(resource:Resource):void
+    public make_convex_from_brothers():Void
+    public resource_changed(resource:Resource):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -1605,8 +1605,8 @@ extern class Color {
 @:unreflective
 @:structAccess
 extern class ColorPicker extends BoxContainer {
-    public add_preset(color:Color):void
-color:Color, 
+    public add_preset(color:Color):Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/ColorPickerButton.hpp')
@@ -1616,7 +1616,7 @@ color:Color,
 extern class ColorPickerButton extends Button {
     public get_picker():ColorPicker
     public get_popup():PopupPanel
-color:Color, 
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/ColorRect.hpp')
@@ -1633,7 +1633,7 @@ extern class ColorRect extends Control {
 @:structAccess
 extern class ConcavePolygonShape extends Shape {
     public get_faces():PoolVector3Array
-    public set_faces(faces:PoolVector3Array):void
+    public set_faces(faces:PoolVector3Array):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -1658,7 +1658,7 @@ extern class ConeTwistJoint extends Joint {
 @:unreflective
 @:structAccess
 extern class ConfigFile extends Reference {
-    public erase_section(section:String):void
+    public erase_section(section:String):Void
     public get_section_keys(section:String):PoolStringArray
     public get_sections():PoolStringArray
     public get_value(section:String, key:String, default:Variant):Variant
@@ -1666,7 +1666,7 @@ extern class ConfigFile extends Reference {
     public has_section_key(section:String, key:String):Bool
     public load(path:String):Int
     public save(path:String):Int
-    public set_value(section:String, key:String, value:Variant):void
+    public set_value(section:String, key:String, value:Variant):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -1684,8 +1684,8 @@ extern class ConfirmationDialog extends AcceptDialog {
 @:unreflective
 @:structAccess
 extern class Container extends Control {
-    public fit_child_in_rect(child:Control, rect:Rect2):void
-    public queue_sort():void
+    public fit_child_in_rect(child:Control, rect:Rect2):Void
+    public queue_sort():Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -1695,18 +1695,18 @@ extern class Container extends Control {
 @:structAccess
 extern class Control extends CanvasItem {
     public _get_minimum_size():Vector2
-    public _gui_input(event:InputEvent):void
+    public _gui_input(event:InputEvent):Void
     public _make_custom_tooltip(for_text:String):Object
-    public accept_event():void
-    public add_color_override(name:String, color:Color):void
-    public add_constant_override(name:String, constant:Int):void
-    public add_font_override(name:String, font:Font):void
-    public add_icon_override(name:String, texture:Texture):void
-    public add_shader_override(name:String, shader:Shader):void
-    public add_stylebox_override(name:String, stylebox:StyleBox):void
+    public accept_event():Void
+    public add_color_override(name:String, color:Color):Void
+    public add_constant_override(name:String, constant:Int):Void
+    public add_font_override(name:String, font:Font):Void
+    public add_icon_override(name:String, texture:Texture):Void
+    public add_shader_override(name:String, shader:Shader):Void
+    public add_stylebox_override(name:String, stylebox:StyleBox):Void
     public can_drop_data(position:Vector2, data:Variant):Bool
-    public drop_data(position:Vector2, data:Variant):void
-    public force_drag(data:Variant, preview:Control):void
+    public drop_data(position:Vector2, data:Variant):Void
+    public force_drag(data:Variant, preview:Control):Void
     public get_begin():Vector2
     public get_color(name:String, type:String):Color
     public get_combined_minimum_size():Vector2
@@ -1725,8 +1725,8 @@ extern class Control extends CanvasItem {
     public get_rotation():Float
     public get_stylebox(name:String, type:String):StyleBox
     public get_tooltip(at_position:Vector2):String
-    public grab_click_focus():void
-    public grab_focus():void
+    public grab_click_focus():Void
+    public grab_focus():Void
     public has_color(name:String, type:String):Bool
     public has_color_override(name:String):Bool
     public has_constant(name:String, type:String):Bool
@@ -1740,21 +1740,21 @@ extern class Control extends CanvasItem {
     public has_shader_override(name:String):Bool
     public has_stylebox(name:String, type:String):Bool
     public has_stylebox_override(name:String):Bool
-    public minimum_size_changed():void
-    public release_focus():void
-    public set_anchor(margin:Int, anchor:Float, keep_margin:Bool, push_opposite_anchor:Bool):void
-    public set_anchor_and_margin(margin:Int, anchor:Float, offset:Float, push_opposite_anchor:Bool):void
-    public set_anchors_and_margins_preset(preset:Int, resize_mode:Int, margin:Int):void
-    public set_anchors_preset(preset:Int, keep_margin:Bool):void
-    public set_begin(position:Vector2):void
-    public set_drag_forwarding(target:Control):void
-    public set_drag_preview(control:Control):void
-    public set_end(position:Vector2):void
-    public set_margins_preset(preset:Int, resize_mode:Int, margin:Int):void
-    public set_rotation(radians:Float):void
-    public show_modal(exclusive:Bool):void
-    public warp_mouse(to_position:Vector2):void
-ev:Object, 
+    public minimum_size_changed():Void
+    public release_focus():Void
+    public set_anchor(margin:Int, anchor:Float, keep_margin:Bool, push_opposite_anchor:Bool):Void
+    public set_anchor_and_margin(margin:Int, anchor:Float, offset:Float, push_opposite_anchor:Bool):Void
+    public set_anchors_and_margins_preset(preset:Int, resize_mode:Int, margin:Int):Void
+    public set_anchors_preset(preset:Int, keep_margin:Bool):Void
+    public set_begin(position:Vector2):Void
+    public set_drag_forwarding(target:Control):Void
+    public set_drag_preview(control:Control):Void
+    public set_end(position:Vector2):Void
+    public set_margins_preset(preset:Int, resize_mode:Int, margin:Int):Void
+    public set_rotation(radians:Float):Void
+    public show_modal(exclusive:Bool):Void
+    public warp_mouse(to_position:Vector2):Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/ConvexPolygonShape.hpp')
@@ -1770,7 +1770,7 @@ extern class ConvexPolygonShape extends Shape {
 @:unreflective
 @:structAccess
 extern class ConvexPolygonShape2D extends Shape2D {
-    public set_point_cloud(point_cloud:PoolVector2Array):void
+    public set_point_cloud(point_cloud:PoolVector2Array):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -1779,8 +1779,8 @@ extern class ConvexPolygonShape2D extends Shape2D {
 @:unreflective
 @:structAccess
 extern class CPUParticles extends GeometryInstance {
-    public convert_from_particles(particles:Node):void
-    public restart():void
+    public convert_from_particles(particles:Node):Void
+    public restart():Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -1792,7 +1792,7 @@ extern class CubeMap extends Resource {
     public get_height():Int
     public get_side(side:Int):Image
     public get_width():Int
-    public set_side(side:Int, image:Image):void
+    public set_side(side:Int, image:Image):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -1810,9 +1810,9 @@ extern class CubeMesh extends PrimitiveMesh {
 @:structAccess
 extern class Curve extends Resource {
     public add_point(position:Vector2, left_tangent:Float, right_tangent:Float, left_mode:Int, right_mode:Int):Int
-    public bake():void
-    public clean_dupes():void
-    public clear_points():void
+    public bake():Void
+    public clean_dupes():Void
+    public clear_points():Void
     public get_point_left_mode(index:Int):Int
     public get_point_left_tangent(index:Int):Float
     public get_point_position(index:Int):Vector2
@@ -1820,13 +1820,13 @@ extern class Curve extends Resource {
     public get_point_right_tangent(index:Int):Float
     public interpolate(offset:Float):Float
     public interpolate_baked(offset:Float):Float
-    public remove_point(index:Int):void
-    public set_point_left_mode(index:Int, mode:Int):void
-    public set_point_left_tangent(index:Int, tangent:Float):void
+    public remove_point(index:Int):Void
+    public set_point_left_mode(index:Int, mode:Int):Void
+    public set_point_left_tangent(index:Int, tangent:Float):Void
     public set_point_offset(index:Int, offset:Float):Int
-    public set_point_right_mode(index:Int, mode:Int):void
-    public set_point_right_tangent(index:Int, tangent:Float):void
-    public set_point_value(index:Int, y:Float):void
+    public set_point_right_mode(index:Int, mode:Int):Void
+    public set_point_right_tangent(index:Int, tangent:Float):Void
+    public set_point_value(index:Int, y:Float):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -1835,8 +1835,8 @@ extern class Curve extends Resource {
 @:unreflective
 @:structAccess
 extern class Curve2D extends Resource {
-    public add_point(position:Vector2, in:Vector2, out:Vector2, at_position:Int):void
-    public clear_points():void
+    public add_point(position:Vector2, in:Vector2, out:Vector2, at_position:Int):Void
+    public clear_points():Void
     public get_baked_length():Float
     public get_baked_points():PoolVector2Array
     public get_closest_offset(to_point:Vector2):Float
@@ -1848,10 +1848,10 @@ extern class Curve2D extends Resource {
     public interpolate(idx:Int, t:Float):Vector2
     public interpolate_baked(offset:Float, cubic:Bool):Vector2
     public interpolatef(fofs:Float):Vector2
-    public remove_point(idx:Int):void
-    public set_point_in(idx:Int, position:Vector2):void
-    public set_point_out(idx:Int, position:Vector2):void
-    public set_point_position(idx:Int, position:Vector2):void
+    public remove_point(idx:Int):Void
+    public set_point_in(idx:Int, position:Vector2):Void
+    public set_point_out(idx:Int, position:Vector2):Void
+    public set_point_position(idx:Int, position:Vector2):Void
     public tessellate(max_stages:Int, tolerance_degrees:Float):PoolVector2Array
 
 }
@@ -1861,8 +1861,8 @@ extern class Curve2D extends Resource {
 @:unreflective
 @:structAccess
 extern class Curve3D extends Resource {
-    public add_point(position:Vector3, in:Vector3, out:Vector3, at_position:Int):void
-    public clear_points():void
+    public add_point(position:Vector3, in:Vector3, out:Vector3, at_position:Int):Void
+    public clear_points():Void
     public get_baked_length():Float
     public get_baked_points():PoolVector3Array
     public get_baked_tilts():PoolRealArray
@@ -1878,11 +1878,11 @@ extern class Curve3D extends Resource {
     public interpolate_baked(offset:Float, cubic:Bool):Vector3
     public interpolate_baked_up_vector(offset:Float, apply_tilt:Bool):Vector3
     public interpolatef(fofs:Float):Vector3
-    public remove_point(idx:Int):void
-    public set_point_in(idx:Int, position:Vector3):void
-    public set_point_out(idx:Int, position:Vector3):void
-    public set_point_position(idx:Int, position:Vector3):void
-    public set_point_tilt(idx:Int, tilt:Float):void
+    public remove_point(idx:Int):Void
+    public set_point_in(idx:Int, position:Vector3):Void
+    public set_point_out(idx:Int, position:Vector3):Void
+    public set_point_position(idx:Int, position:Vector3):Void
+    public set_point_tilt(idx:Int, tilt:Float):Void
     public tessellate(max_stages:Int, tolerance_degrees:Float):PoolVector3Array
 
 }
@@ -1962,7 +1962,7 @@ extern class Directory extends Reference {
     public get_next():String
     public get_space_left():Int
     public list_dir_begin(skip_navigational:Bool, skip_hidden:Bool):Int
-    public list_dir_end():void
+    public list_dir_end():Void
     public make_dir(path:String):Int
     public make_dir_recursive(path:String):Int
     public open(path:String):Int
@@ -1976,11 +1976,11 @@ extern class Directory extends Reference {
 @:unreflective
 @:structAccess
 extern class DynamicFont extends Font {
-    public add_fallback(data:DynamicFontData):void
+    public add_fallback(data:DynamicFontData):Void
     public get_fallback(idx:Int):DynamicFontData
     public get_fallback_count():Int
-    public remove_fallback(idx:Int):void
-    public set_fallback(idx:Int, data:DynamicFontData):void
+    public remove_fallback(idx:Int):Void
+    public set_fallback(idx:Int, data:DynamicFontData):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -1997,16 +1997,16 @@ extern class DynamicFontData extends Resource {
 @:unreflective
 @:structAccess
 extern class EditorExportPlugin extends Reference {
-    public _export_begin(features:PoolStringArray, is_debug:Bool, path:String, flags:Int):void
-    public _export_file(path:String, type:String, features:PoolStringArray):void
-    public add_file(path:String, file:PoolByteArray, remap:Bool):void
-    public add_ios_bundle_file(path:String):void
-    public add_ios_cpp_code(code:String):void
-    public add_ios_framework(path:String):void
-    public add_ios_linker_flags(flags:String):void
-    public add_ios_plist_content(plist_content:String):void
-    public add_shared_object(path:String, tags:PoolStringArray):void
-    public skip():void
+    public _export_begin(features:PoolStringArray, is_debug:Bool, path:String, flags:Int):Void
+    public _export_file(path:String, type:String, features:PoolStringArray):Void
+    public add_file(path:String, file:PoolByteArray, remap:Bool):Void
+    public add_ios_bundle_file(path:String):Void
+    public add_ios_cpp_code(code:String):Void
+    public add_ios_framework(path:String):Void
+    public add_ios_linker_flags(flags:String):Void
+    public add_ios_plist_content(plist_content:String):Void
+    public add_shared_object(path:String, tags:PoolStringArray):Void
+    public skip():Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -2015,11 +2015,11 @@ extern class EditorExportPlugin extends Reference {
 @:unreflective
 @:structAccess
 extern class EditorFileDialog extends ConfirmationDialog {
-    public add_filter(filter:String):void
-    public clear_filters():void
+    public add_filter(filter:String):Void
+    public clear_filters():Void
     public get_vbox():VBoxContainer
-    public invalidate():void
-dir:String, path:String, paths:PoolStringArray, 
+    public invalidate():Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/EditorFileSystem.hpp')
@@ -2032,11 +2032,11 @@ extern class EditorFileSystem extends Node {
     public get_filesystem_path(path:String):EditorFileSystemDirectory
     public get_scanning_progress():Float
     public is_scanning():Bool
-    public scan():void
-    public scan_sources():void
-    public update_file(path:String):void
-    public update_script_classes():void
-resources:PoolStringArray, exist:Bool, 
+    public scan():Void
+    public scan_sources():Void
+    public update_file(path:String):Void
+    public update_script_classes():Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/EditorFileSystemDirectory.hpp')
@@ -2086,8 +2086,8 @@ extern class EditorImportPlugin extends Reference {
 @:unreflective
 @:structAccess
 extern class EditorInspector extends ScrollContainer {
-    public refresh():void
-id:Int, property:String, property:String, property:String, res:Object, prop:String, 
+    public refresh():Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/EditorInspectorPlugin.hpp')
@@ -2095,13 +2095,13 @@ id:Int, property:String, property:String, property:String, res:Object, prop:Stri
 @:unreflective
 @:structAccess
 extern class EditorInspectorPlugin extends Reference {
-    public add_custom_control(control:Control):void
-    public add_property_editor(property:String, editor:Control):void
-    public add_property_editor_for_multiple_properties(label:String, properties:PoolStringArray, editor:Control):void
+    public add_custom_control(control:Control):Void
+    public add_property_editor(property:String, editor:Control):Void
+    public add_property_editor_for_multiple_properties(label:String, properties:PoolStringArray, editor:Control):Void
     public can_handle(object:Object):Bool
-    public parse_begin(object:Object):void
-    public parse_category(object:Object, category:String):void
-    public parse_end():void
+    public parse_begin(object:Object):Void
+    public parse_category(object:Object, category:String):Void
+    public parse_end():Void
     public parse_property(object:Object, type:Int, path:String, hint:Int, hint_text:String, usage:Int):Bool
 
 }
@@ -2111,7 +2111,7 @@ extern class EditorInspectorPlugin extends Reference {
 @:unreflective
 @:structAccess
 extern class EditorInterface extends Node {
-    public edit_resource(resource:Resource):void
+    public edit_resource(resource:Resource):Void
     public get_base_control():Control
     public get_edited_scene_root():Node
     public get_editor_settings():EditorSettings
@@ -2122,15 +2122,15 @@ extern class EditorInterface extends Node {
     public get_script_editor():ScriptEditor
     public get_selected_path():String
     public get_selection():EditorSelection
-    public inspect_object(object:Object, for_property:String):void
+    public inspect_object(object:Object, for_property:String):Void
     public is_plugin_enabled(plugin:String):Bool
     public make_mesh_previews(meshes:Array, preview_size:Int):Array
-    public open_scene_from_path(scene_filepath:String):void
-    public reload_scene_from_path(scene_filepath:String):void
+    public open_scene_from_path(scene_filepath:String):Void
+    public reload_scene_from_path(scene_filepath:String):Void
     public save_scene():Int
-    public save_scene_as(path:String, with_preview:Bool):void
-    public select_file(p_file:String):void
-    public set_plugin_enabled(plugin:String, enabled:Bool):void
+    public save_scene_as(path:String, with_preview:Bool):Void
+    public select_file(p_file:String):Void
+    public set_plugin_enabled(plugin:String, enabled:Bool):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -2139,25 +2139,25 @@ extern class EditorInterface extends Node {
 @:unreflective
 @:structAccess
 extern class EditorPlugin extends Node {
-    public add_autoload_singleton(name:String, path:String):void
+    public add_autoload_singleton(name:String, path:String):Void
     public add_control_to_bottom_panel(control:Control, title:String):ToolButton
-    public add_control_to_container(container:Int, control:Control):void
-    public add_control_to_dock(slot:Int, control:Control):void
-    public add_custom_type(type:String, base:String, script:Script, icon:Texture):void
-    public add_export_plugin(plugin:EditorExportPlugin):void
-    public add_import_plugin(importer:EditorImportPlugin):void
-    public add_inspector_plugin(plugin:EditorInspectorPlugin):void
-    public add_scene_import_plugin(scene_importer:EditorSceneImporter):void
-    public add_tool_menu_item(name:String, handler:Object, callback:String, ud:Variant):void
-    public add_tool_submenu_item(name:String, submenu:Object):void
-    public apply_changes():void
+    public add_control_to_container(container:Int, control:Control):Void
+    public add_control_to_dock(slot:Int, control:Control):Void
+    public add_custom_type(type:String, base:String, script:Script, icon:Texture):Void
+    public add_export_plugin(plugin:EditorExportPlugin):Void
+    public add_import_plugin(importer:EditorImportPlugin):Void
+    public add_inspector_plugin(plugin:EditorInspectorPlugin):Void
+    public add_scene_import_plugin(scene_importer:EditorSceneImporter):Void
+    public add_tool_menu_item(name:String, handler:Object, callback:String, ud:Variant):Void
+    public add_tool_submenu_item(name:String, submenu:Object):Void
+    public apply_changes():Void
     public build():Bool
-    public clear():void
+    public clear():Void
     public create_spatial_gizmo(for_spatial:Spatial):EditorSpatialGizmo
-    public edit(object:Object):void
+    public edit(object:Object):Void
     public forward_canvas_gui_input(event:InputEvent):Bool
-    public forward_draw_over_viewport(overlay:Control):void
-    public forward_force_draw_over_viewport(overlay:Control):void
+    public forward_draw_over_viewport(overlay:Control):Void
+    public forward_force_draw_over_viewport(overlay:Control):Void
     public forward_spatial_gui_input(camera:Camera, event:InputEvent):Bool
     public get_breakpoints():PoolStringArray
     public get_editor_interface():EditorInterface
@@ -2166,30 +2166,30 @@ extern class EditorPlugin extends Node {
     public get_script_create_dialog():ScriptCreateDialog
     public get_state():Dictionary
     public get_undo_redo():UndoRedo
-    public get_window_layout(layout:ConfigFile):void
+    public get_window_layout(layout:ConfigFile):Void
     public handles(object:Object):Bool
     public has_main_screen():Bool
-    public hide_bottom_panel():void
-    public make_bottom_panel_item_visible(item:Control):void
-    public make_visible(visible:Bool):void
-    public queue_save_layout():void
-    public remove_autoload_singleton(name:String):void
-    public remove_control_from_bottom_panel(control:Control):void
-    public remove_control_from_container(container:Int, control:Control):void
-    public remove_control_from_docks(control:Control):void
-    public remove_custom_type(type:String):void
-    public remove_export_plugin(plugin:EditorExportPlugin):void
-    public remove_import_plugin(importer:EditorImportPlugin):void
-    public remove_inspector_plugin(plugin:EditorInspectorPlugin):void
-    public remove_scene_import_plugin(scene_importer:EditorSceneImporter):void
-    public remove_tool_menu_item(name:String):void
-    public save_external_data():void
-    public set_force_draw_over_forwarding_enabled():void
-    public set_input_event_forwarding_always_enabled():void
-    public set_state(state:Dictionary):void
-    public set_window_layout(layout:ConfigFile):void
+    public hide_bottom_panel():Void
+    public make_bottom_panel_item_visible(item:Control):Void
+    public make_visible(visible:Bool):Void
+    public queue_save_layout():Void
+    public remove_autoload_singleton(name:String):Void
+    public remove_control_from_bottom_panel(control:Control):Void
+    public remove_control_from_container(container:Int, control:Control):Void
+    public remove_control_from_docks(control:Control):Void
+    public remove_custom_type(type:String):Void
+    public remove_export_plugin(plugin:EditorExportPlugin):Void
+    public remove_import_plugin(importer:EditorImportPlugin):Void
+    public remove_inspector_plugin(plugin:EditorInspectorPlugin):Void
+    public remove_scene_import_plugin(scene_importer:EditorSceneImporter):Void
+    public remove_tool_menu_item(name:String):Void
+    public save_external_data():Void
+    public set_force_draw_over_forwarding_enabled():Void
+    public set_input_event_forwarding_always_enabled():Void
+    public set_state(state:Dictionary):Void
+    public set_window_layout(layout:ConfigFile):Void
     public update_overlays():Int
-screen_name:String, resource:Object, scene_root:Object, filepath:String, 
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/EditorProperty.hpp')
@@ -2200,8 +2200,8 @@ extern class EditorProperty extends Container {
     public get_edited_object():Object
     public get_edited_property():String
     public get_tooltip_text():String
-    public update_property():void
-properties:PoolStringArray, value:Array, property:String, id:Int, property:String, value:Nil, property:String, bool:String, property:String, property:String, value:Nil, path:String, resource:Object, path:String, focusable_idx:Int, 
+    public update_property():Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/EditorResourceConversionPlugin.hpp')
@@ -2219,12 +2219,12 @@ extern class EditorResourceConversionPlugin extends Reference {
 @:unreflective
 @:structAccess
 extern class EditorResourcePreview extends Node {
-    public add_preview_generator(generator:EditorResourcePreviewGenerator):void
-    public check_for_invalidation(path:String):void
-    public queue_edited_resource_preview(resource:Resource, receiver:Object, receiver_func:String, userdata:Variant):void
-    public queue_resource_preview(path:String, receiver:Object, receiver_func:String, userdata:Variant):void
-    public remove_preview_generator(generator:EditorResourcePreviewGenerator):void
-path:String, 
+    public add_preview_generator(generator:EditorResourcePreviewGenerator):Void
+    public check_for_invalidation(path:String):Void
+    public queue_edited_resource_preview(resource:Resource, receiver:Object, receiver_func:String, userdata:Variant):Void
+    public queue_resource_preview(path:String, receiver:Object, receiver_func:String, userdata:Variant):Void
+    public remove_preview_generator(generator:EditorResourcePreviewGenerator):Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/EditorResourcePreviewGenerator.hpp')
@@ -2268,8 +2268,8 @@ extern class EditorScenePostImport extends Reference {
 @:unreflective
 @:structAccess
 extern class EditorScript extends Reference {
-    public _run():void
-    public add_root_node(node:Node):void
+    public _run():Void
+    public add_root_node(node:Node):Void
     public get_editor_interface():EditorInterface
     public get_scene():Node
 
@@ -2280,11 +2280,11 @@ extern class EditorScript extends Reference {
 @:unreflective
 @:structAccess
 extern class EditorSelection extends Object {
-    public add_node(node:Node):void
-    public clear():void
+    public add_node(node:Node):Void
+    public clear():Void
     public get_selected_nodes():Array
     public get_transformable_selected_nodes():Array
-    public remove_node(node:Node):void
+    public remove_node(node:Node):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -2293,8 +2293,8 @@ extern class EditorSelection extends Object {
 @:unreflective
 @:structAccess
 extern class EditorSettings extends Resource {
-    public add_property_info(info:Dictionary):void
-    public erase(property:String):void
+    public add_property_info(info:Dictionary):Void
+    public erase(property:String):Void
     public get_favorite_dirs():PoolStringArray
     public get_project_metadata(section:String, key:String, default:Variant):Variant
     public get_project_settings_dir():String
@@ -2304,11 +2304,11 @@ extern class EditorSettings extends Resource {
     public has_setting(name:String):Bool
     public property_can_revert(name:String):Bool
     public property_get_revert(name:String):Variant
-    public set_favorite_dirs(dirs:PoolStringArray):void
-    public set_initial_value(name:String, value:Variant, update_current:Bool):void
-    public set_project_metadata(section:String, key:String, data:Variant):void
-    public set_recent_dirs(dirs:PoolStringArray):void
-    public set_setting(name:String, value:Variant):void
+    public set_favorite_dirs(dirs:PoolStringArray):Void
+    public set_initial_value(name:String, value:Variant, update_current:Bool):Void
+    public set_project_metadata(section:String, key:String, data:Variant):Void
+    public set_recent_dirs(dirs:PoolStringArray):Void
+    public set_setting(name:String, value:Variant):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -2317,19 +2317,19 @@ extern class EditorSettings extends Resource {
 @:unreflective
 @:structAccess
 extern class EditorSpatialGizmo extends SpatialGizmo {
-    public add_collision_segments(segments:PoolVector3Array):void
-    public add_collision_triangles(triangles:TriangleMesh):void
-    public add_handles(handles:PoolVector3Array, billboard:Bool, secondary:Bool):void
-    public add_lines(lines:PoolVector3Array, material:Material, billboard:Bool):void
-    public add_mesh(mesh:ArrayMesh, billboard:Bool, skeleton:Rid):void
-    public add_unscaled_billboard(material:Material, default_scale:Float):void
-    public clear():void
-    public commit_handle(index:Int, restore:Variant, cancel:Bool):void
+    public add_collision_segments(segments:PoolVector3Array):Void
+    public add_collision_triangles(triangles:TriangleMesh):Void
+    public add_handles(handles:PoolVector3Array, billboard:Bool, secondary:Bool):Void
+    public add_lines(lines:PoolVector3Array, material:Material, billboard:Bool):Void
+    public add_mesh(mesh:ArrayMesh, billboard:Bool, skeleton:Rid):Void
+    public add_unscaled_billboard(material:Material, default_scale:Float):Void
+    public clear():Void
+    public commit_handle(index:Int, restore:Variant, cancel:Bool):Void
     public get_handle_name(index:Int):String
     public get_handle_value(index:Int):Variant
-    public redraw():void
-    public set_handle(index:Int, camera:Camera, point:Vector2):void
-    public set_spatial_node(node:Node):void
+    public redraw():Void
+    public set_handle(index:Int, camera:Camera, point:Vector2):Void
+    public set_spatial_node(node:Node):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -2339,7 +2339,7 @@ extern class EditorSpatialGizmo extends SpatialGizmo {
 @:structAccess
 extern class EncodedObjectAsID extends Reference {
     public get_object_id():Int
-    public set_object_id(id:Int):void
+    public set_object_id(id:Int):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -2376,7 +2376,7 @@ extern class Environment extends Resource {
 @:unreflective
 @:structAccess
 extern class File extends Reference {
-    public close():void
+    public close():Void
     public eof_reached():Bool
     public file_exists(path:String):Bool
     public get_16():Int
@@ -2405,20 +2405,20 @@ extern class File extends Reference {
     public open_compressed(path:String, mode_flags:Int, compression_mode:Int):Int
     public open_encrypted(path:String, mode_flags:Int, key:PoolByteArray):Int
     public open_encrypted_with_pass(path:String, mode_flags:Int, pass:String):Int
-    public seek(position:Int):void
-    public seek_end(position:Int):void
-    public store_16(value:Int):void
-    public store_32(value:Int):void
-    public store_64(value:Int):void
-    public store_8(value:Int):void
-    public store_buffer(buffer:PoolByteArray):void
-    public store_double(value:Float):void
-    public store_float(value:Float):void
-    public store_line(line:String):void
-    public store_pascal_string(string:String):void
-    public store_real(value:Float):void
-    public store_string(string:String):void
-    public store_var(value:Variant):void
+    public seek(position:Int):Void
+    public seek_end(position:Int):Void
+    public store_16(value:Int):Void
+    public store_32(value:Int):Void
+    public store_64(value:Int):Void
+    public store_8(value:Int):Void
+    public store_buffer(buffer:PoolByteArray):Void
+    public store_double(value:Float):Void
+    public store_float(value:Float):Void
+    public store_line(line:String):Void
+    public store_pascal_string(string:String):Void
+    public store_real(value:Float):Void
+    public store_string(string:String):Void
+    public store_var(value:Variant):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -2427,23 +2427,23 @@ extern class File extends Reference {
 @:unreflective
 @:structAccess
 extern class FileDialog extends ConfirmationDialog {
-    public add_filter(filter:String):void
-    public clear_filters():void
-    public deselect_items():void
+    public add_filter(filter:String):Void
+    public clear_filters():Void
+    public deselect_items():Void
     public get_line_edit():LineEdit
     public get_vbox():VBoxContainer
-    public invalidate():void
-dir:String, path:String, paths:PoolStringArray, 
+    public invalidate():Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/float.hpp')
 @:native('float')
 @:unreflective
 @:structAccess
-extern class float {
-    public float(from:Bool):Float
-    public float(from:Int):Float
-    public float(from:String):Float
+extern class Float {
+    public Float(from:Bool):Float
+    public Float(from:Int):Float
+    public Float(from:String):Float
 
 }
 // ------------------version:3.1-----------------------------
@@ -2452,7 +2452,7 @@ extern class float {
 @:unreflective
 @:structAccess
 extern class Font extends Resource {
-    public draw(canvas_item:Rid, position:Vector2, string:String, modulate:Color, clip_w:Int, outline_modulate:Color):void
+    public draw(canvas_item:Rid, position:Vector2, string:String, modulate:Color, clip_w:Int, outline_modulate:Color):Void
     public draw_char(canvas_item:Rid, position:Vector2, char:Int, next:Int, modulate:Color, outline:Bool):Float
     public get_ascent():Float
     public get_descent():Float
@@ -2460,7 +2460,7 @@ extern class Font extends Resource {
     public get_string_size(string:String):Vector2
     public has_outline():Bool
     public is_distance_field_hint():Bool
-    public update_changes():void
+    public update_changes():Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -2470,8 +2470,8 @@ extern class Font extends Resource {
 @:structAccess
 extern class FuncRef extends Reference {
     public call_func():Variant
-    public set_function(name:String):void
-    public set_instance(instance:Object):void
+    public set_function(name:String):Void
+    public set_instance(instance:Object):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -2527,8 +2527,8 @@ extern class GeometryInstance extends VisualInstance {
 @:unreflective
 @:structAccess
 extern class GIProbe extends VisualInstance {
-    public bake(from_node:Node, create_visual_debug:Bool):void
-    public debug_bake():void
+    public bake(from_node:Node, create_visual_debug:Bool):Void
+    public debug_bake():Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -2545,14 +2545,14 @@ extern class GIProbeData extends Resource {
 @:unreflective
 @:structAccess
 extern class Gradient extends Resource {
-    public add_point(offset:Float, color:Color):void
+    public add_point(offset:Float, color:Color):Void
     public get_color(point:Int):Color
     public get_offset(point:Int):Float
     public get_point_count():Int
     public interpolate(offset:Float):Color
-    public remove_point(offset:Int):void
-    public set_color(point:Int, color:Color):void
-    public set_offset(point:Int, offset:Float):void
+    public remove_point(offset:Int):Void
+    public set_color(point:Int, color:Color):Void
+    public set_offset(point:Int, offset:Float):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -2569,22 +2569,22 @@ extern class GradientTexture extends Texture {
 @:unreflective
 @:structAccess
 extern class GraphEdit extends Control {
-    public add_valid_connection_type(from_type:Int, to_type:Int):void
-    public add_valid_left_disconnect_type(type:Int):void
-    public add_valid_right_disconnect_type(type:Int):void
-    public clear_connections():void
+    public add_valid_connection_type(from_type:Int, to_type:Int):Void
+    public add_valid_left_disconnect_type(type:Int):Void
+    public add_valid_right_disconnect_type(type:Int):Void
+    public clear_connections():Void
     public connect_node(from:String, from_port:Int, to:String, to_port:Int):Int
-    public disconnect_node(from:String, from_port:Int, to:String, to_port:Int):void
+    public disconnect_node(from:String, from_port:Int, to:String, to_port:Int):Void
     public get_connection_list():Array
     public get_zoom_hbox():HBoxContainer
     public is_node_connected(from:String, from_port:Int, to:String, to_port:Int):Bool
     public is_valid_connection_type(from_type:Int, to_type:Int):Bool
-    public remove_valid_connection_type(from_type:Int, to_type:Int):void
-    public remove_valid_left_disconnect_type(type:Int):void
-    public remove_valid_right_disconnect_type(type:Int):void
-    public set_connection_activity(from:String, from_port:Int, to:String, to_port:Int, amount:Float):void
-    public set_selected(node:Node):void
-from:String, from_slot:Int, to:String, to_slot:Int, from:String, from_slot:Int, release_position:Vector2, from:String, from_slot:Int, to:String, to_slot:Int, node:Object, p_position:Vector2, ofs:Vector2, 
+    public remove_valid_connection_type(from_type:Int, to_type:Int):Void
+    public remove_valid_left_disconnect_type(type:Int):Void
+    public remove_valid_right_disconnect_type(type:Int):Void
+    public set_connection_activity(from:String, from_port:Int, to:String, to_port:Int, amount:Float):Void
+    public set_selected(node:Node):Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/GraphNode.hpp')
@@ -2592,8 +2592,8 @@ from:String, from_slot:Int, to:String, to_slot:Int, from:String, from_slot:Int, 
 @:unreflective
 @:structAccess
 extern class GraphNode extends Container {
-    public clear_all_slots():void
-    public clear_slot(idx:Int):void
+    public clear_all_slots():Void
+    public clear_slot(idx:Int):Void
     public get_connection_input_color(idx:Int):Color
     public get_connection_input_count():Int
     public get_connection_input_position(idx:Int):Vector2
@@ -2608,8 +2608,8 @@ extern class GraphNode extends Container {
     public get_slot_type_right(idx:Int):Int
     public is_slot_enabled_left(idx:Int):Bool
     public is_slot_enabled_right(idx:Int):Bool
-    public set_slot(idx:Int, enable_left:Bool, type_left:Int, color_left:Color, enable_right:Bool, type_right:Int, color_right:Color, custom_left:Texture, custom_right:Texture):void
-from:Vector2, to:Vector2, new_minsize:Vector2, 
+    public set_slot(idx:Int, enable_left:Bool, type_left:Int, color_left:Color, enable_right:Bool, type_right:Int, color_right:Color, custom_left:Texture, custom_right:Texture):Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/GridContainer.hpp')
@@ -2682,7 +2682,7 @@ extern class HSplitContainer extends SplitContainer {
 @:unreflective
 @:structAccess
 extern class HTTPClient extends Reference {
-    public close():void
+    public close():Void
     public connect_to_host(host:String, port:Int, use_ssl:Bool, verify_host:Bool):Int
     public get_response_body_length():Int
     public get_response_code():Int
@@ -2696,7 +2696,7 @@ extern class HTTPClient extends Reference {
     public read_response_body_chunk():PoolByteArray
     public request(method:Int, url:String, headers:PoolStringArray, body:String):Int
     public request_raw(method:Int, url:String, headers:PoolStringArray, body:PoolByteArray):Int
-    public set_read_chunk_size(bytes:Int):void
+    public set_read_chunk_size(bytes:Int):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -2705,12 +2705,12 @@ extern class HTTPClient extends Reference {
 @:unreflective
 @:structAccess
 extern class HTTPRequest extends Node {
-    public cancel_request():void
+    public cancel_request():Void
     public get_body_size():Int
     public get_downloaded_bytes():Int
     public get_http_client_status():Int
     public request(url:String, custom_headers:PoolStringArray, ssl_validate_domain:Bool, method:Int, request_data:String):Int
-result:Int, response_code:Int, headers:PoolStringArray, body:PoolByteArray, 
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/Image.hpp')
@@ -2718,25 +2718,25 @@ result:Int, response_code:Int, headers:PoolStringArray, body:PoolByteArray,
 @:unreflective
 @:structAccess
 extern class Image extends Resource {
-    public blend_rect(src:Image, src_rect:Rect2, dst:Vector2):void
-    public blend_rect_mask(src:Image, mask:Image, src_rect:Rect2, dst:Vector2):void
-    public blit_rect(src:Image, src_rect:Rect2, dst:Vector2):void
-    public blit_rect_mask(src:Image, mask:Image, src_rect:Rect2, dst:Vector2):void
-    public bumpmap_to_normalmap(bump_scale:Float):void
-    public clear_mipmaps():void
+    public blend_rect(src:Image, src_rect:Rect2, dst:Vector2):Void
+    public blend_rect_mask(src:Image, mask:Image, src_rect:Rect2, dst:Vector2):Void
+    public blit_rect(src:Image, src_rect:Rect2, dst:Vector2):Void
+    public blit_rect_mask(src:Image, mask:Image, src_rect:Rect2, dst:Vector2):Void
+    public bumpmap_to_normalmap(bump_scale:Float):Void
+    public clear_mipmaps():Void
     public compress(mode:Int, source:Int, lossy_quality:Float):Int
-    public convert(format:Int):void
-    public copy_from(src:Image):void
-    public create(width:Int, height:Int, use_mipmaps:Bool, format:Int):void
-    public create_from_data(width:Int, height:Int, use_mipmaps:Bool, format:Int, data:PoolByteArray):void
-    public crop(width:Int, height:Int):void
+    public convert(format:Int):Void
+    public copy_from(src:Image):Void
+    public create(width:Int, height:Int, use_mipmaps:Bool, format:Int):Void
+    public create_from_data(width:Int, height:Int, use_mipmaps:Bool, format:Int, data:PoolByteArray):Void
+    public crop(width:Int, height:Int):Void
     public decompress():Int
     public detect_alpha():Int
-    public expand_x2_hq2x():void
-    public fill(color:Color):void
-    public fix_alpha_edges():void
-    public flip_x():void
-    public flip_y():void
+    public expand_x2_hq2x():Void
+    public fill(color:Color):Void
+    public fix_alpha_edges():Void
+    public flip_x():Void
+    public flip_y():Void
     public generate_mipmaps(renormalize:Bool):Int
     public get_data():PoolByteArray
     public get_format():Int
@@ -2756,18 +2756,18 @@ extern class Image extends Resource {
     public load_jpg_from_buffer(buffer:PoolByteArray):Int
     public load_png_from_buffer(buffer:PoolByteArray):Int
     public load_webp_from_buffer(buffer:PoolByteArray):Int
-    public lock():void
-    public normalmap_to_xy():void
-    public premultiply_alpha():void
-    public resize(width:Int, height:Int, interpolation:Int):void
-    public resize_to_po2(square:Bool):void
+    public lock():Void
+    public normalmap_to_xy():Void
+    public premultiply_alpha():Void
+    public resize(width:Int, height:Int, interpolation:Int):Void
+    public resize_to_po2(square:Bool):Void
     public rgbe_to_srgb():Image
     public save_png(path:String):Int
-    public set_pixel(x:Int, y:Int, color:Color):void
-    public set_pixelv(dst:Vector2, color:Color):void
-    public shrink_x2():void
-    public srgb_to_linear():void
-    public unlock():void
+    public set_pixel(x:Int, y:Int, color:Color):Void
+    public set_pixelv(dst:Vector2, color:Color):Void
+    public shrink_x2():Void
+    public srgb_to_linear():Void
+    public unlock():Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -2776,12 +2776,12 @@ extern class Image extends Resource {
 @:unreflective
 @:structAccess
 extern class ImageTexture extends Texture {
-    public create(width:Int, height:Int, format:Int, flags:Int):void
-    public create_from_image(image:Image, flags:Int):void
+    public create(width:Int, height:Int, format:Int, flags:Int):Void
+    public create_from_image(image:Image, flags:Int):Void
     public get_format():Int
     public load(path:String):Int
-    public set_data(image:Image):void
-    public set_size_override(size:Vector2):void
+    public set_data(image:Image):Void
+    public set_size_override(size:Vector2):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -2790,16 +2790,16 @@ extern class ImageTexture extends Texture {
 @:unreflective
 @:structAccess
 extern class ImmediateGeometry extends GeometryInstance {
-    public add_sphere(lats:Int, lons:Int, radius:Float, add_uv:Bool):void
-    public add_vertex(position:Vector3):void
-    public begin(primitive:Int, texture:Texture):void
-    public clear():void
-    public end():void
-    public set_color(color:Color):void
-    public set_normal(normal:Vector3):void
-    public set_tangent(tangent:Plane):void
-    public set_uv(uv:Vector2):void
-    public set_uv2(uv:Vector2):void
+    public add_sphere(lats:Int, lons:Int, radius:Float, add_uv:Bool):Void
+    public add_vertex(position:Vector3):Void
+    public begin(primitive:Int, texture:Texture):Void
+    public clear():Void
+    public end():Void
+    public set_color(color:Color):Void
+    public set_normal(normal:Vector3):Void
+    public set_tangent(tangent:Plane):Void
+    public set_uv(uv:Vector2):Void
+    public set_uv2(uv:Vector2):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -2808,9 +2808,9 @@ extern class ImmediateGeometry extends GeometryInstance {
 @:unreflective
 @:structAccess
 extern class Input extends Object {
-    public action_press(action:String):void
-    public action_release(action:String):void
-    public add_joy_mapping(mapping:String, update_existing:Bool):void
+    public action_press(action:String):Void
+    public action_release(action:String):Void
+    public add_joy_mapping(mapping:String, update_existing:Bool):Void
     public get_accelerometer():Vector3
     public get_action_strength(action:String):Float
     public get_connected_joypads():Array
@@ -2836,16 +2836,16 @@ extern class Input extends Object {
     public is_joy_known(device:Int):Bool
     public is_key_pressed(scancode:Int):Bool
     public is_mouse_button_pressed(button:Int):Bool
-    public joy_connection_changed(device:Int, connected:Bool, name:String, guid:String):void
-    public parse_input_event(event:InputEvent):void
-    public remove_joy_mapping(guid:String):void
-    public set_custom_mouse_cursor(image:Resource, shape:Int, hotspot:Vector2):void
-    public set_default_cursor_shape(shape:Int):void
-    public set_mouse_mode(mode:Int):void
-    public start_joy_vibration(device:Int, weak_magnitude:Float, strong_magnitude:Float, duration:Float):void
-    public stop_joy_vibration(device:Int):void
-    public warp_mouse_position(to:Vector2):void
-device:Int, connected:Bool, 
+    public joy_connection_changed(device:Int, connected:Bool, name:String, guid:String):Void
+    public parse_input_event(event:InputEvent):Void
+    public remove_joy_mapping(guid:String):Void
+    public set_custom_mouse_cursor(image:Resource, shape:Int, hotspot:Vector2):Void
+    public set_default_cursor_shape(shape:Int):Void
+    public set_mouse_mode(mode:Int):Void
+    public start_joy_vibration(device:Int, weak_magnitude:Float, strong_magnitude:Float, duration:Float):Void
+    public stop_joy_vibration(device:Int):Void
+    public warp_mouse_position(to:Vector2):Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/InputDefault.hpp')
@@ -2984,18 +2984,18 @@ extern class InputEventWithModifiers extends InputEvent {
 @:unreflective
 @:structAccess
 extern class InputMap extends Object {
-    public action_add_event(action:String, event:InputEvent):void
-    public action_erase_event(action:String, event:InputEvent):void
-    public action_erase_events(action:String):void
+    public action_add_event(action:String, event:InputEvent):Void
+    public action_erase_event(action:String, event:InputEvent):Void
+    public action_erase_events(action:String):Void
     public action_has_event(action:String, event:InputEvent):Bool
-    public action_set_deadzone(deadzone:String, arg1:Float):void
-    public add_action(action:String, deadzone:Float):void
-    public erase_action(action:String):void
+    public action_set_deadzone(deadzone:String, arg1:Float):Void
+    public add_action(action:String, deadzone:Float):Void
+    public erase_action(action:String):Void
     public event_is_action(event:InputEvent, action:String):Bool
     public get_action_list(action:String):Array
     public get_actions():Array
     public has_action(action:String):Bool
-    public load_from_globals():void
+    public load_from_globals():Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -3007,7 +3007,7 @@ extern class InstancePlaceholder extends Node {
     public create_instance(replace:Bool, custom_scene:PackedScene):Node
     public get_instance_path():String
     public get_stored_values(with_order:Bool):Dictionary
-    public replace_by_instance(custom_scene:PackedScene):void
+    public replace_by_instance(custom_scene:PackedScene):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -3015,10 +3015,10 @@ extern class InstancePlaceholder extends Node {
 @:native('int')
 @:unreflective
 @:structAccess
-extern class int {
-    public int(from:Bool):Int
-    public int(from:Float):Int
-    public int(from:String):Int
+extern class Int {
+    public Int(from:Bool):Int
+    public Int(from:Float):Int
+    public Int(from:String):Int
 
 }
 // ------------------version:3.1-----------------------------
@@ -3027,7 +3027,7 @@ extern class int {
 @:unreflective
 @:structAccess
 extern class InterpolatedCamera extends Camera {
-    public set_target(target:Object):void
+    public set_target(target:Object):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -3036,8 +3036,8 @@ extern class InterpolatedCamera extends Camera {
 @:unreflective
 @:structAccess
 extern class IP extends Object {
-    public clear_cache(hostname:String):void
-    public erase_resolve_item(id:Int):void
+    public clear_cache(hostname:String):Void
+    public erase_resolve_item(id:Int):Void
     public get_local_addresses():Array
     public get_resolve_item_address(id:Int):String
     public get_resolve_item_status(id:Int):Int
@@ -3059,10 +3059,10 @@ extern class IP_Unix extends IP {
 @:unreflective
 @:structAccess
 extern class ItemList extends Control {
-    public add_icon_item(icon:Texture, selectable:Bool):void
-    public add_item(text:String, icon:Texture, selectable:Bool):void
-    public clear():void
-    public ensure_current_is_visible():void
+    public add_icon_item(icon:Texture, selectable:Bool):Void
+    public add_item(text:String, icon:Texture, selectable:Bool):Void
+    public clear():Void
+    public ensure_current_is_visible():Void
     public get_item_at_position(position:Vector2, exact:Bool):Int
     public get_item_count():Int
     public get_item_custom_bg_color(idx:Int):Color
@@ -3079,23 +3079,23 @@ extern class ItemList extends Control {
     public is_item_selectable(idx:Int):Bool
     public is_item_tooltip_enabled(idx:Int):Bool
     public is_selected(idx:Int):Bool
-    public move_item(from_idx:Int, to_idx:Int):void
-    public remove_item(idx:Int):void
-    public select(idx:Int, single:Bool):void
-    public set_item_custom_bg_color(idx:Int, custom_bg_color:Color):void
-    public set_item_disabled(idx:Int, disabled:Bool):void
-    public set_item_icon(idx:Int, icon:Texture):void
-    public set_item_icon_modulate(idx:Int, modulate:Color):void
-    public set_item_icon_region(idx:Int, rect:Rect2):void
-    public set_item_metadata(idx:Int, metadata:Variant):void
-    public set_item_selectable(idx:Int, selectable:Bool):void
-    public set_item_text(idx:Int, text:String):void
-    public set_item_tooltip(idx:Int, tooltip:String):void
-    public set_item_tooltip_enabled(idx:Int, enable:Bool):void
-    public sort_items_by_text():void
-    public unselect(idx:Int):void
-    public unselect_all():void
-index:Int, index:Int, at_position:Vector2, index:Int, index:Int, selected:Bool, at_position:Vector2, 
+    public move_item(from_idx:Int, to_idx:Int):Void
+    public remove_item(idx:Int):Void
+    public select(idx:Int, single:Bool):Void
+    public set_item_custom_bg_color(idx:Int, custom_bg_color:Color):Void
+    public set_item_disabled(idx:Int, disabled:Bool):Void
+    public set_item_icon(idx:Int, icon:Texture):Void
+    public set_item_icon_modulate(idx:Int, modulate:Color):Void
+    public set_item_icon_region(idx:Int, rect:Rect2):Void
+    public set_item_metadata(idx:Int, metadata:Variant):Void
+    public set_item_selectable(idx:Int, selectable:Bool):Void
+    public set_item_text(idx:Int, text:String):Void
+    public set_item_tooltip(idx:Int, tooltip:String):Void
+    public set_item_tooltip_enabled(idx:Int, enable:Bool):Void
+    public sort_items_by_text():Void
+    public unselect(idx:Int):Void
+    public unselect_all():Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/JavaScript.hpp')
@@ -3210,13 +3210,13 @@ extern class Label extends Control {
 @:structAccess
 extern class LargeTexture extends Texture {
     public add_piece(ofs:Vector2, texture:Texture):Int
-    public clear():void
+    public clear():Void
     public get_piece_count():Int
     public get_piece_offset(idx:Int):Vector2
     public get_piece_texture(idx:Int):Texture
-    public set_piece_offset(idx:Int, ofs:Vector2):void
-    public set_piece_texture(idx:Int, texture:Texture):void
-    public set_size(size:Vector2):void
+    public set_piece_offset(idx:Int, ofs:Vector2):Void
+    public set_piece_texture(idx:Int, texture:Texture):Void
+    public set_size(size:Vector2):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -3249,11 +3249,11 @@ extern class LightOccluder2D extends Node2D {
 @:unreflective
 @:structAccess
 extern class Line2D extends Node2D {
-    public add_point(position:Vector2):void
+    public add_point(position:Vector2):Void
     public get_point_count():Int
     public get_point_position(i:Int):Vector2
-    public remove_point(i:Int):void
-    public set_point_position(i:Int, position:Vector2):void
+    public remove_point(i:Int):Void
+    public set_point_position(i:Int, position:Vector2):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -3262,14 +3262,14 @@ extern class Line2D extends Node2D {
 @:unreflective
 @:structAccess
 extern class LineEdit extends Control {
-    public append_at_cursor(text:String):void
-    public clear():void
-    public deselect():void
+    public append_at_cursor(text:String):Void
+    public clear():Void
+    public deselect():Void
     public get_menu():PopupMenu
-    public menu_option(option:Int):void
-    public select(from:Int, to:Int):void
-    public select_all():void
-new_text:String, new_text:String, 
+    public menu_option(option:Int):Void
+    public select(from:Int, to:Int):Void
+    public select_all():Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/LineShape2D.hpp')
@@ -3293,10 +3293,10 @@ extern class LinkButton extends BaseButton {
 @:unreflective
 @:structAccess
 extern class Listener extends Spatial {
-    public clear_current():void
+    public clear_current():Void
     public get_listener_transform():Transform
     public is_current():Bool
-    public make_current():void
+    public make_current():Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -3305,18 +3305,18 @@ extern class Listener extends Spatial {
 @:unreflective
 @:structAccess
 extern class MainLoop extends Object {
-    public _drop_files(files:PoolStringArray, screen:Int):void
-    public _finalize():void
-    public _idle(delta:Float):void
-    public _initialize():void
-    public _input_event(ev:InputEvent):void
-    public _input_text(text:String):void
-    public _iteration(delta:Float):void
-    public finish():void
+    public _drop_files(files:PoolStringArray, screen:Int):Void
+    public _finalize():Void
+    public _idle(delta:Float):Void
+    public _initialize():Void
+    public _input_event(ev:InputEvent):Void
+    public _input_text(text:String):Void
+    public _iteration(delta:Float):Void
+    public finish():Void
     public idle(delta:Float):Bool
-    public init():void
-    public input_event(ev:InputEvent):void
-    public input_text(text:String):void
+    public init():Void
+    public input_event(ev:InputEvent):Void
+    public input_text(text:String):Void
     public iteration(delta:Float):Bool
 
 }
@@ -3357,7 +3357,7 @@ extern class Material extends Resource {
 @:structAccess
 extern class MenuButton extends Button {
     public get_popup():PopupMenu
-    public set_disable_shortcuts(disabled:Bool):void
+    public set_disable_shortcuts(disabled:Bool):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -3379,7 +3379,7 @@ extern class Mesh extends Resource {
 @:unreflective
 @:structAccess
 extern class MeshDataTool extends Reference {
-    public clear():void
+    public clear():Void
     public commit_to_surface(mesh:ArrayMesh):Int
     public create_from_surface(mesh:ArrayMesh, surface:Int):Int
     public get_edge_count():Int
@@ -3405,18 +3405,18 @@ extern class MeshDataTool extends Reference {
     public get_vertex_uv(idx:Int):Vector2
     public get_vertex_uv2(idx:Int):Vector2
     public get_vertex_weights(idx:Int):PoolRealArray
-    public set_edge_meta(idx:Int, meta:Variant):void
-    public set_face_meta(idx:Int, meta:Variant):void
-    public set_material(material:Material):void
-    public set_vertex(idx:Int, vertex:Vector3):void
-    public set_vertex_bones(idx:Int, bones:PoolIntArray):void
-    public set_vertex_color(idx:Int, color:Color):void
-    public set_vertex_meta(idx:Int, meta:Variant):void
-    public set_vertex_normal(idx:Int, normal:Vector3):void
-    public set_vertex_tangent(idx:Int, tangent:Plane):void
-    public set_vertex_uv(idx:Int, uv:Vector2):void
-    public set_vertex_uv2(idx:Int, uv2:Vector2):void
-    public set_vertex_weights(idx:Int, weights:PoolRealArray):void
+    public set_edge_meta(idx:Int, meta:Variant):Void
+    public set_face_meta(idx:Int, meta:Variant):Void
+    public set_material(material:Material):Void
+    public set_vertex(idx:Int, vertex:Vector3):Void
+    public set_vertex_bones(idx:Int, bones:PoolIntArray):Void
+    public set_vertex_color(idx:Int, color:Color):Void
+    public set_vertex_meta(idx:Int, meta:Variant):Void
+    public set_vertex_normal(idx:Int, normal:Vector3):Void
+    public set_vertex_tangent(idx:Int, tangent:Plane):Void
+    public set_vertex_uv(idx:Int, uv:Vector2):Void
+    public set_vertex_uv2(idx:Int, uv2:Vector2):Void
+    public set_vertex_weights(idx:Int, weights:PoolRealArray):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -3425,11 +3425,11 @@ extern class MeshDataTool extends Reference {
 @:unreflective
 @:structAccess
 extern class MeshInstance extends GeometryInstance {
-    public create_convex_collision():void
-    public create_debug_tangents():void
-    public create_trimesh_collision():void
+    public create_convex_collision():Void
+    public create_debug_tangents():Void
+    public create_trimesh_collision():Void
     public get_surface_material(surface:Int):Material
-    public set_surface_material(surface:Int, material:Material):void
+    public set_surface_material(surface:Int, material:Material):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -3446,8 +3446,8 @@ extern class MeshInstance2D extends Node2D {
 @:unreflective
 @:structAccess
 extern class MeshLibrary extends Resource {
-    public clear():void
-    public create_item(id:Int):void
+    public clear():Void
+    public create_item(id:Int):Void
     public find_item_by_name(name:String):Int
     public get_item_list():PoolIntArray
     public get_item_mesh(id:Int):Mesh
@@ -3456,12 +3456,12 @@ extern class MeshLibrary extends Resource {
     public get_item_preview(id:Int):Texture
     public get_item_shapes(id:Int):Array
     public get_last_unused_item_id():Int
-    public remove_item(id:Int):void
-    public set_item_mesh(id:Int, mesh:Mesh):void
-    public set_item_name(id:Int, name:String):void
-    public set_item_navmesh(id:Int, navmesh:NavigationMesh):void
-    public set_item_preview(id:Int, texture:Texture):void
-    public set_item_shapes(id:Int, shapes:Array):void
+    public remove_item(id:Int):Void
+    public set_item_mesh(id:Int, mesh:Mesh):Void
+    public set_item_name(id:Int, name:String):Void
+    public set_item_navmesh(id:Int, navmesh:NavigationMesh):Void
+    public set_item_preview(id:Int, texture:Texture):Void
+    public set_item_shapes(id:Int, shapes:Array):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -3473,8 +3473,8 @@ extern class MultiMesh extends Resource {
     public get_aabb():Aabb
     public get_instance_color(instance:Int):Color
     public get_instance_transform(instance:Int):Transform
-    public set_instance_color(instance:Int, color:Color):void
-    public set_instance_transform(instance:Int, transform:Transform):void
+    public set_instance_color(instance:Int, color:Color):Void
+    public set_instance_transform(instance:Int, transform:Transform):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -3491,16 +3491,16 @@ extern class MultiMeshInstance extends GeometryInstance {
 @:unreflective
 @:structAccess
 extern class MultiplayerAPI extends Reference {
-    public clear():void
+    public clear():Void
     public get_network_connected_peers():PoolIntArray
     public get_network_unique_id():Int
     public get_rpc_sender_id():Int
     public has_network_peer():Bool
     public is_network_server():Bool
-    public poll():void
+    public poll():Void
     public send_bytes(bytes:PoolByteArray, id:Int, mode:Int):Int
-    public set_root_node(node:Node):void
-id:Int, id:Int, id:Int, packet:PoolByteArray, 
+    public set_root_node(node:Node):Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/Mutex.hpp')
@@ -3508,9 +3508,9 @@ id:Int, id:Int, id:Int, packet:PoolByteArray,
 @:unreflective
 @:structAccess
 extern class Mutex extends Reference {
-    public lock():void
+    public lock():Void
     public try_lock():Int
-    public unlock():void
+    public unlock():Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -3525,8 +3525,8 @@ extern class Navigation extends Spatial {
     public get_closest_point_to_segment(start:Vector3, end:Vector3, use_collision:Bool):Vector3
     public get_simple_path(start:Vector3, end:Vector3, optimize:Bool):PoolVector3Array
     public navmesh_add(mesh:NavigationMesh, xform:Transform, owner:Object):Int
-    public navmesh_remove(id:Int):void
-    public navmesh_set_transform(id:Int, xform:Transform):void
+    public navmesh_remove(id:Int):Void
+    public navmesh_set_transform(id:Int, xform:Transform):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -3539,8 +3539,8 @@ extern class Navigation2D extends Node2D {
     public get_closest_point_owner(to_point:Vector2):Object
     public get_simple_path(start:Vector2, end:Vector2, optimize:Bool):PoolVector2Array
     public navpoly_add(mesh:NavigationPolygon, xform:Transform2D, owner:Object):Int
-    public navpoly_remove(id:Int):void
-    public navpoly_set_transform(id:Int, xform:Transform2D):void
+    public navpoly_remove(id:Int):Void
+    public navpoly_set_transform(id:Int, xform:Transform2D):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -3549,13 +3549,13 @@ extern class Navigation2D extends Node2D {
 @:unreflective
 @:structAccess
 extern class NavigationMesh extends Resource {
-    public add_polygon(polygon:PoolIntArray):void
-    public clear_polygons():void
-    public create_from_mesh(mesh:Mesh):void
+    public add_polygon(polygon:PoolIntArray):Void
+    public clear_polygons():Void
+    public create_from_mesh(mesh:Mesh):Void
     public get_polygon(idx:Int):PoolIntArray
     public get_polygon_count():Int
     public get_vertices():PoolVector3Array
-    public set_vertices(vertices:PoolVector3Array):void
+    public set_vertices(vertices:PoolVector3Array):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -3572,20 +3572,20 @@ extern class NavigationMeshInstance extends Spatial {
 @:unreflective
 @:structAccess
 extern class NavigationPolygon extends Resource {
-    public add_outline(outline:PoolVector2Array):void
-    public add_outline_at_index(outline:PoolVector2Array, index:Int):void
-    public add_polygon(polygon:PoolIntArray):void
-    public clear_outlines():void
-    public clear_polygons():void
+    public add_outline(outline:PoolVector2Array):Void
+    public add_outline_at_index(outline:PoolVector2Array, index:Int):Void
+    public add_polygon(polygon:PoolIntArray):Void
+    public clear_outlines():Void
+    public clear_polygons():Void
     public get_outline(idx:Int):PoolVector2Array
     public get_outline_count():Int
     public get_polygon(idx:Int):PoolIntArray
     public get_polygon_count():Int
     public get_vertices():PoolVector2Array
-    public make_polygons_from_outlines():void
-    public remove_outline(idx:Int):void
-    public set_outline(idx:Int, outline:PoolVector2Array):void
-    public set_vertices(vertices:PoolVector2Array):void
+    public make_polygons_from_outlines():Void
+    public remove_outline(idx:Int):Void
+    public set_outline(idx:Int, outline:PoolVector2Array):Void
+    public set_vertices(vertices:PoolVector2Array):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -3605,9 +3605,9 @@ extern class NetworkedMultiplayerPeer extends PacketPeer {
     public get_connection_status():Int
     public get_packet_peer():Int
     public get_unique_id():Int
-    public poll():void
-    public set_target_peer(id:Int):void
-id:Int, id:Int, 
+    public poll():Void
+    public set_target_peer(id:Int):Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/Nil.hpp')
@@ -3657,17 +3657,17 @@ extern class NinePatchRect extends Control {
 @:unreflective
 @:structAccess
 extern class Node extends Object {
-    public _enter_tree():void
-    public _exit_tree():void
-    public _input(event:InputEvent):void
-    public _physics_process(delta:Float):void
-    public _process(delta:Float):void
-    public _ready():void
-    public _unhandled_input(event:InputEvent):void
-    public _unhandled_key_input(event:InputEventKey):void
-    public add_child(node:Node, legible_unique_name:Bool):void
-    public add_child_below_node(node:Node, child_node:Node, legible_unique_name:Bool):void
-    public add_to_group(group:String, persistent:Bool):void
+    public _enter_tree():Void
+    public _exit_tree():Void
+    public _input(event:InputEvent):Void
+    public _physics_process(delta:Float):Void
+    public _process(delta:Float):Void
+    public _ready():Void
+    public _unhandled_input(event:InputEvent):Void
+    public _unhandled_key_input(event:InputEventKey):Void
+    public add_child(node:Node, legible_unique_name:Bool):Void
+    public add_child_below_node(node:Node, child_node:Node, legible_unique_name:Bool):Void
+    public add_to_group(group:String, persistent:Bool):Void
     public can_process():Bool
     public duplicate(flags:Int):Node
     public find_node(mask:String, recursive:Bool, owned:Bool):Node
@@ -3703,40 +3703,40 @@ extern class Node extends Object {
     public is_processing_internal():Bool
     public is_processing_unhandled_input():Bool
     public is_processing_unhandled_key_input():Bool
-    public move_child(child_node:Node, to_position:Int):void
-    public print_stray_nodes():void
-    public print_tree():void
-    public print_tree_pretty():void
-    public propagate_call(method:String, args:Array, parent_first:Bool):void
-    public propagate_notification(what:Int):void
-    public queue_free():void
-    public raise():void
-    public remove_and_skip():void
-    public remove_child(node:Node):void
-    public remove_from_group(group:String):void
-    public replace_by(node:Node, keep_data:Bool):void
-    public request_ready():void
+    public move_child(child_node:Node, to_position:Int):Void
+    public print_stray_nodes():Void
+    public print_tree():Void
+    public print_tree_pretty():Void
+    public propagate_call(method:String, args:Array, parent_first:Bool):Void
+    public propagate_notification(what:Int):Void
+    public queue_free():Void
+    public raise():Void
+    public remove_and_skip():Void
+    public remove_child(node:Node):Void
+    public remove_from_group(group:String):Void
+    public replace_by(node:Node, keep_data:Bool):Void
+    public request_ready():Void
     public rpc(method:String):Variant
-    public rpc_config(method:String, mode:Int):void
+    public rpc_config(method:String, mode:Int):Void
     public rpc_id(peer_id:Int, method:String):Variant
     public rpc_unreliable(method:String):Variant
     public rpc_unreliable_id(peer_id:Int, method:String):Variant
-    public rset(property:String, value:Variant):void
-    public rset_config(property:String, mode:Int):void
-    public rset_id(peer_id:Int, property:String, value:Variant):void
-    public rset_unreliable(property:String, value:Variant):void
-    public rset_unreliable_id(peer_id:Int, property:String, value:Variant):void
-    public set_display_folded(fold:Bool):void
-    public set_network_master(id:Int, recursive:Bool):void
-    public set_physics_process(enable:Bool):void
-    public set_physics_process_internal(enable:Bool):void
-    public set_process(enable:Bool):void
-    public set_process_input(enable:Bool):void
-    public set_process_internal(enable:Bool):void
-    public set_process_priority(priority:Int):void
-    public set_process_unhandled_input(enable:Bool):void
-    public set_process_unhandled_key_input(enable:Bool):void
-    public set_scene_instance_load_placeholder(load_placeholder:Bool):void
+    public rset(property:String, value:Variant):Void
+    public rset_config(property:String, mode:Int):Void
+    public rset_id(peer_id:Int, property:String, value:Variant):Void
+    public rset_unreliable(property:String, value:Variant):Void
+    public rset_unreliable_id(peer_id:Int, property:String, value:Variant):Void
+    public set_display_folded(fold:Bool):Void
+    public set_network_master(id:Int, recursive:Bool):Void
+    public set_physics_process(enable:Bool):Void
+    public set_physics_process_internal(enable:Bool):Void
+    public set_process(enable:Bool):Void
+    public set_process_input(enable:Bool):Void
+    public set_process_internal(enable:Bool):Void
+    public set_process_priority(priority:Int):Void
+    public set_process_unhandled_input(enable:Bool):Void
+    public set_process_unhandled_key_input(enable:Bool):Void
+    public set_scene_instance_load_placeholder(load_placeholder:Bool):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -3745,17 +3745,17 @@ extern class Node extends Object {
 @:unreflective
 @:structAccess
 extern class Node2D extends CanvasItem {
-    public apply_scale(ratio:Vector2):void
+    public apply_scale(ratio:Vector2):Void
     public get_angle_to(point:Vector2):Float
     public get_relative_transform_to_parent(parent:Node):Transform2D
-    public global_translate(offset:Vector2):void
-    public look_at(point:Vector2):void
-    public move_local_x(delta:Float, scaled:Bool):void
-    public move_local_y(delta:Float, scaled:Bool):void
-    public rotate(radians:Float):void
+    public global_translate(offset:Vector2):Void
+    public look_at(point:Vector2):Void
+    public move_local_x(delta:Float, scaled:Bool):Void
+    public move_local_y(delta:Float, scaled:Bool):Void
+    public rotate(radians:Float):Void
     public to_global(local_point:Vector2):Vector2
     public to_local(global_point:Vector2):Vector2
-    public translate(offset:Vector2):void
+    public translate(offset:Vector2):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -3783,18 +3783,18 @@ extern class NodePath {
 extern class Object {
     public _get(property:String):Variant
     public _get_property_list():Array
-    public _init():void
-    public _notification(what:Int):void
+    public _init():Void
+    public _notification(what:Int):Void
     public _set(property:String, value:Variant):Bool
-    public add_user_signal(signal:String, arguments:Array):void
+    public add_user_signal(signal:String, arguments:Array):Void
     public call(method:String):Variant
     public call_deferred(method:String):Variant
     public callv(method:String, arg_array:Array):Variant
     public can_translate_messages():Bool
     public connect(signal:String, target:Object, method:String, binds:Array, flags:Int):Int
-    public disconnect(signal:String, target:Object, method:String):void
+    public disconnect(signal:String, target:Object, method:String):Void
     public emit_signal(signal:String):Variant
-    public free():void
+    public free():Void
     public get(property:String):Variant
     public get_class():String
     public get_incoming_connections():Array
@@ -3814,14 +3814,14 @@ extern class Object {
     public is_class(type:String):Bool
     public is_connected(signal:String, target:Object, method:String):Bool
     public is_queued_for_deletion():Bool
-    public notification(what:Int, reversed:Bool):void
-    public property_list_changed_notify():void
-    public set(property:String, value:Variant):void
-    public set_block_signals(enable:Bool):void
-    public set_indexed(property:NodePath, value:Variant):void
-    public set_message_translation(enable:Bool):void
-    public set_meta(name:String, value:Variant):void
-    public set_script(script:Reference):void
+    public notification(what:Int, reversed:Bool):Void
+    public property_list_changed_notify():Void
+    public set(property:String, value:Variant):Void
+    public set_block_signals(enable:Bool):Void
+    public set_indexed(property:NodePath, value:Variant):Void
+    public set_message_translation(enable:Bool):Void
+    public set_meta(name:String, value:Variant):Void
+    public set_script(script:Reference):Void
     public tr(message:String):String
 
 }
@@ -3847,10 +3847,10 @@ extern class OmniLight extends Light {
 @:unreflective
 @:structAccess
 extern class OptionButton extends Button {
-    public add_icon_item(texture:Texture, label:String, id:Int):void
-    public add_item(label:String, id:Int):void
-    public add_separator():void
-    public clear():void
+    public add_icon_item(texture:Texture, label:String, id:Int):Void
+    public add_item(label:String, id:Int):Void
+    public add_separator():Void
+    public clear():Void
     public get_item_count():Int
     public get_item_icon(idx:Int):Texture
     public get_item_id(idx:Int):Int
@@ -3860,14 +3860,14 @@ extern class OptionButton extends Button {
     public get_selected_id():Int
     public get_selected_metadata():Variant
     public is_item_disabled(idx:Int):Bool
-    public remove_item(idx:Int):void
-    public select(idx:Int):void
-    public set_item_disabled(idx:Int, disabled:Bool):void
-    public set_item_icon(idx:Int, texture:Texture):void
-    public set_item_id(idx:Int, id:Int):void
-    public set_item_metadata(idx:Int, metadata:Variant):void
-    public set_item_text(idx:Int, text:String):void
-ID:Int, ID:Int, 
+    public remove_item(idx:Int):Void
+    public select(idx:Int):Void
+    public set_item_disabled(idx:Int, disabled:Bool):Void
+    public set_item_icon(idx:Int, texture:Texture):Void
+    public set_item_id(idx:Int, id:Int):Void
+    public set_item_metadata(idx:Int, metadata:Variant):Void
+    public set_item_text(idx:Int, text:String):Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/OrientedPathFollow.hpp')
@@ -3883,14 +3883,14 @@ extern class OrientedPathFollow extends Spatial {
 @:unreflective
 @:structAccess
 extern class OS extends Object {
-    public alert(text:String, title:String):void
+    public alert(text:String, title:String):Void
     public can_draw():Bool
     public can_use_threads():Bool
-    public center_window():void
-    public delay_msec(msec:Int):void
-    public delay_usec(usec:Int):void
-    public dump_memory_to_file(file:String):void
-    public dump_resources_to_file(file:String):void
+    public center_window():Void
+    public delay_msec(msec:Int):Void
+    public delay_usec(usec:Int):Void
+    public dump_memory_to_file(file:String):Void
+    public dump_resources_to_file(file:String):Void
     public execute(path:String, arguments:PoolStringArray, blocking:Bool, output:Array):Int
     public find_scancode_from_string(string:String):Int
     public get_audio_driver_count():Int
@@ -3939,7 +3939,7 @@ extern class OS extends Object {
     public has_feature(tag_name:String):Bool
     public has_touchscreen_ui_hint():Bool
     public has_virtual_keyboard():Bool
-    public hide_virtual_keyboard():void
+    public hide_virtual_keyboard():Void
     public is_debug_build():Bool
     public is_ok_left_and_cancel_right():Bool
     public is_scancode_unicode(code:Int):Bool
@@ -3948,23 +3948,23 @@ extern class OS extends Object {
     public is_window_always_on_top():Bool
     public kill(pid:Int):Int
     public native_video_is_playing():Bool
-    public native_video_pause():void
+    public native_video_pause():Void
     public native_video_play(path:String, volume:Float, audio_track:String, subtitle_track:String):Int
-    public native_video_stop():void
-    public native_video_unpause():void
-    public print_all_resources(tofile:String):void
-    public print_all_textures_by_size():void
-    public print_resources_by_type(types:PoolStringArray):void
-    public print_resources_in_use(short:Bool):void
-    public request_attention():void
-    public set_icon(icon:Image):void
-    public set_ime_position(position:Vector2):void
+    public native_video_stop():Void
+    public native_video_unpause():Void
+    public print_all_resources(tofile:String):Void
+    public print_all_textures_by_size():Void
+    public print_resources_by_type(types:PoolStringArray):Void
+    public print_resources_in_use(short:Bool):Void
+    public request_attention():Void
+    public set_icon(icon:Image):Void
+    public set_ime_position(position:Vector2):Void
     public set_thread_name(name:String):Int
-    public set_use_file_access_save_and_swap(enabled:Bool):void
-    public set_window_always_on_top(enabled:Bool):void
-    public set_window_title(title:String):void
+    public set_use_file_access_save_and_swap(enabled:Bool):Void
+    public set_window_always_on_top(enabled:Bool):Void
+    public set_window_title(title:String):Void
     public shell_open(uri:String):Int
-    public show_virtual_keyboard(existing_text:String):void
+    public show_virtual_keyboard(existing_text:String):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -4026,7 +4026,7 @@ extern class PacketPeerStream extends PacketPeer {
 @:unreflective
 @:structAccess
 extern class PacketPeerUDP extends PacketPeer {
-    public close():void
+    public close():Void
     public get_packet_ip():String
     public get_packet_port():Int
     public is_listening():Bool
@@ -4082,7 +4082,7 @@ extern class ParallaxLayer extends Node2D {
 @:structAccess
 extern class Particles extends GeometryInstance {
     public capture_aabb():Aabb
-    public restart():void
+    public restart():Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -4092,7 +4092,7 @@ extern class Particles extends GeometryInstance {
 @:structAccess
 extern class Particles2D extends Node2D {
     public capture_rect():Rect2
-    public restart():void
+    public restart():Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -4161,7 +4161,7 @@ extern class Performance extends Object {
 @:unreflective
 @:structAccess
 extern class PHashTranslation extends Translation {
-    public generate(from:Translation):void
+    public generate(from:Translation):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -4181,12 +4181,12 @@ extern class PhysicalBone extends PhysicsBody {
 @:unreflective
 @:structAccess
 extern class Physics2DDirectBodyState extends Object {
-    public add_central_force(force:Vector2):void
-    public add_force(offset:Vector2, force:Vector2):void
-    public add_torque(torque:Float):void
-    public apply_central_impulse(impulse:Vector2):void
-    public apply_impulse(offset:Vector2, impulse:Vector2):void
-    public apply_torque_impulse(impulse:Float):void
+    public add_central_force(force:Vector2):Void
+    public add_force(offset:Vector2, force:Vector2):Void
+    public add_torque(torque:Float):Void
+    public apply_central_impulse(impulse:Vector2):Void
+    public apply_impulse(offset:Vector2, impulse:Vector2):Void
+    public apply_torque_impulse(impulse:Float):Void
     public get_contact_collider(contact_idx:Int):Rid
     public get_contact_collider_id(contact_idx:Int):Int
     public get_contact_collider_object(contact_idx:Int):Object
@@ -4199,7 +4199,7 @@ extern class Physics2DDirectBodyState extends Object {
     public get_contact_local_position(contact_idx:Int):Vector2
     public get_contact_local_shape(contact_idx:Int):Int
     public get_space_state():Physics2DDirectSpaceState
-    public integrate_forces():void
+    public integrate_forces():Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -4230,9 +4230,9 @@ extern class Physics2DDirectSpaceState extends Object {
 @:unreflective
 @:structAccess
 extern class Physics2DServer extends Object {
-    public area_add_shape(area:Rid, shape:Rid, transform:Transform2D):void
-    public area_attach_object_instance_id(area:Rid, id:Int):void
-    public area_clear_shapes(area:Rid):void
+    public area_add_shape(area:Rid, shape:Rid, transform:Transform2D):Void
+    public area_attach_object_instance_id(area:Rid, id:Int):Void
+    public area_clear_shapes(area:Rid):Void
     public area_create():Rid
     public area_get_object_instance_id(area:Rid):Int
     public area_get_param(area:Rid, param:Int):Variant
@@ -4242,29 +4242,29 @@ extern class Physics2DServer extends Object {
     public area_get_space(area:Rid):Rid
     public area_get_space_override_mode(area:Rid):Int
     public area_get_transform(area:Rid):Transform2D
-    public area_remove_shape(area:Rid, shape_idx:Int):void
-    public area_set_area_monitor_callback(area:Rid, receiver:Object, method:String):void
-    public area_set_collision_layer(area:Rid, layer:Int):void
-    public area_set_collision_mask(area:Rid, mask:Int):void
-    public area_set_monitor_callback(area:Rid, receiver:Object, method:String):void
-    public area_set_monitorable(area:Rid, monitorable:Bool):void
-    public area_set_param(area:Rid, param:Int, value:Variant):void
-    public area_set_shape(area:Rid, shape_idx:Int, shape:Rid):void
-    public area_set_shape_disabled(area:Rid, shape_idx:Int, disable:Bool):void
-    public area_set_shape_transform(area:Rid, shape_idx:Int, transform:Transform2D):void
-    public area_set_space(area:Rid, space:Rid):void
-    public area_set_space_override_mode(area:Rid, mode:Int):void
-    public area_set_transform(area:Rid, transform:Transform2D):void
-    public body_add_central_force(body:Rid, force:Vector2):void
-    public body_add_collision_exception(body:Rid, excepted_body:Rid):void
-    public body_add_force(body:Rid, offset:Vector2, force:Vector2):void
-    public body_add_shape(body:Rid, shape:Rid, transform:Transform2D):void
-    public body_add_torque(body:Rid, torque:Float):void
-    public body_apply_central_impulse(body:Rid, impulse:Vector2):void
-    public body_apply_impulse(body:Rid, position:Vector2, impulse:Vector2):void
-    public body_apply_torque_impulse(body:Rid, impulse:Float):void
-    public body_attach_object_instance_id(body:Rid, id:Int):void
-    public body_clear_shapes(body:Rid):void
+    public area_remove_shape(area:Rid, shape_idx:Int):Void
+    public area_set_area_monitor_callback(area:Rid, receiver:Object, method:String):Void
+    public area_set_collision_layer(area:Rid, layer:Int):Void
+    public area_set_collision_mask(area:Rid, mask:Int):Void
+    public area_set_monitor_callback(area:Rid, receiver:Object, method:String):Void
+    public area_set_monitorable(area:Rid, monitorable:Bool):Void
+    public area_set_param(area:Rid, param:Int, value:Variant):Void
+    public area_set_shape(area:Rid, shape_idx:Int, shape:Rid):Void
+    public area_set_shape_disabled(area:Rid, shape_idx:Int, disable:Bool):Void
+    public area_set_shape_transform(area:Rid, shape_idx:Int, transform:Transform2D):Void
+    public area_set_space(area:Rid, space:Rid):Void
+    public area_set_space_override_mode(area:Rid, mode:Int):Void
+    public area_set_transform(area:Rid, transform:Transform2D):Void
+    public body_add_central_force(body:Rid, force:Vector2):Void
+    public body_add_collision_exception(body:Rid, excepted_body:Rid):Void
+    public body_add_force(body:Rid, offset:Vector2, force:Vector2):Void
+    public body_add_shape(body:Rid, shape:Rid, transform:Transform2D):Void
+    public body_add_torque(body:Rid, torque:Float):Void
+    public body_apply_central_impulse(body:Rid, impulse:Vector2):Void
+    public body_apply_impulse(body:Rid, position:Vector2, impulse:Vector2):Void
+    public body_apply_torque_impulse(body:Rid, impulse:Float):Void
+    public body_attach_object_instance_id(body:Rid, id:Int):Void
+    public body_clear_shapes(body:Rid):Void
     public body_create():Rid
     public body_get_collision_layer(body:Rid):Int
     public body_get_collision_mask(body:Rid):Int
@@ -4281,24 +4281,24 @@ extern class Physics2DServer extends Object {
     public body_get_space(body:Rid):Rid
     public body_get_state(body:Rid, state:Int):Variant
     public body_is_omitting_force_integration(body:Rid):Bool
-    public body_remove_collision_exception(body:Rid, excepted_body:Rid):void
-    public body_remove_shape(body:Rid, shape_idx:Int):void
-    public body_set_axis_velocity(body:Rid, axis_velocity:Vector2):void
-    public body_set_collision_layer(body:Rid, layer:Int):void
-    public body_set_collision_mask(body:Rid, mask:Int):void
-    public body_set_continuous_collision_detection_mode(body:Rid, mode:Int):void
-    public body_set_force_integration_callback(body:Rid, receiver:Object, method:String, userdata:Variant):void
-    public body_set_max_contacts_reported(body:Rid, amount:Int):void
-    public body_set_mode(body:Rid, mode:Int):void
-    public body_set_omit_force_integration(body:Rid, enable:Bool):void
-    public body_set_param(body:Rid, param:Int, value:Float):void
-    public body_set_shape(body:Rid, shape_idx:Int, shape:Rid):void
-    public body_set_shape_as_one_way_collision(body:Rid, shape_idx:Int, enable:Bool):void
-    public body_set_shape_disabled(body:Rid, shape_idx:Int, disable:Bool):void
-    public body_set_shape_metadata(body:Rid, shape_idx:Int, metadata:Variant):void
-    public body_set_shape_transform(body:Rid, shape_idx:Int, transform:Transform2D):void
-    public body_set_space(body:Rid, space:Rid):void
-    public body_set_state(body:Rid, state:Int, value:Variant):void
+    public body_remove_collision_exception(body:Rid, excepted_body:Rid):Void
+    public body_remove_shape(body:Rid, shape_idx:Int):Void
+    public body_set_axis_velocity(body:Rid, axis_velocity:Vector2):Void
+    public body_set_collision_layer(body:Rid, layer:Int):Void
+    public body_set_collision_mask(body:Rid, mask:Int):Void
+    public body_set_continuous_collision_detection_mode(body:Rid, mode:Int):Void
+    public body_set_force_integration_callback(body:Rid, receiver:Object, method:String, userdata:Variant):Void
+    public body_set_max_contacts_reported(body:Rid, amount:Int):Void
+    public body_set_mode(body:Rid, mode:Int):Void
+    public body_set_omit_force_integration(body:Rid, enable:Bool):Void
+    public body_set_param(body:Rid, param:Int, value:Float):Void
+    public body_set_shape(body:Rid, shape_idx:Int, shape:Rid):Void
+    public body_set_shape_as_one_way_collision(body:Rid, shape_idx:Int, enable:Bool):Void
+    public body_set_shape_disabled(body:Rid, shape_idx:Int, disable:Bool):Void
+    public body_set_shape_metadata(body:Rid, shape_idx:Int, metadata:Variant):Void
+    public body_set_shape_transform(body:Rid, shape_idx:Int, transform:Transform2D):Void
+    public body_set_space(body:Rid, space:Rid):Void
+    public body_set_state(body:Rid, state:Int, value:Variant):Void
     public body_test_motion(body:Rid, from:Transform2D, motion:Vector2, infinite_inertia:Bool, margin:Float, result:Physics2DTestMotionResult):Bool
     public capsule_shape_create():Rid
     public circle_shape_create():Rid
@@ -4306,28 +4306,28 @@ extern class Physics2DServer extends Object {
     public convex_polygon_shape_create():Rid
     public damped_spring_joint_create(anchor_a:Vector2, anchor_b:Vector2, body_a:Rid, body_b:Rid):Rid
     public damped_string_joint_get_param(joint:Rid, param:Int):Float
-    public damped_string_joint_set_param(joint:Rid, param:Int, value:Float):void
-    public free_rid(rid:Rid):void
+    public damped_string_joint_set_param(joint:Rid, param:Int, value:Float):Void
+    public free_rid(rid:Rid):Void
     public get_process_info(process_info:Int):Int
     public groove_joint_create(groove1_a:Vector2, groove2_a:Vector2, anchor_b:Vector2, body_a:Rid, body_b:Rid):Rid
     public joint_get_param(joint:Rid, param:Int):Float
     public joint_get_type(joint:Rid):Int
-    public joint_set_param(joint:Rid, param:Int, value:Float):void
+    public joint_set_param(joint:Rid, param:Int, value:Float):Void
     public line_shape_create():Rid
     public pin_joint_create(anchor:Vector2, body_a:Rid, body_b:Rid):Rid
     public ray_shape_create():Rid
     public rectangle_shape_create():Rid
     public segment_shape_create():Rid
-    public set_active(active:Bool):void
+    public set_active(active:Bool):Void
     public shape_get_data(shape:Rid):Variant
     public shape_get_type(shape:Rid):Int
-    public shape_set_data(shape:Rid, data:Variant):void
+    public shape_set_data(shape:Rid, data:Variant):Void
     public space_create():Rid
     public space_get_direct_state(space:Rid):Physics2DDirectSpaceState
     public space_get_param(space:Rid, param:Int):Float
     public space_is_active(space:Rid):Bool
-    public space_set_active(space:Rid, active:Bool):void
-    public space_set_param(space:Rid, param:Int, value:Float):void
+    public space_set_active(space:Rid, active:Bool):Void
+    public space_set_param(space:Rid, param:Int, value:Float):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -4344,7 +4344,7 @@ extern class Physics2DServerSW extends Physics2DServer {
 @:unreflective
 @:structAccess
 extern class Physics2DShapeQueryParameters extends Reference {
-    public set_shape(shape:Resource):void
+    public set_shape(shape:Resource):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -4374,12 +4374,12 @@ extern class Physics2DTestMotionResult extends Reference {
 @:unreflective
 @:structAccess
 extern class PhysicsBody extends CollisionObject {
-    public add_collision_exception_with(body:Node):void
+    public add_collision_exception_with(body:Node):Void
     public get_collision_layer_bit(bit:Int):Bool
     public get_collision_mask_bit(bit:Int):Bool
-    public remove_collision_exception_with(body:Node):void
-    public set_collision_layer_bit(bit:Int, value:Bool):void
-    public set_collision_mask_bit(bit:Int, value:Bool):void
+    public remove_collision_exception_with(body:Node):Void
+    public set_collision_layer_bit(bit:Int, value:Bool):Void
+    public set_collision_mask_bit(bit:Int, value:Bool):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -4388,12 +4388,12 @@ extern class PhysicsBody extends CollisionObject {
 @:unreflective
 @:structAccess
 extern class PhysicsBody2D extends CollisionObject2D {
-    public add_collision_exception_with(body:Node):void
+    public add_collision_exception_with(body:Node):Void
     public get_collision_layer_bit(bit:Int):Bool
     public get_collision_mask_bit(bit:Int):Bool
-    public remove_collision_exception_with(body:Node):void
-    public set_collision_layer_bit(bit:Int, value:Bool):void
-    public set_collision_mask_bit(bit:Int, value:Bool):void
+    public remove_collision_exception_with(body:Node):Void
+    public set_collision_layer_bit(bit:Int, value:Bool):Void
+    public set_collision_mask_bit(bit:Int, value:Bool):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -4402,12 +4402,12 @@ extern class PhysicsBody2D extends CollisionObject2D {
 @:unreflective
 @:structAccess
 extern class PhysicsDirectBodyState extends Object {
-    public add_central_force(force:Vector3):void
-    public add_force(force:Vector3, position:Vector3):void
-    public add_torque(torque:Vector3):void
-    public apply_central_impulse(j:Vector3):void
-    public apply_impulse(position:Vector3, j:Vector3):void
-    public apply_torque_impulse(j:Vector3):void
+    public add_central_force(force:Vector3):Void
+    public add_force(force:Vector3, position:Vector3):Void
+    public add_torque(torque:Vector3):Void
+    public apply_central_impulse(j:Vector3):Void
+    public apply_impulse(position:Vector3, j:Vector3):Void
+    public apply_torque_impulse(j:Vector3):Void
     public get_contact_collider(contact_idx:Int):Rid
     public get_contact_collider_id(contact_idx:Int):Int
     public get_contact_collider_object(contact_idx:Int):Object
@@ -4420,7 +4420,7 @@ extern class PhysicsDirectBodyState extends Object {
     public get_contact_local_position(contact_idx:Int):Vector3
     public get_contact_local_shape(contact_idx:Int):Int
     public get_space_state():PhysicsDirectSpaceState
-    public integrate_forces():void
+    public integrate_forces():Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -4450,9 +4450,9 @@ extern class PhysicsMaterial extends Resource {
 @:unreflective
 @:structAccess
 extern class PhysicsServer extends Object {
-    public area_add_shape(area:Rid, shape:Rid, transform:Transform):void
-    public area_attach_object_instance_id(area:Rid, id:Int):void
-    public area_clear_shapes(area:Rid):void
+    public area_add_shape(area:Rid, shape:Rid, transform:Transform):Void
+    public area_attach_object_instance_id(area:Rid, id:Int):Void
+    public area_clear_shapes(area:Rid):Void
     public area_create():Rid
     public area_get_object_instance_id(area:Rid):Int
     public area_get_param(area:Rid, param:Int):Variant
@@ -4463,29 +4463,29 @@ extern class PhysicsServer extends Object {
     public area_get_space_override_mode(area:Rid):Int
     public area_get_transform(area:Rid):Transform
     public area_is_ray_pickable(area:Rid):Bool
-    public area_remove_shape(area:Rid, shape_idx:Int):void
-    public area_set_area_monitor_callback(area:Rid, receiver:Object, method:String):void
-    public area_set_collision_layer(area:Rid, layer:Int):void
-    public area_set_collision_mask(area:Rid, mask:Int):void
-    public area_set_monitor_callback(area:Rid, receiver:Object, method:String):void
-    public area_set_monitorable(area:Rid, monitorable:Bool):void
-    public area_set_param(area:Rid, param:Int, value:Variant):void
-    public area_set_ray_pickable(area:Rid, enable:Bool):void
-    public area_set_shape(area:Rid, shape_idx:Int, shape:Rid):void
-    public area_set_shape_transform(area:Rid, shape_idx:Int, transform:Transform):void
-    public area_set_space(area:Rid, space:Rid):void
-    public area_set_space_override_mode(area:Rid, mode:Int):void
-    public area_set_transform(area:Rid, transform:Transform):void
-    public body_add_central_force(body:Rid, force:Vector3):void
-    public body_add_collision_exception(body:Rid, excepted_body:Rid):void
-    public body_add_force(body:Rid, force:Vector3, position:Vector3):void
-    public body_add_shape(body:Rid, shape:Rid, transform:Transform):void
-    public body_add_torque(body:Rid, torque:Vector3):void
-    public body_apply_central_impulse(body:Rid, impulse:Vector3):void
-    public body_apply_impulse(body:Rid, position:Vector3, impulse:Vector3):void
-    public body_apply_torque_impulse(body:Rid, impulse:Vector3):void
-    public body_attach_object_instance_id(body:Rid, id:Int):void
-    public body_clear_shapes(body:Rid):void
+    public area_remove_shape(area:Rid, shape_idx:Int):Void
+    public area_set_area_monitor_callback(area:Rid, receiver:Object, method:String):Void
+    public area_set_collision_layer(area:Rid, layer:Int):Void
+    public area_set_collision_mask(area:Rid, mask:Int):Void
+    public area_set_monitor_callback(area:Rid, receiver:Object, method:String):Void
+    public area_set_monitorable(area:Rid, monitorable:Bool):Void
+    public area_set_param(area:Rid, param:Int, value:Variant):Void
+    public area_set_ray_pickable(area:Rid, enable:Bool):Void
+    public area_set_shape(area:Rid, shape_idx:Int, shape:Rid):Void
+    public area_set_shape_transform(area:Rid, shape_idx:Int, transform:Transform):Void
+    public area_set_space(area:Rid, space:Rid):Void
+    public area_set_space_override_mode(area:Rid, mode:Int):Void
+    public area_set_transform(area:Rid, transform:Transform):Void
+    public body_add_central_force(body:Rid, force:Vector3):Void
+    public body_add_collision_exception(body:Rid, excepted_body:Rid):Void
+    public body_add_force(body:Rid, force:Vector3, position:Vector3):Void
+    public body_add_shape(body:Rid, shape:Rid, transform:Transform):Void
+    public body_add_torque(body:Rid, torque:Vector3):Void
+    public body_apply_central_impulse(body:Rid, impulse:Vector3):Void
+    public body_apply_impulse(body:Rid, position:Vector3, impulse:Vector3):Void
+    public body_apply_torque_impulse(body:Rid, impulse:Vector3):Void
+    public body_attach_object_instance_id(body:Rid, id:Int):Void
+    public body_clear_shapes(body:Rid):Void
     public body_create(mode:Int, init_sleeping:Bool):Rid
     public body_get_collision_layer(body:Rid):Int
     public body_get_collision_mask(body:Rid):Int
@@ -4504,36 +4504,36 @@ extern class PhysicsServer extends Object {
     public body_is_continuous_collision_detection_enabled(body:Rid):Bool
     public body_is_omitting_force_integration(body:Rid):Bool
     public body_is_ray_pickable(body:Rid):Bool
-    public body_remove_collision_exception(body:Rid, excepted_body:Rid):void
-    public body_remove_shape(body:Rid, shape_idx:Int):void
-    public body_set_axis_lock(body:Rid, axis:Int, lock:Bool):void
-    public body_set_axis_velocity(body:Rid, axis_velocity:Vector3):void
-    public body_set_collision_layer(body:Rid, layer:Int):void
-    public body_set_collision_mask(body:Rid, mask:Int):void
-    public body_set_enable_continuous_collision_detection(body:Rid, enable:Bool):void
-    public body_set_force_integration_callback(body:Rid, receiver:Object, method:String, userdata:Variant):void
-    public body_set_kinematic_safe_margin(body:Rid, margin:Float):void
-    public body_set_max_contacts_reported(body:Rid, amount:Int):void
-    public body_set_mode(body:Rid, mode:Int):void
-    public body_set_omit_force_integration(body:Rid, enable:Bool):void
-    public body_set_param(body:Rid, param:Int, value:Float):void
-    public body_set_ray_pickable(body:Rid, enable:Bool):void
-    public body_set_shape(body:Rid, shape_idx:Int, shape:Rid):void
-    public body_set_shape_transform(body:Rid, shape_idx:Int, transform:Transform):void
-    public body_set_space(body:Rid, space:Rid):void
-    public body_set_state(body:Rid, state:Int, value:Variant):void
+    public body_remove_collision_exception(body:Rid, excepted_body:Rid):Void
+    public body_remove_shape(body:Rid, shape_idx:Int):Void
+    public body_set_axis_lock(body:Rid, axis:Int, lock:Bool):Void
+    public body_set_axis_velocity(body:Rid, axis_velocity:Vector3):Void
+    public body_set_collision_layer(body:Rid, layer:Int):Void
+    public body_set_collision_mask(body:Rid, mask:Int):Void
+    public body_set_enable_continuous_collision_detection(body:Rid, enable:Bool):Void
+    public body_set_force_integration_callback(body:Rid, receiver:Object, method:String, userdata:Variant):Void
+    public body_set_kinematic_safe_margin(body:Rid, margin:Float):Void
+    public body_set_max_contacts_reported(body:Rid, amount:Int):Void
+    public body_set_mode(body:Rid, mode:Int):Void
+    public body_set_omit_force_integration(body:Rid, enable:Bool):Void
+    public body_set_param(body:Rid, param:Int, value:Float):Void
+    public body_set_ray_pickable(body:Rid, enable:Bool):Void
+    public body_set_shape(body:Rid, shape_idx:Int, shape:Rid):Void
+    public body_set_shape_transform(body:Rid, shape_idx:Int, transform:Transform):Void
+    public body_set_space(body:Rid, space:Rid):Void
+    public body_set_state(body:Rid, state:Int, value:Variant):Void
     public cone_twist_joint_get_param(joint:Rid, param:Int):Float
-    public cone_twist_joint_set_param(joint:Rid, param:Int, value:Float):void
-    public free_rid(rid:Rid):void
+    public cone_twist_joint_set_param(joint:Rid, param:Int, value:Float):Void
+    public free_rid(rid:Rid):Void
     public generic_6dof_joint_get_flag(joint:Rid, axis:Int, flag:Int):Bool
     public generic_6dof_joint_get_param(joint:Rid, axis:Int, param:Int):Float
-    public generic_6dof_joint_set_flag(joint:Rid, axis:Int, flag:Int, enable:Bool):void
-    public generic_6dof_joint_set_param(joint:Rid, axis:Int, param:Int, value:Float):void
+    public generic_6dof_joint_set_flag(joint:Rid, axis:Int, flag:Int, enable:Bool):Void
+    public generic_6dof_joint_set_param(joint:Rid, axis:Int, param:Int, value:Float):Void
     public get_process_info(process_info:Int):Int
     public hinge_joint_get_flag(joint:Rid, flag:Int):Bool
     public hinge_joint_get_param(joint:Rid, param:Int):Float
-    public hinge_joint_set_flag(joint:Rid, flag:Int, enabled:Bool):void
-    public hinge_joint_set_param(joint:Rid, param:Int, value:Float):void
+    public hinge_joint_set_flag(joint:Rid, flag:Int, enabled:Bool):Void
+    public hinge_joint_set_param(joint:Rid, param:Int, value:Float):Void
     public joint_create_cone_twist(body_A:Rid, local_ref_A:Transform, body_B:Rid, local_ref_B:Transform):Rid
     public joint_create_generic_6dof(body_A:Rid, local_ref_A:Transform, body_B:Rid, local_ref_B:Transform):Rid
     public joint_create_hinge(body_A:Rid, hinge_A:Transform, body_B:Rid, hinge_B:Transform):Rid
@@ -4541,26 +4541,26 @@ extern class PhysicsServer extends Object {
     public joint_create_slider(body_A:Rid, local_ref_A:Transform, body_B:Rid, local_ref_B:Transform):Rid
     public joint_get_solver_priority(joint:Rid):Int
     public joint_get_type(joint:Rid):Int
-    public joint_set_solver_priority(joint:Rid, priority:Int):void
+    public joint_set_solver_priority(joint:Rid, priority:Int):Void
     public pin_joint_get_local_a(joint:Rid):Vector3
     public pin_joint_get_local_b(joint:Rid):Vector3
     public pin_joint_get_param(joint:Rid, param:Int):Float
-    public pin_joint_set_local_a(joint:Rid, local_A:Vector3):void
-    public pin_joint_set_local_b(joint:Rid, local_B:Vector3):void
-    public pin_joint_set_param(joint:Rid, param:Int, value:Float):void
-    public set_active(active:Bool):void
+    public pin_joint_set_local_a(joint:Rid, local_A:Vector3):Void
+    public pin_joint_set_local_b(joint:Rid, local_B:Vector3):Void
+    public pin_joint_set_param(joint:Rid, param:Int, value:Float):Void
+    public set_active(active:Bool):Void
     public shape_create(type:Int):Rid
     public shape_get_data(shape:Rid):Variant
     public shape_get_type(shape:Rid):Int
-    public shape_set_data(shape:Rid, data:Variant):void
+    public shape_set_data(shape:Rid, data:Variant):Void
     public slider_joint_get_param(joint:Rid, param:Int):Float
-    public slider_joint_set_param(joint:Rid, param:Int, value:Float):void
+    public slider_joint_set_param(joint:Rid, param:Int, value:Float):Void
     public space_create():Rid
     public space_get_direct_state(space:Rid):PhysicsDirectSpaceState
     public space_get_param(space:Rid, param:Int):Float
     public space_is_active(space:Rid):Bool
-    public space_set_active(space:Rid, active:Bool):void
-    public space_set_param(space:Rid, param:Int, value:Float):void
+    public space_set_active(space:Rid, active:Bool):Void
+    public space_set_param(space:Rid, param:Int, value:Float):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -4569,7 +4569,7 @@ extern class PhysicsServer extends Object {
 @:unreflective
 @:structAccess
 extern class PhysicsShapeQueryParameters extends Reference {
-    public set_shape(shape:Resource):void
+    public set_shape(shape:Resource):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -4644,14 +4644,14 @@ extern class PlaneShape extends Shape {
 @:unreflective
 @:structAccess
 extern class Polygon2D extends Node2D {
-    public add_bone(path:NodePath, weights:PoolRealArray):void
-    public clear_bones():void
-    public erase_bone(index:Int):void
+    public add_bone(path:NodePath, weights:PoolRealArray):Void
+    public clear_bones():Void
+    public erase_bone(index:Int):Void
     public get_bone_count():Int
     public get_bone_path(index:Int):NodePath
     public get_bone_weights(index:Int):PoolRealArray
-    public set_bone_path(index:Int, path:NodePath):void
-    public set_bone_weights(index:Int, weights:PoolRealArray):void
+    public set_bone_path(index:Int, path:NodePath):Void
+    public set_bone_weights(index:Int, weights:PoolRealArray):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -4666,8 +4666,8 @@ extern class PolygonPathFinder extends Resource {
     public get_intersections(from:Vector2, to:Vector2):PoolVector2Array
     public get_point_penalty(idx:Int):Float
     public is_point_inside(point:Vector2):Bool
-    public set_point_penalty(idx:Int, penalty:Float):void
-    public setup(points:PoolVector2Array, connections:PoolIntArray):void
+    public set_point_penalty(idx:Int, penalty:Float):Void
+    public setup(points:PoolVector2Array, connections:PoolIntArray):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -4808,10 +4808,10 @@ extern class PoolVector3Array {
 @:unreflective
 @:structAccess
 extern class Popup extends Control {
-    public popup(bounds:Rect2):void
-    public popup_centered(size:Vector2):void
-    public popup_centered_minsize(minsize:Vector2):void
-    public popup_centered_ratio(ratio:Float):void
+    public popup(bounds:Rect2):Void
+    public popup_centered(size:Vector2):Void
+    public popup_centered_minsize(minsize:Vector2):Void
+    public popup_centered_ratio(ratio:Float):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -4828,19 +4828,19 @@ extern class PopupDialog extends Popup {
 @:unreflective
 @:structAccess
 extern class PopupMenu extends Popup {
-    public add_check_item(label:String, id:Int, accel:Int):void
-    public add_check_shortcut(shortcut:ShortCut, id:Int, global:Bool):void
-    public add_icon_check_item(texture:Texture, label:String, id:Int, accel:Int):void
-    public add_icon_check_shortcut(texture:Texture, shortcut:ShortCut, id:Int, global:Bool):void
-    public add_icon_item(texture:Texture, label:String, id:Int, accel:Int):void
-    public add_icon_shortcut(texture:Texture, shortcut:ShortCut, id:Int, global:Bool):void
-    public add_item(label:String, id:Int, accel:Int):void
-    public add_radio_check_item(label:String, id:Int, accel:Int):void
-    public add_radio_check_shortcut(shortcut:ShortCut, id:Int, global:Bool):void
-    public add_separator(label:String):void
-    public add_shortcut(shortcut:ShortCut, id:Int, global:Bool):void
-    public add_submenu_item(label:String, submenu:String, id:Int):void
-    public clear():void
+    public add_check_item(label:String, id:Int, accel:Int):Void
+    public add_check_shortcut(shortcut:ShortCut, id:Int, global:Bool):Void
+    public add_icon_check_item(texture:Texture, label:String, id:Int, accel:Int):Void
+    public add_icon_check_shortcut(texture:Texture, shortcut:ShortCut, id:Int, global:Bool):Void
+    public add_icon_item(texture:Texture, label:String, id:Int, accel:Int):Void
+    public add_icon_shortcut(texture:Texture, shortcut:ShortCut, id:Int, global:Bool):Void
+    public add_item(label:String, id:Int, accel:Int):Void
+    public add_radio_check_item(label:String, id:Int, accel:Int):Void
+    public add_radio_check_shortcut(shortcut:ShortCut, id:Int, global:Bool):Void
+    public add_separator(label:String):Void
+    public add_shortcut(shortcut:ShortCut, id:Int, global:Bool):Void
+    public add_submenu_item(label:String, submenu:String, id:Int):Void
+    public clear():Void
     public get_item_accelerator(idx:Int):Int
     public get_item_count():Int
     public get_item_icon(idx:Int):Texture
@@ -4857,25 +4857,25 @@ extern class PopupMenu extends Popup {
     public is_item_radio_checkable(idx:Int):Bool
     public is_item_separator(idx:Int):Bool
     public is_item_shortcut_disabled(idx:Int):Bool
-    public remove_item(idx:Int):void
-    public set_item_accelerator(idx:Int, accel:Int):void
-    public set_item_as_checkable(idx:Int, enable:Bool):void
-    public set_item_as_radio_checkable(idx:Int, enable:Bool):void
-    public set_item_as_separator(idx:Int, enable:Bool):void
-    public set_item_checked(idx:Int, checked:Bool):void
-    public set_item_disabled(idx:Int, disabled:Bool):void
-    public set_item_icon(idx:Int, icon:Texture):void
-    public set_item_id(idx:Int, id:Int):void
-    public set_item_metadata(idx:Int, metadata:Variant):void
-    public set_item_multistate(idx:Int, state:Int):void
-    public set_item_shortcut(idx:Int, shortcut:ShortCut, global:Bool):void
-    public set_item_shortcut_disabled(idx:Int, disabled:Bool):void
-    public set_item_submenu(idx:Int, submenu:String):void
-    public set_item_text(idx:Int, text:String):void
-    public set_item_tooltip(idx:Int, tooltip:String):void
-    public toggle_item_checked(idx:Int):void
-    public toggle_item_multistate(idx:Int):void
-ID:Int, ID:Int, index:Int, 
+    public remove_item(idx:Int):Void
+    public set_item_accelerator(idx:Int, accel:Int):Void
+    public set_item_as_checkable(idx:Int, enable:Bool):Void
+    public set_item_as_radio_checkable(idx:Int, enable:Bool):Void
+    public set_item_as_separator(idx:Int, enable:Bool):Void
+    public set_item_checked(idx:Int, checked:Bool):Void
+    public set_item_disabled(idx:Int, disabled:Bool):Void
+    public set_item_icon(idx:Int, icon:Texture):Void
+    public set_item_id(idx:Int, id:Int):Void
+    public set_item_metadata(idx:Int, metadata:Variant):Void
+    public set_item_multistate(idx:Int, state:Int):Void
+    public set_item_shortcut(idx:Int, shortcut:ShortCut, global:Bool):Void
+    public set_item_shortcut_disabled(idx:Int, disabled:Bool):Void
+    public set_item_submenu(idx:Int, submenu:String):Void
+    public set_item_text(idx:Int, text:String):Void
+    public set_item_tooltip(idx:Int, tooltip:String):Void
+    public toggle_item_checked(idx:Int):Void
+    public toggle_item_multistate(idx:Int):Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/PopupPanel.hpp')
@@ -4940,8 +4940,8 @@ extern class ProgressBar extends Range {
 @:unreflective
 @:structAccess
 extern class ProjectSettings extends Object {
-    public add_property_info(hint:Dictionary):void
-    public clear(name:String):void
+    public add_property_info(hint:Dictionary):Void
+    public clear(name:String):Void
     public get_order(name:String):Int
     public get_setting(name:String):Variant
     public globalize_path(path:String):String
@@ -4952,9 +4952,9 @@ extern class ProjectSettings extends Object {
     public property_get_revert(name:String):Variant
     public save():Int
     public save_custom(file:String):Int
-    public set_initial_value(name:String, value:Variant):void
-    public set_order(name:String, position:Int):void
-    public set_setting(name:String, value:Variant):void
+    public set_initial_value(name:String, value:Variant):Void
+    public set_order(name:String, position:Int):Void
+    public set_setting(name:String, value:Variant):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -4963,8 +4963,8 @@ extern class ProjectSettings extends Object {
 @:unreflective
 @:structAccess
 extern class ProximityGroup extends Spatial {
-    public broadcast(name:String, parameters:Variant):void
-group_name:String, parameters:Array, 
+    public broadcast(name:String, parameters:Variant):Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/ProxyTexture.hpp')
@@ -5013,9 +5013,9 @@ extern class Quat {
 @:unreflective
 @:structAccess
 extern class Range extends Control {
-    public share(with:Node):void
-    public unshare():void
-value:Float, 
+    public share(with:Node):Void
+    public unshare():Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/RayCast.hpp')
@@ -5023,19 +5023,19 @@ value:Float,
 @:unreflective
 @:structAccess
 extern class RayCast extends Spatial {
-    public add_exception(node:Object):void
-    public add_exception_rid(rid:Rid):void
-    public clear_exceptions():void
-    public force_raycast_update():void
+    public add_exception(node:Object):Void
+    public add_exception_rid(rid:Rid):Void
+    public clear_exceptions():Void
+    public force_raycast_update():Void
     public get_collider():Object
     public get_collider_shape():Int
     public get_collision_mask_bit(bit:Int):Bool
     public get_collision_normal():Vector3
     public get_collision_point():Vector3
     public is_colliding():Bool
-    public remove_exception(node:Object):void
-    public remove_exception_rid(rid:Rid):void
-    public set_collision_mask_bit(bit:Int, value:Bool):void
+    public remove_exception(node:Object):Void
+    public remove_exception_rid(rid:Rid):Void
+    public set_collision_mask_bit(bit:Int, value:Bool):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -5044,19 +5044,19 @@ extern class RayCast extends Spatial {
 @:unreflective
 @:structAccess
 extern class RayCast2D extends Node2D {
-    public add_exception(node:Object):void
-    public add_exception_rid(rid:Rid):void
-    public clear_exceptions():void
-    public force_raycast_update():void
+    public add_exception(node:Object):Void
+    public add_exception_rid(rid:Rid):Void
+    public clear_exceptions():Void
+    public force_raycast_update():Void
     public get_collider():Object
     public get_collider_shape():Int
     public get_collision_mask_bit(bit:Int):Bool
     public get_collision_normal():Vector2
     public get_collision_point():Vector2
     public is_colliding():Bool
-    public remove_exception(node:Object):void
-    public remove_exception_rid(rid:Rid):void
-    public set_collision_mask_bit(bit:Int, value:Bool):void
+    public remove_exception(node:Object):Void
+    public remove_exception_rid(rid:Rid):Void
+    public set_collision_mask_bit(bit:Int, value:Bool):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -5154,12 +5154,12 @@ extern class RemoteTransform2D extends Node2D {
 @:unreflective
 @:structAccess
 extern class Resource extends Reference {
-    public _setup_local_to_scene():void
+    public _setup_local_to_scene():Void
     public duplicate(subresources:Bool):Resource
     public get_local_scene():Node
     public get_rid():Rid
-    public setup_local_to_scene():void
-    public take_over_path(path:String):void
+    public setup_local_to_scene():Void
+    public take_over_path(path:String):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -5194,7 +5194,7 @@ extern class ResourceLoader extends Object {
     public has(path:String):Bool
     public load(path:String, type_hint:String, p_no_cache:Bool):Resource
     public load_interactive(path:String, type_hint:String):ResourceInteractiveLoader
-    public set_abort_on_missing_resources(abort:Bool):void
+    public set_abort_on_missing_resources(abort:Bool):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -5203,12 +5203,12 @@ extern class ResourceLoader extends Object {
 @:unreflective
 @:structAccess
 extern class ResourcePreloader extends Node {
-    public add_resource(name:String, resource:Resource):void
+    public add_resource(name:String, resource:Resource):Void
     public get_resource(name:String):Resource
     public get_resource_list():PoolStringArray
     public has_resource(name:String):Bool
-    public remove_resource(name:String):void
-    public rename_resource(name:String, newname:String):void
+    public remove_resource(name:String):Void
+    public rename_resource(name:String, newname:String):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -5227,39 +5227,39 @@ extern class ResourceSaver extends Object {
 @:unreflective
 @:structAccess
 extern class RichTextLabel extends Control {
-    public add_image(image:Texture):void
-    public add_text(text:String):void
+    public add_image(image:Texture):Void
+    public add_text(text:String):Void
     public append_bbcode(bbcode:String):Int
-    public clear():void
+    public clear():Void
     public get_content_height():Int
     public get_line_count():Int
     public get_total_character_count():Int
     public get_v_scroll():VScrollBar
     public get_visible_line_count():Int
-    public newline():void
+    public newline():Void
     public parse_bbcode(bbcode:String):Int
-    public pop():void
-    public push_align(align:Int):void
-    public push_cell():void
-    public push_color(color:Color):void
-    public push_font(font:Font):void
-    public push_indent(level:Int):void
-    public push_list(type:Int):void
-    public push_meta(data:Variant):void
-    public push_table(columns:Int):void
-    public push_underline():void
+    public pop():Void
+    public push_align(align:Int):Void
+    public push_cell():Void
+    public push_color(color:Color):Void
+    public push_font(font:Font):Void
+    public push_indent(level:Int):Void
+    public push_list(type:Int):Void
+    public push_meta(data:Variant):Void
+    public push_table(columns:Int):Void
+    public push_underline():Void
     public remove_line(line:Int):Bool
-    public scroll_to_line(line:Int):void
-    public set_table_column_expand(column:Int, expand:Bool, ratio:Int):void
-meta:Nil, meta:Nil, meta:Nil, 
+    public scroll_to_line(line:Int):Void
+    public set_table_column_expand(column:Int, expand:Bool, ratio:Int):Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/core/RID.hpp')
 @:native('RID')
 @:unreflective
 @:structAccess
-extern class RID {
-    public RID(from:Object):Rid
+extern class Rid {
+    public Rid(from:Object):Rid
     public get_id():Int
 
 }
@@ -5269,16 +5269,16 @@ extern class RID {
 @:unreflective
 @:structAccess
 extern class RigidBody extends PhysicsBody {
-    public _integrate_forces(state:PhysicsDirectBodyState):void
-    public add_central_force(force:Vector3):void
-    public add_force(force:Vector3, position:Vector3):void
-    public add_torque(torque:Vector3):void
-    public apply_central_impulse(impulse:Vector3):void
-    public apply_impulse(position:Vector3, impulse:Vector3):void
-    public apply_torque_impulse(impulse:Vector3):void
+    public _integrate_forces(state:PhysicsDirectBodyState):Void
+    public add_central_force(force:Vector3):Void
+    public add_force(force:Vector3, position:Vector3):Void
+    public add_torque(torque:Vector3):Void
+    public apply_central_impulse(impulse:Vector3):Void
+    public apply_impulse(position:Vector3, impulse:Vector3):Void
+    public apply_torque_impulse(impulse:Vector3):Void
     public get_colliding_bodies():Array
-    public set_axis_velocity(axis_velocity:Vector3):void
-body:Object, body:Object, body_id:Int, body:Object, body_shape:Int, local_shape:Int, body_id:Int, body:Object, body_shape:Int, local_shape:Int, 
+    public set_axis_velocity(axis_velocity:Vector3):Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/RigidBody2D.hpp')
@@ -5286,17 +5286,17 @@ body:Object, body:Object, body_id:Int, body:Object, body_shape:Int, local_shape:
 @:unreflective
 @:structAccess
 extern class RigidBody2D extends PhysicsBody2D {
-    public _integrate_forces(state:Physics2DDirectBodyState):void
-    public add_central_force(force:Vector2):void
-    public add_force(offset:Vector2, force:Vector2):void
-    public add_torque(torque:Float):void
-    public apply_central_impulse(impulse:Vector2):void
-    public apply_impulse(offset:Vector2, impulse:Vector2):void
-    public apply_torque_impulse(torque:Float):void
+    public _integrate_forces(state:Physics2DDirectBodyState):Void
+    public add_central_force(force:Vector2):Void
+    public add_force(offset:Vector2, force:Vector2):Void
+    public add_torque(torque:Float):Void
+    public apply_central_impulse(impulse:Vector2):Void
+    public apply_impulse(offset:Vector2, impulse:Vector2):Void
+    public apply_torque_impulse(torque:Float):Void
     public get_colliding_bodies():Array
-    public set_axis_velocity(axis_velocity:Vector2):void
+    public set_axis_velocity(axis_velocity:Vector2):Void
     public test_motion(motion:Vector2, infinite_inertia:Bool, margin:Float, result:Physics2DTestMotionResult):Bool
-body:Object, body:Object, body_id:Int, body:Object, body_shape:Int, local_shape:Int, body_id:Int, body:Object, body_shape:Int, local_shape:Int, 
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/RootMotionView.hpp')
@@ -5355,18 +5355,18 @@ extern class SceneTree extends MainLoop {
     public has_network_peer():Bool
     public is_input_handled():Bool
     public is_network_server():Bool
-    public notify_group(group:String, notification:Int):void
-    public notify_group_flags(call_flags:Int, group:String, notification:Int):void
-    public queue_delete(obj:Object):void
-    public quit():void
+    public notify_group(group:String, notification:Int):Void
+    public notify_group_flags(call_flags:Int, group:String, notification:Int):Void
+    public queue_delete(obj:Object):Void
+    public quit():Void
     public reload_current_scene():Int
-    public set_auto_accept_quit(enabled:Bool):void
-    public set_group(group:String, property:String, value:Variant):void
-    public set_group_flags(call_flags:Int, group:String, property:String, value:Variant):void
-    public set_input_as_handled():void
-    public set_quit_on_go_back(enabled:Bool):void
-    public set_screen_stretch(mode:Int, aspect:Int, minsize:Vector2, shrink:Float):void
-files:PoolStringArray, screen:Int, id:Int, id:Int, node:Object, node:Object, node:Object, 
+    public set_auto_accept_quit(enabled:Bool):Void
+    public set_group(group:String, property:String, value:Variant):Void
+    public set_group_flags(call_flags:Int, group:String, property:String, value:Variant):Void
+    public set_input_as_handled():Void
+    public set_quit_on_go_back(enabled:Bool):Void
+    public set_screen_stretch(mode:Int, aspect:Int, minsize:Vector2, shrink:Float):Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/SceneTreeTimer.hpp')
@@ -5398,8 +5398,8 @@ extern class Script extends Resource {
 @:unreflective
 @:structAccess
 extern class ScriptCreateDialog extends ConfirmationDialog {
-    public config(inherits:String, path:String):void
-script:Object, 
+    public config(inherits:String, path:String):Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/ScriptEditor.hpp')
@@ -5408,12 +5408,12 @@ script:Object,
 @:structAccess
 extern class ScriptEditor extends PanelContainer {
     public can_drop_data_fw(point:Vector2, data:Variant, from:Control):Bool
-    public drop_data_fw(point:Vector2, data:Variant, from:Control):void
+    public drop_data_fw(point:Vector2, data:Variant, from:Control):Void
     public get_current_script():Script
     public get_drag_data_fw(point:Vector2, from:Control):Variant
     public get_open_scripts():Array
-    public open_script_create_dialog(base_name:String, base_path:String):void
-script:Object, script:Object, 
+    public open_script_create_dialog(base_name:String, base_path:String):Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/ScrollBar.hpp')
@@ -5468,7 +5468,7 @@ extern class Shader extends Resource {
     public get_default_texture_param(param:String):Texture
     public get_mode():Int
     public has_param(name:String):Bool
-    public set_default_texture_param(param:String, texture:Texture):void
+    public set_default_texture_param(param:String, texture:Texture):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -5478,7 +5478,7 @@ extern class Shader extends Resource {
 @:structAccess
 extern class ShaderMaterial extends Material {
     public get_shader_param(param:String):Variant
-    public set_shader_param(param:String, value:Variant):void
+    public set_shader_param(param:String, value:Variant):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -5518,9 +5518,9 @@ extern class ShortCut extends Resource {
 @:unreflective
 @:structAccess
 extern class Skeleton extends Spatial {
-    public add_bone(name:String):void
-    public bind_child_node_to_bone(bone_idx:Int, node:Node):void
-    public clear_bones():void
+    public add_bone(name:String):Void
+    public bind_child_node_to_bone(bone_idx:Int, node:Node):Void
+    public clear_bones():Void
     public find_bone(name:String):Int
     public get_bone_count():Int
     public get_bone_custom_pose(bone_idx:Int):Transform
@@ -5532,18 +5532,18 @@ extern class Skeleton extends Spatial {
     public get_bone_transform(bone_idx:Int):Transform
     public get_bound_child_nodes_to_bone(bone_idx:Int):Array
     public is_bone_rest_disabled(bone_idx:Int):Bool
-    public physical_bones_add_collision_exception(exception:Rid):void
-    public physical_bones_remove_collision_exception(exception:Rid):void
-    public physical_bones_start_simulation(bones:Array):void
-    public physical_bones_stop_simulation():void
-    public set_bone_custom_pose(bone_idx:Int, custom_pose:Transform):void
-    public set_bone_disable_rest(bone_idx:Int, disable:Bool):void
-    public set_bone_global_pose(bone_idx:Int, pose:Transform):void
-    public set_bone_parent(bone_idx:Int, parent_idx:Int):void
-    public set_bone_pose(bone_idx:Int, pose:Transform):void
-    public set_bone_rest(bone_idx:Int, rest:Transform):void
-    public unbind_child_node_from_bone(bone_idx:Int, node:Node):void
-    public unparent_bone_and_rest(bone_idx:Int):void
+    public physical_bones_add_collision_exception(exception:Rid):Void
+    public physical_bones_remove_collision_exception(exception:Rid):Void
+    public physical_bones_start_simulation(bones:Array):Void
+    public physical_bones_stop_simulation():Void
+    public set_bone_custom_pose(bone_idx:Int, custom_pose:Transform):Void
+    public set_bone_disable_rest(bone_idx:Int, disable:Bool):Void
+    public set_bone_global_pose(bone_idx:Int, pose:Transform):Void
+    public set_bone_parent(bone_idx:Int, parent_idx:Int):Void
+    public set_bone_pose(bone_idx:Int, pose:Transform):Void
+    public set_bone_rest(bone_idx:Int, rest:Transform):Void
+    public unbind_child_node_from_bone(bone_idx:Int, node:Node):Void
+    public unparent_bone_and_rest(bone_idx:Int):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -5587,14 +5587,14 @@ extern class SliderJoint extends Joint {
 @:unreflective
 @:structAccess
 extern class SoftBody extends MeshInstance {
-    public add_collision_exception_with(body:Node):void
+    public add_collision_exception_with(body:Node):Void
     public get_collision_layer_bit(bit:Int):Bool
     public get_collision_mask_bit(bit:Int):Bool
     public is_ray_pickable():Bool
-    public remove_collision_exception_with(body:Node):void
-    public set_collision_layer_bit(bit:Int, value:Bool):void
-    public set_collision_mask_bit(bit:Int, value:Bool):void
-    public set_ray_pickable(ray_pickable:Bool):void
+    public remove_collision_exception_with(body:Node):Void
+    public set_collision_layer_bit(bit:Int, value:Bool):Void
+    public set_collision_mask_bit(bit:Int, value:Bool):Void
+    public set_ray_pickable(ray_pickable:Bool):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -5605,36 +5605,36 @@ extern class SoftBody extends MeshInstance {
 extern class Spatial extends Node {
     public get_parent_spatial():Spatial
     public get_world():World
-    public global_rotate(axis:Vector3, angle:Float):void
-    public global_scale(scale:Vector3):void
-    public global_translate(offset:Vector3):void
-    public hide():void
+    public global_rotate(axis:Vector3, angle:Float):Void
+    public global_scale(scale:Vector3):Void
+    public global_translate(offset:Vector3):Void
+    public hide():Void
     public is_local_transform_notification_enabled():Bool
     public is_scale_disabled():Bool
     public is_set_as_toplevel():Bool
     public is_transform_notification_enabled():Bool
     public is_visible_in_tree():Bool
-    public look_at(target:Vector3, up:Vector3):void
-    public look_at_from_position(position:Vector3, target:Vector3, up:Vector3):void
-    public orthonormalize():void
-    public rotate(axis:Vector3, angle:Float):void
-    public rotate_object_local(axis:Vector3, angle:Float):void
-    public rotate_x(angle:Float):void
-    public rotate_y(angle:Float):void
-    public rotate_z(angle:Float):void
-    public scale_object_local(scale:Vector3):void
-    public set_as_toplevel(enable:Bool):void
-    public set_disable_scale(disable:Bool):void
-    public set_identity():void
-    public set_ignore_transform_notification(enabled:Bool):void
-    public set_notify_local_transform(enable:Bool):void
-    public set_notify_transform(enable:Bool):void
-    public show():void
+    public look_at(target:Vector3, up:Vector3):Void
+    public look_at_from_position(position:Vector3, target:Vector3, up:Vector3):Void
+    public orthonormalize():Void
+    public rotate(axis:Vector3, angle:Float):Void
+    public rotate_object_local(axis:Vector3, angle:Float):Void
+    public rotate_x(angle:Float):Void
+    public rotate_y(angle:Float):Void
+    public rotate_z(angle:Float):Void
+    public scale_object_local(scale:Vector3):Void
+    public set_as_toplevel(enable:Bool):Void
+    public set_disable_scale(disable:Bool):Void
+    public set_identity():Void
+    public set_ignore_transform_notification(enabled:Bool):Void
+    public set_notify_local_transform(enable:Bool):Void
+    public set_notify_transform(enable:Bool):Void
+    public show():Void
     public to_global(local_point:Vector3):Vector3
     public to_local(global_point:Vector3):Vector3
-    public translate(offset:Vector3):void
-    public translate_object_local(offset:Vector3):void
-    public update_gizmo():void
+    public translate(offset:Vector3):Void
+    public translate_object_local(offset:Vector3):Void
+    public update_gizmo():Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -5660,8 +5660,8 @@ extern class SpatialMaterial extends Material {
 @:structAccess
 extern class SpatialVelocityTracker extends Reference {
     public get_tracked_linear_velocity():Vector3
-    public reset(position:Vector3):void
-    public update_position(position:Vector3):void
+    public reset(position:Vector3):Void
+    public update_position(position:Vector3):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -5695,7 +5695,7 @@ extern class SpinBox extends Range {
 @:unreflective
 @:structAccess
 extern class SplitContainer extends Container {
-offset:Int, 
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/SpotLight.hpp')
@@ -5738,22 +5738,22 @@ extern class SpriteBase3D extends GeometryInstance {
 @:unreflective
 @:structAccess
 extern class SpriteFrames extends Resource {
-    public add_animation(anim:String):void
-    public add_frame(anim:String, frame:Texture, at_position:Int):void
-    public clear(anim:String):void
-    public clear_all():void
+    public add_animation(anim:String):Void
+    public add_frame(anim:String, frame:Texture, at_position:Int):Void
+    public clear(anim:String):Void
+    public clear_all():Void
     public get_animation_loop(anim:String):Bool
     public get_animation_names():PoolStringArray
     public get_animation_speed(anim:String):Float
     public get_frame(anim:String, idx:Int):Texture
     public get_frame_count(anim:String):Int
     public has_animation(anim:String):Bool
-    public remove_animation(anim:String):void
-    public remove_frame(anim:String, idx:Int):void
-    public rename_animation(anim:String, newname:String):void
-    public set_animation_loop(anim:String, loop:Bool):void
-    public set_animation_speed(anim:String, speed:Float):void
-    public set_frame(anim:String, idx:Int, txt:Texture):void
+    public remove_animation(anim:String):Void
+    public remove_frame(anim:String, idx:Int):Void
+    public rename_animation(anim:String, newname:String):Void
+    public set_animation_loop(anim:String, loop:Bool):Void
+    public set_animation_speed(anim:String, speed:Float):Void
+    public set_frame(anim:String, idx:Int, txt:Texture):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -5794,20 +5794,20 @@ extern class StreamPeer extends Reference {
     public get_u8():Int
     public get_utf8_string(bytes:Int):String
     public get_var():Variant
-    public put_16(value:Int):void
-    public put_32(value:Int):void
-    public put_64(value:Int):void
-    public put_8(value:Int):void
+    public put_16(value:Int):Void
+    public put_32(value:Int):Void
+    public put_64(value:Int):Void
+    public put_8(value:Int):Void
     public put_data(data:PoolByteArray):Int
-    public put_double(value:Float):void
-    public put_float(value:Float):void
+    public put_double(value:Float):Void
+    public put_float(value:Float):Void
     public put_partial_data(data:PoolByteArray):Array
-    public put_u16(value:Int):void
-    public put_u32(value:Int):void
-    public put_u64(value:Int):void
-    public put_u8(value:Int):void
-    public put_utf8_string(value:String):void
-    public put_var(value:Variant):void
+    public put_u16(value:Int):Void
+    public put_u32(value:Int):Void
+    public put_u64(value:Int):Void
+    public put_u8(value:Int):Void
+    public put_utf8_string(value:String):Void
+    public put_var(value:Variant):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -5816,12 +5816,12 @@ extern class StreamPeer extends Reference {
 @:unreflective
 @:structAccess
 extern class StreamPeerBuffer extends StreamPeer {
-    public clear():void
+    public clear():Void
     public duplicate():StreamPeerBuffer
     public get_position():Int
     public get_size():Int
-    public resize(size:Int):void
-    public seek(position:Int):void
+    public resize(size:Int):Void
+    public seek(position:Int):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -5832,9 +5832,9 @@ extern class StreamPeerBuffer extends StreamPeer {
 extern class StreamPeerSSL extends StreamPeer {
     public accept_stream(base:StreamPeer):Int
     public connect_to_stream(stream:StreamPeer, validate_certs:Bool, for_hostname:String):Int
-    public disconnect_from_stream():void
+    public disconnect_from_stream():Void
     public get_status():Int
-    public poll():void
+    public poll():Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -5844,12 +5844,12 @@ extern class StreamPeerSSL extends StreamPeer {
 @:structAccess
 extern class StreamPeerTCP extends StreamPeer {
     public connect_to_host(host:String, port:Int):Int
-    public disconnect_from_host():void
+    public disconnect_from_host():Void
     public get_connected_host():String
     public get_connected_port():Int
     public get_status():Int
     public is_connected_to_host():Bool
-    public set_no_delay(enabled:Bool):void
+    public set_no_delay(enabled:Bool):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -5967,7 +5967,7 @@ extern class String {
 @:unreflective
 @:structAccess
 extern class StyleBox extends Resource {
-    public draw(canvas_item:Rid, rect:Rect2):void
+    public draw(canvas_item:Rid, rect:Rect2):Void
     public get_center_size():Vector2
     public get_margin(margin:Int):Float
     public get_minimum_size():Vector2
@@ -5990,11 +5990,11 @@ extern class StyleBoxEmpty extends StyleBox {
 @:structAccess
 extern class StyleBoxFlat extends StyleBox {
     public get_border_width_min():Int
-    public set_border_width_all(width:Int):void
-    public set_corner_radius_all(radius:Int):void
-    public set_corner_radius_individual(radius_top_left:Int, radius_top_right:Int, radius_bottom_right:Int, radius_bottom_left:Int):void
-    public set_expand_margin_all(size:Float):void
-    public set_expand_margin_individual(size_left:Float, size_top:Float, size_right:Float, size_bottom:Float):void
+    public set_border_width_all(width:Int):Void
+    public set_corner_radius_all(radius:Int):Void
+    public set_corner_radius_individual(radius_top_left:Int, radius_top_right:Int, radius_bottom_right:Int, radius_bottom_left:Int):Void
+    public set_expand_margin_all(size:Float):Void
+    public set_expand_margin_individual(size_left:Float, size_top:Float, size_right:Float, size_bottom:Float):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -6011,8 +6011,8 @@ extern class StyleBoxLine extends StyleBox {
 @:unreflective
 @:structAccess
 extern class StyleBoxTexture extends StyleBox {
-    public set_expand_margin_all(size:Float):void
-    public set_expand_margin_individual(size_left:Float, size_top:Float, size_right:Float, size_bottom:Float):void
+    public set_expand_margin_all(size:Float):Void
+    public set_expand_margin_individual(size_left:Float, size_top:Float, size_right:Float, size_bottom:Float):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -6021,28 +6021,28 @@ extern class StyleBoxTexture extends StyleBox {
 @:unreflective
 @:structAccess
 extern class SurfaceTool extends Reference {
-    public add_bones(bones:PoolIntArray):void
-    public add_color(color:Color):void
-    public add_index(index:Int):void
-    public add_normal(normal:Vector3):void
-    public add_smooth_group(smooth:Bool):void
-    public add_tangent(tangent:Plane):void
-    public add_to_format(flags:Int):void
-    public add_triangle_fan(vertexes:PoolVector3Array, uvs:PoolVector2Array, colors:PoolColorArray, uv2s:PoolVector2Array, normals:PoolVector3Array, tangents:Array):void
-    public add_uv(uv:Vector2):void
-    public add_uv2(uv2:Vector2):void
-    public add_vertex(vertex:Vector3):void
-    public add_weights(weights:PoolRealArray):void
-    public append_from(existing:Mesh, surface:Int, transform:Transform):void
-    public begin(primitive:Int):void
-    public clear():void
+    public add_bones(bones:PoolIntArray):Void
+    public add_color(color:Color):Void
+    public add_index(index:Int):Void
+    public add_normal(normal:Vector3):Void
+    public add_smooth_group(smooth:Bool):Void
+    public add_tangent(tangent:Plane):Void
+    public add_to_format(flags:Int):Void
+    public add_triangle_fan(vertexes:PoolVector3Array, uvs:PoolVector2Array, colors:PoolColorArray, uv2s:PoolVector2Array, normals:PoolVector3Array, tangents:Array):Void
+    public add_uv(uv:Vector2):Void
+    public add_uv2(uv2:Vector2):Void
+    public add_vertex(vertex:Vector3):Void
+    public add_weights(weights:PoolRealArray):Void
+    public append_from(existing:Mesh, surface:Int, transform:Transform):Void
+    public begin(primitive:Int):Void
+    public clear():Void
     public commit(existing:ArrayMesh, flags:Int):ArrayMesh
-    public create_from(existing:Mesh, surface:Int):void
-    public deindex():void
-    public generate_normals(flip:Bool):void
-    public generate_tangents():void
-    public index():void
-    public set_material(material:Material):void
+    public create_from(existing:Mesh, surface:Int):Void
+    public deindex():Void
+    public generate_normals(flip:Bool):Void
+    public generate_tangents():Void
+    public index():Void
+    public set_material(material:Material):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -6060,12 +6060,12 @@ extern class TabContainer extends Container {
     public get_tab_icon(tab_idx:Int):Texture
     public get_tab_title(tab_idx:Int):String
     public get_tabs_rearrange_group():Int
-    public set_popup(popup:Node):void
-    public set_tab_disabled(tab_idx:Int, disabled:Bool):void
-    public set_tab_icon(tab_idx:Int, icon:Texture):void
-    public set_tab_title(tab_idx:Int, title:String):void
-    public set_tabs_rearrange_group(group_id:Int):void
-tab:Int, tab:Int, 
+    public set_popup(popup:Node):Void
+    public set_tab_disabled(tab_idx:Int, disabled:Bool):Void
+    public set_tab_icon(tab_idx:Int, icon:Texture):Void
+    public set_tab_title(tab_idx:Int, title:String):Void
+    public set_tabs_rearrange_group(group_id:Int):Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/Tabs.hpp')
@@ -6073,8 +6073,8 @@ tab:Int, tab:Int,
 @:unreflective
 @:structAccess
 extern class Tabs extends Control {
-    public add_tab(title:String, icon:Texture):void
-    public ensure_tab_visible(idx:Int):void
+    public add_tab(title:String, icon:Texture):Void
+    public ensure_tab_visible(idx:Int):Void
     public get_offset_buttons_visible():Bool
     public get_tab_count():Int
     public get_tab_disabled(tab_idx:Int):Bool
@@ -6083,13 +6083,13 @@ extern class Tabs extends Control {
     public get_tab_rect(tab_idx:Int):Rect2
     public get_tab_title(tab_idx:Int):String
     public get_tabs_rearrange_group():Int
-    public move_tab(from:Int, to:Int):void
-    public remove_tab(tab_idx:Int):void
-    public set_tab_disabled(tab_idx:Int, disabled:Bool):void
-    public set_tab_icon(tab_idx:Int, icon:Texture):void
-    public set_tab_title(tab_idx:Int, title:String):void
-    public set_tabs_rearrange_group(group_id:Int):void
-idx_to:Int, tab:Int, tab:Int, tab:Int, tab:Int, tab:Int, 
+    public move_tab(from:Int, to:Int):Void
+    public remove_tab(tab_idx:Int):Void
+    public set_tab_disabled(tab_idx:Int, disabled:Bool):Void
+    public set_tab_icon(tab_idx:Int, icon:Texture):Void
+    public set_tab_title(tab_idx:Int, title:String):Void
+    public set_tabs_rearrange_group(group_id:Int):Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/TCP_Server.hpp')
@@ -6099,7 +6099,7 @@ idx_to:Int, tab:Int, tab:Int, tab:Int, tab:Int, tab:Int,
 extern class TCP_Server extends Reference {
     public is_connection_available():Bool
     public listen(port:Int, bind_address:String):Int
-    public stop():void
+    public stop():Void
     public take_connection():StreamPeerTCP
 
 }
@@ -6109,20 +6109,20 @@ extern class TCP_Server extends Reference {
 @:unreflective
 @:structAccess
 extern class TextEdit extends Control {
-    public add_color_region(begin_key:String, end_key:String, color:Color, line_only:Bool):void
-    public add_keyword_color(keyword:String, color:Color):void
+    public add_color_region(begin_key:String, end_key:String, color:Color, line_only:Bool):Void
+    public add_keyword_color(keyword:String, color:Color):Void
     public can_fold(line:Int):Bool
-    public clear_colors():void
-    public clear_undo_history():void
-    public copy():void
+    public clear_colors():Void
+    public clear_undo_history():Void
+    public copy():Void
     public cursor_get_column():Int
     public cursor_get_line():Int
-    public cursor_set_column(column:Int, adjust_viewport:Bool):void
-    public cursor_set_line(line:Int, adjust_viewport:Bool, can_be_hidden:Bool, wrap_index:Int):void
-    public cut():void
-    public deselect():void
-    public fold_all_lines():void
-    public fold_line(line:Int):void
+    public cursor_set_column(column:Int, adjust_viewport:Bool):Void
+    public cursor_set_line(line:Int, adjust_viewport:Bool, can_be_hidden:Bool, wrap_index:Int):Void
+    public cut():Void
+    public deselect():Void
+    public fold_all_lines():Void
+    public fold_line(line:Int):Void
     public get_breakpoints():Array
     public get_keyword_color(keyword:String):Color
     public get_line(line:Int):String
@@ -6135,23 +6135,23 @@ extern class TextEdit extends Control {
     public get_selection_to_line():Int
     public get_word_under_cursor():String
     public has_keyword_color(keyword:String):Bool
-    public insert_text_at_cursor(text:String):void
+    public insert_text_at_cursor(text:String):Void
     public is_folded(line:Int):Bool
     public is_line_hidden(line:Int):Bool
     public is_selection_active():Bool
-    public menu_option(option:Int):void
-    public paste():void
-    public redo():void
-    public remove_breakpoints():void
+    public menu_option(option:Int):Void
+    public paste():Void
+    public redo():Void
+    public remove_breakpoints():Void
     public search(key:String, flags:Int, from_line:Int, from_column:Int):PoolIntArray
-    public select(from_line:Int, from_column:Int, to_line:Int, to_column:Int):void
-    public select_all():void
-    public set_line_as_hidden(line:Int, enable:Bool):void
-    public toggle_fold_line(line:Int):void
-    public undo():void
-    public unfold_line(line:Int):void
-    public unhide_all_lines():void
-row:Int, symbol:String, row:Int, column:Int, 
+    public select(from_line:Int, from_column:Int, to_line:Int, to_column:Int):Void
+    public select_all():Void
+    public set_line_as_hidden(line:Int, enable:Bool):Void
+    public toggle_fold_line(line:Int):Void
+    public undo():Void
+    public unfold_line(line:Int):Void
+    public unhide_all_lines():Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/TextFile.hpp')
@@ -6167,9 +6167,9 @@ extern class TextFile extends Resource {
 @:unreflective
 @:structAccess
 extern class Texture extends Resource {
-    public draw(canvas_item:Rid, position:Vector2, modulate:Color, transpose:Bool, normal_map:Texture):void
-    public draw_rect(canvas_item:Rid, rect:Rect2, tile:Bool, modulate:Color, transpose:Bool, normal_map:Texture):void
-    public draw_rect_region(canvas_item:Rid, rect:Rect2, src_rect:Rect2, modulate:Color, transpose:Bool, normal_map:Texture, clip_uv:Bool):void
+    public draw(canvas_item:Rid, position:Vector2, modulate:Color, transpose:Bool, normal_map:Texture):Void
+    public draw_rect(canvas_item:Rid, rect:Rect2, tile:Bool, modulate:Color, transpose:Bool, normal_map:Texture):Void
+    public draw_rect_region(canvas_item:Rid, rect:Rect2, src_rect:Rect2, modulate:Color, transpose:Bool, normal_map:Texture, clip_uv:Bool):Void
     public get_data():Image
     public get_height():Int
     public get_size():Vector2
@@ -6207,12 +6207,12 @@ extern class TextureRect extends Control {
 @:unreflective
 @:structAccess
 extern class Theme extends Resource {
-    public clear_color(name:String, type:String):void
-    public clear_constant(name:String, type:String):void
-    public clear_font(name:String, type:String):void
-    public clear_icon(name:String, type:String):void
-    public clear_stylebox(name:String, type:String):void
-    public copy_default_theme():void
+    public clear_color(name:String, type:String):Void
+    public clear_constant(name:String, type:String):Void
+    public clear_font(name:String, type:String):Void
+    public clear_icon(name:String, type:String):Void
+    public clear_stylebox(name:String, type:String):Void
+    public copy_default_theme():Void
     public get_color(name:String, type:String):Color
     public get_color_list(type:String):PoolStringArray
     public get_constant(name:String, type:String):Int
@@ -6230,11 +6230,11 @@ extern class Theme extends Resource {
     public has_font(name:String, type:String):Bool
     public has_icon(name:String, type:String):Bool
     public has_stylebox(name:String, type:String):Bool
-    public set_color(name:String, type:String, color:Color):void
-    public set_constant(name:String, type:String, constant:Int):void
-    public set_font(name:String, type:String, font:Font):void
-    public set_icon(name:String, type:String, texture:Texture):void
-    public set_stylebox(name:String, type:String, texture:StyleBox):void
+    public set_color(name:String, type:String, color:Color):Void
+    public set_constant(name:String, type:String, constant:Int):Void
+    public set_font(name:String, type:String, font:Font):Void
+    public set_icon(name:String, type:String, texture:Texture):Void
+    public set_stylebox(name:String, type:String, texture:StyleBox):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -6255,8 +6255,8 @@ extern class Thread extends Reference {
 @:unreflective
 @:structAccess
 extern class TileMap extends Node2D {
-    public clear():void
-    public fix_invalid_tiles():void
+    public clear():Void
+    public fix_invalid_tiles():Void
     public get_cell(x:Int, y:Int):Int
     public get_cellv(position:Vector2):Int
     public get_collision_layer_bit(bit:Int):Bool
@@ -6268,14 +6268,14 @@ extern class TileMap extends Node2D {
     public is_cell_x_flipped(x:Int, y:Int):Bool
     public is_cell_y_flipped(x:Int, y:Int):Bool
     public map_to_world(map_position:Vector2, ignore_half_ofs:Bool):Vector2
-    public set_cell(x:Int, y:Int, tile:Int, flip_x:Bool, flip_y:Bool, transpose:Bool, autotile_coord:Vector2):void
-    public set_celld(position:Vector2, data:Dictionary):void
-    public set_cellv(position:Vector2, tile:Int, flip_x:Bool, flip_y:Bool, transpose:Bool):void
-    public set_collision_layer_bit(bit:Int, value:Bool):void
-    public set_collision_mask_bit(bit:Int, value:Bool):void
-    public update_bitmask_area(position:Vector2):void
-    public update_bitmask_region(start:Vector2, end:Vector2):void
-    public update_dirty_quadrants():void
+    public set_cell(x:Int, y:Int, tile:Int, flip_x:Bool, flip_y:Bool, transpose:Bool, autotile_coord:Vector2):Void
+    public set_celld(position:Vector2, data:Dictionary):Void
+    public set_cellv(position:Vector2, tile:Int, flip_x:Bool, flip_y:Bool, transpose:Bool):Void
+    public set_collision_layer_bit(bit:Int, value:Bool):Void
+    public set_collision_mask_bit(bit:Int, value:Bool):Void
+    public update_bitmask_area(position:Vector2):Void
+    public update_bitmask_region(start:Vector2, end:Vector2):Void
+    public update_dirty_quadrants():Void
     public world_to_map(world_position:Vector2):Vector2
 
 }
@@ -6288,14 +6288,14 @@ extern class TileSet extends Resource {
     public _forward_subtile_selection(autotile_id:Int, bitmask:Int, tilemap:Object, tile_location:Vector2):Vector2
     public _is_tile_bound(drawn_id:Int, neighbor_id:Int):Bool
     public autotile_get_bitmask_mode(id:Int):Int
-    public autotile_set_bitmask_mode(id:Int, mode:Int):void
-    public clear():void
-    public create_tile(id:Int):void
+    public autotile_set_bitmask_mode(id:Int, mode:Int):Void
+    public clear():Void
+    public create_tile(id:Int):Void
     public find_tile_by_name(name:String):Int
     public get_last_unused_tile_id():Int
     public get_tiles_ids():Array
-    public remove_tile(id:Int):void
-    public tile_add_shape(id:Int, shape:Shape2D, shape_transform:Transform2D, one_way:Bool, autotile_coord:Vector2):void
+    public remove_tile(id:Int):Void
+    public tile_add_shape(id:Int, shape:Shape2D, shape_transform:Transform2D, one_way:Bool, autotile_coord:Vector2):Void
     public tile_get_light_occluder(id:Int):OccluderPolygon2D
     public tile_get_material(id:Int):ShaderMaterial
     public tile_get_modulate(id:Int):Color
@@ -6314,23 +6314,23 @@ extern class TileSet extends Resource {
     public tile_get_texture_offset(id:Int):Vector2
     public tile_get_tile_mode(id:Int):Int
     public tile_get_z_index(id:Int):Int
-    public tile_set_light_occluder(id:Int, light_occluder:OccluderPolygon2D):void
-    public tile_set_material(id:Int, material:ShaderMaterial):void
-    public tile_set_modulate(id:Int, color:Color):void
-    public tile_set_name(id:Int, name:String):void
-    public tile_set_navigation_polygon(id:Int, navigation_polygon:NavigationPolygon):void
-    public tile_set_navigation_polygon_offset(id:Int, navigation_polygon_offset:Vector2):void
-    public tile_set_normal_map(id:Int, normal_map:Texture):void
-    public tile_set_occluder_offset(id:Int, occluder_offset:Vector2):void
-    public tile_set_region(id:Int, region:Rect2):void
-    public tile_set_shape(id:Int, shape_id:Int, shape:Shape2D):void
-    public tile_set_shape_one_way(id:Int, shape_id:Int, one_way:Bool):void
-    public tile_set_shape_transform(id:Int, shape_id:Int, shape_transform:Transform2D):void
-    public tile_set_shapes(id:Int, shapes:Array):void
-    public tile_set_texture(id:Int, texture:Texture):void
-    public tile_set_texture_offset(id:Int, texture_offset:Vector2):void
-    public tile_set_tile_mode(id:Int, tilemode:Int):void
-    public tile_set_z_index(id:Int, z_index:Int):void
+    public tile_set_light_occluder(id:Int, light_occluder:OccluderPolygon2D):Void
+    public tile_set_material(id:Int, material:ShaderMaterial):Void
+    public tile_set_modulate(id:Int, color:Color):Void
+    public tile_set_name(id:Int, name:String):Void
+    public tile_set_navigation_polygon(id:Int, navigation_polygon:NavigationPolygon):Void
+    public tile_set_navigation_polygon_offset(id:Int, navigation_polygon_offset:Vector2):Void
+    public tile_set_normal_map(id:Int, normal_map:Texture):Void
+    public tile_set_occluder_offset(id:Int, occluder_offset:Vector2):Void
+    public tile_set_region(id:Int, region:Rect2):Void
+    public tile_set_shape(id:Int, shape_id:Int, shape:Shape2D):Void
+    public tile_set_shape_one_way(id:Int, shape_id:Int, one_way:Bool):Void
+    public tile_set_shape_transform(id:Int, shape_id:Int, shape_transform:Transform2D):Void
+    public tile_set_shapes(id:Int, shapes:Array):Void
+    public tile_set_texture(id:Int, texture:Texture):Void
+    public tile_set_texture_offset(id:Int, texture_offset:Vector2):Void
+    public tile_set_tile_mode(id:Int, tilemode:Int):Void
+    public tile_set_z_index(id:Int, z_index:Int):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -6340,8 +6340,8 @@ extern class TileSet extends Resource {
 @:structAccess
 extern class Timer extends Node {
     public is_stopped():Bool
-    public start(time_sec:Float):void
-    public stop():void
+    public start(time_sec:Float):Void
+    public stop():Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -6415,8 +6415,8 @@ extern class Transform2D {
 @:unreflective
 @:structAccess
 extern class Translation extends Resource {
-    public add_message(src_message:String, xlated_message:String):void
-    public erase_message(src_message:String):void
+    public add_message(src_message:String, xlated_message:String):Void
+    public erase_message(src_message:String):Void
     public get_message(src_message:String):String
     public get_message_count():Int
     public get_message_list():PoolStringArray
@@ -6428,12 +6428,12 @@ extern class Translation extends Resource {
 @:unreflective
 @:structAccess
 extern class TranslationServer extends Object {
-    public add_translation(translation:Translation):void
-    public clear():void
+    public add_translation(translation:Translation):Void
+    public clear():Void
     public get_locale():String
     public get_locale_name(locale:String):String
-    public remove_translation(translation:Translation):void
-    public set_locale(locale:String):void
+    public remove_translation(translation:Translation):Void
+    public set_locale(locale:String):Void
     public translate(message:String):String
 
 }
@@ -6444,9 +6444,9 @@ extern class TranslationServer extends Object {
 @:structAccess
 extern class Tree extends Control {
     public are_column_titles_visible():Bool
-    public clear():void
+    public clear():Void
     public create_item(parent:Object, idx:Int):Object
-    public ensure_cursor_is_visible():void
+    public ensure_cursor_is_visible():Void
     public get_column_at_position(position:Vector2):Int
     public get_column_title(column:Int):String
     public get_column_width(column:Int):Int
@@ -6462,11 +6462,11 @@ extern class Tree extends Control {
     public get_scroll():Vector2
     public get_selected():TreeItem
     public get_selected_column():Int
-    public set_column_expand(column:Int, expand:Bool):void
-    public set_column_min_width(column:Int, min_width:Int):void
-    public set_column_title(column:Int, title:String):void
-    public set_column_titles_visible(visible:Bool):void
-item:Object, column:Int, id:Int, column:Int, arrow_clicked:Bool, position:Vector2, item:Object, position:Vector2, item:Object, column:Int, selected:Bool, 
+    public set_column_expand(column:Int, expand:Bool):Void
+    public set_column_min_width(column:Int, min_width:Int):Void
+    public set_column_title(column:Int, title:String):Void
+    public set_column_titles_visible(visible:Bool):Void
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/TreeItem.hpp')
@@ -6474,11 +6474,11 @@ item:Object, column:Int, id:Int, column:Int, arrow_clicked:Bool, position:Vector
 @:unreflective
 @:structAccess
 extern class TreeItem extends Object {
-    public add_button(column:Int, button:Texture, button_idx:Int, disabled:Bool, tooltip:String):void
-    public clear_custom_bg_color(column:Int):void
-    public clear_custom_color(column:Int):void
-    public deselect(column:Int):void
-    public erase_button(column:Int, button_idx:Int):void
+    public add_button(column:Int, button:Texture, button_idx:Int, disabled:Bool, tooltip:String):Void
+    public clear_custom_bg_color(column:Int):Void
+    public clear_custom_color(column:Int):Void
+    public deselect(column:Int):Void
+    public erase_button(column:Int, button_idx:Int):Void
     public get_button(column:Int, button_idx:Int):Texture
     public get_button_count(column:Int):Int
     public get_cell_mode(column:Int):Int
@@ -6505,29 +6505,29 @@ extern class TreeItem extends Object {
     public is_editable(column:Int):Bool
     public is_selectable(column:Int):Bool
     public is_selected(column:Int):Bool
-    public move_to_bottom():void
-    public move_to_top():void
-    public remove_child(child:Object):void
-    public select(column:Int):void
-    public set_button(column:Int, button_idx:Int, button:Texture):void
-    public set_cell_mode(column:Int, mode:Int):void
-    public set_checked(column:Int, checked:Bool):void
-    public set_custom_as_button(column:Int, enable:Bool):void
-    public set_custom_bg_color(column:Int, color:Color, just_outline:Bool):void
-    public set_custom_color(column:Int, color:Color):void
-    public set_custom_draw(column:Int, object:Object, callback:String):void
-    public set_editable(column:Int, enabled:Bool):void
-    public set_expand_right(column:Int, enable:Bool):void
-    public set_icon(column:Int, texture:Texture):void
-    public set_icon_max_width(column:Int, width:Int):void
-    public set_icon_region(column:Int, region:Rect2):void
-    public set_metadata(column:Int, meta:Variant):void
-    public set_range(column:Int, value:Float):void
-    public set_range_config(column:Int, min:Float, max:Float, step:Float, expr:Bool):void
-    public set_selectable(column:Int, selectable:Bool):void
-    public set_text(column:Int, text:String):void
-    public set_text_align(column:Int, text_align:Int):void
-    public set_tooltip(column:Int, tooltip:String):void
+    public move_to_bottom():Void
+    public move_to_top():Void
+    public remove_child(child:Object):Void
+    public select(column:Int):Void
+    public set_button(column:Int, button_idx:Int, button:Texture):Void
+    public set_cell_mode(column:Int, mode:Int):Void
+    public set_checked(column:Int, checked:Bool):Void
+    public set_custom_as_button(column:Int, enable:Bool):Void
+    public set_custom_bg_color(column:Int, color:Color, just_outline:Bool):Void
+    public set_custom_color(column:Int, color:Color):Void
+    public set_custom_draw(column:Int, object:Object, callback:String):Void
+    public set_editable(column:Int, enabled:Bool):Void
+    public set_expand_right(column:Int, enable:Bool):Void
+    public set_icon(column:Int, texture:Texture):Void
+    public set_icon_max_width(column:Int, width:Int):Void
+    public set_icon_region(column:Int, region:Rect2):Void
+    public set_metadata(column:Int, meta:Variant):Void
+    public set_range(column:Int, value:Float):Void
+    public set_range_config(column:Int, min:Float, max:Float, step:Float, expr:Bool):Void
+    public set_selectable(column:Int, selectable:Bool):Void
+    public set_text(column:Int, text:String):Void
+    public set_text_align(column:Int, text_align:Int):Void
+    public set_tooltip(column:Int, tooltip:String):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -6559,14 +6559,14 @@ extern class Tween extends Node {
     public resume(object:Object, key:String):Bool
     public resume_all():Bool
     public seek(time:Float):Bool
-    public set_active(active:Bool):void
+    public set_active(active:Bool):Void
     public start():Bool
     public stop(object:Object, key:String):Bool
     public stop_all():Bool
     public targeting_method(object:Object, method:String, initial:Object, initial_method:String, final_val:Variant, duration:Float, trans_type:Int, ease_type:Int, delay:Float):Bool
     public targeting_property(object:Object, property:NodePath, initial:Object, initial_val:NodePath, final_val:Variant, duration:Float, trans_type:Int, ease_type:Int, delay:Float):Bool
     public tell():Float
-object:Object, key:NodePath, object:Object, key:NodePath, object:Object, key:NodePath, elapsed:Float, value:Object, 
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/UndoRedo.hpp')
@@ -6575,14 +6575,14 @@ object:Object, key:NodePath, object:Object, key:NodePath, object:Object, key:Nod
 @:structAccess
 extern class UndoRedo extends Object {
     public add_do_method(object:Object, method:String):Variant
-    public add_do_property(object:Object, property:String, value:Variant):void
-    public add_do_reference(object:Object):void
+    public add_do_property(object:Object, property:String, value:Variant):Void
+    public add_do_reference(object:Object):Void
     public add_undo_method(object:Object, method:String):Variant
-    public add_undo_property(object:Object, property:String, value:Variant):void
-    public add_undo_reference(object:Object):void
-    public clear_history():void
-    public commit_action():void
-    public create_action(name:String, merge_mode:Int):void
+    public add_undo_property(object:Object, property:String, value:Variant):Void
+    public add_undo_reference(object:Object):Void
+    public clear_history():Void
+    public commit_action():Void
+    public create_action(name:String, merge_mode:Int):Void
     public get_current_action_name():String
     public get_version():Int
     public redo():Bool
@@ -6702,8 +6702,8 @@ extern class VideoPlayer extends Control {
     public get_stream_name():String
     public get_video_texture():Texture
     public is_playing():Bool
-    public play():void
-    public stop():void
+    public play():Void
+    public stop():Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -6732,15 +6732,15 @@ extern class Viewport extends Node {
     public get_visible_rect():Rect2
     public gui_get_drag_data():Variant
     public gui_has_modal_stack():Bool
-    public input(local_event:InputEvent):void
+    public input(local_event:InputEvent):Void
     public is_size_override_enabled():Bool
     public is_size_override_stretch_enabled():Bool
-    public set_attach_to_screen_rect(rect:Rect2):void
-    public set_size_override(enable:Bool, size:Vector2, margin:Vector2):void
-    public set_size_override_stretch(enabled:Bool):void
-    public unhandled_input(local_event:InputEvent):void
-    public update_worlds():void
-    public warp_mouse(to_position:Vector2):void
+    public set_attach_to_screen_rect(rect:Rect2):Void
+    public set_size_override(enable:Bool, size:Vector2, margin:Vector2):Void
+    public set_size_override_stretch(enabled:Bool):Void
+    public unhandled_input(local_event:InputEvent):Void
+    public update_worlds():Void
+    public warp_mouse(to_position:Vector2):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -6782,7 +6782,7 @@ extern class VisibilityEnabler2D extends VisibilityNotifier2D {
 @:structAccess
 extern class VisibilityNotifier extends Spatial {
     public is_on_screen():Bool
-camera:Object, camera:Object, 
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/VisibilityNotifier2D.hpp')
@@ -6791,7 +6791,7 @@ camera:Object, camera:Object,
 @:structAccess
 extern class VisibilityNotifier2D extends Node2D {
     public is_on_screen():Bool
-viewport:Object, viewport:Object, 
+
 }
 // ------------------version:3.1-----------------------------
 @:include('godot-cpp/include/gen/VisualInstance.hpp')
@@ -6801,7 +6801,7 @@ viewport:Object, viewport:Object,
 extern class VisualInstance extends Spatial {
     public get_aabb():Aabb
     public get_transformed_aabb():Aabb
-    public set_base(base:Rid):void
+    public set_base(base:Rid):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -6810,107 +6810,107 @@ extern class VisualInstance extends Spatial {
 @:unreflective
 @:structAccess
 extern class VisualServer extends Object {
-    public black_bars_set_images(left:Rid, top:Rid, right:Rid, bottom:Rid):void
-    public black_bars_set_margins(left:Int, top:Int, right:Int, bottom:Int):void
+    public black_bars_set_images(left:Rid, top:Rid, right:Rid, bottom:Rid):Void
+    public black_bars_set_margins(left:Int, top:Int, right:Int, bottom:Int):Void
     public camera_create():Rid
-    public camera_set_cull_mask(camera:Rid, layers:Int):void
-    public camera_set_environment(camera:Rid, env:Rid):void
-    public camera_set_orthogonal(camera:Rid, size:Float, z_near:Float, z_far:Float):void
-    public camera_set_perspective(camera:Rid, fovy_degrees:Float, z_near:Float, z_far:Float):void
-    public camera_set_transform(camera:Rid, transform:Transform):void
-    public camera_set_use_vertical_aspect(camera:Rid, enable:Bool):void
+    public camera_set_cull_mask(camera:Rid, layers:Int):Void
+    public camera_set_environment(camera:Rid, env:Rid):Void
+    public camera_set_orthogonal(camera:Rid, size:Float, z_near:Float, z_far:Float):Void
+    public camera_set_perspective(camera:Rid, fovy_degrees:Float, z_near:Float, z_far:Float):Void
+    public camera_set_transform(camera:Rid, transform:Transform):Void
+    public camera_set_use_vertical_aspect(camera:Rid, enable:Bool):Void
     public canvas_create():Rid
-    public canvas_item_add_circle(item:Rid, pos:Vector2, radius:Float, color:Color):void
-    public canvas_item_add_clip_ignore(item:Rid, ignore:Bool):void
-    public canvas_item_add_line(item:Rid, from:Vector2, to:Vector2, color:Color, width:Float, antialiased:Bool):void
-    public canvas_item_add_mesh(item:Rid, mesh:Rid, texture:Rid, normal_map:Rid):void
-    public canvas_item_add_multimesh(item:Rid, mesh:Rid, texture:Rid, normal_map:Rid):void
-    public canvas_item_add_nine_patch(item:Rid, rect:Rect2, source:Rect2, texture:Rid, topleft:Vector2, bottomright:Vector2, x_axis_mode:Int, y_axis_mode:Int, draw_center:Bool, modulate:Color, normal_map:Rid):void
-    public canvas_item_add_particles(item:Rid, particles:Rid, texture:Rid, normal_map:Rid, h_frames:Int, v_frames:Int):void
-    public canvas_item_add_polygon(item:Rid, points:PoolVector2Array, colors:PoolColorArray, uvs:PoolVector2Array, texture:Rid, normal_map:Rid, antialiased:Bool):void
-    public canvas_item_add_polyline(item:Rid, points:PoolVector2Array, colors:PoolColorArray, width:Float, antialiased:Bool):void
-    public canvas_item_add_primitive(item:Rid, points:PoolVector2Array, colors:PoolColorArray, uvs:PoolVector2Array, texture:Rid, width:Float, normal_map:Rid):void
-    public canvas_item_add_rect(item:Rid, rect:Rect2, color:Color):void
-    public canvas_item_add_set_transform(item:Rid, transform:Transform2D):void
-    public canvas_item_add_texture_rect(item:Rid, rect:Rect2, texture:Rid, tile:Bool, modulate:Color, transpose:Bool, normal_map:Rid):void
-    public canvas_item_add_texture_rect_region(item:Rid, rect:Rect2, texture:Rid, src_rect:Rect2, modulate:Color, transpose:Bool, normal_map:Rid, clip_uv:Bool):void
-    public canvas_item_add_triangle_array(item:Rid, indices:PoolIntArray, points:PoolVector2Array, colors:PoolColorArray, uvs:PoolVector2Array, bones:PoolIntArray, weights:PoolRealArray, texture:Rid, count:Int, normal_map:Rid):void
-    public canvas_item_clear(item:Rid):void
+    public canvas_item_add_circle(item:Rid, pos:Vector2, radius:Float, color:Color):Void
+    public canvas_item_add_clip_ignore(item:Rid, ignore:Bool):Void
+    public canvas_item_add_line(item:Rid, from:Vector2, to:Vector2, color:Color, width:Float, antialiased:Bool):Void
+    public canvas_item_add_mesh(item:Rid, mesh:Rid, texture:Rid, normal_map:Rid):Void
+    public canvas_item_add_multimesh(item:Rid, mesh:Rid, texture:Rid, normal_map:Rid):Void
+    public canvas_item_add_nine_patch(item:Rid, rect:Rect2, source:Rect2, texture:Rid, topleft:Vector2, bottomright:Vector2, x_axis_mode:Int, y_axis_mode:Int, draw_center:Bool, modulate:Color, normal_map:Rid):Void
+    public canvas_item_add_particles(item:Rid, particles:Rid, texture:Rid, normal_map:Rid, h_frames:Int, v_frames:Int):Void
+    public canvas_item_add_polygon(item:Rid, points:PoolVector2Array, colors:PoolColorArray, uvs:PoolVector2Array, texture:Rid, normal_map:Rid, antialiased:Bool):Void
+    public canvas_item_add_polyline(item:Rid, points:PoolVector2Array, colors:PoolColorArray, width:Float, antialiased:Bool):Void
+    public canvas_item_add_primitive(item:Rid, points:PoolVector2Array, colors:PoolColorArray, uvs:PoolVector2Array, texture:Rid, width:Float, normal_map:Rid):Void
+    public canvas_item_add_rect(item:Rid, rect:Rect2, color:Color):Void
+    public canvas_item_add_set_transform(item:Rid, transform:Transform2D):Void
+    public canvas_item_add_texture_rect(item:Rid, rect:Rect2, texture:Rid, tile:Bool, modulate:Color, transpose:Bool, normal_map:Rid):Void
+    public canvas_item_add_texture_rect_region(item:Rid, rect:Rect2, texture:Rid, src_rect:Rect2, modulate:Color, transpose:Bool, normal_map:Rid, clip_uv:Bool):Void
+    public canvas_item_add_triangle_array(item:Rid, indices:PoolIntArray, points:PoolVector2Array, colors:PoolColorArray, uvs:PoolVector2Array, bones:PoolIntArray, weights:PoolRealArray, texture:Rid, count:Int, normal_map:Rid):Void
+    public canvas_item_clear(item:Rid):Void
     public canvas_item_create():Rid
-    public canvas_item_set_clip(item:Rid, clip:Bool):void
-    public canvas_item_set_copy_to_backbuffer(item:Rid, enabled:Bool, rect:Rect2):void
-    public canvas_item_set_custom_rect(item:Rid, use_custom_rect:Bool, rect:Rect2):void
-    public canvas_item_set_distance_field_mode(item:Rid, enabled:Bool):void
-    public canvas_item_set_draw_behind_parent(item:Rid, enabled:Bool):void
-    public canvas_item_set_draw_index(item:Rid, index:Int):void
-    public canvas_item_set_light_mask(item:Rid, mask:Int):void
-    public canvas_item_set_material(item:Rid, material:Rid):void
-    public canvas_item_set_modulate(item:Rid, color:Color):void
-    public canvas_item_set_parent(item:Rid, parent:Rid):void
-    public canvas_item_set_self_modulate(item:Rid, color:Color):void
-    public canvas_item_set_sort_children_by_y(item:Rid, enabled:Bool):void
-    public canvas_item_set_transform(item:Rid, transform:Transform2D):void
-    public canvas_item_set_use_parent_material(item:Rid, enabled:Bool):void
-    public canvas_item_set_visible(item:Rid, visible:Bool):void
-    public canvas_item_set_z_as_relative_to_parent(item:Rid, enabled:Bool):void
-    public canvas_item_set_z_index(item:Rid, z_index:Int):void
-    public canvas_light_attach_to_canvas(light:Rid, canvas:Rid):void
+    public canvas_item_set_clip(item:Rid, clip:Bool):Void
+    public canvas_item_set_copy_to_backbuffer(item:Rid, enabled:Bool, rect:Rect2):Void
+    public canvas_item_set_custom_rect(item:Rid, use_custom_rect:Bool, rect:Rect2):Void
+    public canvas_item_set_distance_field_mode(item:Rid, enabled:Bool):Void
+    public canvas_item_set_draw_behind_parent(item:Rid, enabled:Bool):Void
+    public canvas_item_set_draw_index(item:Rid, index:Int):Void
+    public canvas_item_set_light_mask(item:Rid, mask:Int):Void
+    public canvas_item_set_material(item:Rid, material:Rid):Void
+    public canvas_item_set_modulate(item:Rid, color:Color):Void
+    public canvas_item_set_parent(item:Rid, parent:Rid):Void
+    public canvas_item_set_self_modulate(item:Rid, color:Color):Void
+    public canvas_item_set_sort_children_by_y(item:Rid, enabled:Bool):Void
+    public canvas_item_set_transform(item:Rid, transform:Transform2D):Void
+    public canvas_item_set_use_parent_material(item:Rid, enabled:Bool):Void
+    public canvas_item_set_visible(item:Rid, visible:Bool):Void
+    public canvas_item_set_z_as_relative_to_parent(item:Rid, enabled:Bool):Void
+    public canvas_item_set_z_index(item:Rid, z_index:Int):Void
+    public canvas_light_attach_to_canvas(light:Rid, canvas:Rid):Void
     public canvas_light_create():Rid
-    public canvas_light_occluder_attach_to_canvas(occluder:Rid, canvas:Rid):void
+    public canvas_light_occluder_attach_to_canvas(occluder:Rid, canvas:Rid):Void
     public canvas_light_occluder_create():Rid
-    public canvas_light_occluder_set_enabled(occluder:Rid, enabled:Bool):void
-    public canvas_light_occluder_set_light_mask(occluder:Rid, mask:Int):void
-    public canvas_light_occluder_set_polygon(occluder:Rid, polygon:Rid):void
-    public canvas_light_occluder_set_transform(occluder:Rid, transform:Transform2D):void
-    public canvas_light_set_color(light:Rid, color:Color):void
-    public canvas_light_set_enabled(light:Rid, enabled:Bool):void
-    public canvas_light_set_energy(light:Rid, energy:Float):void
-    public canvas_light_set_height(light:Rid, height:Float):void
-    public canvas_light_set_item_cull_mask(light:Rid, mask:Int):void
-    public canvas_light_set_item_shadow_cull_mask(light:Rid, mask:Int):void
-    public canvas_light_set_layer_range(light:Rid, min_layer:Int, max_layer:Int):void
-    public canvas_light_set_mode(light:Rid, mode:Int):void
-    public canvas_light_set_scale(light:Rid, scale:Float):void
-    public canvas_light_set_shadow_buffer_size(light:Rid, size:Int):void
-    public canvas_light_set_shadow_color(light:Rid, color:Color):void
-    public canvas_light_set_shadow_enabled(light:Rid, enabled:Bool):void
-    public canvas_light_set_shadow_filter(light:Rid, filter:Int):void
-    public canvas_light_set_shadow_gradient_length(light:Rid, length:Float):void
-    public canvas_light_set_shadow_smooth(light:Rid, smooth:Float):void
-    public canvas_light_set_texture(light:Rid, texture:Rid):void
-    public canvas_light_set_texture_offset(light:Rid, offset:Vector2):void
-    public canvas_light_set_transform(light:Rid, transform:Transform2D):void
-    public canvas_light_set_z_range(light:Rid, min_z:Int, max_z:Int):void
+    public canvas_light_occluder_set_enabled(occluder:Rid, enabled:Bool):Void
+    public canvas_light_occluder_set_light_mask(occluder:Rid, mask:Int):Void
+    public canvas_light_occluder_set_polygon(occluder:Rid, polygon:Rid):Void
+    public canvas_light_occluder_set_transform(occluder:Rid, transform:Transform2D):Void
+    public canvas_light_set_color(light:Rid, color:Color):Void
+    public canvas_light_set_enabled(light:Rid, enabled:Bool):Void
+    public canvas_light_set_energy(light:Rid, energy:Float):Void
+    public canvas_light_set_height(light:Rid, height:Float):Void
+    public canvas_light_set_item_cull_mask(light:Rid, mask:Int):Void
+    public canvas_light_set_item_shadow_cull_mask(light:Rid, mask:Int):Void
+    public canvas_light_set_layer_range(light:Rid, min_layer:Int, max_layer:Int):Void
+    public canvas_light_set_mode(light:Rid, mode:Int):Void
+    public canvas_light_set_scale(light:Rid, scale:Float):Void
+    public canvas_light_set_shadow_buffer_size(light:Rid, size:Int):Void
+    public canvas_light_set_shadow_color(light:Rid, color:Color):Void
+    public canvas_light_set_shadow_enabled(light:Rid, enabled:Bool):Void
+    public canvas_light_set_shadow_filter(light:Rid, filter:Int):Void
+    public canvas_light_set_shadow_gradient_length(light:Rid, length:Float):Void
+    public canvas_light_set_shadow_smooth(light:Rid, smooth:Float):Void
+    public canvas_light_set_texture(light:Rid, texture:Rid):Void
+    public canvas_light_set_texture_offset(light:Rid, offset:Vector2):Void
+    public canvas_light_set_transform(light:Rid, transform:Transform2D):Void
+    public canvas_light_set_z_range(light:Rid, min_z:Int, max_z:Int):Void
     public canvas_occluder_polygon_create():Rid
-    public canvas_occluder_polygon_set_cull_mode(occluder_polygon:Rid, mode:Int):void
-    public canvas_occluder_polygon_set_shape(occluder_polygon:Rid, shape:PoolVector2Array, closed:Bool):void
-    public canvas_occluder_polygon_set_shape_as_lines(occluder_polygon:Rid, shape:PoolVector2Array):void
-    public canvas_set_item_mirroring(canvas:Rid, item:Rid, mirroring:Vector2):void
-    public canvas_set_modulate(canvas:Rid, color:Color):void
+    public canvas_occluder_polygon_set_cull_mode(occluder_polygon:Rid, mode:Int):Void
+    public canvas_occluder_polygon_set_shape(occluder_polygon:Rid, shape:PoolVector2Array, closed:Bool):Void
+    public canvas_occluder_polygon_set_shape_as_lines(occluder_polygon:Rid, shape:PoolVector2Array):Void
+    public canvas_set_item_mirroring(canvas:Rid, item:Rid, mirroring:Vector2):Void
+    public canvas_set_modulate(canvas:Rid, color:Color):Void
     public directional_light_create():Rid
-    public draw(swap_buffers:Bool, frame_step:Float):void
+    public draw(swap_buffers:Bool, frame_step:Float):Void
     public environment_create():Rid
-    public environment_set_adjustment(env:Rid, enable:Bool, brightness:Float, contrast:Float, saturation:Float, ramp:Rid):void
-    public environment_set_ambient_light(env:Rid, color:Color, energy:Float, sky_contibution:Float):void
-    public environment_set_background(env:Rid, bg:Int):void
-    public environment_set_bg_color(env:Rid, color:Color):void
-    public environment_set_bg_energy(env:Rid, energy:Float):void
-    public environment_set_canvas_max_layer(env:Rid, max_layer:Int):void
-    public environment_set_dof_blur_far(env:Rid, enable:Bool, distance:Float, transition:Float, far_amount:Float, quality:Int):void
-    public environment_set_dof_blur_near(env:Rid, enable:Bool, distance:Float, transition:Float, far_amount:Float, quality:Int):void
-    public environment_set_fog(env:Rid, enable:Bool, color:Color, sun_color:Color, sun_amount:Float):void
-    public environment_set_fog_depth(env:Rid, enable:Bool, depth_begin:Float, depth_curve:Float, transmit:Bool, transmit_curve:Float):void
-    public environment_set_fog_height(env:Rid, enable:Bool, min_height:Float, max_height:Float, height_curve:Float):void
-    public environment_set_glow(env:Rid, enable:Bool, level_flags:Int, intensity:Float, strength:Float, bloom_threshold:Float, blend_mode:Int, hdr_bleed_threshold:Float, hdr_bleed_scale:Float, bicubic_upscale:Bool):void
-    public environment_set_sky(env:Rid, sky:Rid):void
-    public environment_set_sky_custom_fov(env:Rid, scale:Float):void
-    public environment_set_ssao(env:Rid, enable:Bool, radius:Float, intensity:Float, radius2:Float, intensity2:Float, bias:Float, light_affect:Float, ao_channel_affect:Float, color:Color, quality:Int, blur:Int, bilateral_sharpness:Float):void
-    public environment_set_ssr(env:Rid, enable:Bool, max_steps:Int, fade_in:Float, fade_out:Float, depth_tolerance:Float, roughness:Bool):void
-    public environment_set_tonemap(env:Rid, tone_mapper:Int, exposure:Float, white:Float, auto_exposure:Bool, min_luminance:Float, max_luminance:Float, auto_exp_speed:Float, auto_exp_grey:Float):void
-    public finish():void
-    public force_draw(swap_buffers:Bool, frame_step:Float):void
-    public force_sync():void
-    public free_rid(rid:Rid):void
+    public environment_set_adjustment(env:Rid, enable:Bool, brightness:Float, contrast:Float, saturation:Float, ramp:Rid):Void
+    public environment_set_ambient_light(env:Rid, color:Color, energy:Float, sky_contibution:Float):Void
+    public environment_set_background(env:Rid, bg:Int):Void
+    public environment_set_bg_color(env:Rid, color:Color):Void
+    public environment_set_bg_energy(env:Rid, energy:Float):Void
+    public environment_set_canvas_max_layer(env:Rid, max_layer:Int):Void
+    public environment_set_dof_blur_far(env:Rid, enable:Bool, distance:Float, transition:Float, far_amount:Float, quality:Int):Void
+    public environment_set_dof_blur_near(env:Rid, enable:Bool, distance:Float, transition:Float, far_amount:Float, quality:Int):Void
+    public environment_set_fog(env:Rid, enable:Bool, color:Color, sun_color:Color, sun_amount:Float):Void
+    public environment_set_fog_depth(env:Rid, enable:Bool, depth_begin:Float, depth_curve:Float, transmit:Bool, transmit_curve:Float):Void
+    public environment_set_fog_height(env:Rid, enable:Bool, min_height:Float, max_height:Float, height_curve:Float):Void
+    public environment_set_glow(env:Rid, enable:Bool, level_flags:Int, intensity:Float, strength:Float, bloom_threshold:Float, blend_mode:Int, hdr_bleed_threshold:Float, hdr_bleed_scale:Float, bicubic_upscale:Bool):Void
+    public environment_set_sky(env:Rid, sky:Rid):Void
+    public environment_set_sky_custom_fov(env:Rid, scale:Float):Void
+    public environment_set_ssao(env:Rid, enable:Bool, radius:Float, intensity:Float, radius2:Float, intensity2:Float, bias:Float, light_affect:Float, ao_channel_affect:Float, color:Color, quality:Int, blur:Int, bilateral_sharpness:Float):Void
+    public environment_set_ssr(env:Rid, enable:Bool, max_steps:Int, fade_in:Float, fade_out:Float, depth_tolerance:Float, roughness:Bool):Void
+    public environment_set_tonemap(env:Rid, tone_mapper:Int, exposure:Float, white:Float, auto_exposure:Bool, min_luminance:Float, max_luminance:Float, auto_exp_speed:Float, auto_exp_grey:Float):Void
+    public finish():Void
+    public force_draw(swap_buffers:Bool, frame_step:Float):Void
+    public force_sync():Void
+    public free_rid(rid:Rid):Void
     public get_render_info(info:Int):Int
     public get_test_cube():Rid
     public get_test_texture():Rid
@@ -6927,101 +6927,101 @@ extern class VisualServer extends Object {
     public gi_probe_get_to_cell_xform(arg0:Rid):Transform
     public gi_probe_is_compressed(arg0:Rid):Bool
     public gi_probe_is_interior(arg0:Rid):Bool
-    public gi_probe_set_bias(bias:Rid, arg1:Float):void
-    public gi_probe_set_bounds(probe:Rid, bounds:Aabb):void
-    public gi_probe_set_cell_size(probe:Rid, range:Float):void
-    public gi_probe_set_compress(enable:Rid, arg1:Bool):void
-    public gi_probe_set_dynamic_data(data:Rid, arg1:PoolIntArray):void
-    public gi_probe_set_dynamic_range(range:Rid, arg1:Int):void
-    public gi_probe_set_energy(energy:Rid, arg1:Float):void
-    public gi_probe_set_interior(enable:Rid, arg1:Bool):void
-    public gi_probe_set_normal_bias(bias:Rid, arg1:Float):void
-    public gi_probe_set_propagation(propagation:Rid, arg1:Float):void
-    public gi_probe_set_to_cell_xform(xform:Rid, arg1:Transform):void
+    public gi_probe_set_bias(bias:Rid, arg1:Float):Void
+    public gi_probe_set_bounds(probe:Rid, bounds:Aabb):Void
+    public gi_probe_set_cell_size(probe:Rid, range:Float):Void
+    public gi_probe_set_compress(enable:Rid, arg1:Bool):Void
+    public gi_probe_set_dynamic_data(data:Rid, arg1:PoolIntArray):Void
+    public gi_probe_set_dynamic_range(range:Rid, arg1:Int):Void
+    public gi_probe_set_energy(energy:Rid, arg1:Float):Void
+    public gi_probe_set_interior(enable:Rid, arg1:Bool):Void
+    public gi_probe_set_normal_bias(bias:Rid, arg1:Float):Void
+    public gi_probe_set_propagation(propagation:Rid, arg1:Float):Void
+    public gi_probe_set_to_cell_xform(xform:Rid, arg1:Transform):Void
     public has_changed():Bool
     public has_feature(feature:Int):Bool
     public has_os_feature(feature:String):Bool
-    public immediate_begin(immediate:Rid, primitive:Int, texture:Rid):void
-    public immediate_clear(immediate:Rid):void
-    public immediate_color(immediate:Rid, color:Color):void
+    public immediate_begin(immediate:Rid, primitive:Int, texture:Rid):Void
+    public immediate_clear(immediate:Rid):Void
+    public immediate_color(immediate:Rid, color:Color):Void
     public immediate_create():Rid
-    public immediate_end(immediate:Rid):void
+    public immediate_end(immediate:Rid):Void
     public immediate_get_material(immediate:Rid):Rid
-    public immediate_normal(immediate:Rid, normal:Vector3):void
-    public immediate_set_material(immediate:Rid, material:Rid):void
-    public immediate_tangent(immediate:Rid, tangent:Plane):void
-    public immediate_uv(immediate:Rid, tex_uv:Vector2):void
-    public immediate_uv2(immediate:Rid, tex_uv:Vector2):void
-    public immediate_vertex(immediate:Rid, vertex:Vector3):void
-    public immediate_vertex_2d(immediate:Rid, vertex:Vector2):void
-    public init():void
-    public instance_attach_object_instance_id(instance:Rid, id:Int):void
-    public instance_attach_skeleton(instance:Rid, skeleton:Rid):void
+    public immediate_normal(immediate:Rid, normal:Vector3):Void
+    public immediate_set_material(immediate:Rid, material:Rid):Void
+    public immediate_tangent(immediate:Rid, tangent:Plane):Void
+    public immediate_uv(immediate:Rid, tex_uv:Vector2):Void
+    public immediate_uv2(immediate:Rid, tex_uv:Vector2):Void
+    public immediate_vertex(immediate:Rid, vertex:Vector3):Void
+    public immediate_vertex_2d(immediate:Rid, vertex:Vector2):Void
+    public init():Void
+    public instance_attach_object_instance_id(instance:Rid, id:Int):Void
+    public instance_attach_skeleton(instance:Rid, skeleton:Rid):Void
     public instance_create():Rid
     public instance_create2(base:Rid, scenario:Rid):Rid
-    public instance_geometry_set_as_instance_lod(instance:Rid, as_lod_of_instance:Rid):void
-    public instance_geometry_set_cast_shadows_setting(instance:Rid, shadow_casting_setting:Int):void
-    public instance_geometry_set_draw_range(instance:Rid, min:Float, max:Float, min_margin:Float, max_margin:Float):void
-    public instance_geometry_set_flag(instance:Rid, flag:Int, enabled:Bool):void
-    public instance_geometry_set_material_override(instance:Rid, material:Rid):void
-    public instance_set_base(instance:Rid, base:Rid):void
-    public instance_set_blend_shape_weight(instance:Rid, shape:Int, weight:Float):void
-    public instance_set_custom_aabb(instance:Rid, aabb:Aabb):void
-    public instance_set_exterior(instance:Rid, enabled:Bool):void
-    public instance_set_extra_visibility_margin(instance:Rid, margin:Float):void
-    public instance_set_layer_mask(instance:Rid, mask:Int):void
-    public instance_set_scenario(instance:Rid, scenario:Rid):void
-    public instance_set_surface_material(instance:Rid, surface:Int, material:Rid):void
-    public instance_set_transform(instance:Rid, transform:Transform):void
-    public instance_set_use_lightmap(instance:Rid, lightmap_instance:Rid, lightmap:Rid):void
-    public instance_set_visible(instance:Rid, visible:Bool):void
+    public instance_geometry_set_as_instance_lod(instance:Rid, as_lod_of_instance:Rid):Void
+    public instance_geometry_set_cast_shadows_setting(instance:Rid, shadow_casting_setting:Int):Void
+    public instance_geometry_set_draw_range(instance:Rid, min:Float, max:Float, min_margin:Float, max_margin:Float):Void
+    public instance_geometry_set_flag(instance:Rid, flag:Int, enabled:Bool):Void
+    public instance_geometry_set_material_override(instance:Rid, material:Rid):Void
+    public instance_set_base(instance:Rid, base:Rid):Void
+    public instance_set_blend_shape_weight(instance:Rid, shape:Int, weight:Float):Void
+    public instance_set_custom_aabb(instance:Rid, aabb:Aabb):Void
+    public instance_set_exterior(instance:Rid, enabled:Bool):Void
+    public instance_set_extra_visibility_margin(instance:Rid, margin:Float):Void
+    public instance_set_layer_mask(instance:Rid, mask:Int):Void
+    public instance_set_scenario(instance:Rid, scenario:Rid):Void
+    public instance_set_surface_material(instance:Rid, surface:Int, material:Rid):Void
+    public instance_set_transform(instance:Rid, transform:Transform):Void
+    public instance_set_use_lightmap(instance:Rid, lightmap_instance:Rid, lightmap:Rid):Void
+    public instance_set_visible(instance:Rid, visible:Bool):Void
     public instances_cull_aabb(aabb:Aabb, scenario:Rid):Array
     public instances_cull_convex(convex:Array, scenario:Rid):Array
     public instances_cull_ray(from:Vector3, to:Vector3, scenario:Rid):Array
-    public light_directional_set_blend_splits(light:Rid, enable:Bool):void
-    public light_directional_set_shadow_depth_range_mode(light:Rid, range_mode:Int):void
-    public light_directional_set_shadow_mode(light:Rid, mode:Int):void
-    public light_omni_set_shadow_detail(light:Rid, detail:Int):void
-    public light_omni_set_shadow_mode(light:Rid, mode:Int):void
-    public light_set_color(light:Rid, color:Color):void
-    public light_set_cull_mask(light:Rid, mask:Int):void
-    public light_set_negative(light:Rid, enable:Bool):void
-    public light_set_param(light:Rid, param:Int, value:Float):void
-    public light_set_projector(light:Rid, texture:Rid):void
-    public light_set_reverse_cull_face_mode(light:Rid, enabled:Bool):void
-    public light_set_shadow(light:Rid, enabled:Bool):void
-    public light_set_shadow_color(light:Rid, color:Color):void
+    public light_directional_set_blend_splits(light:Rid, enable:Bool):Void
+    public light_directional_set_shadow_depth_range_mode(light:Rid, range_mode:Int):Void
+    public light_directional_set_shadow_mode(light:Rid, mode:Int):Void
+    public light_omni_set_shadow_detail(light:Rid, detail:Int):Void
+    public light_omni_set_shadow_mode(light:Rid, mode:Int):Void
+    public light_set_color(light:Rid, color:Color):Void
+    public light_set_cull_mask(light:Rid, mask:Int):Void
+    public light_set_negative(light:Rid, enable:Bool):Void
+    public light_set_param(light:Rid, param:Int, value:Float):Void
+    public light_set_projector(light:Rid, texture:Rid):Void
+    public light_set_reverse_cull_face_mode(light:Rid, enabled:Bool):Void
+    public light_set_shadow(light:Rid, enabled:Bool):Void
+    public light_set_shadow_color(light:Rid, color:Color):Void
     public lightmap_capture_create():Rid
     public lightmap_capture_get_bounds(capture:Rid):Aabb
     public lightmap_capture_get_energy(capture:Rid):Float
     public lightmap_capture_get_octree(capture:Rid):PoolByteArray
     public lightmap_capture_get_octree_cell_subdiv(capture:Rid):Int
     public lightmap_capture_get_octree_cell_transform(capture:Rid):Transform
-    public lightmap_capture_set_bounds(capture:Rid, bounds:Aabb):void
-    public lightmap_capture_set_energy(capture:Rid, energy:Float):void
-    public lightmap_capture_set_octree(capture:Rid, octree:PoolByteArray):void
-    public lightmap_capture_set_octree_cell_subdiv(capture:Rid, subdiv:Int):void
-    public lightmap_capture_set_octree_cell_transform(capture:Rid, xform:Transform):void
+    public lightmap_capture_set_bounds(capture:Rid, bounds:Aabb):Void
+    public lightmap_capture_set_energy(capture:Rid, energy:Float):Void
+    public lightmap_capture_set_octree(capture:Rid, octree:PoolByteArray):Void
+    public lightmap_capture_set_octree_cell_subdiv(capture:Rid, subdiv:Int):Void
+    public lightmap_capture_set_octree_cell_transform(capture:Rid, xform:Transform):Void
     public make_sphere_mesh(latitudes:Int, longitudes:Int, radius:Float):Rid
     public material_create():Rid
     public material_get_param(material:Rid, parameter:String):Variant
     public material_get_shader(shader_material:Rid):Rid
-    public material_set_line_width(material:Rid, width:Float):void
-    public material_set_next_pass(material:Rid, next_material:Rid):void
-    public material_set_param(material:Rid, parameter:String, value:Variant):void
-    public material_set_render_priority(material:Rid, priority:Int):void
-    public material_set_shader(shader_material:Rid, shader:Rid):void
-    public mesh_add_surface_from_arrays(mesh:Rid, primtive:Int, arrays:Array, blend_shapes:Array, compress_format:Int):void
-    public mesh_clear(mesh:Rid):void
+    public material_set_line_width(material:Rid, width:Float):Void
+    public material_set_next_pass(material:Rid, next_material:Rid):Void
+    public material_set_param(material:Rid, parameter:String, value:Variant):Void
+    public material_set_render_priority(material:Rid, priority:Int):Void
+    public material_set_shader(shader_material:Rid, shader:Rid):Void
+    public mesh_add_surface_from_arrays(mesh:Rid, primtive:Int, arrays:Array, blend_shapes:Array, compress_format:Int):Void
+    public mesh_clear(mesh:Rid):Void
     public mesh_create():Rid
     public mesh_get_blend_shape_count(mesh:Rid):Int
     public mesh_get_blend_shape_mode(mesh:Rid):Int
     public mesh_get_custom_aabb(mesh:Rid):Aabb
     public mesh_get_surface_count(mesh:Rid):Int
-    public mesh_remove_surface(mesh:Rid, index:Int):void
-    public mesh_set_blend_shape_count(mesh:Rid, amount:Int):void
-    public mesh_set_blend_shape_mode(mesh:Rid, mode:Int):void
-    public mesh_set_custom_aabb(mesh:Rid, aabb:Aabb):void
+    public mesh_remove_surface(mesh:Rid, index:Int):Void
+    public mesh_set_blend_shape_count(mesh:Rid, amount:Int):Void
+    public mesh_set_blend_shape_mode(mesh:Rid, mode:Int):Void
+    public mesh_set_custom_aabb(mesh:Rid, aabb:Aabb):Void
     public mesh_surface_get_aabb(mesh:Rid, surface:Int):Aabb
     public mesh_surface_get_array(mesh:Rid, surface:Int):PoolByteArray
     public mesh_surface_get_array_index_len(mesh:Rid, surface:Int):Int
@@ -7035,9 +7035,9 @@ extern class VisualServer extends Object {
     public mesh_surface_get_material(mesh:Rid, surface:Int):Rid
     public mesh_surface_get_primitive_type(mesh:Rid, surface:Int):Int
     public mesh_surface_get_skeleton_aabb(mesh:Rid, surface:Int):Array
-    public mesh_surface_set_material(mesh:Rid, surface:Int, material:Rid):void
-    public mesh_surface_update_region(mesh:Rid, surface:Int, offset:Int, data:PoolByteArray):void
-    public multimesh_allocate(multimesh:Rid, instances:Int, transform_format:Int, color_format:Int, custom_data_format:Int):void
+    public mesh_surface_set_material(mesh:Rid, surface:Int, material:Rid):Void
+    public mesh_surface_update_region(mesh:Rid, surface:Int, offset:Int, data:PoolByteArray):Void
+    public multimesh_allocate(multimesh:Rid, instances:Int, transform_format:Int, color_format:Int, custom_data_format:Int):Void
     public multimesh_get_aabb(multimesh:Rid):Aabb
     public multimesh_get_instance_count(multimesh:Rid):Int
     public multimesh_get_mesh(multimesh:Rid):Rid
@@ -7046,75 +7046,75 @@ extern class VisualServer extends Object {
     public multimesh_instance_get_custom_data(multimesh:Rid, index:Int):Color
     public multimesh_instance_get_transform(multimesh:Rid, index:Int):Transform
     public multimesh_instance_get_transform_2d(multimesh:Rid, index:Int):Transform2D
-    public multimesh_instance_set_color(multimesh:Rid, index:Int, color:Color):void
-    public multimesh_instance_set_custom_data(multimesh:Rid, index:Int, custom_data:Color):void
-    public multimesh_instance_set_transform(multimesh:Rid, index:Int, transform:Transform):void
-    public multimesh_instance_set_transform_2d(multimesh:Rid, index:Int, transform:Transform2D):void
-    public multimesh_set_as_bulk_array(multimesh:Rid, array:PoolRealArray):void
-    public multimesh_set_mesh(multimesh:Rid, mesh:Rid):void
-    public multimesh_set_visible_instances(multimesh:Rid, visible:Int):void
+    public multimesh_instance_set_color(multimesh:Rid, index:Int, color:Color):Void
+    public multimesh_instance_set_custom_data(multimesh:Rid, index:Int, custom_data:Color):Void
+    public multimesh_instance_set_transform(multimesh:Rid, index:Int, transform:Transform):Void
+    public multimesh_instance_set_transform_2d(multimesh:Rid, index:Int, transform:Transform2D):Void
+    public multimesh_set_as_bulk_array(multimesh:Rid, array:PoolRealArray):Void
+    public multimesh_set_mesh(multimesh:Rid, mesh:Rid):Void
+    public multimesh_set_visible_instances(multimesh:Rid, visible:Int):Void
     public omni_light_create():Rid
     public particles_create():Rid
     public particles_get_current_aabb(particles:Rid):Aabb
     public particles_get_emitting(particles:Rid):Bool
-    public particles_restart(particles:Rid):void
-    public particles_set_amount(particles:Rid, amount:Int):void
-    public particles_set_custom_aabb(particles:Rid, aabb:Aabb):void
-    public particles_set_draw_order(particles:Rid, order:Int):void
-    public particles_set_draw_pass_mesh(particles:Rid, pass:Int, mesh:Rid):void
-    public particles_set_draw_passes(particles:Rid, count:Int):void
-    public particles_set_emission_transform(particles:Rid, transform:Transform):void
-    public particles_set_emitting(particles:Rid, emitting:Bool):void
-    public particles_set_explosiveness_ratio(particles:Rid, ratio:Float):void
-    public particles_set_fixed_fps(particles:Rid, fps:Int):void
-    public particles_set_fractional_delta(particles:Rid, enable:Bool):void
-    public particles_set_lifetime(particles:Rid, lifetime:Float):void
-    public particles_set_one_shot(particles:Rid, one_shot:Bool):void
-    public particles_set_pre_process_time(particles:Rid, time:Float):void
-    public particles_set_process_material(particles:Rid, material:Rid):void
-    public particles_set_randomness_ratio(particles:Rid, ratio:Float):void
-    public particles_set_speed_scale(particles:Rid, scale:Float):void
-    public particles_set_use_local_coordinates(particles:Rid, enable:Bool):void
+    public particles_restart(particles:Rid):Void
+    public particles_set_amount(particles:Rid, amount:Int):Void
+    public particles_set_custom_aabb(particles:Rid, aabb:Aabb):Void
+    public particles_set_draw_order(particles:Rid, order:Int):Void
+    public particles_set_draw_pass_mesh(particles:Rid, pass:Int, mesh:Rid):Void
+    public particles_set_draw_passes(particles:Rid, count:Int):Void
+    public particles_set_emission_transform(particles:Rid, transform:Transform):Void
+    public particles_set_emitting(particles:Rid, emitting:Bool):Void
+    public particles_set_explosiveness_ratio(particles:Rid, ratio:Float):Void
+    public particles_set_fixed_fps(particles:Rid, fps:Int):Void
+    public particles_set_fractional_delta(particles:Rid, enable:Bool):Void
+    public particles_set_lifetime(particles:Rid, lifetime:Float):Void
+    public particles_set_one_shot(particles:Rid, one_shot:Bool):Void
+    public particles_set_pre_process_time(particles:Rid, time:Float):Void
+    public particles_set_process_material(particles:Rid, material:Rid):Void
+    public particles_set_randomness_ratio(particles:Rid, ratio:Float):Void
+    public particles_set_speed_scale(particles:Rid, scale:Float):Void
+    public particles_set_use_local_coordinates(particles:Rid, enable:Bool):Void
     public reflection_probe_create():Rid
-    public reflection_probe_set_as_interior(probe:Rid, enable:Bool):void
-    public reflection_probe_set_cull_mask(probe:Rid, layers:Int):void
-    public reflection_probe_set_enable_box_projection(probe:Rid, enable:Bool):void
-    public reflection_probe_set_enable_shadows(probe:Rid, enable:Bool):void
-    public reflection_probe_set_extents(probe:Rid, extents:Vector3):void
-    public reflection_probe_set_intensity(probe:Rid, intensity:Float):void
-    public reflection_probe_set_interior_ambient(probe:Rid, color:Color):void
-    public reflection_probe_set_interior_ambient_energy(probe:Rid, energy:Float):void
-    public reflection_probe_set_interior_ambient_probe_contribution(probe:Rid, contrib:Float):void
-    public reflection_probe_set_max_distance(probe:Rid, distance:Float):void
-    public reflection_probe_set_origin_offset(probe:Rid, offset:Vector3):void
-    public reflection_probe_set_update_mode(probe:Rid, mode:Int):void
-    public request_frame_drawn_callback(where:Object, method:String, userdata:Variant):void
+    public reflection_probe_set_as_interior(probe:Rid, enable:Bool):Void
+    public reflection_probe_set_cull_mask(probe:Rid, layers:Int):Void
+    public reflection_probe_set_enable_box_projection(probe:Rid, enable:Bool):Void
+    public reflection_probe_set_enable_shadows(probe:Rid, enable:Bool):Void
+    public reflection_probe_set_extents(probe:Rid, extents:Vector3):Void
+    public reflection_probe_set_intensity(probe:Rid, intensity:Float):Void
+    public reflection_probe_set_interior_ambient(probe:Rid, color:Color):Void
+    public reflection_probe_set_interior_ambient_energy(probe:Rid, energy:Float):Void
+    public reflection_probe_set_interior_ambient_probe_contribution(probe:Rid, contrib:Float):Void
+    public reflection_probe_set_max_distance(probe:Rid, distance:Float):Void
+    public reflection_probe_set_origin_offset(probe:Rid, offset:Vector3):Void
+    public reflection_probe_set_update_mode(probe:Rid, mode:Int):Void
+    public request_frame_drawn_callback(where:Object, method:String, userdata:Variant):Void
     public scenario_create():Rid
-    public scenario_set_debug(scenario:Rid, debug_mode:Int):void
-    public scenario_set_environment(scenario:Rid, environment:Rid):void
-    public scenario_set_fallback_environment(scenario:Rid, environment:Rid):void
-    public scenario_set_reflection_atlas_size(scenario:Rid, p_size:Int, subdiv:Int):void
-    public set_boot_image(image:Image, color:Color, scale:Bool):void
-    public set_debug_generate_wireframes(generate:Bool):void
-    public set_default_clear_color(color:Color):void
+    public scenario_set_debug(scenario:Rid, debug_mode:Int):Void
+    public scenario_set_environment(scenario:Rid, environment:Rid):Void
+    public scenario_set_fallback_environment(scenario:Rid, environment:Rid):Void
+    public scenario_set_reflection_atlas_size(scenario:Rid, p_size:Int, subdiv:Int):Void
+    public set_boot_image(image:Image, color:Color, scale:Bool):Void
+    public set_debug_generate_wireframes(generate:Bool):Void
+    public set_default_clear_color(color:Color):Void
     public shader_create():Rid
     public shader_get_code(shader:Rid):String
     public shader_get_default_texture_param(shader:Rid, name:String):Rid
     public shader_get_param_list(shader:Rid):Array
-    public shader_set_code(shader:Rid, code:String):void
-    public shader_set_default_texture_param(shader:Rid, name:String, texture:Rid):void
-    public skeleton_allocate(skeleton:Rid, bones:Int, is_2d_skeleton:Bool):void
+    public shader_set_code(shader:Rid, code:String):Void
+    public shader_set_default_texture_param(shader:Rid, name:String, texture:Rid):Void
+    public skeleton_allocate(skeleton:Rid, bones:Int, is_2d_skeleton:Bool):Void
     public skeleton_bone_get_transform(skeleton:Rid, bone:Int):Transform
     public skeleton_bone_get_transform_2d(skeleton:Rid, bone:Int):Transform2D
-    public skeleton_bone_set_transform(skeleton:Rid, bone:Int, transform:Transform):void
-    public skeleton_bone_set_transform_2d(skeleton:Rid, bone:Int, transform:Transform2D):void
+    public skeleton_bone_set_transform(skeleton:Rid, bone:Int, transform:Transform):Void
+    public skeleton_bone_set_transform_2d(skeleton:Rid, bone:Int, transform:Transform2D):Void
     public skeleton_create():Rid
     public skeleton_get_bone_count(skeleton:Rid):Int
     public sky_create():Rid
-    public sky_set_texture(sky:Rid, cube_map:Rid, radiance_size:Int):void
+    public sky_set_texture(sky:Rid, cube_map:Rid, radiance_size:Int):Void
     public spot_light_create():Rid
-    public sync():void
-    public texture_allocate(texture:Rid, width:Int, height:Int, format:Int, flags:Int):void
+    public sync():Void
+    public texture_allocate(texture:Rid, width:Int, height:Int, format:Int, flags:Int):Void
     public texture_create():Rid
     public texture_create_from_image(image:Image, flags:Int):Rid
     public texture_debug_usage():Array
@@ -7125,43 +7125,43 @@ extern class VisualServer extends Object {
     public texture_get_path(texture:Rid):String
     public texture_get_texid(texture:Rid):Int
     public texture_get_width(texture:Rid):Int
-    public texture_set_data(texture:Rid, image:Image, cube_side:Int):void
-    public texture_set_data_partial(texture:Rid, image:Image, src_x:Int, src_y:Int, src_w:Int, src_h:Int, dst_x:Int, dst_y:Int, dst_mip:Int, cube_side:Int):void
-    public texture_set_flags(texture:Rid, flags:Int):void
-    public texture_set_path(texture:Rid, path:String):void
-    public texture_set_shrink_all_x2_on_set_data(shrink:Bool):void
-    public texture_set_size_override(texture:Rid, width:Int, height:Int):void
-    public textures_keep_original(enable:Bool):void
-    public viewport_attach_camera(viewport:Rid, camera:Rid):void
-    public viewport_attach_canvas(viewport:Rid, canvas:Rid):void
-    public viewport_attach_to_screen(viewport:Rid, rect:Rect2, screen:Int):void
+    public texture_set_data(texture:Rid, image:Image, cube_side:Int):Void
+    public texture_set_data_partial(texture:Rid, image:Image, src_x:Int, src_y:Int, src_w:Int, src_h:Int, dst_x:Int, dst_y:Int, dst_mip:Int, cube_side:Int):Void
+    public texture_set_flags(texture:Rid, flags:Int):Void
+    public texture_set_path(texture:Rid, path:String):Void
+    public texture_set_shrink_all_x2_on_set_data(shrink:Bool):Void
+    public texture_set_size_override(texture:Rid, width:Int, height:Int):Void
+    public textures_keep_original(enable:Bool):Void
+    public viewport_attach_camera(viewport:Rid, camera:Rid):Void
+    public viewport_attach_canvas(viewport:Rid, canvas:Rid):Void
+    public viewport_attach_to_screen(viewport:Rid, rect:Rect2, screen:Int):Void
     public viewport_create():Rid
-    public viewport_detach(viewport:Rid):void
+    public viewport_detach(viewport:Rid):Void
     public viewport_get_render_info(viewport:Rid, info:Int):Int
     public viewport_get_texture(viewport:Rid):Rid
-    public viewport_remove_canvas(viewport:Rid, canvas:Rid):void
-    public viewport_set_active(viewport:Rid, active:Bool):void
-    public viewport_set_canvas_layer(viewport:Rid, canvas:Rid, layer:Int):void
-    public viewport_set_canvas_transform(viewport:Rid, canvas:Rid, offset:Transform2D):void
-    public viewport_set_clear_mode(viewport:Rid, clear_mode:Int):void
-    public viewport_set_debug_draw(viewport:Rid, draw:Int):void
-    public viewport_set_disable_3d(viewport:Rid, disabled:Bool):void
-    public viewport_set_disable_environment(viewport:Rid, disabled:Bool):void
-    public viewport_set_global_canvas_transform(viewport:Rid, transform:Transform2D):void
-    public viewport_set_hdr(viewport:Rid, enabled:Bool):void
-    public viewport_set_hide_canvas(viewport:Rid, hidden:Bool):void
-    public viewport_set_hide_scenario(viewport:Rid, hidden:Bool):void
-    public viewport_set_msaa(viewport:Rid, msaa:Int):void
-    public viewport_set_parent_viewport(viewport:Rid, parent_viewport:Rid):void
-    public viewport_set_scenario(viewport:Rid, scenario:Rid):void
-    public viewport_set_shadow_atlas_quadrant_subdivision(viewport:Rid, quadrant:Int, subdivision:Int):void
-    public viewport_set_shadow_atlas_size(viewport:Rid, size:Int):void
-    public viewport_set_size(viewport:Rid, width:Int, height:Int):void
-    public viewport_set_transparent_background(viewport:Rid, enabled:Bool):void
-    public viewport_set_update_mode(viewport:Rid, update_mode:Int):void
-    public viewport_set_usage(viewport:Rid, usage:Int):void
-    public viewport_set_use_arvr(viewport:Rid, use_arvr:Bool):void
-    public viewport_set_vflip(viewport:Rid, enabled:Bool):void
+    public viewport_remove_canvas(viewport:Rid, canvas:Rid):Void
+    public viewport_set_active(viewport:Rid, active:Bool):Void
+    public viewport_set_canvas_layer(viewport:Rid, canvas:Rid, layer:Int):Void
+    public viewport_set_canvas_transform(viewport:Rid, canvas:Rid, offset:Transform2D):Void
+    public viewport_set_clear_mode(viewport:Rid, clear_mode:Int):Void
+    public viewport_set_debug_draw(viewport:Rid, draw:Int):Void
+    public viewport_set_disable_3d(viewport:Rid, disabled:Bool):Void
+    public viewport_set_disable_environment(viewport:Rid, disabled:Bool):Void
+    public viewport_set_global_canvas_transform(viewport:Rid, transform:Transform2D):Void
+    public viewport_set_hdr(viewport:Rid, enabled:Bool):Void
+    public viewport_set_hide_canvas(viewport:Rid, hidden:Bool):Void
+    public viewport_set_hide_scenario(viewport:Rid, hidden:Bool):Void
+    public viewport_set_msaa(viewport:Rid, msaa:Int):Void
+    public viewport_set_parent_viewport(viewport:Rid, parent_viewport:Rid):Void
+    public viewport_set_scenario(viewport:Rid, scenario:Rid):Void
+    public viewport_set_shadow_atlas_quadrant_subdivision(viewport:Rid, quadrant:Int, subdivision:Int):Void
+    public viewport_set_shadow_atlas_size(viewport:Rid, size:Int):Void
+    public viewport_set_size(viewport:Rid, width:Int, height:Int):Void
+    public viewport_set_transparent_background(viewport:Rid, enabled:Bool):Void
+    public viewport_set_update_mode(viewport:Rid, update_mode:Int):Void
+    public viewport_set_usage(viewport:Rid, usage:Int):Void
+    public viewport_set_use_arvr(viewport:Rid, use_arvr:Bool):Void
+    public viewport_set_vflip(viewport:Rid, enabled:Bool):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -7170,19 +7170,19 @@ extern class VisualServer extends Object {
 @:unreflective
 @:structAccess
 extern class VisualShader extends Shader {
-    public add_node(type:Int, node:VisualShaderNode, position:Vector2, id:Int):void
+    public add_node(type:Int, node:VisualShaderNode, position:Vector2, id:Int):Void
     public can_connect_nodes(type:Int, from_node:Int, from_port:Int, to_node:Int, to_port:Int):Bool
     public connect_nodes(type:Int, from_node:Int, from_port:Int, to_node:Int, to_port:Int):Int
-    public disconnect_nodes(type:Int, from_node:Int, from_port:Int, to_node:Int, to_port:Int):void
+    public disconnect_nodes(type:Int, from_node:Int, from_port:Int, to_node:Int, to_port:Int):Void
     public get_node(type:Int, id:Int):VisualShaderNode
     public get_node_connections(type:Int):Array
     public get_node_list(type:Int):PoolIntArray
     public get_node_position(type:Int, id:Int):Vector2
     public get_valid_node_id(type:Int):Int
     public is_node_connection(type:Int, from_node:Int, from_port:Int, to_node:Int, to_port:Int):Bool
-    public remove_node(type:Int, id:Int):void
-    public set_mode(mode:Int):void
-    public set_node_position(type:Int, id:Int, position:Vector2):void
+    public remove_node(type:Int, id:Int):Void
+    public set_mode(mode:Int):Void
+    public set_node_position(type:Int, id:Int, position:Vector2):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -7192,7 +7192,7 @@ extern class VisualShader extends Shader {
 @:structAccess
 extern class VisualShaderNode extends Resource {
     public get_input_port_default_value(port:Int):Variant
-    public set_input_port_default_value(port:Int, value:Variant):void
+    public set_input_port_default_value(port:Int, value:Variant):Void
 
 }
 // ------------------version:3.1-----------------------------
@@ -7531,7 +7531,7 @@ extern class XMLParser extends Reference {
     public open_buffer(buffer:PoolByteArray):Int
     public read():Int
     public seek(position:Int):Int
-    public skip_section():void
+    public skip_section():Void
 
 }
 // ------------------version:3.1-----------------------------
