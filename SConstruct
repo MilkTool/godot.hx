@@ -1,15 +1,54 @@
 #!python
 
-import os, subprocess, platform,pygccxml,pyplusplus
+import os,sys, subprocess, platform,pygccxml,pyplusplus
 
 from pygccxml import parser
+from pygccxml import declarations
+import xml.etree.cElementTree as ET
+
 
 def add_sources(sources, dir, extension):
   for f in os.listdir(dir):
       if f.endswith('.' + extension):
           sources.append(dir + '/' + f)
-
-env = Environment( tools=['default', 'castxml'])
+def indent(elem, level=0):
+    i = "\n" + level*"  "
+    if len(elem):
+        if not elem.text or not elem.text.strip():
+            elem.text = i + "  "
+        if not elem.tail or not elem.tail.strip():
+            elem.tail = i
+        for elem in elem:
+            indent(elem, level+1)
+        if not elem.tail or not elem.tail.strip():
+            elem.tail = i
+    else:
+        if level and (not elem.tail or not elem.tail.strip()):
+            elem.tail = i
+def to_dict(wrapper,removeIfNotIn=None):
+    list = {}
+    for instance in wrapper:
+        if removeIfNotIn==None or instance.name in removeIfNotIn and instance.name !='':
+            list[instance.name] = instance
+    return list
+def get_type(type):
+    if declarations.is_void(type):
+        return 'void'
+    elif declarations.is_bool(type):
+        return 'bool'
+    elif declarations.is_integral(type):
+        return 'int'
+    elif declarations.is_floating_point(type):
+        return 'float'
+    elif declarations.is_reference(type):
+        return 'Reference'
+    elif declarations.is_std_string(type):
+        return 'String'
+    elif declarations.is_std_wstring(type):
+        return 'String'
+    else:
+        return type.decl_type
+env = Environment( tools=['default'])
 host_platform = platform.system()
 target_platform = ARGUMENTS.get('p', ARGUMENTS.get('platform', 'linux'))
 target_arch = ARGUMENTS.get('a', ARGUMENTS.get('arch', '64'))
@@ -101,32 +140,70 @@ if ARGUMENTS.get('generate_bindings', 'no') == 'yes':
     import binding_generator
 
     binding_generator.generate_bindings(json_api_file)
-
-heads = []
-files = []
-names = []
-flags = ''
-for st in env['CCFLAGS']:
-    flags += ' ' + st
-print(flags)
-add_sources(heads, 'include/core', 'hpp')
-add_sources(heads, 'include/gen', 'hpp')
 if ARGUMENTS.get('generate_xml', 'yes') == 'yes':
-    generator_path= "C:\\castxml\\bin\\castxml.exe"
+    heads = []
+    files = [[]]
+    flags = ''
+    add_sources(heads, 'include/core', 'hpp')
+    add_sources(heads, 'include/gen', 'hpp')
+    gen_path = '/usr/bin/castxml'
+    if sys.platform == 'win32':
+        gen_path ="C:\\castxml\\bin\\castxml.exe"
+    generator_path= gen_path
     generator_name = "castxml"
+    for st in env['CCFLAGS']:
+        flags += ' ' + st
     # Configure the xml generator
     xml_generator_config = parser.xml_generator_configuration_t(
     xml_generator_path=generator_path,
     xml_generator=generator_name, compiler=env['CXX'], compiler_path=env['CC'],
     include_paths=env['CPPPATH'],keep_xml=True, flags=flags)
     #print(env.Dump('TOOLS'))
+    i = 1
+    y = 0
+    index = 0
     for f in heads:
-        names += env.XMLHeader(f)
-parser.parse(heads,xml_generator_config)     
-# Now tell py++ that we already made the xml file
-for f in names:
-    files.append(parser.create_gccxml_fc(f.abspath))
-mb = pyplusplus.module_builder.module_builder_t(files)
+        y+=1
+        if y >i *(index +1):
+            index+=1
+            files.append([]) 
+        files[index].append(f)      
+    test = files
+    files = [test[0]]
+    for t in files:
+        decls = parser.parse(t,xml_generator_config)
+        global_ns = declarations.get_global_namespace(decls)
+        ns = global_ns.namespace('godot')
+        vars = to_dict(ns.variables())
+        classes = to_dict(ns.classes(),t[0])
+        for clAss in classes.values():
+            #funcs = to_dict(clAss.calldefs)
+            if clAss.name != "" and clAss.class_type == 'class' or ( not clAss.name.startswith('_') and clAss.class_type == 'struct') :
+                print(clAss.class_type)
+                print(clAss.name)
+                root = ET.Element('class',name=clAss.name)
+                members = ET.SubElement(root,'members')
+                methods = ET.SubElement(root,'methods')
+                if len(clAss.bases) != 0:
+                    root.set('inherits',clAss.bases[0].related_class.name)
+                    print(clAss.bases[0].related_class.name)
+                for member in clAss.public_members:
+                    if not member.name in vars:
+                        method = ET.SubElement(methods,'method',name=member.name)
+                        if declarations.is_const(member):
+                            ET.SubElement(method,qualifiers="const")
+                        if member.name != clAss.name and 'operator' not in member.name and '~' not in member.name:
+                            #typ = get_type(clAss.calldef(name=member.name).return_type.decl_type)
+                            #print(typ)
+                            #returnType = ET.SubElement(method,'return',type=typ)
+                            indx = 0
+                            for args in clAss.member_function(name=member.name).arguments:
+                                argument = ET.SubElement(method,'argument',index=str(indx),name=args.name,type=str(args.decl_type))#
+                                indx+=1
+                    else:
+                        variable = ET.SubElement(members,'member',name=member.name)
+                indent(root)
+                ET.ElementTree(root).write('../classDefinitions/'+clAss.name+'.xml')
 # source to compile
 sources = []
 add_sources(sources, 'src/core', 'cpp')

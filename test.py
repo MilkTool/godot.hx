@@ -9,6 +9,11 @@ generator_path= "C:\\castxml\\bin\\castxml.exe"
 generator_name = "castxml"
 names = []
 path = ""
+
+a,b,c,d,e,f,g,h,i,j = split_list(heads,10)
+    lists = [a,b,c,d,e,f,g,h,i,j]
+    for list in lists:
+        parser.parse(list,xml_generator_config)  
 # Configure the xml generator
 xml_generator_config = parser.xml_generator_configuration_t(
     xml_generator_path=generator_path,
@@ -26,7 +31,10 @@ for p in arr:
 print(names)
 # Parse the c++ file
 decls = parser.parse(names, xml_generator_config)
-
+# Now tell py++ that we already made the xml file
+    for f in names:
+        files.append(parser.create_gccxml_fc(f.abspath))
+    mb = pyplusplus.module_builder.module_builder_t(files)
 # # Get access to the global namespace
 # global_namespace = declarations.get_global_namespace(decls)
 
