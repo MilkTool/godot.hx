@@ -1,10 +1,10 @@
 #!python
 
-import os,sys, subprocess, platform,pygccxml,pyplusplus
+import os,sys, subprocess, platform,pygccxml
 
 from pygccxml import parser
 from pygccxml import declarations
-import xml.etree.cElementTree as ET
+from lxml import etree as ET
 
 
 def add_sources(sources, dir, extension):
@@ -15,7 +15,7 @@ def indent(elem, level=0):
     i = "\n" + level*"  "
     if len(elem):
         if not elem.text or not elem.text.strip():
-            elem.text = i + "  "
+            elem.text = i + "	"
         if not elem.tail or not elem.tail.strip():
             elem.tail = i
         for elem in elem:
@@ -31,23 +31,6 @@ def to_dict(wrapper,removeIfNotIn=None):
         if removeIfNotIn==None or instance.name in removeIfNotIn and instance.name !='':
             list[instance.name] = instance
     return list
-def get_type(type):
-    if declarations.is_void(type):
-        return 'void'
-    elif declarations.is_bool(type):
-        return 'bool'
-    elif declarations.is_integral(type):
-        return 'int'
-    elif declarations.is_floating_point(type):
-        return 'float'
-    elif declarations.is_reference(type):
-        return 'Reference'
-    elif declarations.is_std_string(type):
-        return 'String'
-    elif declarations.is_std_wstring(type):
-        return 'String'
-    else:
-        return type.decl_type
 env = Environment( tools=['default'])
 host_platform = platform.system()
 target_platform = ARGUMENTS.get('p', ARGUMENTS.get('platform', 'linux'))
@@ -169,39 +152,60 @@ if ARGUMENTS.get('generate_xml', 'yes') == 'yes':
             files.append([]) 
         files[index].append(f)      
     test = files
-    files = [test[0]]
+    files = [test[10]]
+    # Parse the cpp files and output docs
     for t in files:
         decls = parser.parse(t,xml_generator_config)
         global_ns = declarations.get_global_namespace(decls)
         ns = global_ns.namespace('godot')
-        vars = to_dict(ns.variables())
-        classes = to_dict(ns.classes(),t[0])
+        classes = to_dict(ns.classes(allow_empty=True),t[0])
         for clAss in classes.values():
             #funcs = to_dict(clAss.calldefs)
             if clAss.name != "" and clAss.class_type == 'class' or ( not clAss.name.startswith('_') and clAss.class_type == 'struct') :
-                print(clAss.class_type)
-                print(clAss.name)
+                #print(clAss.name)
                 root = ET.Element('class',name=clAss.name)
-                members = ET.SubElement(root,'members')
                 methods = ET.SubElement(root,'methods')
+                members = ET.SubElement(root,'members')
+                constants = ET.SubElement(root,'constants')
                 if len(clAss.bases) != 0:
                     root.set('inherits',clAss.bases[0].related_class.name)
-                    print(clAss.bases[0].related_class.name)
-                for member in clAss.public_members:
-                    if not member.name in vars:
+                
+                for member in clAss.member_functions(allow_empty=True):
+                    if member.access_type == 'public':
                         method = ET.SubElement(methods,'method',name=member.name)
-                        if declarations.is_const(member):
-                            ET.SubElement(method,qualifiers="const")
-                        if member.name != clAss.name and 'operator' not in member.name and '~' not in member.name:
-                            #typ = get_type(clAss.calldef(name=member.name).return_type.decl_type)
-                            #print(typ)
-                            #returnType = ET.SubElement(method,'return',type=typ)
-                            indx = 0
-                            for args in clAss.member_function(name=member.name).arguments:
-                                argument = ET.SubElement(method,'argument',index=str(indx),name=args.name,type=str(args.decl_type))#
+                        typ = str(member.return_type).replace('::','').replace('godot','').replace('&','').replace('const','')
+                        returnType = ET.SubElement(method,'return',type=typ)
+                        indx = 0
+                        for args in member.arguments:
+                            if str(args.decl_type) in member.decl_string:
+                                typeText = str(args.decl_type).replace('::','').replace('godot','').replace('&','').replace('const','')
+                                argument = ET.SubElement(method,'argument',index=str(indx),name=args.name,type=typeText)#
                                 indx+=1
-                    else:
-                        variable = ET.SubElement(members,'member',name=member.name)
+                        if member.has_const:
+                            method.set('qualifiers',"const")
+                for member in clAss.constructors(allow_empty=True):
+                    if member.access_type == 'public':
+                            method = ET.SubElement(methods,'method',name=member.name)
+                            typ = str(member.return_type).replace('::','').replace('godot','').replace('&','').replace('const','')
+                            if typ != 'None':
+                                returnType = ET.SubElement(method,'return',type=typ)
+                            indx = 0
+                            for args in member.arguments:
+                                if str(args.decl_type) in member.decl_string:
+                                    typeText = str(args.decl_type).replace('::','').replace('godot','').replace('&','').replace('const','')
+                                    argument = ET.SubElement(method,'argument',index=str(indx),name=args.name,type=typeText)#
+                                    indx+=1
+                            if member.has_const:
+                                method.set('qualifiers',"const")
+                for var in clAss.variables(allow_empty=True):
+                    if var.access_type == 'public':
+                        typeText = str(var.decl_type).replace('::','').replace('godot','').replace('&','')
+                    if '[' in typeText:
+                        typeText = 'Array<'+ typeText.partition('[')[0] +'>'
+                    variable = ET.SubElement(members,'member',name=var.name,type=typeText)
+                for enum in clAss.enumerations(allow_empty=True):
+                    for val in enum.values:
+                        constant = ET.SubElement(constants,'constant', name=val[0], value=str(val[1]), enum=enum.name)
                 indent(root)
                 ET.ElementTree(root).write('../classDefinitions/'+clAss.name+'.xml')
 # source to compile
