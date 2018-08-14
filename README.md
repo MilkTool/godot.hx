@@ -6,7 +6,8 @@ Potential release date : On 3.1 release of Godot
 Use haxe to write your game code in Godot
 
 ## Roadmap :
-- [ ] Create Haxe code generator from godot-docs XML
+- [X] Create Haxe code generator from godot-docs XML template
+- [X] Have a cpp to godot-docs generator based on CastXML output
 - [ ] Develop a build system around the user generated code and the auto generated code
 - [ ] Make build system rebuild gdnlib before running the game in godot
 - [ ] Build an example project 
