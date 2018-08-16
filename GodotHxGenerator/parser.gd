@@ -1,4 +1,4 @@
-extends Node
+extends SceneTree
 onready var file = File.new()
 onready var string =""
 onready var path = "godot-cpp/include/"
@@ -9,16 +9,16 @@ onready var typesToCap =  ['int', 'float', 'bool', 'RID', 'AABB', 'void']
 var XMLFiles
 onready var body = String()
 func _ready():
-	if OS.get_name() == 'X11':# Linux
-		ProjectSettings.set('Network/Ssl/Certificates', '/etc/ssl/certs/ca-certificates.crt')
-		HTTP_request()
-	elif OS.get_name() == 'Windows':
-		var dir = dir_contents('../classDefinitions/')
-		var p = (dir.get_current_dir().replace('/', '\\')+'\\')+'dl-xml.bat'
-		var output = []
-		var pid = OS.execute(p,[],true,output)
-		print(output)
-		analyse_XML_files()
+	# if OS.get_name() == 'X11':# Linux
+	# 	ProjectSettings.set('Network/Ssl/Certificates', '/etc/ssl/certs/ca-certificates.crt')
+	# 	HTTP_request()
+	# elif OS.get_name() == 'Windows':
+	# 	var dir = dir_contents('../classDefinitions/')
+	# 	var p = (dir.get_current_dir().replace('/', '\\')+'\\')+'dl-xml.bat'
+	# 	var output = []
+	# 	var pid = OS.execute(p,[],true,output)
+	# 	print(output)
+	analyse_XML_files()
 
 
 

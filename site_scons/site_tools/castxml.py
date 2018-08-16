@@ -8,57 +8,44 @@
 This module contains a custom CastXML tool for SCons
 """
 
-import os,sys,pygccxml,SCons
+import os,sys,pygccxml
 
 from pygccxml import parser
 from pygccxml import declarations
-import xml.etree.cElementTree as ET
+from lxml import etree as ET
 
 
 
-# GCCXMLBuilder = SCons.Builder.Builder(action = "$GCCXML $GCCXML_EXTRA_FLAGS $_XML_CPPINCFLAGS $_XML_CPPDEFFLAGS $SOURCE -fxml=$TARGET",
-#                               suffix='xml',
-#                               src_suffic = ['h', 'hpp'],
-#                               source_scanner = SCons.Tool.CScanner)
-      
+def add_sources(sources, dir, extension):
+  for f in os.listdir(dir):
+      if f.endswith('.' + extension):
+          sources.append(dir + '/' + f)
+def indent(elem, level=0):
+    i = "\n" + level*"  "
+    if len(elem):
+        if not elem.text or not elem.text.strip():
+            elem.text = i + " "+ " "+ " "+ " "
+        if not elem.tail or not elem.tail.strip():
+            elem.tail = i
+        for elem in elem:
+            indent(elem, level+1)
+        if not elem.tail or not elem.tail.strip():
+            elem.tail = i
+    else:
+        if level and (not elem.tail or not elem.tail.strip()):
+            elem.tail = i
+def to_dict(wrapper,removeIfNotIn=None):
+    list = {}
+    for instance in wrapper:
+        if removeIfNotIn==None or instance.name in removeIfNotIn and instance.name !='':
+            list[instance.name] = instance
+    return list
 
-def generate(env):
-    files = []
-    files.
-    gccxml_path = env.WhereIs('castxml')
-    if gccxml_path is None:
-        if sys.platform == 'win32':
-            gccxml_path = "C:\\castxml\\bin\\castxml.exe"
-        else:
-            gccxml_path = 'castxml'
-        print('Could not find gccxml, please make sure it is on your PATH')
-        # env.Exit(1) 
-
-    env['GCCXML'] = gccxml_path
-    extra = ''
-    if os.name != 'posix':
-        comp = 'gnu'
-        if sys.platform == 'win32':
-            comp = 'msvc'
-        extra = '--castxml-output=' + str(1)+ ' '
-        extra += '--castxml-cc-'+comp + ' /DWIN32 /D_WINDOWS /W3 /Zm1000 /EHsc /GR /MT ' + '-std=c++11'
-    env['GCCXML_EXTRA_FLAGS'] = extra
-    #env['GCCXML_EXTRA_FLAGS'] = ''
-    
-    # These variables hold the expanded form of the include and defines lists
-    env['_XML_CPPINCFLAGS'] = '$( ${_concat(INCPREFIX, XMLCPPPATH, INCSUFFIX, __env__, RDirs)} $)'
-    env['_XML_CPPDFFFLAGS'] = '${_defines(CPPDEFPREFIX, XMLCPPDEFINES, CPPDEFSUFFIX, __env__)}'
-
-    
-    if os.name != 'posix':
-        env['GCCXML_INCPREFIX'] = '-I'
-        env['_XML_CPPINCFLAGS'] = '$( ${_concat(GCCXML_INCPREFIX, CPPPATH, INCSUFFIX, __env__, RDirs, TARGET, SOURCE) } $)'
-    
-    # Added the builder to the given environment
-    # env['BUILDERS']['XMLHeader'] = GCCXMLBuilder
+def generate_xml(env):
     heads = []
-    files = []
     flags = ''
+    add_sources(heads, 'include/core', 'hpp')
+    add_sources(heads, 'include/gen', 'hpp')
     gen_path = '/usr/bin/castxml'
     if sys.platform == 'win32':
         gen_path ="C:\\castxml\\bin\\castxml.exe"
@@ -71,21 +58,79 @@ def generate(env):
     xml_generator_path=generator_path,
     xml_generator=generator_name, compiler=env['CXX'], compiler_path=env['CC'],
     include_paths=env['CPPPATH'],keep_xml=True, flags=flags)
-    #print(env.Dump('TOOLS'))
-    for f in heads:
-        file_config = parser.file_configuration_t(data=f,content_type=parser.CONTENT_TYPE.CACHED_SOURCE_FILE)
-        files.append(file_config)
-    project_reader = parser.project_reader_t(xml_generator_config)
-    decls = project_reader.read_files(files,compilation_mode=parser.COMPILATION_MODE.FILE_BY_FILE)
-    global_ns = declarations.get_global_namespace(decls)
-    ns = global_ns.namespace('godot')
-    for clAss in ns.classes():
-        print(clAss.name)
-        if len(clAss.bases) != 0:
-            print(clAss.bases[0])
-        for member in clAss.class_t.public_members():
-            if not clAss.variables().contains(member):
-                print(member.decl_string)
+    # files = [[]]
+    # i = 1
+    # y = 0
+    # index = 0
+    # for f in heads:
+    #     y+=1
+    #     if y >i *(index +1):
+    #         index+=1
+    #         files.append([]) 
+    #     files[index].append(f)      
+    # test = files
+    # files = [test[10]]
+    # Parse the cpp files and output docs
+    for t in heads:
+        decls = parser.parse([t],xml_generator_config)
+        global_ns = declarations.get_global_namespace(decls)
+        ns = global_ns.namespace('godot')
+        classes = to_dict(ns.classes(allow_empty=True),t)
+        for clAss in classes.values():
+            # Parse classes
+            if clAss.name != "" and clAss.class_type == 'class' or ( not clAss.name.startswith('_') and clAss.class_type == 'struct') :
+                #print(clAss.name)
+                root = ET.Element('class',name=clAss.name)
+                methods = ET.SubElement(root,'methods')
+                members = ET.SubElement(root,'members')
+                constants = ET.SubElement(root,'constants')
+                if len(clAss.bases) != 0:
+                    root.set('inherits',clAss.bases[0].related_class.name)
+                # Parse functions
+                for member in clAss.member_functions(allow_empty=True):
+                    if member.access_type == 'public':
+                        method = ET.SubElement(methods,'method',name=member.name)
+                        typ = str(member.return_type).replace('::','').replace('godot','').replace('&','').replace('const','')
+                        returnType = ET.SubElement(method,'return',type=typ)
+                        indx = 0
+                        for args in member.arguments:
+                            if str(args.decl_type) in member.decl_string:
+                                typeText = str(args.decl_type).replace('::','').replace('godot','').replace('&','').replace('const','')
+                                argument = ET.SubElement(method,'argument',index=str(indx),name=args.name,type=typeText)#
+                                indx+=1
+                        if member.has_const:
+                            method.set('qualifiers',"const")
+                # Parse constructors            
+                for member in clAss.constructors(allow_empty=True):
+                    if member.access_type == 'public':
+                            method = ET.SubElement(methods,'method',name=member.name)
+                            typ = str(member.return_type).replace('::','').replace('godot','').replace('&','').replace('const','')
+                            if typ != 'None':
+                                returnType = ET.SubElement(method,'return',type=typ)
+                            indx = 0
+                            for args in member.arguments:
+                                if str(args.decl_type) in member.decl_string:
+                                    typeText = str(args.decl_type).replace('::','').replace('godot','').replace('&','').replace('const','')
+                                    argument = ET.SubElement(method,'argument',index=str(indx),name=args.name,type=typeText)#
+                                    indx+=1
+                            if member.has_const:
+                                method.set('qualifiers',"const")
+                # Parse variables
+                for var in clAss.variables(allow_empty=True):
+                    if var.access_type == 'public':
+                        typeText = str(var.decl_type).replace('::','').replace('godot','').replace('&','')
+                    if '[' in typeText:
+                        typeText = 'Array<'+ typeText.partition('[')[0] +'>'
+                    variable = ET.SubElement(members,'member',name=var.name,type=typeText)
+                # Parse enumerations
+                for enum in clAss.enumerations(allow_empty=True):
+                    for val in enum.values:
+                        constant = ET.SubElement(constants,'constant', name=val[0], value=str(val[1]), enum=enum.name)
+                indent(root)
+                ET.ElementTree(root).write('../classDefinitions/'+clAss.name+'.xml')
+
+def generate(env):
+    env.AddMethod(generate_xml)
 
 def exists(env):
     return True
