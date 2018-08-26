@@ -1,4 +1,4 @@
-# godot-haxe
+# Godot.hx
 
 Potential release date : On 3.1 release of Godot
 
