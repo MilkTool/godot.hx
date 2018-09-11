@@ -1,7 +1,6 @@
 #!python
 
-import os,subprocess, platform
-
+import os, subprocess, platform, sys
 
 
 def add_sources(sources, dir, extension):
@@ -9,19 +8,20 @@ def add_sources(sources, dir, extension):
       if f.endswith('.' + extension):
           sources.append(dir + '/' + f)
 
+
 env = Environment( tools=['default','castxml'])
 host_platform = platform.system()
 target_platform = ARGUMENTS.get('p', ARGUMENTS.get('platform', 'linux'))
 target_arch = ARGUMENTS.get('a', ARGUMENTS.get('arch', '64'))
 # default to debug build, must be same setting as used for cpp_bindings
-target = ARGUMENTS.get('target', 'release')
+target = ARGUMENTS.get('target', 'debug')
 # Local dependency paths, adapt them to your setup
 godot_headers = ARGUMENTS.get('headers', 'godot_headers')
 result_path = 'bin'
 result_name = ARGUMENTS.get('n', ARGUMENTS.get('name', os.path.relpath('.', '..')))
 
 
-if target_platform == 'linux':
+if target_platform == 'linux' or platform == "x11":
     result_name += '.linux.' + target_arch
 
     env['CXX']='g++'
@@ -50,6 +50,7 @@ elif target_platform == 'windows':
         env = Environment(ENV = os.environ, TARGET_ARCH='amd64', tools=['default', 'castxml'])
     else:
         env = Environment(ENV = os.environ, TARGET_ARCH='x86', tools=['default', 'castxml'])
+
 
     result_name += '.windows.' + target_arch
 
@@ -80,6 +81,9 @@ elif target_platform == 'osx':
 
     env.Append(CCFLAGS = [ '-g','-O3', '-std=c++14', '-arch', 'x86_64' ])
     env.Append(LINKFLAGS = [ '-arch', 'x86_64', '-framework', 'Cocoa', '-Wl,-undefined,dynamic_lookup' ])
+else:
+    print("The only supported targets are 'osx', 'linux' and 'windows'.")
+    sys.exit(255)    
 
 
 env.Append(CPPPATH=['.', godot_headers, 'include', 'include/gen', 'include/core'])
@@ -103,6 +107,7 @@ if ARGUMENTS.get('generate_bindings', 'no') == 'yes':
     binding_generator.generate_bindings(json_api_file)
 if ARGUMENTS.get('generate_xml', 'yes') == 'yes':
     env.generate_xml()
+
 # source to compile
 sources = []
 add_sources(sources, 'src/core', 'cpp')
