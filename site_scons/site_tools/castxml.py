@@ -72,7 +72,7 @@ def generate_xml(env):
             # Parse classes
             if clAss.name != "" and clAss.class_type == 'class' or ( not clAss.name.startswith('_') and clAss.class_type == 'struct') or clAss.class_type == 'union':
                 print(clAss.class_type)
-                root = ET.Element('class',name=clAss.name)
+                root = ET.Element('class',name=clAss.name,path=t)
                 methods = ET.SubElement(root,'methods')
                 members = ET.SubElement(root,'members')
                 constants = ET.SubElement(root,'constants')
@@ -120,7 +120,7 @@ def generate_xml(env):
                     for val in enum.values:
                         constant = ET.SubElement(constants,'constant', name=val[0], value=str(val[1]), enum=enum.name)
                 indent(root)
-                ET.ElementTree(root).write('../classDefinitions/'+clAss.name+'.xml')
+                ET.ElementTree(root).write('../libraries/'+'Godot/'+clAss.name+'.xml')
 
 def generate(env):
     env.AddMethod(generate_xml)
