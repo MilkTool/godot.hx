@@ -1,7 +1,5 @@
 # Godot.hx
 
-Potential release date : On 3.1 release of Godot
-
 ## Description:
 Use haxe to write your game code in Godot
 
