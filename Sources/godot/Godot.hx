@@ -1,7544 +1,6242 @@
-package godot;
-
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/GDScript.hpp')
-@:native('GDScript')
-@:unreflective
-@:structAccess
-extern class GDScript {
-    public Color8(r8:Int, g8:Int, b8:Int, a8:Int):Color
-    public ColorN(name:String, alpha:Float):Color
-    public abs(s:Float):Float
-    public acos(s:Float):Float
-    public asin(s:Float):Float
-    public assert(condition:Bool):Void
-    public atan(s:Float):Float
-    public atan2(x:Float, y:Float):Float
-    public bytes2var(bytes:PoolByteArray):Variant
-    public cartesian2polar(x:Float, y:Float):Vector2
-    public ceil(s:Float):Float
-    public char(ascii:Int):String
-    public clamp(value:Float, min:Float, max:Float):Float
-    public convert(what:Variant, type:Int):Variant
-    public cos(s:Float):Float
-    public cosh(s:Float):Float
-    public db2linear(db:Float):Float
-    public decimals(step:Float):Float
-    public dectime(value:Float, amount:Float, step:Float):Float
-    public deg2rad(deg:Float):Float
-    public dict2inst(dict:Dictionary):Object
-    public ease(s:Float, curve:Float):Float
-    public exp(s:Float):Float
-    public floor(s:Float):Float
-    public fmod(x:Float, y:Float):Float
-    public fposmod(x:Float, y:Float):Float
-    public funcref(instance:Object, funcname:String):FuncRef
-    public get_stack():Void
-    public hash(var:Variant):Int
-    public inst2dict(inst:Object):Dictionary
-    public instance_from_id(instance_id:Int):Object
-    public inverse_lerp(from:Float, to:Float, weight:Float):Float
-    public is_inf(s:Float):Bool
-    public is_instance_valid(instance:Object):Bool
-    public is_nan(s:Float):Bool
-    public len(var:Variant):Int
-    public lerp(from:Variant, to:Variant, weight:Float):Float
-    public linear2db(nrg:Float):Float
-    public load(path:String):Resource
-    public log(s:Float):Float
-    public max(a:Float, b:Float):Float
-    public min(a:Float, b:Float):Float
-    public nearest_po2(value:Int):Int
-    public parse_json(json:String):Variant
-    public polar2cartesian(r:Float, th:Float):Vector2
-    public pow(x:Float, y:Float):Float
-    public preload(path:String):Resource
-    public print():Void
-    public print_debug():Void
-    public print_stack():Void
-    public printerr():Void
-    public printraw():Void
-    public prints():Void
-    public printt():Void
-    public rad2deg(rad:Float):Float
-    public rand_range(from:Float, to:Float):Float
-    public rand_seed(seed:Int):Array
-    public randf():Float
-    public randi():Int
-    public randomize():Void
-    public range():Array
-    public range_lerp(value:Float, istart:Float, istop:Float, ostart:Float, ostop:Float):Float
-    public round(s:Float):Float
-    public seed(seed:Int):Void
-    public sign(s:Float):Float
-    public sin(s:Float):Float
-    public sinh(s:Float):Float
-    public sqrt(s:Float):Float
-    public stepify(s:Float, step:Float):Float
-    public str():String
-    public str2var(string:String):Variant
-    public tan(s:Float):Float
-    public tanh(s:Float):Float
-    public to_json(var:Variant):String
-    public type_exists(type:String):Bool
-    public typeof(what:Variant):Int
-    public validate_json(json:String):String
-    public var2bytes(var:Variant):PoolByteArray
-    public var2str(var:Variant):String
-    public weakref(obj:Object):WeakRef
-    public wrapf(value:Float, min:Float, max:Float):Float
-    public wrapi(value:Int, min:Int, max:Int):Int
-    public yield(object:Object, signal:String):GDScriptFunctionState
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/GlobalScope.hpp')
-@:native('GlobalScope')
-@:unreflective
-@:structAccess
-extern class GlobalScope {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/NativeScript.hpp')
-@:native('NativeScript')
-@:unreflective
-@:structAccess
-extern class NativeScript {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualScript.hpp')
-@:native('VisualScript')
-@:unreflective
-@:structAccess
-extern class VisualScript {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/core/AABB.hpp')
-@:native('AABB')
-@:unreflective
-@:structAccess
-extern class Aabb {
-    public Aabb(position:Vector3, size:Vector3):Aabb
-    public encloses(with:Aabb):Bool
-    public expand(to_point:Vector3):Aabb
-    public get_area():Float
-    public get_endpoint(idx:Int):Vector3
-    public get_longest_axis():Vector3
-    public get_longest_axis_index():Int
-    public get_longest_axis_size():Float
-    public get_shortest_axis():Vector3
-    public get_shortest_axis_index():Int
-    public get_shortest_axis_size():Float
-    public get_support(dir:Vector3):Vector3
-    public grow(by:Float):Aabb
-    public has_no_area():Bool
-    public has_no_surface():Bool
-    public has_point(point:Vector3):Bool
-    public intersection(with:Aabb):Aabb
-    public intersects(with:Aabb):Bool
-    public intersects_plane(plane:Plane):Bool
-    public intersects_segment(from:Vector3, to:Vector3):Bool
-    public merge(with:Aabb):Aabb
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AcceptDialog.hpp')
-@:native('AcceptDialog')
-@:unreflective
-@:structAccess
-extern class AcceptDialog extends WindowDialog {
-    public add_button(text:String, right:Bool, action:String):Button
-    public add_cancel(name:String):Button
-    public get_label():Label
-    public get_ok():Button
-    public register_text_enter(line_edit:Node):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AnimatedSprite.hpp')
-@:native('AnimatedSprite')
-@:unreflective
-@:structAccess
-extern class AnimatedSprite extends Node2D {
-    public is_playing():Bool
-    public play(anim:String):Void
-    public stop():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AnimatedSprite3D.hpp')
-@:native('AnimatedSprite3D')
-@:unreflective
-@:structAccess
-extern class AnimatedSprite3D extends SpriteBase3D {
-    public is_playing():Bool
-    public play(anim:String):Void
-    public stop():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AnimatedTexture.hpp')
-@:native('AnimatedTexture')
-@:unreflective
-@:structAccess
-extern class AnimatedTexture extends Texture {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Animation.hpp')
-@:native('Animation')
-@:unreflective
-@:structAccess
-extern class Animation extends Resource {
-    public add_track(type:Int, at_position:Int):Int
-    public animation_track_get_key_animation(idx:Int, key_idx:Int):String
-    public animation_track_insert_key(track:Int, time:Float, animation:String):Int
-    public animation_track_set_key_animation(idx:Int, key_idx:Int, animation:String):Void
-    public audio_track_get_key_end_offset(idx:Int, key_idx:Int):Float
-    public audio_track_get_key_start_offset(idx:Int, key_idx:Int):Float
-    public audio_track_get_key_stream(idx:Int, key_idx:Int):Resource
-    public audio_track_insert_key(track:Int, time:Float, stream:Resource, start_offset:Float, end_offset:Float):Int
-    public audio_track_set_key_end_offset(idx:Int, key_idx:Int, offset:Float):Void
-    public audio_track_set_key_start_offset(idx:Int, key_idx:Int, offset:Float):Void
-    public audio_track_set_key_stream(idx:Int, key_idx:Int, stream:Resource):Void
-    public bezier_track_get_key_in_handle(idx:Int, key_idx:Int):Vector2
-    public bezier_track_get_key_out_handle(idx:Int, key_idx:Int):Vector2
-    public bezier_track_get_key_value(idx:Int, key_idx:Int):Float
-    public bezier_track_insert_key(track:Int, time:Float, value:Float, in_handle:Vector2, out_handle:Vector2):Int
-    public bezier_track_interpolate(track:Int, time:Float):Float
-    public bezier_track_set_key_in_handle(idx:Int, key_idx:Int, in_handle:Vector2):Void
-    public bezier_track_set_key_out_handle(idx:Int, key_idx:Int, out_handle:Vector2):Void
-    public bezier_track_set_key_value(idx:Int, key_idx:Int, value:Float):Void
-    public clear():Void
-    public copy_track(track:Int, to_animation:Animation):Void
-    public find_track(path:NodePath):Int
-    public get_track_count():Int
-    public method_track_get_key_indices(idx:Int, time_sec:Float, delta:Float):PoolIntArray
-    public method_track_get_name(idx:Int, key_idx:Int):String
-    public method_track_get_params(idx:Int, key_idx:Int):Array
-    public remove_track(idx:Int):Void
-    public track_find_key(idx:Int, time:Float, exact:Bool):Int
-    public track_get_interpolation_loop_wrap(idx:Int):Bool
-    public track_get_interpolation_type(idx:Int):Int
-    public track_get_key_count(idx:Int):Int
-    public track_get_key_time(idx:Int, key_idx:Int):Float
-    public track_get_key_transition(idx:Int, key_idx:Int):Float
-    public track_get_key_value(idx:Int, key_idx:Int):Variant
-    public track_get_path(idx:Int):NodePath
-    public track_get_type(idx:Int):Int
-    public track_insert_key(idx:Int, time:Float, key:Variant, transition:Float):Void
-    public track_is_enabled(idx:Int):Bool
-    public track_is_imported(idx:Int):Bool
-    public track_move_down(idx:Int):Void
-    public track_move_up(idx:Int):Void
-    public track_remove_key(idx:Int, key_idx:Int):Void
-    public track_remove_key_at_position(idx:Int, position:Float):Void
-    public track_set_enabled(idx:Int, enabled:Bool):Void
-    public track_set_imported(idx:Int, imported:Bool):Void
-    public track_set_interpolation_loop_wrap(idx:Int, interpolation:Bool):Void
-    public track_set_interpolation_type(idx:Int, interpolation:Int):Void
-    public track_set_key_transition(idx:Int, key_idx:Int, transition:Float):Void
-    public track_set_key_value(idx:Int, key:Int, value:Variant):Void
-    public track_set_path(idx:Int, path:NodePath):Void
-    public track_swap(idx:Int, with_idx:Int):Void
-    public transform_track_insert_key(idx:Int, time:Float, location:Vector3, rotation:Quat, scale:Vector3):Int
-    public transform_track_interpolate(idx:Int, time_sec:Float):Array
-    public value_track_get_key_indices(idx:Int, time_sec:Float, delta:Float):PoolIntArray
-    public value_track_get_update_mode(idx:Int):Int
-    public value_track_set_update_mode(idx:Int, mode:Int):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AnimationNode.hpp')
-@:native('AnimationNode')
-@:unreflective
-@:structAccess
-extern class AnimationNode extends Resource {
-    public _parent_set(parent:Object):Void
-    public add_input(name:String):Void
-    public blend_animation(animation:String, time:Float, delta:Float, seeked:Bool, blend:Float):Void
-    public blend_input(input_index:Int, time:Float, seek:Bool, blend:Float, filter:Int, optimize:Bool):Float
-    public blend_node(node:AnimationNode, time:Float, seek:Bool, blend:Float, filter:Int, optimize:Bool):Float
-    public get_caption():String
-    public get_input_activity(input:Int):Float
-    public get_input_connection(input:Int):String
-    public get_input_count():Int
-    public get_input_name(input:Int):String
-    public get_parent():AnimationNode
-    public get_position():Vector2
-    public get_tree():AnimationTree
-    public has_filter():String
-    public is_path_filtered(path:NodePath):Bool
-    public process(time:Float, seek:Bool):Void
-    public remove_input(index:Int):Void
-    public set_filter_path(path:NodePath, enable:Bool):Void
-    public set_parent(parent:Object):Void
-    public set_position(position:Vector2):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AnimationNodeAdd2.hpp')
-@:native('AnimationNodeAdd2')
-@:unreflective
-@:structAccess
-extern class AnimationNodeAdd2 extends AnimationNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AnimationNodeAdd3.hpp')
-@:native('AnimationNodeAdd3')
-@:unreflective
-@:structAccess
-extern class AnimationNodeAdd3 extends AnimationNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AnimationNodeAnimation.hpp')
-@:native('AnimationNodeAnimation')
-@:unreflective
-@:structAccess
-extern class AnimationNodeAnimation extends AnimationRootNode {
-    public get_playback_time():Float
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AnimationNodeBlend2.hpp')
-@:native('AnimationNodeBlend2')
-@:unreflective
-@:structAccess
-extern class AnimationNodeBlend2 extends AnimationNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AnimationNodeBlend3.hpp')
-@:native('AnimationNodeBlend3')
-@:unreflective
-@:structAccess
-extern class AnimationNodeBlend3 extends AnimationNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AnimationNodeBlendSpace1D.hpp')
-@:native('AnimationNodeBlendSpace1D')
-@:unreflective
-@:structAccess
-extern class AnimationNodeBlendSpace1D extends AnimationRootNode {
-    public add_blend_point(node:AnimationRootNode, pos:Float, at_index:Int):Void
-    public get_blend_point_count():Int
-    public get_blend_point_node(point:Int):AnimationRootNode
-    public get_blend_point_position(point:Int):Float
-    public remove_blend_point(point:Int):Void
-    public set_blend_point_node(point:Int, node:AnimationRootNode):Void
-    public set_blend_point_position(point:Int, pos:Float):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AnimationNodeBlendSpace2D.hpp')
-@:native('AnimationNodeBlendSpace2D')
-@:unreflective
-@:structAccess
-extern class AnimationNodeBlendSpace2D extends AnimationRootNode {
-    public add_blend_point(node:AnimationRootNode, pos:Vector2, at_index:Int):Void
-    public add_triangle(x:Int, y:Int, z:Int, at_index:Int):Void
-    public get_blend_point_count():Int
-    public get_blend_point_node(point:Int):AnimationRootNode
-    public get_blend_point_position(point:Int):Vector2
-    public get_triangle_count():Int
-    public get_triangle_point(triangle:Int, point:Int):Int
-    public remove_blend_point(point:Int):Void
-    public remove_triangle(triangle:Int):Void
-    public set_blend_point_node(point:Int, node:AnimationRootNode):Void
-    public set_blend_point_position(point:Int, pos:Vector2):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AnimationNodeBlendTree.hpp')
-@:native('AnimationNodeBlendTree')
-@:unreflective
-@:structAccess
-extern class AnimationNodeBlendTree extends AnimationRootNode {
-    public add_node(name:String, node:AnimationNode):Void
-    public connect_node(input_node:String, input_index:Int, output_node:String):Void
-    public disconnect_node(input_node:String, input_index:Int):Void
-    public get_node(name:String):AnimationNode
-    public has_node(name:String):Bool
-    public remove_node(name:String):Void
-    public rename_node(name:String, new_name:String):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AnimationNodeOneShot.hpp')
-@:native('AnimationNodeOneShot')
-@:unreflective
-@:structAccess
-extern class AnimationNodeOneShot extends AnimationNode {
-    public get_mix_mode():Int
-    public is_active():Bool
-    public set_mix_mode(mode:Int):Void
-    public start():Void
-    public stop():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AnimationNodeOutput.hpp')
-@:native('AnimationNodeOutput')
-@:unreflective
-@:structAccess
-extern class AnimationNodeOutput extends AnimationNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AnimationNodeStateMachine.hpp')
-@:native('AnimationNodeStateMachine')
-@:unreflective
-@:structAccess
-extern class AnimationNodeStateMachine extends AnimationRootNode {
-    public add_node(name:String, node:AnimationNode):Void
-    public add_transition(from:String, to:String, transition:AnimationNodeStateMachineTransition):Void
-    public get_current_node():String
-    public get_end_node():String
-    public get_graph_offset():Vector2
-    public get_node(name:String):AnimationNode
-    public get_node_name(node:AnimationNode):String
-    public get_start_node():String
-    public get_transition(idx:Int):AnimationNodeStateMachineTransition
-    public get_transition_count():Int
-    public get_transition_from(idx:Int):String
-    public get_transition_to(idx:Int):String
-    public get_travel_path():PoolStringArray
-    public has_node(name:String):Bool
-    public has_transition(from:String, to:String, arg2:AnimationNodeStateMachineTransition):Void
-    public is_playing():Bool
-    public remove_node(name:String):Void
-    public remove_transition(from:String, to:String):Void
-    public remove_transition_by_index(idx:Int):Void
-    public rename_node(name:String, new_name:String):Void
-    public set_end_node(name:String):Void
-    public set_graph_offset(name:Vector2):Void
-    public set_start_node(name:String):Void
-    public start(node:String):Void
-    public stop():Void
-    public travel(to_node:String):Bool
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AnimationNodeStateMachineTransition.hpp')
-@:native('AnimationNodeStateMachineTransition')
-@:unreflective
-@:structAccess
-extern class AnimationNodeStateMachineTransition extends Resource {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AnimationNodeTimeScale.hpp')
-@:native('AnimationNodeTimeScale')
-@:unreflective
-@:structAccess
-extern class AnimationNodeTimeScale extends AnimationNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AnimationNodeTimeSeek.hpp')
-@:native('AnimationNodeTimeSeek')
-@:unreflective
-@:structAccess
-extern class AnimationNodeTimeSeek extends AnimationNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AnimationNodeTransition.hpp')
-@:native('AnimationNodeTransition')
-@:unreflective
-@:structAccess
-extern class AnimationNodeTransition extends AnimationNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AnimationPlayer.hpp')
-@:native('AnimationPlayer')
-@:unreflective
-@:structAccess
-extern class AnimationPlayer extends Node {
-    public add_animation(name:String, animation:Animation):Int
-    public advance(delta:Float):Void
-    public animation_get_next(anim_from:String):String
-    public animation_set_next(anim_from:String, anim_to:String):Void
-    public clear_caches():Void
-    public clear_queue():Void
-    public find_animation(animation:Animation):String
-    public get_animation(name:String):Animation
-    public get_animation_list():PoolStringArray
-    public get_blend_time(anim_from:String, anim_to:String):Float
-    public get_playing_speed():Float
-    public has_animation(name:String):Bool
-    public is_playing():Bool
-    public play(name:String, custom_blend:Float, custom_speed:Float, from_end:Bool):Void
-    public play_backwards(name:String, custom_blend:Float):Void
-    public queue(name:String):Void
-    public remove_animation(name:String):Void
-    public rename_animation(name:String, newname:String):Void
-    public seek(seconds:Float, update:Bool):Void
-    public set_blend_time(anim_from:String, anim_to:String, sec:Float):Void
-    public stop(reset:Bool):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AnimationRootNode.hpp')
-@:native('AnimationRootNode')
-@:unreflective
-@:structAccess
-extern class AnimationRootNode extends AnimationNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AnimationTrackEditPlugin.hpp')
-@:native('AnimationTrackEditPlugin')
-@:unreflective
-@:structAccess
-extern class AnimationTrackEditPlugin extends Reference {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AnimationTree.hpp')
-@:native('AnimationTree')
-@:unreflective
-@:structAccess
-extern class AnimationTree extends Node {
-    public get_root_motion_transform():Transform
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AnimationTreePlayer.hpp')
-@:native('AnimationTreePlayer')
-@:unreflective
-@:structAccess
-extern class AnimationTreePlayer extends Node {
-    public add_node(type:Int, id:String):Void
-    public advance(delta:Float):Void
-    public animation_node_get_animation(id:String):Animation
-    public animation_node_get_master_animation(id:String):String
-    public animation_node_get_position(id:String):Float
-    public animation_node_set_animation(id:String, animation:Animation):Void
-    public animation_node_set_filter_path(id:String, path:NodePath, enable:Bool):Void
-    public animation_node_set_master_animation(id:String, source:String):Void
-    public are_nodes_connected(id:String, dst_id:String, dst_input_idx:Int):Bool
-    public blend2_node_get_amount(id:String):Float
-    public blend2_node_set_amount(id:String, blend:Float):Void
-    public blend2_node_set_filter_path(id:String, path:NodePath, enable:Bool):Void
-    public blend3_node_get_amount(id:String):Float
-    public blend3_node_set_amount(id:String, blend:Float):Void
-    public blend4_node_get_amount(id:String):Vector2
-    public blend4_node_set_amount(id:String, blend:Vector2):Void
-    public connect_nodes(id:String, dst_id:String, dst_input_idx:Int):Int
-    public disconnect_nodes(id:String, dst_input_idx:Int):Void
-    public get_node_list():PoolStringArray
-    public mix_node_get_amount(id:String):Float
-    public mix_node_set_amount(id:String, ratio:Float):Void
-    public node_exists(node:String):Bool
-    public node_get_input_count(id:String):Int
-    public node_get_input_source(id:String, idx:Int):String
-    public node_get_position(id:String):Vector2
-    public node_get_type(id:String):Int
-    public node_rename(node:String, new_name:String):Int
-    public node_set_position(id:String, screen_position:Vector2):Void
-    public oneshot_node_get_autorestart_delay(id:String):Float
-    public oneshot_node_get_autorestart_random_delay(id:String):Float
-    public oneshot_node_get_fadein_time(id:String):Float
-    public oneshot_node_get_fadeout_time(id:String):Float
-    public oneshot_node_has_autorestart(id:String):Bool
-    public oneshot_node_is_active(id:String):Bool
-    public oneshot_node_set_autorestart(id:String, enable:Bool):Void
-    public oneshot_node_set_autorestart_delay(id:String, delay_sec:Float):Void
-    public oneshot_node_set_autorestart_random_delay(id:String, rand_sec:Float):Void
-    public oneshot_node_set_fadein_time(id:String, time_sec:Float):Void
-    public oneshot_node_set_fadeout_time(id:String, time_sec:Float):Void
-    public oneshot_node_set_filter_path(id:String, path:NodePath, enable:Bool):Void
-    public oneshot_node_start(id:String):Void
-    public oneshot_node_stop(id:String):Void
-    public recompute_caches():Void
-    public remove_node(id:String):Void
-    public reset():Void
-    public timescale_node_get_scale(id:String):Float
-    public timescale_node_set_scale(id:String, scale:Float):Void
-    public timeseek_node_seek(id:String, seconds:Float):Void
-    public transition_node_delete_input(id:String, input_idx:Int):Void
-    public transition_node_get_current(id:String):Int
-    public transition_node_get_input_count(id:String):Int
-    public transition_node_get_xfade_time(id:String):Float
-    public transition_node_has_input_auto_advance(id:String, input_idx:Int):Bool
-    public transition_node_set_current(id:String, input_idx:Int):Void
-    public transition_node_set_input_auto_advance(id:String, input_idx:Int, enable:Bool):Void
-    public transition_node_set_input_count(id:String, count:Int):Void
-    public transition_node_set_xfade_time(id:String, time_sec:Float):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Area.hpp')
-@:native('Area')
-@:unreflective
-@:structAccess
-extern class Area extends CollisionObject {
-    public get_collision_layer_bit(bit:Int):Bool
-    public get_collision_mask_bit(bit:Int):Bool
-    public get_overlapping_areas():Array
-    public get_overlapping_bodies():Array
-    public overlaps_area(area:Node):Bool
-    public overlaps_body(body:Node):Bool
-    public set_collision_layer_bit(bit:Int, value:Bool):Void
-    public set_collision_mask_bit(bit:Int, value:Bool):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Area2D.hpp')
-@:native('Area2D')
-@:unreflective
-@:structAccess
-extern class Area2D extends CollisionObject2D {
-    public get_collision_layer_bit(bit:Int):Bool
-    public get_collision_mask_bit(bit:Int):Bool
-    public get_overlapping_areas():Array
-    public get_overlapping_bodies():Array
-    public overlaps_area(area:Node):Bool
-    public overlaps_body(body:Node):Bool
-    public set_collision_layer_bit(bit:Int, value:Bool):Void
-    public set_collision_mask_bit(bit:Int, value:Bool):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/core/Array.hpp')
-@:native('Array')
-@:unreflective
-@:structAccess
-extern class Array {
-    public Array(from:PoolColorArray):Array
-    public Array(from:PoolVector3Array):Array
-    public Array(from:PoolVector2Array):Array
-    public Array(from:PoolStringArray):Array
-    public Array(from:PoolRealArray):Array
-    public Array(from:PoolIntArray):Array
-    public Array(from:PoolByteArray):Array
-    public append(value:var):Void
-    public back():var
-    public bsearch(value:var, before:Bool):Int
-    public bsearch_custom(value:var, obj:Object, func:String, before:Bool):Int
-    public clear():Void
-    public count(value:var):Int
-    public duplicate(deep:Bool):Array
-    public empty():Bool
-    public erase(value:var):Void
-    public find(what:var, from:Int):Int
-    public find_last(value:var):Int
-    public front():var
-    public has(value:var):Bool
-    public hash():Int
-    public insert(position:Int, value:var):Void
-    public invert():Void
-    public pop_back():var
-    public pop_front():var
-    public push_back(value:var):Void
-    public push_front(value:var):Void
-    public remove(position:Int):Void
-    public resize(size:Int):Void
-    public rfind(what:var, from:Int):Int
-    public shuffle():Void
-    public size():Int
-    public sort():Void
-    public sort_custom(obj:Object, func:String):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ArrayMesh.hpp')
-@:native('ArrayMesh')
-@:unreflective
-@:structAccess
-extern class ArrayMesh extends Mesh {
-    public add_blend_shape(name:String):Void
-    public add_surface_from_arrays(primitive:Int, arrays:Array, blend_shapes:Array, compress_flags:Int):Void
-    public center_geometry():Void
-    public clear_blend_shapes():Void
-    public get_blend_shape_count():Int
-    public get_blend_shape_name(index:Int):String
-    public get_surface_count():Int
-    public lightmap_unwrap(arg0:Transform, arg1:Float):Int
-    public regen_normalmaps():Void
-    public surface_find_by_name(name:String):Int
-    public surface_get_array_index_len(surf_idx:Int):Int
-    public surface_get_array_len(surf_idx:Int):Int
-    public surface_get_arrays(surf_idx:Int):Array
-    public surface_get_blend_shape_arrays(surf_idx:Int):Array
-    public surface_get_format(surf_idx:Int):Int
-    public surface_get_material(surf_idx:Int):Material
-    public surface_get_name(surf_idx:Int):String
-    public surface_get_primitive_type(surf_idx:Int):Int
-    public surface_remove(surf_idx:Int):Void
-    public surface_set_material(surf_idx:Int, material:Material):Void
-    public surface_set_name(surf_idx:Int, name:String):Void
-    public surface_update_region(surf_idx:Int, offset:Int, data:PoolByteArray):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ARVRAnchor.hpp')
-@:native('ARVRAnchor')
-@:unreflective
-@:structAccess
-extern class ARVRAnchor extends Spatial {
-    public get_anchor_name():String
-    public get_is_active():Bool
-    public get_plane():Plane
-    public get_size():Vector3
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ARVRCamera.hpp')
-@:native('ARVRCamera')
-@:unreflective
-@:structAccess
-extern class ARVRCamera extends Camera {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ARVRController.hpp')
-@:native('ARVRController')
-@:unreflective
-@:structAccess
-extern class ARVRController extends Spatial {
-    public get_controller_name():String
-    public get_hand():Int
-    public get_is_active():Bool
-    public get_joystick_axis(axis:Int):Float
-    public get_joystick_id():Int
-    public is_button_pressed(button:Int):Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ARVRInterface.hpp')
-@:native('ARVRInterface')
-@:unreflective
-@:structAccess
-extern class ARVRInterface extends Reference {
-    public get_capabilities():Int
-    public get_name():String
-    public get_render_targetsize():Vector2
-    public get_tracking_status():Int
-    public initialize():Bool
-    public is_stereo():Bool
-    public uninitialize():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ARVROrigin.hpp')
-@:native('ARVROrigin')
-@:unreflective
-@:structAccess
-extern class ARVROrigin extends Spatial {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ARVRPositionalTracker.hpp')
-@:native('ARVRPositionalTracker')
-@:unreflective
-@:structAccess
-extern class ARVRPositionalTracker extends Object {
-    public get_hand():Int
-    public get_joy_id():Int
-    public get_name():String
-    public get_orientation():Basis
-    public get_position():Vector3
-    public get_tracks_orientation():Bool
-    public get_tracks_position():Bool
-    public get_transform(adjust_by_reference_frame:Bool):Transform
-    public get_type():Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ARVRServer.hpp')
-@:native('ARVRServer')
-@:unreflective
-@:structAccess
-extern class ARVRServer extends Object {
-    public center_on_hmd(rotation_mode:Int, keep_height:Bool):Void
-    public find_interface(name:String):ARVRInterface
-    public get_hmd_transform():Transform
-    public get_interface(idx:Int):ARVRInterface
-    public get_interface_count():Int
-    public get_interfaces():Array
-    public get_last_commit_usec():Int
-    public get_last_frame_usec():Int
-    public get_last_process_usec():Int
-    public get_reference_frame():Transform
-    public get_tracker(idx:Int):ARVRPositionalTracker
-    public get_tracker_count():Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AStar.hpp')
-@:native('AStar')
-@:unreflective
-@:structAccess
-extern class AStar extends Reference {
-    public _compute_cost(from_id:Int, to_id:Int):Float
-    public _estimate_cost(from_id:Int, to_id:Int):Float
-    public add_point(id:Int, position:Vector3, weight_scale:Float):Void
-    public are_points_connected(id:Int, to_id:Int):Bool
-    public clear():Void
-    public connect_points(id:Int, to_id:Int, bidirectional:Bool):Void
-    public disconnect_points(id:Int, to_id:Int):Void
-    public get_available_point_id():Int
-    public get_closest_point(to_position:Vector3):Int
-    public get_closest_position_in_segment(to_position:Vector3):Vector3
-    public get_id_path(from_id:Int, to_id:Int):PoolIntArray
-    public get_point_connections(id:Int):PoolIntArray
-    public get_point_path(from_id:Int, to_id:Int):PoolVector3Array
-    public get_point_position(id:Int):Vector3
-    public get_point_weight_scale(id:Int):Float
-    public get_points():Array
-    public has_point(id:Int):Bool
-    public remove_point(id:Int):Void
-    public set_point_position(id:Int, position:Vector3):Void
-    public set_point_weight_scale(id:Int, weight_scale:Float):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AtlasTexture.hpp')
-@:native('AtlasTexture')
-@:unreflective
-@:structAccess
-extern class AtlasTexture extends Texture {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioBusLayout.hpp')
-@:native('AudioBusLayout')
-@:unreflective
-@:structAccess
-extern class AudioBusLayout extends Resource {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioEffect.hpp')
-@:native('AudioEffect')
-@:unreflective
-@:structAccess
-extern class AudioEffect extends Resource {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioEffectAmplify.hpp')
-@:native('AudioEffectAmplify')
-@:unreflective
-@:structAccess
-extern class AudioEffectAmplify extends AudioEffect {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioEffectBandLimitFilter.hpp')
-@:native('AudioEffectBandLimitFilter')
-@:unreflective
-@:structAccess
-extern class AudioEffectBandLimitFilter extends AudioEffectFilter {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioEffectBandPassFilter.hpp')
-@:native('AudioEffectBandPassFilter')
-@:unreflective
-@:structAccess
-extern class AudioEffectBandPassFilter extends AudioEffectFilter {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioEffectChorus.hpp')
-@:native('AudioEffectChorus')
-@:unreflective
-@:structAccess
-extern class AudioEffectChorus extends AudioEffect {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioEffectCompressor.hpp')
-@:native('AudioEffectCompressor')
-@:unreflective
-@:structAccess
-extern class AudioEffectCompressor extends AudioEffect {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioEffectDelay.hpp')
-@:native('AudioEffectDelay')
-@:unreflective
-@:structAccess
-extern class AudioEffectDelay extends AudioEffect {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioEffectDistortion.hpp')
-@:native('AudioEffectDistortion')
-@:unreflective
-@:structAccess
-extern class AudioEffectDistortion extends AudioEffect {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioEffectEQ.hpp')
-@:native('AudioEffectEQ')
-@:unreflective
-@:structAccess
-extern class AudioEffectEQ extends AudioEffect {
-    public get_band_count():Int
-    public get_band_gain_db(band_idx:Int):Float
-    public set_band_gain_db(band_idx:Int, volume_db:Float):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioEffectEQ10.hpp')
-@:native('AudioEffectEQ10')
-@:unreflective
-@:structAccess
-extern class AudioEffectEQ10 extends AudioEffectEQ {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioEffectEQ21.hpp')
-@:native('AudioEffectEQ21')
-@:unreflective
-@:structAccess
-extern class AudioEffectEQ21 extends AudioEffectEQ {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioEffectEQ6.hpp')
-@:native('AudioEffectEQ6')
-@:unreflective
-@:structAccess
-extern class AudioEffectEQ6 extends AudioEffectEQ {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioEffectFilter.hpp')
-@:native('AudioEffectFilter')
-@:unreflective
-@:structAccess
-extern class AudioEffectFilter extends AudioEffect {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioEffectHighPassFilter.hpp')
-@:native('AudioEffectHighPassFilter')
-@:unreflective
-@:structAccess
-extern class AudioEffectHighPassFilter extends AudioEffectFilter {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioEffectHighShelfFilter.hpp')
-@:native('AudioEffectHighShelfFilter')
-@:unreflective
-@:structAccess
-extern class AudioEffectHighShelfFilter extends AudioEffectFilter {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioEffectLimiter.hpp')
-@:native('AudioEffectLimiter')
-@:unreflective
-@:structAccess
-extern class AudioEffectLimiter extends AudioEffect {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioEffectLowPassFilter.hpp')
-@:native('AudioEffectLowPassFilter')
-@:unreflective
-@:structAccess
-extern class AudioEffectLowPassFilter extends AudioEffectFilter {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioEffectLowShelfFilter.hpp')
-@:native('AudioEffectLowShelfFilter')
-@:unreflective
-@:structAccess
-extern class AudioEffectLowShelfFilter extends AudioEffectFilter {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioEffectNotchFilter.hpp')
-@:native('AudioEffectNotchFilter')
-@:unreflective
-@:structAccess
-extern class AudioEffectNotchFilter extends AudioEffectFilter {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioEffectPanner.hpp')
-@:native('AudioEffectPanner')
-@:unreflective
-@:structAccess
-extern class AudioEffectPanner extends AudioEffect {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioEffectPhaser.hpp')
-@:native('AudioEffectPhaser')
-@:unreflective
-@:structAccess
-extern class AudioEffectPhaser extends AudioEffect {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioEffectPitchShift.hpp')
-@:native('AudioEffectPitchShift')
-@:unreflective
-@:structAccess
-extern class AudioEffectPitchShift extends AudioEffect {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioEffectReverb.hpp')
-@:native('AudioEffectReverb')
-@:unreflective
-@:structAccess
-extern class AudioEffectReverb extends AudioEffect {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioEffectStereoEnhance.hpp')
-@:native('AudioEffectStereoEnhance')
-@:unreflective
-@:structAccess
-extern class AudioEffectStereoEnhance extends AudioEffect {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioServer.hpp')
-@:native('AudioServer')
-@:unreflective
-@:structAccess
-extern class AudioServer extends Object {
-    public add_bus(at_position:Int):Void
-    public add_bus_effect(bus_idx:Int, effect:AudioEffect, at_position:Int):Void
-    public generate_bus_layout():AudioBusLayout
-    public get_bus_count():Int
-    public get_bus_effect(bus_idx:Int, effect_idx:Int):AudioEffect
-    public get_bus_effect_count(bus_idx:Int):Int
-    public get_bus_index(bus_name:String):Int
-    public get_bus_name(bus_idx:Int):String
-    public get_bus_peak_volume_left_db(bus_idx:Int, channel:Int):Float
-    public get_bus_peak_volume_right_db(bus_idx:Int, channel:Int):Float
-    public get_bus_send(bus_idx:Int):String
-    public get_bus_volume_db(bus_idx:Int):Float
-    public get_device():String
-    public get_device_list():Array
-    public get_mix_rate():Float
-    public get_speaker_mode():Int
-    public is_bus_bypassing_effects(bus_idx:Int):Bool
-    public is_bus_effect_enabled(bus_idx:Int, effect_idx:Int):Bool
-    public is_bus_mute(bus_idx:Int):Bool
-    public is_bus_solo(bus_idx:Int):Bool
-    public lock():Void
-    public move_bus(index:Int, to_index:Int):Void
-    public remove_bus(index:Int):Void
-    public remove_bus_effect(bus_idx:Int, effect_idx:Int):Void
-    public set_bus_bypass_effects(bus_idx:Int, enable:Bool):Void
-    public set_bus_count(amount:Int):Void
-    public set_bus_effect_enabled(bus_idx:Int, effect_idx:Int, enabled:Bool):Void
-    public set_bus_layout(bus_layout:AudioBusLayout):Void
-    public set_bus_mute(bus_idx:Int, enable:Bool):Void
-    public set_bus_name(bus_idx:Int, name:String):Void
-    public set_bus_send(bus_idx:Int, send:String):Void
-    public set_bus_solo(bus_idx:Int, enable:Bool):Void
-    public set_bus_volume_db(bus_idx:Int, volume_db:Float):Void
-    public set_device(arg0:String):Void
-    public swap_bus_effects(bus_idx:Int, effect_idx:Int, by_effect_idx:Int):Void
-    public unlock():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioStream.hpp')
-@:native('AudioStream')
-@:unreflective
-@:structAccess
-extern class AudioStream extends Resource {
-    public get_length():Float
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioStreamPlayback.hpp')
-@:native('AudioStreamPlayback')
-@:unreflective
-@:structAccess
-extern class AudioStreamPlayback extends Reference {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioStreamPlayer.hpp')
-@:native('AudioStreamPlayer')
-@:unreflective
-@:structAccess
-extern class AudioStreamPlayer extends Node {
-    public get_playback_position():Float
-    public play(from_position:Float):Void
-    public seek(to_position:Float):Void
-    public stop():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioStreamPlayer2D.hpp')
-@:native('AudioStreamPlayer2D')
-@:unreflective
-@:structAccess
-extern class AudioStreamPlayer2D extends Node2D {
-    public get_playback_position():Float
-    public play(from_position:Float):Void
-    public seek(to_position:Float):Void
-    public stop():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioStreamPlayer3D.hpp')
-@:native('AudioStreamPlayer3D')
-@:unreflective
-@:structAccess
-extern class AudioStreamPlayer3D extends Spatial {
-    public get_playback_position():Float
-    public play(from_position:Float):Void
-    public seek(to_position:Float):Void
-    public stop():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioStreamRandomPitch.hpp')
-@:native('AudioStreamRandomPitch')
-@:unreflective
-@:structAccess
-extern class AudioStreamRandomPitch extends AudioStream {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/AudioStreamSample.hpp')
-@:native('AudioStreamSample')
-@:unreflective
-@:structAccess
-extern class AudioStreamSample extends AudioStream {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/BackBufferCopy.hpp')
-@:native('BackBufferCopy')
-@:unreflective
-@:structAccess
-extern class BackBufferCopy extends Node2D {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/BakedLightmap.hpp')
-@:native('BakedLightmap')
-@:unreflective
-@:structAccess
-extern class BakedLightmap extends VisualInstance {
-    public bake(from_node:Node, create_visual_debug:Bool):Int
-    public debug_bake():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/BakedLightmapData.hpp')
-@:native('BakedLightmapData')
-@:unreflective
-@:structAccess
-extern class BakedLightmapData extends Resource {
-    public add_user(path:NodePath, lightmap:Texture, instance:Int):Void
-    public clear_users():Void
-    public get_user_count():Int
-    public get_user_lightmap(user_idx:Int):Texture
-    public get_user_path(user_idx:Int):NodePath
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/BaseButton.hpp')
-@:native('BaseButton')
-@:unreflective
-@:structAccess
-extern class BaseButton extends Control {
-    public _pressed():Void
-    public _toggled(button_pressed:Bool):Void
-    public get_draw_mode():Int
-    public is_hovered():Bool
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/core/Basis.hpp')
-@:native('Basis')
-@:unreflective
-@:structAccess
-extern class Basis {
-    public Basis(from:Quat):Basis
-    public Basis(from:Vector3):Basis
-    public Basis(axis:Vector3, phi:Float):Basis
-    public Basis(x_axis:Vector3, y_axis:Vector3, z_axis:Vector3):Basis
-    public determinant():Float
-    public get_euler():Vector3
-    public get_orthogonal_index():Int
-    public get_scale():Vector3
-    public inverse():Basis
-    public orthonormalized():Basis
-    public rotated(axis:Vector3, phi:Float):Basis
-    public scaled(scale:Vector3):Basis
-    public slerp(b:Basis, t:Float):Basis
-    public tdotx(with:Vector3):Float
-    public tdoty(with:Vector3):Float
-    public tdotz(with:Vector3):Float
-    public transposed():Basis
-    public xform(v:Vector3):Vector3
-    public xform_inv(v:Vector3):Vector3
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/BitMap.hpp')
-@:native('BitMap')
-@:unreflective
-@:structAccess
-extern class BitMap extends Resource {
-    public create(size:Vector2):Void
-    public create_from_image_alpha(image:Image, threshold:Float):Void
-    public get_bit(position:Vector2):Bool
-    public get_size():Vector2
-    public get_true_bit_count():Int
-    public set_bit(position:Vector2, bit:Bool):Void
-    public set_bit_rect(p_rect:Rect2, bit:Bool):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/BitmapFont.hpp')
-@:native('BitmapFont')
-@:unreflective
-@:structAccess
-extern class BitmapFont extends Font {
-    public add_char(character:Int, texture:Int, rect:Rect2, align:Vector2, advance:Float):Void
-    public add_kerning_pair(char_a:Int, char_b:Int, kerning:Int):Void
-    public add_texture(texture:Texture):Void
-    public clear():Void
-    public create_from_fnt(path:String):Int
-    public get_char_size(char:Int, next:Int):Vector2
-    public get_kerning_pair(char_a:Int, char_b:Int):Int
-    public get_texture(idx:Int):Texture
-    public get_texture_count():Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Bone2D.hpp')
-@:native('Bone2D')
-@:unreflective
-@:structAccess
-extern class Bone2D extends Node2D {
-    public apply_rest():Void
-    public get_index_in_skeleton():Int
-    public get_skeleton_rest():Transform2D
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/BoneAttachment.hpp')
-@:native('BoneAttachment')
-@:unreflective
-@:structAccess
-extern class BoneAttachment extends Spatial {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/bool.hpp')
-@:native('bool')
-@:unreflective
-@:structAccess
-extern class Bool {
-    public Bool(from:Int):Bool
-    public Bool(from:Float):Bool
-    public Bool(from:String):Bool
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/BoxContainer.hpp')
-@:native('BoxContainer')
-@:unreflective
-@:structAccess
-extern class BoxContainer extends Container {
-    public add_spacer(begin:Bool):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/BoxShape.hpp')
-@:native('BoxShape')
-@:unreflective
-@:structAccess
-extern class BoxShape extends Shape {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Button.hpp')
-@:native('Button')
-@:unreflective
-@:structAccess
-extern class Button extends BaseButton {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ButtonGroup.hpp')
-@:native('ButtonGroup')
-@:unreflective
-@:structAccess
-extern class ButtonGroup extends Resource {
-    public get_pressed_button():BaseButton
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Camera.hpp')
-@:native('Camera')
-@:unreflective
-@:structAccess
-extern class Camera extends Spatial {
-    public clear_current(enable_next:Bool):Void
-    public get_camera_transform():Transform
-    public is_position_behind(world_point:Vector3):Bool
-    public make_current():Void
-    public project_local_ray_normal(screen_point:Vector2):Vector3
-    public project_position(screen_point:Vector2):Vector3
-    public project_ray_normal(screen_point:Vector2):Vector3
-    public project_ray_origin(screen_point:Vector2):Vector3
-    public set_orthogonal(size:Float, z_near:Float, z_far:Float):Void
-    public set_perspective(fov:Float, z_near:Float, z_far:Float):Void
-    public unproject_position(world_point:Vector3):Vector2
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Camera2D.hpp')
-@:native('Camera2D')
-@:unreflective
-@:structAccess
-extern class Camera2D extends Node2D {
-    public align():Void
-    public clear_current():Void
-    public force_update_scroll():Void
-    public get_camera_position():Vector2
-    public get_camera_screen_center():Vector2
-    public make_current():Void
-    public reset_smoothing():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/CanvasItem.hpp')
-@:native('CanvasItem')
-@:unreflective
-@:structAccess
-extern class CanvasItem extends Node {
-    public _draw():Void
-    public draw_char(font:Font, position:Vector2, char:String, next:String, modulate:Color):Float
-    public draw_circle(position:Vector2, radius:Float, color:Color):Void
-    public draw_colored_polygon(points:PoolVector2Array, color:Color, uvs:PoolVector2Array, texture:Texture, normal_map:Texture, antialiased:Bool):Void
-    public draw_line(from:Vector2, to:Vector2, color:Color, width:Float, antialiased:Bool):Void
-    public draw_mesh(mesh:Mesh, texture:Texture, normal_map:Texture):Void
-    public draw_multiline(points:PoolVector2Array, color:Color, width:Float, antialiased:Bool):Void
-    public draw_multiline_colors(points:PoolVector2Array, colors:PoolColorArray, width:Float, antialiased:Bool):Void
-    public draw_multimesh(mesh:Mesh, texture:Texture, normal_map:Texture):Void
-    public draw_polygon(points:PoolVector2Array, colors:PoolColorArray, uvs:PoolVector2Array, texture:Texture, normal_map:Texture, antialiased:Bool):Void
-    public draw_polyline(points:PoolVector2Array, color:Color, width:Float, antialiased:Bool):Void
-    public draw_polyline_colors(points:PoolVector2Array, colors:PoolColorArray, width:Float, antialiased:Bool):Void
-    public draw_primitive(points:PoolVector2Array, colors:PoolColorArray, uvs:PoolVector2Array, texture:Texture, width:Float, normal_map:Texture):Void
-    public draw_rect(rect:Rect2, color:Color, filled:Bool):Void
-    public draw_set_transform(position:Vector2, rotation:Float, scale:Vector2):Void
-    public draw_set_transform_matrix(xform:Transform2D):Void
-    public draw_string(font:Font, position:Vector2, text:String, modulate:Color, clip_w:Int):Void
-    public draw_style_box(style_box:StyleBox, rect:Rect2):Void
-    public draw_texture(texture:Texture, position:Vector2, modulate:Color, normal_map:Texture):Void
-    public draw_texture_rect(texture:Texture, rect:Rect2, tile:Bool, modulate:Color, transpose:Bool, normal_map:Texture):Void
-    public draw_texture_rect_region(texture:Texture, rect:Rect2, src_rect:Rect2, modulate:Color, transpose:Bool, normal_map:Texture, clip_uv:Bool):Void
-    public get_canvas():Rid
-    public get_canvas_item():Rid
-    public get_canvas_transform():Transform2D
-    public get_global_mouse_position():Vector2
-    public get_global_transform():Transform2D
-    public get_global_transform_with_canvas():Transform2D
-    public get_local_mouse_position():Vector2
-    public get_transform():Transform2D
-    public get_viewport_rect():Rect2
-    public get_viewport_transform():Transform2D
-    public get_world_2d():World2D
-    public hide():Void
-    public is_local_transform_notification_enabled():Bool
-    public is_set_as_toplevel():Bool
-    public is_transform_notification_enabled():Bool
-    public is_visible_in_tree():Bool
-    public make_canvas_position_local(screen_point:Vector2):Vector2
-    public make_input_local(event:InputEvent):InputEvent
-    public set_as_toplevel(enable:Bool):Void
-    public set_notify_local_transform(enable:Bool):Void
-    public set_notify_transform(enable:Bool):Void
-    public show():Void
-    public update():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/CanvasItemMaterial.hpp')
-@:native('CanvasItemMaterial')
-@:unreflective
-@:structAccess
-extern class CanvasItemMaterial extends Material {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/CanvasLayer.hpp')
-@:native('CanvasLayer')
-@:unreflective
-@:structAccess
-extern class CanvasLayer extends Node {
-    public get_canvas():Rid
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/CanvasModulate.hpp')
-@:native('CanvasModulate')
-@:unreflective
-@:structAccess
-extern class CanvasModulate extends Node2D {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/CapsuleMesh.hpp')
-@:native('CapsuleMesh')
-@:unreflective
-@:structAccess
-extern class CapsuleMesh extends PrimitiveMesh {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/CapsuleShape.hpp')
-@:native('CapsuleShape')
-@:unreflective
-@:structAccess
-extern class CapsuleShape extends Shape {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/CapsuleShape2D.hpp')
-@:native('CapsuleShape2D')
-@:unreflective
-@:structAccess
-extern class CapsuleShape2D extends Shape2D {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/CenterContainer.hpp')
-@:native('CenterContainer')
-@:unreflective
-@:structAccess
-extern class CenterContainer extends Container {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/CheckBox.hpp')
-@:native('CheckBox')
-@:unreflective
-@:structAccess
-extern class CheckBox extends Button {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/CheckButton.hpp')
-@:native('CheckButton')
-@:unreflective
-@:structAccess
-extern class CheckButton extends Button {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/CircleShape2D.hpp')
-@:native('CircleShape2D')
-@:unreflective
-@:structAccess
-extern class CircleShape2D extends Shape2D {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ClassDB.hpp')
-@:native('ClassDB')
-@:unreflective
-@:structAccess
-extern class ClassDB extends Object {
-    public can_instance(class:String):Bool
-    public class_exists(class:String):Bool
-    public class_get_category(class:String):String
-    public class_get_integer_constant(class:String, name:String):Int
-    public class_get_integer_constant_list(class:String, no_inheritance:Bool):PoolStringArray
-    public class_get_method_list(class:String, no_inheritance:Bool):Array
-    public class_get_property(object:Object, property:String):Variant
-    public class_get_property_list(class:String, no_inheritance:Bool):Array
-    public class_get_signal(class:String, signal:String):Dictionary
-    public class_get_signal_list(class:String, no_inheritance:Bool):Array
-    public class_has_integer_constant(class:String, name:String):Bool
-    public class_has_method(class:String, method:String, no_inheritance:Bool):Bool
-    public class_has_signal(class:String, signal:String):Bool
-    public class_set_property(object:Object, property:String, value:Variant):Int
-    public get_class_list():PoolStringArray
-    public get_inheriters_from_class(class:String):PoolStringArray
-    public get_parent_class(class:String):String
-    public instance(class:String):Variant
-    public is_class_enabled(class:String):Bool
-    public is_parent_class(class:String, inherits:String):Bool
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/CollisionObject.hpp')
-@:native('CollisionObject')
-@:unreflective
-@:structAccess
-extern class CollisionObject extends Spatial {
-    public _input_event(camera:Object, event:InputEvent, click_position:Vector3, click_normal:Vector3, shape_idx:Int):Void
-    public create_shape_owner(owner:Object):Int
-    public get_rid():Rid
-    public get_shape_owners():Array
-    public is_shape_owner_disabled(owner_id:Int):Bool
-    public remove_shape_owner(owner_id:Int):Void
-    public shape_find_owner(shape_index:Int):Int
-    public shape_owner_add_shape(owner_id:Int, shape:Shape):Void
-    public shape_owner_clear_shapes(owner_id:Int):Void
-    public shape_owner_get_owner(owner_id:Int):Object
-    public shape_owner_get_shape(owner_id:Int, shape_id:Int):Shape
-    public shape_owner_get_shape_count(owner_id:Int):Int
-    public shape_owner_get_shape_index(owner_id:Int, shape_id:Int):Int
-    public shape_owner_get_transform(owner_id:Int):Transform
-    public shape_owner_remove_shape(owner_id:Int, shape_id:Int):Void
-    public shape_owner_set_disabled(owner_id:Int, disabled:Bool):Void
-    public shape_owner_set_transform(owner_id:Int, transform:Transform):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/CollisionObject2D.hpp')
-@:native('CollisionObject2D')
-@:unreflective
-@:structAccess
-extern class CollisionObject2D extends Node2D {
-    public _input_event(viewport:Object, event:InputEvent, shape_idx:Int):Void
-    public create_shape_owner(owner:Object):Int
-    public get_rid():Rid
-    public get_shape_owners():Array
-    public is_shape_owner_disabled(owner_id:Int):Bool
-    public is_shape_owner_one_way_collision_enabled(owner_id:Int):Bool
-    public remove_shape_owner(owner_id:Int):Void
-    public shape_find_owner(shape_index:Int):Int
-    public shape_owner_add_shape(owner_id:Int, shape:Shape2D):Void
-    public shape_owner_clear_shapes(owner_id:Int):Void
-    public shape_owner_get_owner(owner_id:Int):Object
-    public shape_owner_get_shape(owner_id:Int, shape_id:Int):Shape2D
-    public shape_owner_get_shape_count(owner_id:Int):Int
-    public shape_owner_get_shape_index(owner_id:Int, shape_id:Int):Int
-    public shape_owner_get_transform(owner_id:Int):Transform2D
-    public shape_owner_remove_shape(owner_id:Int, shape_id:Int):Void
-    public shape_owner_set_disabled(owner_id:Int, disabled:Bool):Void
-    public shape_owner_set_one_way_collision(owner_id:Int, enable:Bool):Void
-    public shape_owner_set_transform(owner_id:Int, transform:Transform2D):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/CollisionPolygon.hpp')
-@:native('CollisionPolygon')
-@:unreflective
-@:structAccess
-extern class CollisionPolygon extends Spatial {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/CollisionPolygon2D.hpp')
-@:native('CollisionPolygon2D')
-@:unreflective
-@:structAccess
-extern class CollisionPolygon2D extends Node2D {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/CollisionShape.hpp')
-@:native('CollisionShape')
-@:unreflective
-@:structAccess
-extern class CollisionShape extends Spatial {
-    public make_convex_from_brothers():Void
-    public resource_changed(resource:Resource):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/CollisionShape2D.hpp')
-@:native('CollisionShape2D')
-@:unreflective
-@:structAccess
-extern class CollisionShape2D extends Node2D {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/core/Color.hpp')
-@:native('Color')
-@:unreflective
-@:structAccess
-extern class Color {
-    public Color(from:String):Color
-    public Color(from:Int):Color
-    public Color(r:Float, g:Float, b:Float):Color
-    public Color(r:Float, g:Float, b:Float, a:Float):Color
-    public blend(over:Color):Color
-    public contrasted():Color
-    public darkened(amount:Float):Color
-    public from_hsv(h:Float, s:Float, v:Float, a:Float):Color
-    public gray():Float
-    public inverted():Color
-    public lightened(amount:Float):Color
-    public linear_interpolate(b:Color, t:Float):Color
-    public to_abgr32():Int
-    public to_abgr64():Int
-    public to_argb32():Int
-    public to_argb64():Int
-    public to_html(with_alpha:Bool):String
-    public to_rgba32():Int
-    public to_rgba64():Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ColorPicker.hpp')
-@:native('ColorPicker')
-@:unreflective
-@:structAccess
-extern class ColorPicker extends BoxContainer {
-    public add_preset(color:Color):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ColorPickerButton.hpp')
-@:native('ColorPickerButton')
-@:unreflective
-@:structAccess
-extern class ColorPickerButton extends Button {
-    public get_picker():ColorPicker
-    public get_popup():PopupPanel
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ColorRect.hpp')
-@:native('ColorRect')
-@:unreflective
-@:structAccess
-extern class ColorRect extends Control {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ConcavePolygonShape.hpp')
-@:native('ConcavePolygonShape')
-@:unreflective
-@:structAccess
-extern class ConcavePolygonShape extends Shape {
-    public get_faces():PoolVector3Array
-    public set_faces(faces:PoolVector3Array):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ConcavePolygonShape2D.hpp')
-@:native('ConcavePolygonShape2D')
-@:unreflective
-@:structAccess
-extern class ConcavePolygonShape2D extends Shape2D {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ConeTwistJoint.hpp')
-@:native('ConeTwistJoint')
-@:unreflective
-@:structAccess
-extern class ConeTwistJoint extends Joint {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ConfigFile.hpp')
-@:native('ConfigFile')
-@:unreflective
-@:structAccess
-extern class ConfigFile extends Reference {
-    public erase_section(section:String):Void
-    public get_section_keys(section:String):PoolStringArray
-    public get_sections():PoolStringArray
-    public get_value(section:String, key:String, default:Variant):Variant
-    public has_section(section:String):Bool
-    public has_section_key(section:String, key:String):Bool
-    public load(path:String):Int
-    public save(path:String):Int
-    public set_value(section:String, key:String, value:Variant):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ConfirmationDialog.hpp')
-@:native('ConfirmationDialog')
-@:unreflective
-@:structAccess
-extern class ConfirmationDialog extends AcceptDialog {
-    public get_cancel():Button
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Container.hpp')
-@:native('Container')
-@:unreflective
-@:structAccess
-extern class Container extends Control {
-    public fit_child_in_rect(child:Control, rect:Rect2):Void
-    public queue_sort():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Control.hpp')
-@:native('Control')
-@:unreflective
-@:structAccess
-extern class Control extends CanvasItem {
-    public _get_minimum_size():Vector2
-    public _gui_input(event:InputEvent):Void
-    public _make_custom_tooltip(for_text:String):Object
-    public accept_event():Void
-    public add_color_override(name:String, color:Color):Void
-    public add_constant_override(name:String, constant:Int):Void
-    public add_font_override(name:String, font:Font):Void
-    public add_icon_override(name:String, texture:Texture):Void
-    public add_shader_override(name:String, shader:Shader):Void
-    public add_stylebox_override(name:String, stylebox:StyleBox):Void
-    public can_drop_data(position:Vector2, data:Variant):Bool
-    public drop_data(position:Vector2, data:Variant):Void
-    public force_drag(data:Variant, preview:Control):Void
-    public get_begin():Vector2
-    public get_color(name:String, type:String):Color
-    public get_combined_minimum_size():Vector2
-    public get_constant(name:String, type:String):Int
-    public get_cursor_shape(position:Vector2):Int
-    public get_drag_data(position:Vector2):Object
-    public get_end():Vector2
-    public get_focus_owner():Control
-    public get_font(name:String, type:String):Font
-    public get_global_rect():Rect2
-    public get_icon(name:String, type:String):Texture
-    public get_minimum_size():Vector2
-    public get_parent_area_size():Vector2
-    public get_parent_control():Control
-    public get_rect():Rect2
-    public get_rotation():Float
-    public get_stylebox(name:String, type:String):StyleBox
-    public get_tooltip(at_position:Vector2):String
-    public grab_click_focus():Void
-    public grab_focus():Void
-    public has_color(name:String, type:String):Bool
-    public has_color_override(name:String):Bool
-    public has_constant(name:String, type:String):Bool
-    public has_constant_override(name:String):Bool
-    public has_focus():Bool
-    public has_font(name:String, type:String):Bool
-    public has_font_override(name:String):Bool
-    public has_icon(name:String, type:String):Bool
-    public has_icon_override(name:String):Bool
-    public has_point(point:Vector2):Bool
-    public has_shader_override(name:String):Bool
-    public has_stylebox(name:String, type:String):Bool
-    public has_stylebox_override(name:String):Bool
-    public minimum_size_changed():Void
-    public release_focus():Void
-    public set_anchor(margin:Int, anchor:Float, keep_margin:Bool, push_opposite_anchor:Bool):Void
-    public set_anchor_and_margin(margin:Int, anchor:Float, offset:Float, push_opposite_anchor:Bool):Void
-    public set_anchors_and_margins_preset(preset:Int, resize_mode:Int, margin:Int):Void
-    public set_anchors_preset(preset:Int, keep_margin:Bool):Void
-    public set_begin(position:Vector2):Void
-    public set_drag_forwarding(target:Control):Void
-    public set_drag_preview(control:Control):Void
-    public set_end(position:Vector2):Void
-    public set_margins_preset(preset:Int, resize_mode:Int, margin:Int):Void
-    public set_rotation(radians:Float):Void
-    public show_modal(exclusive:Bool):Void
-    public warp_mouse(to_position:Vector2):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ConvexPolygonShape.hpp')
-@:native('ConvexPolygonShape')
-@:unreflective
-@:structAccess
-extern class ConvexPolygonShape extends Shape {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ConvexPolygonShape2D.hpp')
-@:native('ConvexPolygonShape2D')
-@:unreflective
-@:structAccess
-extern class ConvexPolygonShape2D extends Shape2D {
-    public set_point_cloud(point_cloud:PoolVector2Array):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/CPUParticles.hpp')
-@:native('CPUParticles')
-@:unreflective
-@:structAccess
-extern class CPUParticles extends GeometryInstance {
-    public convert_from_particles(particles:Node):Void
-    public restart():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/CubeMap.hpp')
-@:native('CubeMap')
-@:unreflective
-@:structAccess
-extern class CubeMap extends Resource {
-    public get_height():Int
-    public get_side(side:Int):Image
-    public get_width():Int
-    public set_side(side:Int, image:Image):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/CubeMesh.hpp')
-@:native('CubeMesh')
-@:unreflective
-@:structAccess
-extern class CubeMesh extends PrimitiveMesh {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Curve.hpp')
-@:native('Curve')
-@:unreflective
-@:structAccess
-extern class Curve extends Resource {
-    public add_point(position:Vector2, left_tangent:Float, right_tangent:Float, left_mode:Int, right_mode:Int):Int
-    public bake():Void
-    public clean_dupes():Void
-    public clear_points():Void
-    public get_point_left_mode(index:Int):Int
-    public get_point_left_tangent(index:Int):Float
-    public get_point_position(index:Int):Vector2
-    public get_point_right_mode(index:Int):Int
-    public get_point_right_tangent(index:Int):Float
-    public interpolate(offset:Float):Float
-    public interpolate_baked(offset:Float):Float
-    public remove_point(index:Int):Void
-    public set_point_left_mode(index:Int, mode:Int):Void
-    public set_point_left_tangent(index:Int, tangent:Float):Void
-    public set_point_offset(index:Int, offset:Float):Int
-    public set_point_right_mode(index:Int, mode:Int):Void
-    public set_point_right_tangent(index:Int, tangent:Float):Void
-    public set_point_value(index:Int, y:Float):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Curve2D.hpp')
-@:native('Curve2D')
-@:unreflective
-@:structAccess
-extern class Curve2D extends Resource {
-    public add_point(position:Vector2, in:Vector2, out:Vector2, at_position:Int):Void
-    public clear_points():Void
-    public get_baked_length():Float
-    public get_baked_points():PoolVector2Array
-    public get_closest_offset(to_point:Vector2):Float
-    public get_closest_point(to_point:Vector2):Vector2
-    public get_point_count():Int
-    public get_point_in(idx:Int):Vector2
-    public get_point_out(idx:Int):Vector2
-    public get_point_position(idx:Int):Vector2
-    public interpolate(idx:Int, t:Float):Vector2
-    public interpolate_baked(offset:Float, cubic:Bool):Vector2
-    public interpolatef(fofs:Float):Vector2
-    public remove_point(idx:Int):Void
-    public set_point_in(idx:Int, position:Vector2):Void
-    public set_point_out(idx:Int, position:Vector2):Void
-    public set_point_position(idx:Int, position:Vector2):Void
-    public tessellate(max_stages:Int, tolerance_degrees:Float):PoolVector2Array
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Curve3D.hpp')
-@:native('Curve3D')
-@:unreflective
-@:structAccess
-extern class Curve3D extends Resource {
-    public add_point(position:Vector3, in:Vector3, out:Vector3, at_position:Int):Void
-    public clear_points():Void
-    public get_baked_length():Float
-    public get_baked_points():PoolVector3Array
-    public get_baked_tilts():PoolRealArray
-    public get_baked_up_vectors():PoolVector3Array
-    public get_closest_offset(to_point:Vector3):Float
-    public get_closest_point(to_point:Vector3):Vector3
-    public get_point_count():Int
-    public get_point_in(idx:Int):Vector3
-    public get_point_out(idx:Int):Vector3
-    public get_point_position(idx:Int):Vector3
-    public get_point_tilt(idx:Int):Float
-    public interpolate(idx:Int, t:Float):Vector3
-    public interpolate_baked(offset:Float, cubic:Bool):Vector3
-    public interpolate_baked_up_vector(offset:Float, apply_tilt:Bool):Vector3
-    public interpolatef(fofs:Float):Vector3
-    public remove_point(idx:Int):Void
-    public set_point_in(idx:Int, position:Vector3):Void
-    public set_point_out(idx:Int, position:Vector3):Void
-    public set_point_position(idx:Int, position:Vector3):Void
-    public set_point_tilt(idx:Int, tilt:Float):Void
-    public tessellate(max_stages:Int, tolerance_degrees:Float):PoolVector3Array
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/CurveTexture.hpp')
-@:native('CurveTexture')
-@:unreflective
-@:structAccess
-extern class CurveTexture extends Texture {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/CylinderMesh.hpp')
-@:native('CylinderMesh')
-@:unreflective
-@:structAccess
-extern class CylinderMesh extends PrimitiveMesh {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/CylinderShape.hpp')
-@:native('CylinderShape')
-@:unreflective
-@:structAccess
-extern class CylinderShape extends Shape {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/DampedSpringJoint2D.hpp')
-@:native('DampedSpringJoint2D')
-@:unreflective
-@:structAccess
-extern class DampedSpringJoint2D extends Joint2D {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/core/Dictionary.hpp')
-@:native('Dictionary')
-@:unreflective
-@:structAccess
-extern class Dictionary {
-    public clear():Void
-    public duplicate(deep:Bool):Dictionary
-    public empty():Bool
-    public erase(key:var):Void
-    public has(key:var):Bool
-    public has_all(keys:Array):Bool
-    public hash():Int
-    public keys():Array
-    public size():Int
-    public values():Array
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/DirectionalLight.hpp')
-@:native('DirectionalLight')
-@:unreflective
-@:structAccess
-extern class DirectionalLight extends Light {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Directory.hpp')
-@:native('Directory')
-@:unreflective
-@:structAccess
-extern class Directory extends Reference {
-    public change_dir(todir:String):Int
-    public copy(from:String, to:String):Int
-    public current_is_dir():Bool
-    public dir_exists(path:String):Bool
-    public file_exists(path:String):Bool
-    public get_current_dir():String
-    public get_current_drive():Int
-    public get_drive(idx:Int):String
-    public get_drive_count():Int
-    public get_next():String
-    public get_space_left():Int
-    public list_dir_begin(skip_navigational:Bool, skip_hidden:Bool):Int
-    public list_dir_end():Void
-    public make_dir(path:String):Int
-    public make_dir_recursive(path:String):Int
-    public open(path:String):Int
-    public remove(path:String):Int
-    public rename(from:String, to:String):Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/DynamicFont.hpp')
-@:native('DynamicFont')
-@:unreflective
-@:structAccess
-extern class DynamicFont extends Font {
-    public add_fallback(data:DynamicFontData):Void
-    public get_fallback(idx:Int):DynamicFontData
-    public get_fallback_count():Int
-    public remove_fallback(idx:Int):Void
-    public set_fallback(idx:Int, data:DynamicFontData):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/DynamicFontData.hpp')
-@:native('DynamicFontData')
-@:unreflective
-@:structAccess
-extern class DynamicFontData extends Resource {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/EditorExportPlugin.hpp')
-@:native('EditorExportPlugin')
-@:unreflective
-@:structAccess
-extern class EditorExportPlugin extends Reference {
-    public _export_begin(features:PoolStringArray, is_debug:Bool, path:String, flags:Int):Void
-    public _export_file(path:String, type:String, features:PoolStringArray):Void
-    public add_file(path:String, file:PoolByteArray, remap:Bool):Void
-    public add_ios_bundle_file(path:String):Void
-    public add_ios_cpp_code(code:String):Void
-    public add_ios_framework(path:String):Void
-    public add_ios_linker_flags(flags:String):Void
-    public add_ios_plist_content(plist_content:String):Void
-    public add_shared_object(path:String, tags:PoolStringArray):Void
-    public skip():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/EditorFileDialog.hpp')
-@:native('EditorFileDialog')
-@:unreflective
-@:structAccess
-extern class EditorFileDialog extends ConfirmationDialog {
-    public add_filter(filter:String):Void
-    public clear_filters():Void
-    public get_vbox():VBoxContainer
-    public invalidate():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/EditorFileSystem.hpp')
-@:native('EditorFileSystem')
-@:unreflective
-@:structAccess
-extern class EditorFileSystem extends Node {
-    public get_file_type(path:String):String
-    public get_filesystem():EditorFileSystemDirectory
-    public get_filesystem_path(path:String):EditorFileSystemDirectory
-    public get_scanning_progress():Float
-    public is_scanning():Bool
-    public scan():Void
-    public scan_sources():Void
-    public update_file(path:String):Void
-    public update_script_classes():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/EditorFileSystemDirectory.hpp')
-@:native('EditorFileSystemDirectory')
-@:unreflective
-@:structAccess
-extern class EditorFileSystemDirectory extends Object {
-    public find_dir_index(name:String):Int
-    public find_file_index(name:String):Int
-    public get_file(idx:Int):String
-    public get_file_count():Int
-    public get_file_import_is_valid(idx:Int):Bool
-    public get_file_path(idx:Int):String
-    public get_file_script_class_extends(idx:Int):String
-    public get_file_script_class_name(idx:Int):String
-    public get_file_type(idx:Int):String
-    public get_name():String
-    public get_parent():EditorFileSystemDirectory
-    public get_path():String
-    public get_subdir(idx:Int):EditorFileSystemDirectory
-    public get_subdir_count():Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/EditorImportPlugin.hpp')
-@:native('EditorImportPlugin')
-@:unreflective
-@:structAccess
-extern class EditorImportPlugin extends Reference {
-    public get_import_options(preset:Int):Array
-    public get_import_order():Int
-    public get_importer_name():String
-    public get_option_visibility(option:String, options:Dictionary):Bool
-    public get_preset_count():Int
-    public get_preset_name(preset:Int):String
-    public get_priority():Float
-    public get_recognized_extensions():Array
-    public get_resource_type():String
-    public get_save_extension():String
-    public get_visible_name():String
-    public import(source_file:String, save_path:String, options:Dictionary, r_platform_variants:Array, r_gen_files:Array):Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/EditorInspector.hpp')
-@:native('EditorInspector')
-@:unreflective
-@:structAccess
-extern class EditorInspector extends ScrollContainer {
-    public refresh():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/EditorInspectorPlugin.hpp')
-@:native('EditorInspectorPlugin')
-@:unreflective
-@:structAccess
-extern class EditorInspectorPlugin extends Reference {
-    public add_custom_control(control:Control):Void
-    public add_property_editor(property:String, editor:Control):Void
-    public add_property_editor_for_multiple_properties(label:String, properties:PoolStringArray, editor:Control):Void
-    public can_handle(object:Object):Bool
-    public parse_begin(object:Object):Void
-    public parse_category(object:Object, category:String):Void
-    public parse_end():Void
-    public parse_property(object:Object, type:Int, path:String, hint:Int, hint_text:String, usage:Int):Bool
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/EditorInterface.hpp')
-@:native('EditorInterface')
-@:unreflective
-@:structAccess
-extern class EditorInterface extends Node {
-    public edit_resource(resource:Resource):Void
-    public get_base_control():Control
-    public get_edited_scene_root():Node
-    public get_editor_settings():EditorSettings
-    public get_editor_viewport():Control
-    public get_open_scenes():Array
-    public get_resource_filesystem():EditorFileSystem
-    public get_resource_previewer():EditorResourcePreview
-    public get_script_editor():ScriptEditor
-    public get_selected_path():String
-    public get_selection():EditorSelection
-    public inspect_object(object:Object, for_property:String):Void
-    public is_plugin_enabled(plugin:String):Bool
-    public make_mesh_previews(meshes:Array, preview_size:Int):Array
-    public open_scene_from_path(scene_filepath:String):Void
-    public reload_scene_from_path(scene_filepath:String):Void
-    public save_scene():Int
-    public save_scene_as(path:String, with_preview:Bool):Void
-    public select_file(p_file:String):Void
-    public set_plugin_enabled(plugin:String, enabled:Bool):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/EditorPlugin.hpp')
-@:native('EditorPlugin')
-@:unreflective
-@:structAccess
-extern class EditorPlugin extends Node {
-    public add_autoload_singleton(name:String, path:String):Void
-    public add_control_to_bottom_panel(control:Control, title:String):ToolButton
-    public add_control_to_container(container:Int, control:Control):Void
-    public add_control_to_dock(slot:Int, control:Control):Void
-    public add_custom_type(type:String, base:String, script:Script, icon:Texture):Void
-    public add_export_plugin(plugin:EditorExportPlugin):Void
-    public add_import_plugin(importer:EditorImportPlugin):Void
-    public add_inspector_plugin(plugin:EditorInspectorPlugin):Void
-    public add_scene_import_plugin(scene_importer:EditorSceneImporter):Void
-    public add_tool_menu_item(name:String, handler:Object, callback:String, ud:Variant):Void
-    public add_tool_submenu_item(name:String, submenu:Object):Void
-    public apply_changes():Void
-    public build():Bool
-    public clear():Void
-    public create_spatial_gizmo(for_spatial:Spatial):EditorSpatialGizmo
-    public edit(object:Object):Void
-    public forward_canvas_gui_input(event:InputEvent):Bool
-    public forward_draw_over_viewport(overlay:Control):Void
-    public forward_force_draw_over_viewport(overlay:Control):Void
-    public forward_spatial_gui_input(camera:Camera, event:InputEvent):Bool
-    public get_breakpoints():PoolStringArray
-    public get_editor_interface():EditorInterface
-    public get_plugin_icon():Object
-    public get_plugin_name():String
-    public get_script_create_dialog():ScriptCreateDialog
-    public get_state():Dictionary
-    public get_undo_redo():UndoRedo
-    public get_window_layout(layout:ConfigFile):Void
-    public handles(object:Object):Bool
-    public has_main_screen():Bool
-    public hide_bottom_panel():Void
-    public make_bottom_panel_item_visible(item:Control):Void
-    public make_visible(visible:Bool):Void
-    public queue_save_layout():Void
-    public remove_autoload_singleton(name:String):Void
-    public remove_control_from_bottom_panel(control:Control):Void
-    public remove_control_from_container(container:Int, control:Control):Void
-    public remove_control_from_docks(control:Control):Void
-    public remove_custom_type(type:String):Void
-    public remove_export_plugin(plugin:EditorExportPlugin):Void
-    public remove_import_plugin(importer:EditorImportPlugin):Void
-    public remove_inspector_plugin(plugin:EditorInspectorPlugin):Void
-    public remove_scene_import_plugin(scene_importer:EditorSceneImporter):Void
-    public remove_tool_menu_item(name:String):Void
-    public save_external_data():Void
-    public set_force_draw_over_forwarding_enabled():Void
-    public set_input_event_forwarding_always_enabled():Void
-    public set_state(state:Dictionary):Void
-    public set_window_layout(layout:ConfigFile):Void
-    public update_overlays():Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/EditorProperty.hpp')
-@:native('EditorProperty')
-@:unreflective
-@:structAccess
-extern class EditorProperty extends Container {
-    public get_edited_object():Object
-    public get_edited_property():String
-    public get_tooltip_text():String
-    public update_property():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/EditorResourceConversionPlugin.hpp')
-@:native('EditorResourceConversionPlugin')
-@:unreflective
-@:structAccess
-extern class EditorResourceConversionPlugin extends Reference {
-    public _convert(resource:Resource):Resource
-    public _converts_to():String
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/EditorResourcePreview.hpp')
-@:native('EditorResourcePreview')
-@:unreflective
-@:structAccess
-extern class EditorResourcePreview extends Node {
-    public add_preview_generator(generator:EditorResourcePreviewGenerator):Void
-    public check_for_invalidation(path:String):Void
-    public queue_edited_resource_preview(resource:Resource, receiver:Object, receiver_func:String, userdata:Variant):Void
-    public queue_resource_preview(path:String, receiver:Object, receiver_func:String, userdata:Variant):Void
-    public remove_preview_generator(generator:EditorResourcePreviewGenerator):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/EditorResourcePreviewGenerator.hpp')
-@:native('EditorResourcePreviewGenerator')
-@:unreflective
-@:structAccess
-extern class EditorResourcePreviewGenerator extends Reference {
-    public generate(from:Resource):Texture
-    public generate_from_path(path:String):Texture
-    public handles(type:String):Bool
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/EditorSceneImporter.hpp')
-@:native('EditorSceneImporter')
-@:unreflective
-@:structAccess
-extern class EditorSceneImporter extends Reference {
-    public _get_extensions():Array
-    public _get_import_flags():Int
-    public _import_animation(path:String, flags:Int, bake_fps:Int):Animation
-    public _import_scene(path:String, flags:Int, bake_fps:Int):Node
-    public import_animation_from_other_importer(path:String, flags:Int, bake_fps:Int):Animation
-    public import_scene_from_other_importer(path:String, flags:Int, bake_fps:Int):Node
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/EditorScenePostImport.hpp')
-@:native('EditorScenePostImport')
-@:unreflective
-@:structAccess
-extern class EditorScenePostImport extends Reference {
-    public get_source_file():String
-    public get_source_folder():String
-    public post_import(scene:Object):Object
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/EditorScript.hpp')
-@:native('EditorScript')
-@:unreflective
-@:structAccess
-extern class EditorScript extends Reference {
-    public _run():Void
-    public add_root_node(node:Node):Void
-    public get_editor_interface():EditorInterface
-    public get_scene():Node
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/EditorSelection.hpp')
-@:native('EditorSelection')
-@:unreflective
-@:structAccess
-extern class EditorSelection extends Object {
-    public add_node(node:Node):Void
-    public clear():Void
-    public get_selected_nodes():Array
-    public get_transformable_selected_nodes():Array
-    public remove_node(node:Node):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/EditorSettings.hpp')
-@:native('EditorSettings')
-@:unreflective
-@:structAccess
-extern class EditorSettings extends Resource {
-    public add_property_info(info:Dictionary):Void
-    public erase(property:String):Void
-    public get_favorite_dirs():PoolStringArray
-    public get_project_metadata(section:String, key:String, default:Variant):Variant
-    public get_project_settings_dir():String
-    public get_recent_dirs():PoolStringArray
-    public get_setting(name:String):Variant
-    public get_settings_dir():String
-    public has_setting(name:String):Bool
-    public property_can_revert(name:String):Bool
-    public property_get_revert(name:String):Variant
-    public set_favorite_dirs(dirs:PoolStringArray):Void
-    public set_initial_value(name:String, value:Variant, update_current:Bool):Void
-    public set_project_metadata(section:String, key:String, data:Variant):Void
-    public set_recent_dirs(dirs:PoolStringArray):Void
-    public set_setting(name:String, value:Variant):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/EditorSpatialGizmo.hpp')
-@:native('EditorSpatialGizmo')
-@:unreflective
-@:structAccess
-extern class EditorSpatialGizmo extends SpatialGizmo {
-    public add_collision_segments(segments:PoolVector3Array):Void
-    public add_collision_triangles(triangles:TriangleMesh):Void
-    public add_handles(handles:PoolVector3Array, billboard:Bool, secondary:Bool):Void
-    public add_lines(lines:PoolVector3Array, material:Material, billboard:Bool):Void
-    public add_mesh(mesh:ArrayMesh, billboard:Bool, skeleton:Rid):Void
-    public add_unscaled_billboard(material:Material, default_scale:Float):Void
-    public clear():Void
-    public commit_handle(index:Int, restore:Variant, cancel:Bool):Void
-    public get_handle_name(index:Int):String
-    public get_handle_value(index:Int):Variant
-    public redraw():Void
-    public set_handle(index:Int, camera:Camera, point:Vector2):Void
-    public set_spatial_node(node:Node):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/EncodedObjectAsID.hpp')
-@:native('EncodedObjectAsID')
-@:unreflective
-@:structAccess
-extern class EncodedObjectAsID extends Reference {
-    public get_object_id():Int
-    public set_object_id(id:Int):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Engine.hpp')
-@:native('Engine')
-@:unreflective
-@:structAccess
-extern class Engine extends Object {
-    public get_author_info():Dictionary
-    public get_copyright_info():Array
-    public get_donor_info():Dictionary
-    public get_frames_drawn():Int
-    public get_frames_per_second():Float
-    public get_license_info():Dictionary
-    public get_license_text():String
-    public get_main_loop():MainLoop
-    public get_singleton(name:String):Object
-    public get_version_info():Dictionary
-    public has_singleton(name:String):Bool
-    public is_in_physics_frame():Bool
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Environment.hpp')
-@:native('Environment')
-@:unreflective
-@:structAccess
-extern class Environment extends Resource {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/File.hpp')
-@:native('File')
-@:unreflective
-@:structAccess
-extern class File extends Reference {
-    public close():Void
-    public eof_reached():Bool
-    public file_exists(path:String):Bool
-    public get_16():Int
-    public get_32():Int
-    public get_64():Int
-    public get_8():Int
-    public get_as_text():String
-    public get_buffer(len:Int):PoolByteArray
-    public get_csv_line(delim:String):PoolStringArray
-    public get_double():Float
-    public get_error():Int
-    public get_float():Float
-    public get_len():Int
-    public get_line():String
-    public get_md5(path:String):String
-    public get_modified_time(file:String):Int
-    public get_pascal_string():String
-    public get_path():String
-    public get_path_absolute():String
-    public get_position():Int
-    public get_real():Float
-    public get_sha256(path:String):String
-    public get_var():Variant
-    public is_open():Bool
-    public open(path:String, flags:Int):Int
-    public open_compressed(path:String, mode_flags:Int, compression_mode:Int):Int
-    public open_encrypted(path:String, mode_flags:Int, key:PoolByteArray):Int
-    public open_encrypted_with_pass(path:String, mode_flags:Int, pass:String):Int
-    public seek(position:Int):Void
-    public seek_end(position:Int):Void
-    public store_16(value:Int):Void
-    public store_32(value:Int):Void
-    public store_64(value:Int):Void
-    public store_8(value:Int):Void
-    public store_buffer(buffer:PoolByteArray):Void
-    public store_double(value:Float):Void
-    public store_float(value:Float):Void
-    public store_line(line:String):Void
-    public store_pascal_string(string:String):Void
-    public store_real(value:Float):Void
-    public store_string(string:String):Void
-    public store_var(value:Variant):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/FileDialog.hpp')
-@:native('FileDialog')
-@:unreflective
-@:structAccess
-extern class FileDialog extends ConfirmationDialog {
-    public add_filter(filter:String):Void
-    public clear_filters():Void
-    public deselect_items():Void
-    public get_line_edit():LineEdit
-    public get_vbox():VBoxContainer
-    public invalidate():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/float.hpp')
-@:native('float')
-@:unreflective
-@:structAccess
-extern class Float {
-    public Float(from:Bool):Float
-    public Float(from:Int):Float
-    public Float(from:String):Float
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Font.hpp')
-@:native('Font')
-@:unreflective
-@:structAccess
-extern class Font extends Resource {
-    public draw(canvas_item:Rid, position:Vector2, string:String, modulate:Color, clip_w:Int, outline_modulate:Color):Void
-    public draw_char(canvas_item:Rid, position:Vector2, char:Int, next:Int, modulate:Color, outline:Bool):Float
-    public get_ascent():Float
-    public get_descent():Float
-    public get_height():Float
-    public get_string_size(string:String):Vector2
-    public has_outline():Bool
-    public is_distance_field_hint():Bool
-    public update_changes():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/FuncRef.hpp')
-@:native('FuncRef')
-@:unreflective
-@:structAccess
-extern class FuncRef extends Reference {
-    public call_func():Variant
-    public set_function(name:String):Void
-    public set_instance(instance:Object):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Generic6DOFJoint.hpp')
-@:native('Generic6DOFJoint')
-@:unreflective
-@:structAccess
-extern class Generic6DOFJoint extends Joint {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Geometry.hpp')
-@:native('Geometry')
-@:unreflective
-@:structAccess
-extern class Geometry extends Object {
-    public build_box_planes(extents:Vector3):Array
-    public build_capsule_planes(radius:Float, height:Float, sides:Int, lats:Int, axis:Int):Array
-    public build_cylinder_planes(radius:Float, height:Float, sides:Int, axis:Int):Array
-    public clip_polygon(points:PoolVector3Array, plane:Plane):PoolVector3Array
-    public convex_hull_2d(points:PoolVector2Array):PoolVector2Array
-    public get_closest_point_to_segment(point:Vector3, s1:Vector3, s2:Vector3):Vector3
-    public get_closest_point_to_segment_2d(point:Vector2, s1:Vector2, s2:Vector2):Vector2
-    public get_closest_point_to_segment_uncapped(point:Vector3, s1:Vector3, s2:Vector3):Vector3
-    public get_closest_point_to_segment_uncapped_2d(point:Vector2, s1:Vector2, s2:Vector2):Vector2
-    public get_closest_points_between_segments(p1:Vector3, p2:Vector3, q1:Vector3, q2:Vector3):PoolVector3Array
-    public get_closest_points_between_segments_2d(p1:Vector2, q1:Vector2, p2:Vector2, q2:Vector2):PoolVector2Array
-    public get_uv84_normal_bit(normal:Vector3):Int
-    public line_intersects_line_2d(from_a:Vector2, dir_a:Vector2, from_b:Vector2, dir_b:Vector2):Variant
-    public make_atlas(sizes:PoolVector2Array):Dictionary
-    public point_is_inside_triangle(point:Vector2, a:Vector2, b:Vector2, c:Vector2):Bool
-    public ray_intersects_triangle(from:Vector3, dir:Vector3, a:Vector3, b:Vector3, c:Vector3):Variant
-    public segment_intersects_circle(segment_from:Vector2, segment_to:Vector2, circle_position:Vector2, circle_radius:Float):Float
-    public segment_intersects_convex(from:Vector3, to:Vector3, planes:Array):PoolVector3Array
-    public segment_intersects_cylinder(from:Vector3, to:Vector3, height:Float, radius:Float):PoolVector3Array
-    public segment_intersects_segment_2d(from_a:Vector2, to_a:Vector2, from_b:Vector2, to_b:Vector2):Variant
-    public segment_intersects_sphere(from:Vector3, to:Vector3, sphere_position:Vector3, sphere_radius:Float):PoolVector3Array
-    public segment_intersects_triangle(from:Vector3, to:Vector3, a:Vector3, b:Vector3, c:Vector3):Variant
-    public triangulate_polygon(polygon:PoolVector2Array):PoolIntArray
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/GeometryInstance.hpp')
-@:native('GeometryInstance')
-@:unreflective
-@:structAccess
-extern class GeometryInstance extends VisualInstance {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/GIProbe.hpp')
-@:native('GIProbe')
-@:unreflective
-@:structAccess
-extern class GIProbe extends VisualInstance {
-    public bake(from_node:Node, create_visual_debug:Bool):Void
-    public debug_bake():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/GIProbeData.hpp')
-@:native('GIProbeData')
-@:unreflective
-@:structAccess
-extern class GIProbeData extends Resource {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Gradient.hpp')
-@:native('Gradient')
-@:unreflective
-@:structAccess
-extern class Gradient extends Resource {
-    public add_point(offset:Float, color:Color):Void
-    public get_color(point:Int):Color
-    public get_offset(point:Int):Float
-    public get_point_count():Int
-    public interpolate(offset:Float):Color
-    public remove_point(offset:Int):Void
-    public set_color(point:Int, color:Color):Void
-    public set_offset(point:Int, offset:Float):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/GradientTexture.hpp')
-@:native('GradientTexture')
-@:unreflective
-@:structAccess
-extern class GradientTexture extends Texture {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/GraphEdit.hpp')
-@:native('GraphEdit')
-@:unreflective
-@:structAccess
-extern class GraphEdit extends Control {
-    public add_valid_connection_type(from_type:Int, to_type:Int):Void
-    public add_valid_left_disconnect_type(type:Int):Void
-    public add_valid_right_disconnect_type(type:Int):Void
-    public clear_connections():Void
-    public connect_node(from:String, from_port:Int, to:String, to_port:Int):Int
-    public disconnect_node(from:String, from_port:Int, to:String, to_port:Int):Void
-    public get_connection_list():Array
-    public get_zoom_hbox():HBoxContainer
-    public is_node_connected(from:String, from_port:Int, to:String, to_port:Int):Bool
-    public is_valid_connection_type(from_type:Int, to_type:Int):Bool
-    public remove_valid_connection_type(from_type:Int, to_type:Int):Void
-    public remove_valid_left_disconnect_type(type:Int):Void
-    public remove_valid_right_disconnect_type(type:Int):Void
-    public set_connection_activity(from:String, from_port:Int, to:String, to_port:Int, amount:Float):Void
-    public set_selected(node:Node):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/GraphNode.hpp')
-@:native('GraphNode')
-@:unreflective
-@:structAccess
-extern class GraphNode extends Container {
-    public clear_all_slots():Void
-    public clear_slot(idx:Int):Void
-    public get_connection_input_color(idx:Int):Color
-    public get_connection_input_count():Int
-    public get_connection_input_position(idx:Int):Vector2
-    public get_connection_input_type(idx:Int):Int
-    public get_connection_output_color(idx:Int):Color
-    public get_connection_output_count():Int
-    public get_connection_output_position(idx:Int):Vector2
-    public get_connection_output_type(idx:Int):Int
-    public get_slot_color_left(idx:Int):Color
-    public get_slot_color_right(idx:Int):Color
-    public get_slot_type_left(idx:Int):Int
-    public get_slot_type_right(idx:Int):Int
-    public is_slot_enabled_left(idx:Int):Bool
-    public is_slot_enabled_right(idx:Int):Bool
-    public set_slot(idx:Int, enable_left:Bool, type_left:Int, color_left:Color, enable_right:Bool, type_right:Int, color_right:Color, custom_left:Texture, custom_right:Texture):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/GridContainer.hpp')
-@:native('GridContainer')
-@:unreflective
-@:structAccess
-extern class GridContainer extends Container {
-    public get_child_control_at_cell(row:Int, column:Int):Control
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/GrooveJoint2D.hpp')
-@:native('GrooveJoint2D')
-@:unreflective
-@:structAccess
-extern class GrooveJoint2D extends Joint2D {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/HBoxContainer.hpp')
-@:native('HBoxContainer')
-@:unreflective
-@:structAccess
-extern class HBoxContainer extends BoxContainer {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/HingeJoint.hpp')
-@:native('HingeJoint')
-@:unreflective
-@:structAccess
-extern class HingeJoint extends Joint {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/HScrollBar.hpp')
-@:native('HScrollBar')
-@:unreflective
-@:structAccess
-extern class HScrollBar extends ScrollBar {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/HSeparator.hpp')
-@:native('HSeparator')
-@:unreflective
-@:structAccess
-extern class HSeparator extends Separator {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/HSlider.hpp')
-@:native('HSlider')
-@:unreflective
-@:structAccess
-extern class HSlider extends Slider {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/HSplitContainer.hpp')
-@:native('HSplitContainer')
-@:unreflective
-@:structAccess
-extern class HSplitContainer extends SplitContainer {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/HTTPClient.hpp')
-@:native('HTTPClient')
-@:unreflective
-@:structAccess
-extern class HTTPClient extends Reference {
-    public close():Void
-    public connect_to_host(host:String, port:Int, use_ssl:Bool, verify_host:Bool):Int
-    public get_response_body_length():Int
-    public get_response_code():Int
-    public get_response_headers():PoolStringArray
-    public get_response_headers_as_dictionary():Dictionary
-    public get_status():Int
-    public has_response():Bool
-    public is_response_chunked():Bool
-    public poll():Int
-    public query_string_from_dict(fields:Dictionary):String
-    public read_response_body_chunk():PoolByteArray
-    public request(method:Int, url:String, headers:PoolStringArray, body:String):Int
-    public request_raw(method:Int, url:String, headers:PoolStringArray, body:PoolByteArray):Int
-    public set_read_chunk_size(bytes:Int):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/HTTPRequest.hpp')
-@:native('HTTPRequest')
-@:unreflective
-@:structAccess
-extern class HTTPRequest extends Node {
-    public cancel_request():Void
-    public get_body_size():Int
-    public get_downloaded_bytes():Int
-    public get_http_client_status():Int
-    public request(url:String, custom_headers:PoolStringArray, ssl_validate_domain:Bool, method:Int, request_data:String):Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Image.hpp')
-@:native('Image')
-@:unreflective
-@:structAccess
-extern class Image extends Resource {
-    public blend_rect(src:Image, src_rect:Rect2, dst:Vector2):Void
-    public blend_rect_mask(src:Image, mask:Image, src_rect:Rect2, dst:Vector2):Void
-    public blit_rect(src:Image, src_rect:Rect2, dst:Vector2):Void
-    public blit_rect_mask(src:Image, mask:Image, src_rect:Rect2, dst:Vector2):Void
-    public bumpmap_to_normalmap(bump_scale:Float):Void
-    public clear_mipmaps():Void
-    public compress(mode:Int, source:Int, lossy_quality:Float):Int
-    public convert(format:Int):Void
-    public copy_from(src:Image):Void
-    public create(width:Int, height:Int, use_mipmaps:Bool, format:Int):Void
-    public create_from_data(width:Int, height:Int, use_mipmaps:Bool, format:Int, data:PoolByteArray):Void
-    public crop(width:Int, height:Int):Void
-    public decompress():Int
-    public detect_alpha():Int
-    public expand_x2_hq2x():Void
-    public fill(color:Color):Void
-    public fix_alpha_edges():Void
-    public flip_x():Void
-    public flip_y():Void
-    public generate_mipmaps(renormalize:Bool):Int
-    public get_data():PoolByteArray
-    public get_format():Int
-    public get_height():Int
-    public get_mipmap_offset(mipmap:Int):Int
-    public get_pixel(x:Int, y:Int):Color
-    public get_pixelv(src:Vector2):Color
-    public get_rect(rect:Rect2):Image
-    public get_size():Vector2
-    public get_used_rect():Rect2
-    public get_width():Int
-    public has_mipmaps():Bool
-    public is_compressed():Bool
-    public is_empty():Bool
-    public is_invisible():Bool
-    public load(path:String):Int
-    public load_jpg_from_buffer(buffer:PoolByteArray):Int
-    public load_png_from_buffer(buffer:PoolByteArray):Int
-    public load_webp_from_buffer(buffer:PoolByteArray):Int
-    public lock():Void
-    public normalmap_to_xy():Void
-    public premultiply_alpha():Void
-    public resize(width:Int, height:Int, interpolation:Int):Void
-    public resize_to_po2(square:Bool):Void
-    public rgbe_to_srgb():Image
-    public save_png(path:String):Int
-    public set_pixel(x:Int, y:Int, color:Color):Void
-    public set_pixelv(dst:Vector2, color:Color):Void
-    public shrink_x2():Void
-    public srgb_to_linear():Void
-    public unlock():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ImageTexture.hpp')
-@:native('ImageTexture')
-@:unreflective
-@:structAccess
-extern class ImageTexture extends Texture {
-    public create(width:Int, height:Int, format:Int, flags:Int):Void
-    public create_from_image(image:Image, flags:Int):Void
-    public get_format():Int
-    public load(path:String):Int
-    public set_data(image:Image):Void
-    public set_size_override(size:Vector2):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ImmediateGeometry.hpp')
-@:native('ImmediateGeometry')
-@:unreflective
-@:structAccess
-extern class ImmediateGeometry extends GeometryInstance {
-    public add_sphere(lats:Int, lons:Int, radius:Float, add_uv:Bool):Void
-    public add_vertex(position:Vector3):Void
-    public begin(primitive:Int, texture:Texture):Void
-    public clear():Void
-    public end():Void
-    public set_color(color:Color):Void
-    public set_normal(normal:Vector3):Void
-    public set_tangent(tangent:Plane):Void
-    public set_uv(uv:Vector2):Void
-    public set_uv2(uv:Vector2):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Input.hpp')
-@:native('Input')
-@:unreflective
-@:structAccess
-extern class Input extends Object {
-    public action_press(action:String):Void
-    public action_release(action:String):Void
-    public add_joy_mapping(mapping:String, update_existing:Bool):Void
-    public get_accelerometer():Vector3
-    public get_action_strength(action:String):Float
-    public get_connected_joypads():Array
-    public get_gravity():Vector3
-    public get_gyroscope():Vector3
-    public get_joy_axis(device:Int, axis:Int):Float
-    public get_joy_axis_index_from_string(axis:String):Int
-    public get_joy_axis_string(axis_index:Int):String
-    public get_joy_button_index_from_string(button:String):Int
-    public get_joy_button_string(button_index:Int):String
-    public get_joy_guid(device:Int):String
-    public get_joy_name(device:Int):String
-    public get_joy_vibration_duration(device:Int):Float
-    public get_joy_vibration_strength(device:Int):Vector2
-    public get_last_mouse_speed():Vector2
-    public get_magnetometer():Vector3
-    public get_mouse_button_mask():Int
-    public get_mouse_mode():Int
-    public is_action_just_pressed(action:String):Bool
-    public is_action_just_released(action:String):Bool
-    public is_action_pressed(action:String):Bool
-    public is_joy_button_pressed(device:Int, button:Int):Bool
-    public is_joy_known(device:Int):Bool
-    public is_key_pressed(scancode:Int):Bool
-    public is_mouse_button_pressed(button:Int):Bool
-    public joy_connection_changed(device:Int, connected:Bool, name:String, guid:String):Void
-    public parse_input_event(event:InputEvent):Void
-    public remove_joy_mapping(guid:String):Void
-    public set_custom_mouse_cursor(image:Resource, shape:Int, hotspot:Vector2):Void
-    public set_default_cursor_shape(shape:Int):Void
-    public set_mouse_mode(mode:Int):Void
-    public start_joy_vibration(device:Int, weak_magnitude:Float, strong_magnitude:Float, duration:Float):Void
-    public stop_joy_vibration(device:Int):Void
-    public warp_mouse_position(to:Vector2):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/InputDefault.hpp')
-@:native('InputDefault')
-@:unreflective
-@:structAccess
-extern class InputDefault extends Input {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/InputEvent.hpp')
-@:native('InputEvent')
-@:unreflective
-@:structAccess
-extern class InputEvent extends Resource {
-    public as_text():String
-    public get_action_strength(action:String):Float
-    public is_action(action:String):Bool
-    public is_action_pressed(action:String):Bool
-    public is_action_released(action:String):Bool
-    public is_action_type():Bool
-    public is_echo():Bool
-    public is_pressed():Bool
-    public shortcut_match(event:InputEvent):Bool
-    public xformed_by(xform:Transform2D, local_ofs:Vector2):InputEvent
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/InputEventAction.hpp')
-@:native('InputEventAction')
-@:unreflective
-@:structAccess
-extern class InputEventAction extends InputEvent {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/InputEventGesture.hpp')
-@:native('InputEventGesture')
-@:unreflective
-@:structAccess
-extern class InputEventGesture extends InputEventWithModifiers {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/InputEventJoypadButton.hpp')
-@:native('InputEventJoypadButton')
-@:unreflective
-@:structAccess
-extern class InputEventJoypadButton extends InputEvent {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/InputEventJoypadMotion.hpp')
-@:native('InputEventJoypadMotion')
-@:unreflective
-@:structAccess
-extern class InputEventJoypadMotion extends InputEvent {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/InputEventKey.hpp')
-@:native('InputEventKey')
-@:unreflective
-@:structAccess
-extern class InputEventKey extends InputEventWithModifiers {
-    public get_scancode_with_modifiers():Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/InputEventMagnifyGesture.hpp')
-@:native('InputEventMagnifyGesture')
-@:unreflective
-@:structAccess
-extern class InputEventMagnifyGesture extends InputEventGesture {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/InputEventMouse.hpp')
-@:native('InputEventMouse')
-@:unreflective
-@:structAccess
-extern class InputEventMouse extends InputEventWithModifiers {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/InputEventMouseButton.hpp')
-@:native('InputEventMouseButton')
-@:unreflective
-@:structAccess
-extern class InputEventMouseButton extends InputEventMouse {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/InputEventMouseMotion.hpp')
-@:native('InputEventMouseMotion')
-@:unreflective
-@:structAccess
-extern class InputEventMouseMotion extends InputEventMouse {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/InputEventPanGesture.hpp')
-@:native('InputEventPanGesture')
-@:unreflective
-@:structAccess
-extern class InputEventPanGesture extends InputEventGesture {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/InputEventScreenDrag.hpp')
-@:native('InputEventScreenDrag')
-@:unreflective
-@:structAccess
-extern class InputEventScreenDrag extends InputEvent {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/InputEventScreenTouch.hpp')
-@:native('InputEventScreenTouch')
-@:unreflective
-@:structAccess
-extern class InputEventScreenTouch extends InputEvent {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/InputEventWithModifiers.hpp')
-@:native('InputEventWithModifiers')
-@:unreflective
-@:structAccess
-extern class InputEventWithModifiers extends InputEvent {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/InputMap.hpp')
-@:native('InputMap')
-@:unreflective
-@:structAccess
-extern class InputMap extends Object {
-    public action_add_event(action:String, event:InputEvent):Void
-    public action_erase_event(action:String, event:InputEvent):Void
-    public action_erase_events(action:String):Void
-    public action_has_event(action:String, event:InputEvent):Bool
-    public action_set_deadzone(deadzone:String, arg1:Float):Void
-    public add_action(action:String, deadzone:Float):Void
-    public erase_action(action:String):Void
-    public event_is_action(event:InputEvent, action:String):Bool
-    public get_action_list(action:String):Array
-    public get_actions():Array
-    public has_action(action:String):Bool
-    public load_from_globals():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/InstancePlaceholder.hpp')
-@:native('InstancePlaceholder')
-@:unreflective
-@:structAccess
-extern class InstancePlaceholder extends Node {
-    public create_instance(replace:Bool, custom_scene:PackedScene):Node
-    public get_instance_path():String
-    public get_stored_values(with_order:Bool):Dictionary
-    public replace_by_instance(custom_scene:PackedScene):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/int.hpp')
-@:native('int')
-@:unreflective
-@:structAccess
-extern class Int {
-    public Int(from:Bool):Int
-    public Int(from:Float):Int
-    public Int(from:String):Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/InterpolatedCamera.hpp')
-@:native('InterpolatedCamera')
-@:unreflective
-@:structAccess
-extern class InterpolatedCamera extends Camera {
-    public set_target(target:Object):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/IP.hpp')
-@:native('IP')
-@:unreflective
-@:structAccess
-extern class IP extends Object {
-    public clear_cache(hostname:String):Void
-    public erase_resolve_item(id:Int):Void
-    public get_local_addresses():Array
-    public get_resolve_item_address(id:Int):String
-    public get_resolve_item_status(id:Int):Int
-    public resolve_hostname(host:String, ip_type:Int):String
-    public resolve_hostname_queue_item(host:String, ip_type:Int):Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/IP_Unix.hpp')
-@:native('IP_Unix')
-@:unreflective
-@:structAccess
-extern class IP_Unix extends IP {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ItemList.hpp')
-@:native('ItemList')
-@:unreflective
-@:structAccess
-extern class ItemList extends Control {
-    public add_icon_item(icon:Texture, selectable:Bool):Void
-    public add_item(text:String, icon:Texture, selectable:Bool):Void
-    public clear():Void
-    public ensure_current_is_visible():Void
-    public get_item_at_position(position:Vector2, exact:Bool):Int
-    public get_item_count():Int
-    public get_item_custom_bg_color(idx:Int):Color
-    public get_item_icon(idx:Int):Texture
-    public get_item_icon_modulate(idx:Int):Color
-    public get_item_icon_region(idx:Int):Rect2
-    public get_item_metadata(idx:Int):Variant
-    public get_item_text(idx:Int):String
-    public get_item_tooltip(idx:Int):String
-    public get_selected_items():PoolIntArray
-    public get_v_scroll():VScrollBar
-    public is_anything_selected():Bool
-    public is_item_disabled(idx:Int):Bool
-    public is_item_selectable(idx:Int):Bool
-    public is_item_tooltip_enabled(idx:Int):Bool
-    public is_selected(idx:Int):Bool
-    public move_item(from_idx:Int, to_idx:Int):Void
-    public remove_item(idx:Int):Void
-    public select(idx:Int, single:Bool):Void
-    public set_item_custom_bg_color(idx:Int, custom_bg_color:Color):Void
-    public set_item_disabled(idx:Int, disabled:Bool):Void
-    public set_item_icon(idx:Int, icon:Texture):Void
-    public set_item_icon_modulate(idx:Int, modulate:Color):Void
-    public set_item_icon_region(idx:Int, rect:Rect2):Void
-    public set_item_metadata(idx:Int, metadata:Variant):Void
-    public set_item_selectable(idx:Int, selectable:Bool):Void
-    public set_item_text(idx:Int, text:String):Void
-    public set_item_tooltip(idx:Int, tooltip:String):Void
-    public set_item_tooltip_enabled(idx:Int, enable:Bool):Void
-    public sort_items_by_text():Void
-    public unselect(idx:Int):Void
-    public unselect_all():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/JavaScript.hpp')
-@:native('JavaScript')
-@:unreflective
-@:structAccess
-extern class JavaScript extends Object {
-    public eval(code:String, use_global_execution_context:Bool):Variant
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Joint.hpp')
-@:native('Joint')
-@:unreflective
-@:structAccess
-extern class Joint extends Spatial {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Joint2D.hpp')
-@:native('Joint2D')
-@:unreflective
-@:structAccess
-extern class Joint2D extends Node2D {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/JSON.hpp')
-@:native('JSON')
-@:unreflective
-@:structAccess
-extern class JSON extends Object {
-    public parse(json:String):JSONParseResult
-    public print(value:Variant, indent:String, sort_keys:Bool):String
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/JSONParseResult.hpp')
-@:native('JSONParseResult')
-@:unreflective
-@:structAccess
-extern class JSONParseResult extends Reference {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/KinematicBody.hpp')
-@:native('KinematicBody')
-@:unreflective
-@:structAccess
-extern class KinematicBody extends PhysicsBody {
-    public get_floor_velocity():Vector3
-    public get_slide_collision(slide_idx:Int):KinematicCollision
-    public get_slide_count():Int
-    public is_on_ceiling():Bool
-    public is_on_floor():Bool
-    public is_on_wall():Bool
-    public move_and_collide(rel_vec:Vector3, infinite_inertia:Bool):KinematicCollision
-    public move_and_slide(linear_velocity:Vector3, floor_normal:Vector3, slope_stop_min_velocity:Float, max_slides:Int, floor_max_angle:Float, infinite_inertia:Bool):Vector3
-    public test_move(from:Transform, rel_vec:Vector3, infinite_inertia:Bool):Bool
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/KinematicBody2D.hpp')
-@:native('KinematicBody2D')
-@:unreflective
-@:structAccess
-extern class KinematicBody2D extends PhysicsBody2D {
-    public get_floor_velocity():Vector2
-    public get_slide_collision(slide_idx:Int):KinematicCollision2D
-    public get_slide_count():Int
-    public is_on_ceiling():Bool
-    public is_on_floor():Bool
-    public is_on_wall():Bool
-    public move_and_collide(rel_vec:Vector2, infinite_inertia:Bool, exclude_raycast_shapes:Bool, test_only:Bool):KinematicCollision2D
-    public move_and_slide(linear_velocity:Vector2, floor_normal:Vector2, infinite_inertia:Bool, slope_stop_min_velocity:Float, max_bounces:Int, floor_max_angle:Float):Vector2
-    public move_and_slide_with_snap(linear_velocity:Vector2, snap:Vector2, floor_normal:Vector2, infinite_inertia:Bool, slope_stop_min_velocity:Float, max_bounces:Int, floor_max_angle:Float):Vector2
-    public test_move(from:Transform2D, rel_vec:Vector2, infinite_inertia:Bool):Bool
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/KinematicCollision.hpp')
-@:native('KinematicCollision')
-@:unreflective
-@:structAccess
-extern class KinematicCollision extends Reference {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/KinematicCollision2D.hpp')
-@:native('KinematicCollision2D')
-@:unreflective
-@:structAccess
-extern class KinematicCollision2D extends Reference {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Label.hpp')
-@:native('Label')
-@:unreflective
-@:structAccess
-extern class Label extends Control {
-    public get_line_count():Int
-    public get_line_height():Int
-    public get_total_character_count():Int
-    public get_visible_line_count():Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/LargeTexture.hpp')
-@:native('LargeTexture')
-@:unreflective
-@:structAccess
-extern class LargeTexture extends Texture {
-    public add_piece(ofs:Vector2, texture:Texture):Int
-    public clear():Void
-    public get_piece_count():Int
-    public get_piece_offset(idx:Int):Vector2
-    public get_piece_texture(idx:Int):Texture
-    public set_piece_offset(idx:Int, ofs:Vector2):Void
-    public set_piece_texture(idx:Int, texture:Texture):Void
-    public set_size(size:Vector2):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Light.hpp')
-@:native('Light')
-@:unreflective
-@:structAccess
-extern class Light extends VisualInstance {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Light2D.hpp')
-@:native('Light2D')
-@:unreflective
-@:structAccess
-extern class Light2D extends Node2D {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/LightOccluder2D.hpp')
-@:native('LightOccluder2D')
-@:unreflective
-@:structAccess
-extern class LightOccluder2D extends Node2D {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Line2D.hpp')
-@:native('Line2D')
-@:unreflective
-@:structAccess
-extern class Line2D extends Node2D {
-    public add_point(position:Vector2):Void
-    public get_point_count():Int
-    public get_point_position(i:Int):Vector2
-    public remove_point(i:Int):Void
-    public set_point_position(i:Int, position:Vector2):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/LineEdit.hpp')
-@:native('LineEdit')
-@:unreflective
-@:structAccess
-extern class LineEdit extends Control {
-    public append_at_cursor(text:String):Void
-    public clear():Void
-    public deselect():Void
-    public get_menu():PopupMenu
-    public menu_option(option:Int):Void
-    public select(from:Int, to:Int):Void
-    public select_all():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/LineShape2D.hpp')
-@:native('LineShape2D')
-@:unreflective
-@:structAccess
-extern class LineShape2D extends Shape2D {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/LinkButton.hpp')
-@:native('LinkButton')
-@:unreflective
-@:structAccess
-extern class LinkButton extends BaseButton {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Listener.hpp')
-@:native('Listener')
-@:unreflective
-@:structAccess
-extern class Listener extends Spatial {
-    public clear_current():Void
-    public get_listener_transform():Transform
-    public is_current():Bool
-    public make_current():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/MainLoop.hpp')
-@:native('MainLoop')
-@:unreflective
-@:structAccess
-extern class MainLoop extends Object {
-    public _drop_files(files:PoolStringArray, screen:Int):Void
-    public _finalize():Void
-    public _idle(delta:Float):Void
-    public _initialize():Void
-    public _input_event(ev:InputEvent):Void
-    public _input_text(text:String):Void
-    public _iteration(delta:Float):Void
-    public finish():Void
-    public idle(delta:Float):Bool
-    public init():Void
-    public input_event(ev:InputEvent):Void
-    public input_text(text:String):Void
-    public iteration(delta:Float):Bool
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/MarginContainer.hpp')
-@:native('MarginContainer')
-@:unreflective
-@:structAccess
-extern class MarginContainer extends Container {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Marshalls.hpp')
-@:native('Marshalls')
-@:unreflective
-@:structAccess
-extern class Marshalls extends Reference {
-    public base64_to_raw(base64_str:String):PoolByteArray
-    public base64_to_utf8(base64_str:String):String
-    public base64_to_variant(base64_str:String):Variant
-    public raw_to_base64(array:PoolByteArray):String
-    public utf8_to_base64(utf8_str:String):String
-    public variant_to_base64(variant:Variant):String
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Material.hpp')
-@:native('Material')
-@:unreflective
-@:structAccess
-extern class Material extends Resource {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/MenuButton.hpp')
-@:native('MenuButton')
-@:unreflective
-@:structAccess
-extern class MenuButton extends Button {
-    public get_popup():PopupMenu
-    public set_disable_shortcuts(disabled:Bool):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Mesh.hpp')
-@:native('Mesh')
-@:unreflective
-@:structAccess
-extern class Mesh extends Resource {
-    public create_convex_shape():Shape
-    public create_outline(margin:Float):Mesh
-    public create_trimesh_shape():Shape
-    public generate_triangle_mesh():TriangleMesh
-    public get_faces():PoolVector3Array
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/MeshDataTool.hpp')
-@:native('MeshDataTool')
-@:unreflective
-@:structAccess
-extern class MeshDataTool extends Reference {
-    public clear():Void
-    public commit_to_surface(mesh:ArrayMesh):Int
-    public create_from_surface(mesh:ArrayMesh, surface:Int):Int
-    public get_edge_count():Int
-    public get_edge_faces(idx:Int):PoolIntArray
-    public get_edge_meta(idx:Int):Variant
-    public get_edge_vertex(idx:Int, vertex:Int):Int
-    public get_face_count():Int
-    public get_face_edge(idx:Int, edge:Int):Int
-    public get_face_meta(idx:Int):Variant
-    public get_face_normal(idx:Int):Vector3
-    public get_face_vertex(idx:Int, vertex:Int):Int
-    public get_format():Int
-    public get_material():Material
-    public get_vertex(idx:Int):Vector3
-    public get_vertex_bones(idx:Int):PoolIntArray
-    public get_vertex_color(idx:Int):Color
-    public get_vertex_count():Int
-    public get_vertex_edges(idx:Int):PoolIntArray
-    public get_vertex_faces(idx:Int):PoolIntArray
-    public get_vertex_meta(idx:Int):Variant
-    public get_vertex_normal(idx:Int):Vector3
-    public get_vertex_tangent(idx:Int):Plane
-    public get_vertex_uv(idx:Int):Vector2
-    public get_vertex_uv2(idx:Int):Vector2
-    public get_vertex_weights(idx:Int):PoolRealArray
-    public set_edge_meta(idx:Int, meta:Variant):Void
-    public set_face_meta(idx:Int, meta:Variant):Void
-    public set_material(material:Material):Void
-    public set_vertex(idx:Int, vertex:Vector3):Void
-    public set_vertex_bones(idx:Int, bones:PoolIntArray):Void
-    public set_vertex_color(idx:Int, color:Color):Void
-    public set_vertex_meta(idx:Int, meta:Variant):Void
-    public set_vertex_normal(idx:Int, normal:Vector3):Void
-    public set_vertex_tangent(idx:Int, tangent:Plane):Void
-    public set_vertex_uv(idx:Int, uv:Vector2):Void
-    public set_vertex_uv2(idx:Int, uv2:Vector2):Void
-    public set_vertex_weights(idx:Int, weights:PoolRealArray):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/MeshInstance.hpp')
-@:native('MeshInstance')
-@:unreflective
-@:structAccess
-extern class MeshInstance extends GeometryInstance {
-    public create_convex_collision():Void
-    public create_debug_tangents():Void
-    public create_trimesh_collision():Void
-    public get_surface_material(surface:Int):Material
-    public set_surface_material(surface:Int, material:Material):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/MeshInstance2D.hpp')
-@:native('MeshInstance2D')
-@:unreflective
-@:structAccess
-extern class MeshInstance2D extends Node2D {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/MeshLibrary.hpp')
-@:native('MeshLibrary')
-@:unreflective
-@:structAccess
-extern class MeshLibrary extends Resource {
-    public clear():Void
-    public create_item(id:Int):Void
-    public find_item_by_name(name:String):Int
-    public get_item_list():PoolIntArray
-    public get_item_mesh(id:Int):Mesh
-    public get_item_name(id:Int):String
-    public get_item_navmesh(id:Int):NavigationMesh
-    public get_item_preview(id:Int):Texture
-    public get_item_shapes(id:Int):Array
-    public get_last_unused_item_id():Int
-    public remove_item(id:Int):Void
-    public set_item_mesh(id:Int, mesh:Mesh):Void
-    public set_item_name(id:Int, name:String):Void
-    public set_item_navmesh(id:Int, navmesh:NavigationMesh):Void
-    public set_item_preview(id:Int, texture:Texture):Void
-    public set_item_shapes(id:Int, shapes:Array):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/MultiMesh.hpp')
-@:native('MultiMesh')
-@:unreflective
-@:structAccess
-extern class MultiMesh extends Resource {
-    public get_aabb():Aabb
-    public get_instance_color(instance:Int):Color
-    public get_instance_transform(instance:Int):Transform
-    public set_instance_color(instance:Int, color:Color):Void
-    public set_instance_transform(instance:Int, transform:Transform):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/MultiMeshInstance.hpp')
-@:native('MultiMeshInstance')
-@:unreflective
-@:structAccess
-extern class MultiMeshInstance extends GeometryInstance {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/MultiplayerAPI.hpp')
-@:native('MultiplayerAPI')
-@:unreflective
-@:structAccess
-extern class MultiplayerAPI extends Reference {
-    public clear():Void
-    public get_network_connected_peers():PoolIntArray
-    public get_network_unique_id():Int
-    public get_rpc_sender_id():Int
-    public has_network_peer():Bool
-    public is_network_server():Bool
-    public poll():Void
-    public send_bytes(bytes:PoolByteArray, id:Int, mode:Int):Int
-    public set_root_node(node:Node):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Mutex.hpp')
-@:native('Mutex')
-@:unreflective
-@:structAccess
-extern class Mutex extends Reference {
-    public lock():Void
-    public try_lock():Int
-    public unlock():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Navigation.hpp')
-@:native('Navigation')
-@:unreflective
-@:structAccess
-extern class Navigation extends Spatial {
-    public get_closest_point(to_point:Vector3):Vector3
-    public get_closest_point_normal(to_point:Vector3):Vector3
-    public get_closest_point_owner(to_point:Vector3):Object
-    public get_closest_point_to_segment(start:Vector3, end:Vector3, use_collision:Bool):Vector3
-    public get_simple_path(start:Vector3, end:Vector3, optimize:Bool):PoolVector3Array
-    public navmesh_add(mesh:NavigationMesh, xform:Transform, owner:Object):Int
-    public navmesh_remove(id:Int):Void
-    public navmesh_set_transform(id:Int, xform:Transform):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Navigation2D.hpp')
-@:native('Navigation2D')
-@:unreflective
-@:structAccess
-extern class Navigation2D extends Node2D {
-    public get_closest_point(to_point:Vector2):Vector2
-    public get_closest_point_owner(to_point:Vector2):Object
-    public get_simple_path(start:Vector2, end:Vector2, optimize:Bool):PoolVector2Array
-    public navpoly_add(mesh:NavigationPolygon, xform:Transform2D, owner:Object):Int
-    public navpoly_remove(id:Int):Void
-    public navpoly_set_transform(id:Int, xform:Transform2D):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/NavigationMesh.hpp')
-@:native('NavigationMesh')
-@:unreflective
-@:structAccess
-extern class NavigationMesh extends Resource {
-    public add_polygon(polygon:PoolIntArray):Void
-    public clear_polygons():Void
-    public create_from_mesh(mesh:Mesh):Void
-    public get_polygon(idx:Int):PoolIntArray
-    public get_polygon_count():Int
-    public get_vertices():PoolVector3Array
-    public set_vertices(vertices:PoolVector3Array):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/NavigationMeshInstance.hpp')
-@:native('NavigationMeshInstance')
-@:unreflective
-@:structAccess
-extern class NavigationMeshInstance extends Spatial {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/NavigationPolygon.hpp')
-@:native('NavigationPolygon')
-@:unreflective
-@:structAccess
-extern class NavigationPolygon extends Resource {
-    public add_outline(outline:PoolVector2Array):Void
-    public add_outline_at_index(outline:PoolVector2Array, index:Int):Void
-    public add_polygon(polygon:PoolIntArray):Void
-    public clear_outlines():Void
-    public clear_polygons():Void
-    public get_outline(idx:Int):PoolVector2Array
-    public get_outline_count():Int
-    public get_polygon(idx:Int):PoolIntArray
-    public get_polygon_count():Int
-    public get_vertices():PoolVector2Array
-    public make_polygons_from_outlines():Void
-    public remove_outline(idx:Int):Void
-    public set_outline(idx:Int, outline:PoolVector2Array):Void
-    public set_vertices(vertices:PoolVector2Array):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/NavigationPolygonInstance.hpp')
-@:native('NavigationPolygonInstance')
-@:unreflective
-@:structAccess
-extern class NavigationPolygonInstance extends Node2D {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/NetworkedMultiplayerPeer.hpp')
-@:native('NetworkedMultiplayerPeer')
-@:unreflective
-@:structAccess
-extern class NetworkedMultiplayerPeer extends PacketPeer {
-    public get_connection_status():Int
-    public get_packet_peer():Int
-    public get_unique_id():Int
-    public poll():Void
-    public set_target_peer(id:Int):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Nil.hpp')
-@:native('Nil')
-@:unreflective
-@:structAccess
-extern class Nil {
-    public Nil(from:PoolColorArray):Void
-    public Nil(from:PoolVector3Array):Void
-    public Nil(from:PoolVector2Array):Void
-    public Nil(from:PoolStringArray):Void
-    public Nil(from:PoolRealArray):Void
-    public Nil(from:PoolIntArray):Void
-    public Nil(from:PoolByteArray):Void
-    public Nil(from:Array):Void
-    public Nil(from:Dictionary):Void
-    public Nil(from:Object):Void
-    public Nil(from:Rid):Void
-    public Nil(from:NodePath):Void
-    public Nil(from:Color):Void
-    public Nil(from:Transform):Void
-    public Nil(from:Basis):Void
-    public Nil(from:Aabb):Void
-    public Nil(from:Quat):Void
-    public Nil(from:Plane):Void
-    public Nil(from:Transform2D):Void
-    public Nil(from:Vector3):Void
-    public Nil(from:Rect2):Void
-    public Nil(from:Vector2):Void
-    public Nil(from:String):Void
-    public Nil(from:Float):Void
-    public Nil(from:Int):Void
-    public Nil(from:Bool):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/NinePatchRect.hpp')
-@:native('NinePatchRect')
-@:unreflective
-@:structAccess
-extern class NinePatchRect extends Control {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Node.hpp')
-@:native('Node')
-@:unreflective
-@:structAccess
-extern class Node extends Object {
-    public _enter_tree():Void
-    public _exit_tree():Void
-    public _input(event:InputEvent):Void
-    public _physics_process(delta:Float):Void
-    public _process(delta:Float):Void
-    public _ready():Void
-    public _unhandled_input(event:InputEvent):Void
-    public _unhandled_key_input(event:InputEventKey):Void
-    public add_child(node:Node, legible_unique_name:Bool):Void
-    public add_child_below_node(node:Node, child_node:Node, legible_unique_name:Bool):Void
-    public add_to_group(group:String, persistent:Bool):Void
-    public can_process():Bool
-    public duplicate(flags:Int):Node
-    public find_node(mask:String, recursive:Bool, owned:Bool):Node
-    public get_child(idx:Int):Node
-    public get_child_count():Int
-    public get_children():Array
-    public get_groups():Array
-    public get_index():Int
-    public get_network_master():Int
-    public get_node(path:NodePath):Node
-    public get_node_and_resource(path:NodePath):Array
-    public get_parent():Node
-    public get_path():NodePath
-    public get_path_to(node:Node):NodePath
-    public get_physics_process_delta_time():Float
-    public get_position_in_parent():Int
-    public get_process_delta_time():Float
-    public get_scene_instance_load_placeholder():Bool
-    public get_tree():SceneTree
-    public get_viewport():Viewport
-    public has_node(path:NodePath):Bool
-    public has_node_and_resource(path:NodePath):Bool
-    public is_a_parent_of(node:Node):Bool
-    public is_displayed_folded():Bool
-    public is_greater_than(node:Node):Bool
-    public is_in_group(group:String):Bool
-    public is_inside_tree():Bool
-    public is_network_master():Bool
-    public is_physics_processing():Bool
-    public is_physics_processing_internal():Bool
-    public is_processing():Bool
-    public is_processing_input():Bool
-    public is_processing_internal():Bool
-    public is_processing_unhandled_input():Bool
-    public is_processing_unhandled_key_input():Bool
-    public move_child(child_node:Node, to_position:Int):Void
-    public print_stray_nodes():Void
-    public print_tree():Void
-    public print_tree_pretty():Void
-    public propagate_call(method:String, args:Array, parent_first:Bool):Void
-    public propagate_notification(what:Int):Void
-    public queue_free():Void
-    public raise():Void
-    public remove_and_skip():Void
-    public remove_child(node:Node):Void
-    public remove_from_group(group:String):Void
-    public replace_by(node:Node, keep_data:Bool):Void
-    public request_ready():Void
-    public rpc(method:String):Variant
-    public rpc_config(method:String, mode:Int):Void
-    public rpc_id(peer_id:Int, method:String):Variant
-    public rpc_unreliable(method:String):Variant
-    public rpc_unreliable_id(peer_id:Int, method:String):Variant
-    public rset(property:String, value:Variant):Void
-    public rset_config(property:String, mode:Int):Void
-    public rset_id(peer_id:Int, property:String, value:Variant):Void
-    public rset_unreliable(property:String, value:Variant):Void
-    public rset_unreliable_id(peer_id:Int, property:String, value:Variant):Void
-    public set_display_folded(fold:Bool):Void
-    public set_network_master(id:Int, recursive:Bool):Void
-    public set_physics_process(enable:Bool):Void
-    public set_physics_process_internal(enable:Bool):Void
-    public set_process(enable:Bool):Void
-    public set_process_input(enable:Bool):Void
-    public set_process_internal(enable:Bool):Void
-    public set_process_priority(priority:Int):Void
-    public set_process_unhandled_input(enable:Bool):Void
-    public set_process_unhandled_key_input(enable:Bool):Void
-    public set_scene_instance_load_placeholder(load_placeholder:Bool):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Node2D.hpp')
-@:native('Node2D')
-@:unreflective
-@:structAccess
-extern class Node2D extends CanvasItem {
-    public apply_scale(ratio:Vector2):Void
-    public get_angle_to(point:Vector2):Float
-    public get_relative_transform_to_parent(parent:Node):Transform2D
-    public global_translate(offset:Vector2):Void
-    public look_at(point:Vector2):Void
-    public move_local_x(delta:Float, scaled:Bool):Void
-    public move_local_y(delta:Float, scaled:Bool):Void
-    public rotate(radians:Float):Void
-    public to_global(local_point:Vector2):Vector2
-    public to_local(global_point:Vector2):Vector2
-    public translate(offset:Vector2):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/core/NodePath.hpp')
-@:native('NodePath')
-@:unreflective
-@:structAccess
-extern class NodePath {
-    public NodePath(from:String):NodePath
-    public get_as_property_path():NodePath
-    public get_concatenated_subnames():String
-    public get_name(idx:Int):String
-    public get_name_count():Int
-    public get_subname(idx:Int):String
-    public get_subname_count():Int
-    public is_absolute():Bool
-    public is_empty():Bool
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Object.hpp')
-@:native('Object')
-@:unreflective
-@:structAccess
-extern class Object {
-    public _get(property:String):Variant
-    public _get_property_list():Array
-    public _init():Void
-    public _notification(what:Int):Void
-    public _set(property:String, value:Variant):Bool
-    public add_user_signal(signal:String, arguments:Array):Void
-    public call(method:String):Variant
-    public call_deferred(method:String):Variant
-    public callv(method:String, arg_array:Array):Variant
-    public can_translate_messages():Bool
-    public connect(signal:String, target:Object, method:String, binds:Array, flags:Int):Int
-    public disconnect(signal:String, target:Object, method:String):Void
-    public emit_signal(signal:String):Variant
-    public free():Void
-    public get(property:String):Variant
-    public get_class():String
-    public get_incoming_connections():Array
-    public get_indexed(property:NodePath):Variant
-    public get_instance_id():Int
-    public get_meta(name:String):Variant
-    public get_meta_list():PoolStringArray
-    public get_method_list():Array
-    public get_property_list():Array
-    public get_script():Reference
-    public get_signal_connection_list(signal:String):Array
-    public get_signal_list():Array
-    public has_meta(name:String):Bool
-    public has_method(method:String):Bool
-    public has_user_signal(signal:String):Bool
-    public is_blocking_signals():Bool
-    public is_class(type:String):Bool
-    public is_connected(signal:String, target:Object, method:String):Bool
-    public is_queued_for_deletion():Bool
-    public notification(what:Int, reversed:Bool):Void
-    public property_list_changed_notify():Void
-    public set(property:String, value:Variant):Void
-    public set_block_signals(enable:Bool):Void
-    public set_indexed(property:NodePath, value:Variant):Void
-    public set_message_translation(enable:Bool):Void
-    public set_meta(name:String, value:Variant):Void
-    public set_script(script:Reference):Void
-    public tr(message:String):String
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/OccluderPolygon2D.hpp')
-@:native('OccluderPolygon2D')
-@:unreflective
-@:structAccess
-extern class OccluderPolygon2D extends Resource {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/OmniLight.hpp')
-@:native('OmniLight')
-@:unreflective
-@:structAccess
-extern class OmniLight extends Light {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/OptionButton.hpp')
-@:native('OptionButton')
-@:unreflective
-@:structAccess
-extern class OptionButton extends Button {
-    public add_icon_item(texture:Texture, label:String, id:Int):Void
-    public add_item(label:String, id:Int):Void
-    public add_separator():Void
-    public clear():Void
-    public get_item_count():Int
-    public get_item_icon(idx:Int):Texture
-    public get_item_id(idx:Int):Int
-    public get_item_metadata(idx:Int):Variant
-    public get_item_text(idx:Int):String
-    public get_popup():PopupMenu
-    public get_selected_id():Int
-    public get_selected_metadata():Variant
-    public is_item_disabled(idx:Int):Bool
-    public remove_item(idx:Int):Void
-    public select(idx:Int):Void
-    public set_item_disabled(idx:Int, disabled:Bool):Void
-    public set_item_icon(idx:Int, texture:Texture):Void
-    public set_item_id(idx:Int, id:Int):Void
-    public set_item_metadata(idx:Int, metadata:Variant):Void
-    public set_item_text(idx:Int, text:String):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/OrientedPathFollow.hpp')
-@:native('OrientedPathFollow')
-@:unreflective
-@:structAccess
-extern class OrientedPathFollow extends Spatial {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/OS.hpp')
-@:native('OS')
-@:unreflective
-@:structAccess
-extern class OS extends Object {
-    public alert(text:String, title:String):Void
-    public can_draw():Bool
-    public can_use_threads():Bool
-    public center_window():Void
-    public delay_msec(msec:Int):Void
-    public delay_usec(usec:Int):Void
-    public dump_memory_to_file(file:String):Void
-    public dump_resources_to_file(file:String):Void
-    public execute(path:String, arguments:PoolStringArray, blocking:Bool, output:Array):Int
-    public find_scancode_from_string(string:String):Int
-    public get_audio_driver_count():Int
-    public get_audio_driver_name(driver:Int):String
-    public get_cmdline_args():PoolStringArray
-    public get_connected_midi_inputs():PoolStringArray
-    public get_date(utc:Bool):Dictionary
-    public get_datetime(utc:Bool):Dictionary
-    public get_datetime_from_unix_time(unix_time_val:Int):Dictionary
-    public get_dynamic_memory_usage():Int
-    public get_environment(environment:String):String
-    public get_executable_path():String
-    public get_latin_keyboard_variant():String
-    public get_locale():String
-    public get_model_name():String
-    public get_name():String
-    public get_power_percent_left():Int
-    public get_power_seconds_left():Int
-    public get_power_state():Int
-    public get_process_id():Int
-    public get_processor_count():Int
-    public get_real_window_size():Vector2
-    public get_scancode_string(code:Int):String
-    public get_screen_count():Int
-    public get_screen_dpi(screen:Int):Int
-    public get_screen_position(screen:Int):Vector2
-    public get_screen_size(screen:Int):Vector2
-    public get_splash_tick_msec():Int
-    public get_static_memory_peak_usage():Int
-    public get_static_memory_usage():Int
-    public get_system_dir(dir:Int):String
-    public get_system_time_secs():Int
-    public get_ticks_msec():Int
-    public get_ticks_usec():Int
-    public get_time(utc:Bool):Dictionary
-    public get_time_zone_info():Dictionary
-    public get_unique_id():String
-    public get_unix_time():Int
-    public get_unix_time_from_datetime(datetime:Dictionary):Int
-    public get_user_data_dir():String
-    public get_video_driver_count():Int
-    public get_video_driver_name(driver:Int):String
-    public get_virtual_keyboard_height():Int
-    public get_window_safe_area():Rect2
-    public has_environment(environment:String):Bool
-    public has_feature(tag_name:String):Bool
-    public has_touchscreen_ui_hint():Bool
-    public has_virtual_keyboard():Bool
-    public hide_virtual_keyboard():Void
-    public is_debug_build():Bool
-    public is_ok_left_and_cancel_right():Bool
-    public is_scancode_unicode(code:Int):Bool
-    public is_stdout_verbose():Bool
-    public is_userfs_persistent():Bool
-    public is_window_always_on_top():Bool
-    public kill(pid:Int):Int
-    public native_video_is_playing():Bool
-    public native_video_pause():Void
-    public native_video_play(path:String, volume:Float, audio_track:String, subtitle_track:String):Int
-    public native_video_stop():Void
-    public native_video_unpause():Void
-    public print_all_resources(tofile:String):Void
-    public print_all_textures_by_size():Void
-    public print_resources_by_type(types:PoolStringArray):Void
-    public print_resources_in_use(short:Bool):Void
-    public request_attention():Void
-    public set_icon(icon:Image):Void
-    public set_ime_position(position:Vector2):Void
-    public set_thread_name(name:String):Int
-    public set_use_file_access_save_and_swap(enabled:Bool):Void
-    public set_window_always_on_top(enabled:Bool):Void
-    public set_window_title(title:String):Void
-    public shell_open(uri:String):Int
-    public show_virtual_keyboard(existing_text:String):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PackedDataContainer.hpp')
-@:native('PackedDataContainer')
-@:unreflective
-@:structAccess
-extern class PackedDataContainer extends Resource {
-    public pack(value:Variant):Int
-    public size():Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PackedDataContainerRef.hpp')
-@:native('PackedDataContainerRef')
-@:unreflective
-@:structAccess
-extern class PackedDataContainerRef extends Reference {
-    public size():Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PackedScene.hpp')
-@:native('PackedScene')
-@:unreflective
-@:structAccess
-extern class PackedScene extends Resource {
-    public can_instance():Bool
-    public get_state():SceneState
-    public instance(edit_state:Int):Node
-    public pack(path:Node):Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PacketPeer.hpp')
-@:native('PacketPeer')
-@:unreflective
-@:structAccess
-extern class PacketPeer extends Reference {
-    public get_available_packet_count():Int
-    public get_packet():PoolByteArray
-    public get_packet_error():Int
-    public get_var():Variant
-    public put_packet(buffer:PoolByteArray):Int
-    public put_var(var:Variant):Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PacketPeerStream.hpp')
-@:native('PacketPeerStream')
-@:unreflective
-@:structAccess
-extern class PacketPeerStream extends PacketPeer {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PacketPeerUDP.hpp')
-@:native('PacketPeerUDP')
-@:unreflective
-@:structAccess
-extern class PacketPeerUDP extends PacketPeer {
-    public close():Void
-    public get_packet_ip():String
-    public get_packet_port():Int
-    public is_listening():Bool
-    public listen(port:Int, bind_address:String, recv_buf_size:Int):Int
-    public set_dest_address(host:String, port:Int):Int
-    public wait():Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Panel.hpp')
-@:native('Panel')
-@:unreflective
-@:structAccess
-extern class Panel extends Control {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PanelContainer.hpp')
-@:native('PanelContainer')
-@:unreflective
-@:structAccess
-extern class PanelContainer extends Container {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PanoramaSky.hpp')
-@:native('PanoramaSky')
-@:unreflective
-@:structAccess
-extern class PanoramaSky extends Sky {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ParallaxBackground.hpp')
-@:native('ParallaxBackground')
-@:unreflective
-@:structAccess
-extern class ParallaxBackground extends CanvasLayer {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ParallaxLayer.hpp')
-@:native('ParallaxLayer')
-@:unreflective
-@:structAccess
-extern class ParallaxLayer extends Node2D {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Particles.hpp')
-@:native('Particles')
-@:unreflective
-@:structAccess
-extern class Particles extends GeometryInstance {
-    public capture_aabb():Aabb
-    public restart():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Particles2D.hpp')
-@:native('Particles2D')
-@:unreflective
-@:structAccess
-extern class Particles2D extends Node2D {
-    public capture_rect():Rect2
-    public restart():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ParticlesMaterial.hpp')
-@:native('ParticlesMaterial')
-@:unreflective
-@:structAccess
-extern class ParticlesMaterial extends Material {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Path.hpp')
-@:native('Path')
-@:unreflective
-@:structAccess
-extern class Path extends Spatial {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Path2D.hpp')
-@:native('Path2D')
-@:unreflective
-@:structAccess
-extern class Path2D extends Node2D {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PathFollow.hpp')
-@:native('PathFollow')
-@:unreflective
-@:structAccess
-extern class PathFollow extends Spatial {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PathFollow2D.hpp')
-@:native('PathFollow2D')
-@:unreflective
-@:structAccess
-extern class PathFollow2D extends Node2D {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PCKPacker.hpp')
-@:native('PCKPacker')
-@:unreflective
-@:structAccess
-extern class PCKPacker extends Reference {
-    public add_file(pck_path:String, source_path:String):Int
-    public flush(verbose:Bool):Int
-    public pck_start(pck_name:String, alignment:Int):Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Performance.hpp')
-@:native('Performance')
-@:unreflective
-@:structAccess
-extern class Performance extends Object {
-    public get_monitor(monitor:Int):Float
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PHashTranslation.hpp')
-@:native('PHashTranslation')
-@:unreflective
-@:structAccess
-extern class PHashTranslation extends Translation {
-    public generate(from:Translation):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PhysicalBone.hpp')
-@:native('PhysicalBone')
-@:unreflective
-@:structAccess
-extern class PhysicalBone extends PhysicsBody {
-    public get_simulate_physics():Bool
-    public is_simulating_physics():Bool
-    public is_static_body():Bool
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Physics2DDirectBodyState.hpp')
-@:native('Physics2DDirectBodyState')
-@:unreflective
-@:structAccess
-extern class Physics2DDirectBodyState extends Object {
-    public add_central_force(force:Vector2):Void
-    public add_force(offset:Vector2, force:Vector2):Void
-    public add_torque(torque:Float):Void
-    public apply_central_impulse(impulse:Vector2):Void
-    public apply_impulse(offset:Vector2, impulse:Vector2):Void
-    public apply_torque_impulse(impulse:Float):Void
-    public get_contact_collider(contact_idx:Int):Rid
-    public get_contact_collider_id(contact_idx:Int):Int
-    public get_contact_collider_object(contact_idx:Int):Object
-    public get_contact_collider_position(contact_idx:Int):Vector2
-    public get_contact_collider_shape(contact_idx:Int):Int
-    public get_contact_collider_shape_metadata(contact_idx:Int):Variant
-    public get_contact_collider_velocity_at_position(contact_idx:Int):Vector2
-    public get_contact_count():Int
-    public get_contact_local_normal(contact_idx:Int):Vector2
-    public get_contact_local_position(contact_idx:Int):Vector2
-    public get_contact_local_shape(contact_idx:Int):Int
-    public get_space_state():Physics2DDirectSpaceState
-    public integrate_forces():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Physics2DDirectBodyStateSW.hpp')
-@:native('Physics2DDirectBodyStateSW')
-@:unreflective
-@:structAccess
-extern class Physics2DDirectBodyStateSW extends Physics2DDirectBodyState {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Physics2DDirectSpaceState.hpp')
-@:native('Physics2DDirectSpaceState')
-@:unreflective
-@:structAccess
-extern class Physics2DDirectSpaceState extends Object {
-    public cast_motion(shape:Physics2DShapeQueryParameters):Array
-    public collide_shape(shape:Physics2DShapeQueryParameters, max_results:Int):Array
-    public get_rest_info(shape:Physics2DShapeQueryParameters):Dictionary
-    public intersect_point(point:Vector2, max_results:Int, exclude:Array, collision_layer:Int):Array
-    public intersect_ray(from:Vector2, to:Vector2, exclude:Array, collision_layer:Int):Dictionary
-    public intersect_shape(shape:Physics2DShapeQueryParameters, max_results:Int):Array
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Physics2DServer.hpp')
-@:native('Physics2DServer')
-@:unreflective
-@:structAccess
-extern class Physics2DServer extends Object {
-    public area_add_shape(area:Rid, shape:Rid, transform:Transform2D):Void
-    public area_attach_object_instance_id(area:Rid, id:Int):Void
-    public area_clear_shapes(area:Rid):Void
-    public area_create():Rid
-    public area_get_object_instance_id(area:Rid):Int
-    public area_get_param(area:Rid, param:Int):Variant
-    public area_get_shape(area:Rid, shape_idx:Int):Rid
-    public area_get_shape_count(area:Rid):Int
-    public area_get_shape_transform(area:Rid, shape_idx:Int):Transform2D
-    public area_get_space(area:Rid):Rid
-    public area_get_space_override_mode(area:Rid):Int
-    public area_get_transform(area:Rid):Transform2D
-    public area_remove_shape(area:Rid, shape_idx:Int):Void
-    public area_set_area_monitor_callback(area:Rid, receiver:Object, method:String):Void
-    public area_set_collision_layer(area:Rid, layer:Int):Void
-    public area_set_collision_mask(area:Rid, mask:Int):Void
-    public area_set_monitor_callback(area:Rid, receiver:Object, method:String):Void
-    public area_set_monitorable(area:Rid, monitorable:Bool):Void
-    public area_set_param(area:Rid, param:Int, value:Variant):Void
-    public area_set_shape(area:Rid, shape_idx:Int, shape:Rid):Void
-    public area_set_shape_disabled(area:Rid, shape_idx:Int, disable:Bool):Void
-    public area_set_shape_transform(area:Rid, shape_idx:Int, transform:Transform2D):Void
-    public area_set_space(area:Rid, space:Rid):Void
-    public area_set_space_override_mode(area:Rid, mode:Int):Void
-    public area_set_transform(area:Rid, transform:Transform2D):Void
-    public body_add_central_force(body:Rid, force:Vector2):Void
-    public body_add_collision_exception(body:Rid, excepted_body:Rid):Void
-    public body_add_force(body:Rid, offset:Vector2, force:Vector2):Void
-    public body_add_shape(body:Rid, shape:Rid, transform:Transform2D):Void
-    public body_add_torque(body:Rid, torque:Float):Void
-    public body_apply_central_impulse(body:Rid, impulse:Vector2):Void
-    public body_apply_impulse(body:Rid, position:Vector2, impulse:Vector2):Void
-    public body_apply_torque_impulse(body:Rid, impulse:Float):Void
-    public body_attach_object_instance_id(body:Rid, id:Int):Void
-    public body_clear_shapes(body:Rid):Void
-    public body_create():Rid
-    public body_get_collision_layer(body:Rid):Int
-    public body_get_collision_mask(body:Rid):Int
-    public body_get_continuous_collision_detection_mode(body:Rid):Int
-    public body_get_direct_state(body:Rid):Physics2DDirectBodyState
-    public body_get_max_contacts_reported(body:Rid):Int
-    public body_get_mode(body:Rid):Int
-    public body_get_object_instance_id(body:Rid):Int
-    public body_get_param(body:Rid, param:Int):Float
-    public body_get_shape(body:Rid, shape_idx:Int):Rid
-    public body_get_shape_count(body:Rid):Int
-    public body_get_shape_metadata(body:Rid, shape_idx:Int):Variant
-    public body_get_shape_transform(body:Rid, shape_idx:Int):Transform2D
-    public body_get_space(body:Rid):Rid
-    public body_get_state(body:Rid, state:Int):Variant
-    public body_is_omitting_force_integration(body:Rid):Bool
-    public body_remove_collision_exception(body:Rid, excepted_body:Rid):Void
-    public body_remove_shape(body:Rid, shape_idx:Int):Void
-    public body_set_axis_velocity(body:Rid, axis_velocity:Vector2):Void
-    public body_set_collision_layer(body:Rid, layer:Int):Void
-    public body_set_collision_mask(body:Rid, mask:Int):Void
-    public body_set_continuous_collision_detection_mode(body:Rid, mode:Int):Void
-    public body_set_force_integration_callback(body:Rid, receiver:Object, method:String, userdata:Variant):Void
-    public body_set_max_contacts_reported(body:Rid, amount:Int):Void
-    public body_set_mode(body:Rid, mode:Int):Void
-    public body_set_omit_force_integration(body:Rid, enable:Bool):Void
-    public body_set_param(body:Rid, param:Int, value:Float):Void
-    public body_set_shape(body:Rid, shape_idx:Int, shape:Rid):Void
-    public body_set_shape_as_one_way_collision(body:Rid, shape_idx:Int, enable:Bool):Void
-    public body_set_shape_disabled(body:Rid, shape_idx:Int, disable:Bool):Void
-    public body_set_shape_metadata(body:Rid, shape_idx:Int, metadata:Variant):Void
-    public body_set_shape_transform(body:Rid, shape_idx:Int, transform:Transform2D):Void
-    public body_set_space(body:Rid, space:Rid):Void
-    public body_set_state(body:Rid, state:Int, value:Variant):Void
-    public body_test_motion(body:Rid, from:Transform2D, motion:Vector2, infinite_inertia:Bool, margin:Float, result:Physics2DTestMotionResult):Bool
-    public capsule_shape_create():Rid
-    public circle_shape_create():Rid
-    public concave_polygon_shape_create():Rid
-    public convex_polygon_shape_create():Rid
-    public damped_spring_joint_create(anchor_a:Vector2, anchor_b:Vector2, body_a:Rid, body_b:Rid):Rid
-    public damped_string_joint_get_param(joint:Rid, param:Int):Float
-    public damped_string_joint_set_param(joint:Rid, param:Int, value:Float):Void
-    public free_rid(rid:Rid):Void
-    public get_process_info(process_info:Int):Int
-    public groove_joint_create(groove1_a:Vector2, groove2_a:Vector2, anchor_b:Vector2, body_a:Rid, body_b:Rid):Rid
-    public joint_get_param(joint:Rid, param:Int):Float
-    public joint_get_type(joint:Rid):Int
-    public joint_set_param(joint:Rid, param:Int, value:Float):Void
-    public line_shape_create():Rid
-    public pin_joint_create(anchor:Vector2, body_a:Rid, body_b:Rid):Rid
-    public ray_shape_create():Rid
-    public rectangle_shape_create():Rid
-    public segment_shape_create():Rid
-    public set_active(active:Bool):Void
-    public shape_get_data(shape:Rid):Variant
-    public shape_get_type(shape:Rid):Int
-    public shape_set_data(shape:Rid, data:Variant):Void
-    public space_create():Rid
-    public space_get_direct_state(space:Rid):Physics2DDirectSpaceState
-    public space_get_param(space:Rid, param:Int):Float
-    public space_is_active(space:Rid):Bool
-    public space_set_active(space:Rid, active:Bool):Void
-    public space_set_param(space:Rid, param:Int, value:Float):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Physics2DServerSW.hpp')
-@:native('Physics2DServerSW')
-@:unreflective
-@:structAccess
-extern class Physics2DServerSW extends Physics2DServer {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Physics2DShapeQueryParameters.hpp')
-@:native('Physics2DShapeQueryParameters')
-@:unreflective
-@:structAccess
-extern class Physics2DShapeQueryParameters extends Reference {
-    public set_shape(shape:Resource):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Physics2DShapeQueryResult.hpp')
-@:native('Physics2DShapeQueryResult')
-@:unreflective
-@:structAccess
-extern class Physics2DShapeQueryResult extends Reference {
-    public get_result_count():Int
-    public get_result_object(idx:Int):Object
-    public get_result_object_id(idx:Int):Int
-    public get_result_object_shape(idx:Int):Int
-    public get_result_rid(idx:Int):Rid
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Physics2DTestMotionResult.hpp')
-@:native('Physics2DTestMotionResult')
-@:unreflective
-@:structAccess
-extern class Physics2DTestMotionResult extends Reference {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PhysicsBody.hpp')
-@:native('PhysicsBody')
-@:unreflective
-@:structAccess
-extern class PhysicsBody extends CollisionObject {
-    public add_collision_exception_with(body:Node):Void
-    public get_collision_layer_bit(bit:Int):Bool
-    public get_collision_mask_bit(bit:Int):Bool
-    public remove_collision_exception_with(body:Node):Void
-    public set_collision_layer_bit(bit:Int, value:Bool):Void
-    public set_collision_mask_bit(bit:Int, value:Bool):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PhysicsBody2D.hpp')
-@:native('PhysicsBody2D')
-@:unreflective
-@:structAccess
-extern class PhysicsBody2D extends CollisionObject2D {
-    public add_collision_exception_with(body:Node):Void
-    public get_collision_layer_bit(bit:Int):Bool
-    public get_collision_mask_bit(bit:Int):Bool
-    public remove_collision_exception_with(body:Node):Void
-    public set_collision_layer_bit(bit:Int, value:Bool):Void
-    public set_collision_mask_bit(bit:Int, value:Bool):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PhysicsDirectBodyState.hpp')
-@:native('PhysicsDirectBodyState')
-@:unreflective
-@:structAccess
-extern class PhysicsDirectBodyState extends Object {
-    public add_central_force(force:Vector3):Void
-    public add_force(force:Vector3, position:Vector3):Void
-    public add_torque(torque:Vector3):Void
-    public apply_central_impulse(j:Vector3):Void
-    public apply_impulse(position:Vector3, j:Vector3):Void
-    public apply_torque_impulse(j:Vector3):Void
-    public get_contact_collider(contact_idx:Int):Rid
-    public get_contact_collider_id(contact_idx:Int):Int
-    public get_contact_collider_object(contact_idx:Int):Object
-    public get_contact_collider_position(contact_idx:Int):Vector3
-    public get_contact_collider_shape(contact_idx:Int):Int
-    public get_contact_collider_velocity_at_position(contact_idx:Int):Vector3
-    public get_contact_count():Int
-    public get_contact_impulse(contact_idx:Int):Float
-    public get_contact_local_normal(contact_idx:Int):Vector3
-    public get_contact_local_position(contact_idx:Int):Vector3
-    public get_contact_local_shape(contact_idx:Int):Int
-    public get_space_state():PhysicsDirectSpaceState
-    public integrate_forces():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PhysicsDirectSpaceState.hpp')
-@:native('PhysicsDirectSpaceState')
-@:unreflective
-@:structAccess
-extern class PhysicsDirectSpaceState extends Object {
-    public cast_motion(shape:PhysicsShapeQueryParameters, motion:Vector3):Array
-    public collide_shape(shape:PhysicsShapeQueryParameters, max_results:Int):Array
-    public get_rest_info(shape:PhysicsShapeQueryParameters):Dictionary
-    public intersect_ray(from:Vector3, to:Vector3, exclude:Array, collision_layer:Int):Dictionary
-    public intersect_shape(shape:PhysicsShapeQueryParameters, max_results:Int):Array
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PhysicsMaterial.hpp')
-@:native('PhysicsMaterial')
-@:unreflective
-@:structAccess
-extern class PhysicsMaterial extends Resource {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PhysicsServer.hpp')
-@:native('PhysicsServer')
-@:unreflective
-@:structAccess
-extern class PhysicsServer extends Object {
-    public area_add_shape(area:Rid, shape:Rid, transform:Transform):Void
-    public area_attach_object_instance_id(area:Rid, id:Int):Void
-    public area_clear_shapes(area:Rid):Void
-    public area_create():Rid
-    public area_get_object_instance_id(area:Rid):Int
-    public area_get_param(area:Rid, param:Int):Variant
-    public area_get_shape(area:Rid, shape_idx:Int):Rid
-    public area_get_shape_count(area:Rid):Int
-    public area_get_shape_transform(area:Rid, shape_idx:Int):Transform
-    public area_get_space(area:Rid):Rid
-    public area_get_space_override_mode(area:Rid):Int
-    public area_get_transform(area:Rid):Transform
-    public area_is_ray_pickable(area:Rid):Bool
-    public area_remove_shape(area:Rid, shape_idx:Int):Void
-    public area_set_area_monitor_callback(area:Rid, receiver:Object, method:String):Void
-    public area_set_collision_layer(area:Rid, layer:Int):Void
-    public area_set_collision_mask(area:Rid, mask:Int):Void
-    public area_set_monitor_callback(area:Rid, receiver:Object, method:String):Void
-    public area_set_monitorable(area:Rid, monitorable:Bool):Void
-    public area_set_param(area:Rid, param:Int, value:Variant):Void
-    public area_set_ray_pickable(area:Rid, enable:Bool):Void
-    public area_set_shape(area:Rid, shape_idx:Int, shape:Rid):Void
-    public area_set_shape_transform(area:Rid, shape_idx:Int, transform:Transform):Void
-    public area_set_space(area:Rid, space:Rid):Void
-    public area_set_space_override_mode(area:Rid, mode:Int):Void
-    public area_set_transform(area:Rid, transform:Transform):Void
-    public body_add_central_force(body:Rid, force:Vector3):Void
-    public body_add_collision_exception(body:Rid, excepted_body:Rid):Void
-    public body_add_force(body:Rid, force:Vector3, position:Vector3):Void
-    public body_add_shape(body:Rid, shape:Rid, transform:Transform):Void
-    public body_add_torque(body:Rid, torque:Vector3):Void
-    public body_apply_central_impulse(body:Rid, impulse:Vector3):Void
-    public body_apply_impulse(body:Rid, position:Vector3, impulse:Vector3):Void
-    public body_apply_torque_impulse(body:Rid, impulse:Vector3):Void
-    public body_attach_object_instance_id(body:Rid, id:Int):Void
-    public body_clear_shapes(body:Rid):Void
-    public body_create(mode:Int, init_sleeping:Bool):Rid
-    public body_get_collision_layer(body:Rid):Int
-    public body_get_collision_mask(body:Rid):Int
-    public body_get_direct_state(body:Rid):PhysicsDirectBodyState
-    public body_get_kinematic_safe_margin(body:Rid):Float
-    public body_get_max_contacts_reported(body:Rid):Int
-    public body_get_mode(body:Rid):Int
-    public body_get_object_instance_id(body:Rid):Int
-    public body_get_param(body:Rid, param:Int):Float
-    public body_get_shape(body:Rid, shape_idx:Int):Rid
-    public body_get_shape_count(body:Rid):Int
-    public body_get_shape_transform(body:Rid, shape_idx:Int):Transform
-    public body_get_space(body:Rid):Rid
-    public body_get_state(body:Rid, state:Int):Variant
-    public body_is_axis_locked(body:Rid, axis:Int):Bool
-    public body_is_continuous_collision_detection_enabled(body:Rid):Bool
-    public body_is_omitting_force_integration(body:Rid):Bool
-    public body_is_ray_pickable(body:Rid):Bool
-    public body_remove_collision_exception(body:Rid, excepted_body:Rid):Void
-    public body_remove_shape(body:Rid, shape_idx:Int):Void
-    public body_set_axis_lock(body:Rid, axis:Int, lock:Bool):Void
-    public body_set_axis_velocity(body:Rid, axis_velocity:Vector3):Void
-    public body_set_collision_layer(body:Rid, layer:Int):Void
-    public body_set_collision_mask(body:Rid, mask:Int):Void
-    public body_set_enable_continuous_collision_detection(body:Rid, enable:Bool):Void
-    public body_set_force_integration_callback(body:Rid, receiver:Object, method:String, userdata:Variant):Void
-    public body_set_kinematic_safe_margin(body:Rid, margin:Float):Void
-    public body_set_max_contacts_reported(body:Rid, amount:Int):Void
-    public body_set_mode(body:Rid, mode:Int):Void
-    public body_set_omit_force_integration(body:Rid, enable:Bool):Void
-    public body_set_param(body:Rid, param:Int, value:Float):Void
-    public body_set_ray_pickable(body:Rid, enable:Bool):Void
-    public body_set_shape(body:Rid, shape_idx:Int, shape:Rid):Void
-    public body_set_shape_transform(body:Rid, shape_idx:Int, transform:Transform):Void
-    public body_set_space(body:Rid, space:Rid):Void
-    public body_set_state(body:Rid, state:Int, value:Variant):Void
-    public cone_twist_joint_get_param(joint:Rid, param:Int):Float
-    public cone_twist_joint_set_param(joint:Rid, param:Int, value:Float):Void
-    public free_rid(rid:Rid):Void
-    public generic_6dof_joint_get_flag(joint:Rid, axis:Int, flag:Int):Bool
-    public generic_6dof_joint_get_param(joint:Rid, axis:Int, param:Int):Float
-    public generic_6dof_joint_set_flag(joint:Rid, axis:Int, flag:Int, enable:Bool):Void
-    public generic_6dof_joint_set_param(joint:Rid, axis:Int, param:Int, value:Float):Void
-    public get_process_info(process_info:Int):Int
-    public hinge_joint_get_flag(joint:Rid, flag:Int):Bool
-    public hinge_joint_get_param(joint:Rid, param:Int):Float
-    public hinge_joint_set_flag(joint:Rid, flag:Int, enabled:Bool):Void
-    public hinge_joint_set_param(joint:Rid, param:Int, value:Float):Void
-    public joint_create_cone_twist(body_A:Rid, local_ref_A:Transform, body_B:Rid, local_ref_B:Transform):Rid
-    public joint_create_generic_6dof(body_A:Rid, local_ref_A:Transform, body_B:Rid, local_ref_B:Transform):Rid
-    public joint_create_hinge(body_A:Rid, hinge_A:Transform, body_B:Rid, hinge_B:Transform):Rid
-    public joint_create_pin(body_A:Rid, local_A:Vector3, body_B:Rid, local_B:Vector3):Rid
-    public joint_create_slider(body_A:Rid, local_ref_A:Transform, body_B:Rid, local_ref_B:Transform):Rid
-    public joint_get_solver_priority(joint:Rid):Int
-    public joint_get_type(joint:Rid):Int
-    public joint_set_solver_priority(joint:Rid, priority:Int):Void
-    public pin_joint_get_local_a(joint:Rid):Vector3
-    public pin_joint_get_local_b(joint:Rid):Vector3
-    public pin_joint_get_param(joint:Rid, param:Int):Float
-    public pin_joint_set_local_a(joint:Rid, local_A:Vector3):Void
-    public pin_joint_set_local_b(joint:Rid, local_B:Vector3):Void
-    public pin_joint_set_param(joint:Rid, param:Int, value:Float):Void
-    public set_active(active:Bool):Void
-    public shape_create(type:Int):Rid
-    public shape_get_data(shape:Rid):Variant
-    public shape_get_type(shape:Rid):Int
-    public shape_set_data(shape:Rid, data:Variant):Void
-    public slider_joint_get_param(joint:Rid, param:Int):Float
-    public slider_joint_set_param(joint:Rid, param:Int, value:Float):Void
-    public space_create():Rid
-    public space_get_direct_state(space:Rid):PhysicsDirectSpaceState
-    public space_get_param(space:Rid, param:Int):Float
-    public space_is_active(space:Rid):Bool
-    public space_set_active(space:Rid, active:Bool):Void
-    public space_set_param(space:Rid, param:Int, value:Float):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PhysicsShapeQueryParameters.hpp')
-@:native('PhysicsShapeQueryParameters')
-@:unreflective
-@:structAccess
-extern class PhysicsShapeQueryParameters extends Reference {
-    public set_shape(shape:Resource):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PhysicsShapeQueryResult.hpp')
-@:native('PhysicsShapeQueryResult')
-@:unreflective
-@:structAccess
-extern class PhysicsShapeQueryResult extends Reference {
-    public get_result_count():Int
-    public get_result_object(idx:Int):Object
-    public get_result_object_id(idx:Int):Int
-    public get_result_object_shape(idx:Int):Int
-    public get_result_rid(idx:Int):Rid
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PinJoint.hpp')
-@:native('PinJoint')
-@:unreflective
-@:structAccess
-extern class PinJoint extends Joint {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PinJoint2D.hpp')
-@:native('PinJoint2D')
-@:unreflective
-@:structAccess
-extern class PinJoint2D extends Joint2D {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/core/Plane.hpp')
-@:native('Plane')
-@:unreflective
-@:structAccess
-extern class Plane {
-    public Plane(a:Float, b:Float, c:Float, d:Float):Plane
-    public Plane(v1:Vector3, v2:Vector3, v3:Vector3):Plane
-    public Plane(normal:Vector3, d:Float):Plane
-    public center():Vector3
-    public distance_to(point:Vector3):Float
-    public get_any_point():Vector3
-    public has_point(point:Vector3, epsilon:Float):Bool
-    public intersect_3(b:Plane, c:Plane):Vector3
-    public intersects_ray(from:Vector3, dir:Vector3):Vector3
-    public intersects_segment(begin:Vector3, end:Vector3):Vector3
-    public is_point_over(point:Vector3):Bool
-    public normalized():Plane
-    public project(point:Vector3):Vector3
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PlaneMesh.hpp')
-@:native('PlaneMesh')
-@:unreflective
-@:structAccess
-extern class PlaneMesh extends PrimitiveMesh {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PlaneShape.hpp')
-@:native('PlaneShape')
-@:unreflective
-@:structAccess
-extern class PlaneShape extends Shape {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Polygon2D.hpp')
-@:native('Polygon2D')
-@:unreflective
-@:structAccess
-extern class Polygon2D extends Node2D {
-    public add_bone(path:NodePath, weights:PoolRealArray):Void
-    public clear_bones():Void
-    public erase_bone(index:Int):Void
-    public get_bone_count():Int
-    public get_bone_path(index:Int):NodePath
-    public get_bone_weights(index:Int):PoolRealArray
-    public set_bone_path(index:Int, path:NodePath):Void
-    public set_bone_weights(index:Int, weights:PoolRealArray):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PolygonPathFinder.hpp')
-@:native('PolygonPathFinder')
-@:unreflective
-@:structAccess
-extern class PolygonPathFinder extends Resource {
-    public find_path(from:Vector2, to:Vector2):PoolVector2Array
-    public get_bounds():Rect2
-    public get_closest_point(point:Vector2):Vector2
-    public get_intersections(from:Vector2, to:Vector2):PoolVector2Array
-    public get_point_penalty(idx:Int):Float
-    public is_point_inside(point:Vector2):Bool
-    public set_point_penalty(idx:Int, penalty:Float):Void
-    public setup(points:PoolVector2Array, connections:PoolIntArray):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PoolByteArray.hpp')
-@:native('PoolByteArray')
-@:unreflective
-@:structAccess
-extern class PoolByteArray {
-    public PoolByteArray(from:Array):PoolByteArray
-    public append(byte:Int):Void
-    public append_array(array:PoolByteArray):Void
-    public compress(compression_mode:Int):PoolByteArray
-    public decompress(buffer_size:Int, compression_mode:Int):PoolByteArray
-    public get_string_from_ascii():String
-    public get_string_from_utf8():String
-    public insert(idx:Int, byte:Int):Int
-    public invert():Void
-    public push_back(byte:Int):Void
-    public remove(idx:Int):Void
-    public resize(idx:Int):Void
-    public set(idx:Int, byte:Int):Void
-    public size():Int
-    public subarray(from:Int, to:Int):PoolByteArray
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PoolColorArray.hpp')
-@:native('PoolColorArray')
-@:unreflective
-@:structAccess
-extern class PoolColorArray {
-    public PoolColorArray(from:Array):PoolColorArray
-    public append(color:Color):Void
-    public append_array(array:PoolColorArray):Void
-    public insert(idx:Int, color:Color):Int
-    public invert():Void
-    public push_back(color:Color):Void
-    public remove(idx:Int):Void
-    public resize(idx:Int):Void
-    public set(idx:Int, color:Color):Void
-    public size():Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PoolIntArray.hpp')
-@:native('PoolIntArray')
-@:unreflective
-@:structAccess
-extern class PoolIntArray {
-    public PoolIntArray(from:Array):PoolIntArray
-    public append(integer:Int):Void
-    public append_array(array:PoolIntArray):Void
-    public insert(idx:Int, integer:Int):Int
-    public invert():Void
-    public push_back(integer:Int):Void
-    public remove(idx:Int):Void
-    public resize(idx:Int):Void
-    public set(idx:Int, integer:Int):Void
-    public size():Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PoolRealArray.hpp')
-@:native('PoolRealArray')
-@:unreflective
-@:structAccess
-extern class PoolRealArray {
-    public PoolRealArray(from:Array):PoolRealArray
-    public append(value:Float):Void
-    public append_array(array:PoolRealArray):Void
-    public insert(idx:Int, value:Float):Int
-    public invert():Void
-    public push_back(value:Float):Void
-    public remove(idx:Int):Void
-    public resize(idx:Int):Void
-    public set(idx:Int, value:Float):Void
-    public size():Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PoolStringArray.hpp')
-@:native('PoolStringArray')
-@:unreflective
-@:structAccess
-extern class PoolStringArray {
-    public PoolStringArray(from:Array):PoolStringArray
-    public append(string:String):Void
-    public append_array(array:PoolStringArray):Void
-    public insert(idx:Int, string:String):Int
-    public invert():Void
-    public join(delimiter:String):String
-    public push_back(string:String):Void
-    public remove(idx:Int):Void
-    public resize(idx:Int):Void
-    public set(idx:Int, string:String):Void
-    public size():Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PoolVector2Array.hpp')
-@:native('PoolVector2Array')
-@:unreflective
-@:structAccess
-extern class PoolVector2Array {
-    public PoolVector2Array(from:Array):PoolVector2Array
-    public append(vector2:Vector2):Void
-    public append_array(array:PoolVector2Array):Void
-    public insert(idx:Int, vector2:Vector2):Int
-    public invert():Void
-    public push_back(vector2:Vector2):Void
-    public remove(idx:Int):Void
-    public resize(idx:Int):Void
-    public set(idx:Int, vector2:Vector2):Void
-    public size():Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PoolVector3Array.hpp')
-@:native('PoolVector3Array')
-@:unreflective
-@:structAccess
-extern class PoolVector3Array {
-    public PoolVector3Array(from:Array):PoolVector3Array
-    public append(vector3:Vector3):Void
-    public append_array(array:PoolVector3Array):Void
-    public insert(idx:Int, vector3:Vector3):Int
-    public invert():Void
-    public push_back(vector3:Vector3):Void
-    public remove(idx:Int):Void
-    public resize(idx:Int):Void
-    public set(idx:Int, vector3:Vector3):Void
-    public size():Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Popup.hpp')
-@:native('Popup')
-@:unreflective
-@:structAccess
-extern class Popup extends Control {
-    public popup(bounds:Rect2):Void
-    public popup_centered(size:Vector2):Void
-    public popup_centered_minsize(minsize:Vector2):Void
-    public popup_centered_ratio(ratio:Float):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PopupDialog.hpp')
-@:native('PopupDialog')
-@:unreflective
-@:structAccess
-extern class PopupDialog extends Popup {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PopupMenu.hpp')
-@:native('PopupMenu')
-@:unreflective
-@:structAccess
-extern class PopupMenu extends Popup {
-    public add_check_item(label:String, id:Int, accel:Int):Void
-    public add_check_shortcut(shortcut:ShortCut, id:Int, global:Bool):Void
-    public add_icon_check_item(texture:Texture, label:String, id:Int, accel:Int):Void
-    public add_icon_check_shortcut(texture:Texture, shortcut:ShortCut, id:Int, global:Bool):Void
-    public add_icon_item(texture:Texture, label:String, id:Int, accel:Int):Void
-    public add_icon_shortcut(texture:Texture, shortcut:ShortCut, id:Int, global:Bool):Void
-    public add_item(label:String, id:Int, accel:Int):Void
-    public add_radio_check_item(label:String, id:Int, accel:Int):Void
-    public add_radio_check_shortcut(shortcut:ShortCut, id:Int, global:Bool):Void
-    public add_separator(label:String):Void
-    public add_shortcut(shortcut:ShortCut, id:Int, global:Bool):Void
-    public add_submenu_item(label:String, submenu:String, id:Int):Void
-    public clear():Void
-    public get_item_accelerator(idx:Int):Int
-    public get_item_count():Int
-    public get_item_icon(idx:Int):Texture
-    public get_item_id(idx:Int):Int
-    public get_item_index(id:Int):Int
-    public get_item_metadata(idx:Int):Variant
-    public get_item_shortcut(idx:Int):ShortCut
-    public get_item_submenu(idx:Int):String
-    public get_item_text(idx:Int):String
-    public get_item_tooltip(idx:Int):String
-    public is_item_checkable(idx:Int):Bool
-    public is_item_checked(idx:Int):Bool
-    public is_item_disabled(idx:Int):Bool
-    public is_item_radio_checkable(idx:Int):Bool
-    public is_item_separator(idx:Int):Bool
-    public is_item_shortcut_disabled(idx:Int):Bool
-    public remove_item(idx:Int):Void
-    public set_item_accelerator(idx:Int, accel:Int):Void
-    public set_item_as_checkable(idx:Int, enable:Bool):Void
-    public set_item_as_radio_checkable(idx:Int, enable:Bool):Void
-    public set_item_as_separator(idx:Int, enable:Bool):Void
-    public set_item_checked(idx:Int, checked:Bool):Void
-    public set_item_disabled(idx:Int, disabled:Bool):Void
-    public set_item_icon(idx:Int, icon:Texture):Void
-    public set_item_id(idx:Int, id:Int):Void
-    public set_item_metadata(idx:Int, metadata:Variant):Void
-    public set_item_multistate(idx:Int, state:Int):Void
-    public set_item_shortcut(idx:Int, shortcut:ShortCut, global:Bool):Void
-    public set_item_shortcut_disabled(idx:Int, disabled:Bool):Void
-    public set_item_submenu(idx:Int, submenu:String):Void
-    public set_item_text(idx:Int, text:String):Void
-    public set_item_tooltip(idx:Int, tooltip:String):Void
-    public toggle_item_checked(idx:Int):Void
-    public toggle_item_multistate(idx:Int):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PopupPanel.hpp')
-@:native('PopupPanel')
-@:unreflective
-@:structAccess
-extern class PopupPanel extends Popup {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Position2D.hpp')
-@:native('Position2D')
-@:unreflective
-@:structAccess
-extern class Position2D extends Node2D {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Position3D.hpp')
-@:native('Position3D')
-@:unreflective
-@:structAccess
-extern class Position3D extends Spatial {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PrimitiveMesh.hpp')
-@:native('PrimitiveMesh')
-@:unreflective
-@:structAccess
-extern class PrimitiveMesh extends Mesh {
-    public get_mesh_arrays():Array
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/PrismMesh.hpp')
-@:native('PrismMesh')
-@:unreflective
-@:structAccess
-extern class PrismMesh extends PrimitiveMesh {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ProceduralSky.hpp')
-@:native('ProceduralSky')
-@:unreflective
-@:structAccess
-extern class ProceduralSky extends Sky {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ProgressBar.hpp')
-@:native('ProgressBar')
-@:unreflective
-@:structAccess
-extern class ProgressBar extends Range {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ProjectSettings.hpp')
-@:native('ProjectSettings')
-@:unreflective
-@:structAccess
-extern class ProjectSettings extends Object {
-    public add_property_info(hint:Dictionary):Void
-    public clear(name:String):Void
-    public get_order(name:String):Int
-    public get_setting(name:String):Variant
-    public globalize_path(path:String):String
-    public has_setting(name:String):Bool
-    public load_resource_pack(pack:String):Bool
-    public localize_path(path:String):String
-    public property_can_revert(name:String):Bool
-    public property_get_revert(name:String):Variant
-    public save():Int
-    public save_custom(file:String):Int
-    public set_initial_value(name:String, value:Variant):Void
-    public set_order(name:String, position:Int):Void
-    public set_setting(name:String, value:Variant):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ProximityGroup.hpp')
-@:native('ProximityGroup')
-@:unreflective
-@:structAccess
-extern class ProximityGroup extends Spatial {
-    public broadcast(name:String, parameters:Variant):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ProxyTexture.hpp')
-@:native('ProxyTexture')
-@:unreflective
-@:structAccess
-extern class ProxyTexture extends Texture {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/QuadMesh.hpp')
-@:native('QuadMesh')
-@:unreflective
-@:structAccess
-extern class QuadMesh extends PrimitiveMesh {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/core/Quat.hpp')
-@:native('Quat')
-@:unreflective
-@:structAccess
-extern class Quat {
-    public Quat(from:Basis):Quat
-    public Quat(euler:Vector3):Quat
-    public Quat(axis:Vector3, angle:Float):Quat
-    public Quat(x:Float, y:Float, z:Float, w:Float):Quat
-    public cubic_slerp(b:Quat, pre_a:Quat, post_b:Quat, t:Float):Quat
-    public dot(b:Quat):Float
-    public get_euler():Vector3
-    public inverse():Quat
-    public is_normalized():Bool
-    public length():Float
-    public length_squared():Float
-    public normalized():Quat
-    public set_axis_angle(axis:Vector3, angle:Float):Void
-    public set_euler(euler:Vector3):Void
-    public slerp(b:Quat, t:Float):Quat
-    public slerpni(b:Quat, t:Float):Quat
-    public xform(v:Vector3):Vector3
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Range.hpp')
-@:native('Range')
-@:unreflective
-@:structAccess
-extern class Range extends Control {
-    public share(with:Node):Void
-    public unshare():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/RayCast.hpp')
-@:native('RayCast')
-@:unreflective
-@:structAccess
-extern class RayCast extends Spatial {
-    public add_exception(node:Object):Void
-    public add_exception_rid(rid:Rid):Void
-    public clear_exceptions():Void
-    public force_raycast_update():Void
-    public get_collider():Object
-    public get_collider_shape():Int
-    public get_collision_mask_bit(bit:Int):Bool
-    public get_collision_normal():Vector3
-    public get_collision_point():Vector3
-    public is_colliding():Bool
-    public remove_exception(node:Object):Void
-    public remove_exception_rid(rid:Rid):Void
-    public set_collision_mask_bit(bit:Int, value:Bool):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/RayCast2D.hpp')
-@:native('RayCast2D')
-@:unreflective
-@:structAccess
-extern class RayCast2D extends Node2D {
-    public add_exception(node:Object):Void
-    public add_exception_rid(rid:Rid):Void
-    public clear_exceptions():Void
-    public force_raycast_update():Void
-    public get_collider():Object
-    public get_collider_shape():Int
-    public get_collision_mask_bit(bit:Int):Bool
-    public get_collision_normal():Vector2
-    public get_collision_point():Vector2
-    public is_colliding():Bool
-    public remove_exception(node:Object):Void
-    public remove_exception_rid(rid:Rid):Void
-    public set_collision_mask_bit(bit:Int, value:Bool):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/RayShape.hpp')
-@:native('RayShape')
-@:unreflective
-@:structAccess
-extern class RayShape extends Shape {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/RayShape2D.hpp')
-@:native('RayShape2D')
-@:unreflective
-@:structAccess
-extern class RayShape2D extends Shape2D {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/core/Rect2.hpp')
-@:native('Rect2')
-@:unreflective
-@:structAccess
-extern class Rect2 {
-    public Rect2(position:Vector2, size:Vector2):Rect2
-    public Rect2(x:Float, y:Float, width:Float, height:Float):Rect2
-    public abs():Rect2
-    public clip(b:Rect2):Rect2
-    public encloses(b:Rect2):Bool
-    public expand(to:Vector2):Rect2
-    public get_area():Float
-    public grow(by:Float):Rect2
-    public grow_individual(left:Float, top:Float, right:Float,  bottom:Float):Rect2
-    public grow_margin(margin:Int, by:Float):Rect2
-    public has_no_area():Bool
-    public has_point(point:Vector2):Bool
-    public intersects(b:Rect2):Bool
-    public merge(b:Rect2):Rect2
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/RectangleShape2D.hpp')
-@:native('RectangleShape2D')
-@:unreflective
-@:structAccess
-extern class RectangleShape2D extends Shape2D {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Reference.hpp')
-@:native('Reference')
-@:unreflective
-@:structAccess
-extern class Reference extends Object {
-    public init_ref():Bool
-    public reference():Bool
-    public unreference():Bool
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ReferenceRect.hpp')
-@:native('ReferenceRect')
-@:unreflective
-@:structAccess
-extern class ReferenceRect extends Control {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ReflectionProbe.hpp')
-@:native('ReflectionProbe')
-@:unreflective
-@:structAccess
-extern class ReflectionProbe extends VisualInstance {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/RemoteTransform.hpp')
-@:native('RemoteTransform')
-@:unreflective
-@:structAccess
-extern class RemoteTransform extends Spatial {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/RemoteTransform2D.hpp')
-@:native('RemoteTransform2D')
-@:unreflective
-@:structAccess
-extern class RemoteTransform2D extends Node2D {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Resource.hpp')
-@:native('Resource')
-@:unreflective
-@:structAccess
-extern class Resource extends Reference {
-    public _setup_local_to_scene():Void
-    public duplicate(subresources:Bool):Resource
-    public get_local_scene():Node
-    public get_rid():Rid
-    public setup_local_to_scene():Void
-    public take_over_path(path:String):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ResourceImporter.hpp')
-@:native('ResourceImporter')
-@:unreflective
-@:structAccess
-extern class ResourceImporter extends Reference {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ResourceInteractiveLoader.hpp')
-@:native('ResourceInteractiveLoader')
-@:unreflective
-@:structAccess
-extern class ResourceInteractiveLoader extends Reference {
-    public get_resource():Resource
-    public get_stage():Int
-    public get_stage_count():Int
-    public poll():Int
-    public wait():Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ResourceLoader.hpp')
-@:native('ResourceLoader')
-@:unreflective
-@:structAccess
-extern class ResourceLoader extends Object {
-    public get_dependencies(path:String):PoolStringArray
-    public get_recognized_extensions_for_type(type:String):PoolStringArray
-    public has(path:String):Bool
-    public load(path:String, type_hint:String, p_no_cache:Bool):Resource
-    public load_interactive(path:String, type_hint:String):ResourceInteractiveLoader
-    public set_abort_on_missing_resources(abort:Bool):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ResourcePreloader.hpp')
-@:native('ResourcePreloader')
-@:unreflective
-@:structAccess
-extern class ResourcePreloader extends Node {
-    public add_resource(name:String, resource:Resource):Void
-    public get_resource(name:String):Resource
-    public get_resource_list():PoolStringArray
-    public has_resource(name:String):Bool
-    public remove_resource(name:String):Void
-    public rename_resource(name:String, newname:String):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ResourceSaver.hpp')
-@:native('ResourceSaver')
-@:unreflective
-@:structAccess
-extern class ResourceSaver extends Object {
-    public get_recognized_extensions(type:Resource):PoolStringArray
-    public save(path:String, resource:Resource, flags:Int):Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/RichTextLabel.hpp')
-@:native('RichTextLabel')
-@:unreflective
-@:structAccess
-extern class RichTextLabel extends Control {
-    public add_image(image:Texture):Void
-    public add_text(text:String):Void
-    public append_bbcode(bbcode:String):Int
-    public clear():Void
-    public get_content_height():Int
-    public get_line_count():Int
-    public get_total_character_count():Int
-    public get_v_scroll():VScrollBar
-    public get_visible_line_count():Int
-    public newline():Void
-    public parse_bbcode(bbcode:String):Int
-    public pop():Void
-    public push_align(align:Int):Void
-    public push_cell():Void
-    public push_color(color:Color):Void
-    public push_font(font:Font):Void
-    public push_indent(level:Int):Void
-    public push_list(type:Int):Void
-    public push_meta(data:Variant):Void
-    public push_table(columns:Int):Void
-    public push_underline():Void
-    public remove_line(line:Int):Bool
-    public scroll_to_line(line:Int):Void
-    public set_table_column_expand(column:Int, expand:Bool, ratio:Int):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/core/RID.hpp')
-@:native('RID')
-@:unreflective
-@:structAccess
-extern class Rid {
-    public Rid(from:Object):Rid
-    public get_id():Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/RigidBody.hpp')
-@:native('RigidBody')
-@:unreflective
-@:structAccess
-extern class RigidBody extends PhysicsBody {
-    public _integrate_forces(state:PhysicsDirectBodyState):Void
-    public add_central_force(force:Vector3):Void
-    public add_force(force:Vector3, position:Vector3):Void
-    public add_torque(torque:Vector3):Void
-    public apply_central_impulse(impulse:Vector3):Void
-    public apply_impulse(position:Vector3, impulse:Vector3):Void
-    public apply_torque_impulse(impulse:Vector3):Void
-    public get_colliding_bodies():Array
-    public set_axis_velocity(axis_velocity:Vector3):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/RigidBody2D.hpp')
-@:native('RigidBody2D')
-@:unreflective
-@:structAccess
-extern class RigidBody2D extends PhysicsBody2D {
-    public _integrate_forces(state:Physics2DDirectBodyState):Void
-    public add_central_force(force:Vector2):Void
-    public add_force(offset:Vector2, force:Vector2):Void
-    public add_torque(torque:Float):Void
-    public apply_central_impulse(impulse:Vector2):Void
-    public apply_impulse(offset:Vector2, impulse:Vector2):Void
-    public apply_torque_impulse(torque:Float):Void
-    public get_colliding_bodies():Array
-    public set_axis_velocity(axis_velocity:Vector2):Void
-    public test_motion(motion:Vector2, infinite_inertia:Bool, margin:Float, result:Physics2DTestMotionResult):Bool
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/RootMotionView.hpp')
-@:native('RootMotionView')
-@:unreflective
-@:structAccess
-extern class RootMotionView extends VisualInstance {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/SceneState.hpp')
-@:native('SceneState')
-@:unreflective
-@:structAccess
-extern class SceneState extends Reference {
-    public get_connection_binds(idx:Int):Array
-    public get_connection_count():Int
-    public get_connection_flags(idx:Int):Int
-    public get_connection_method(idx:Int):String
-    public get_connection_signal(idx:Int):String
-    public get_connection_source(idx:Int):NodePath
-    public get_connection_target(idx:Int):NodePath
-    public get_node_count():Int
-    public get_node_groups(idx:Int):PoolStringArray
-    public get_node_index(idx:Int):Int
-    public get_node_instance(idx:Int):PackedScene
-    public get_node_instance_placeholder(idx:Int):String
-    public get_node_name(idx:Int):String
-    public get_node_owner_path(idx:Int):NodePath
-    public get_node_path(idx:Int, for_parent:Bool):NodePath
-    public get_node_property_count(idx:Int):Int
-    public get_node_property_name(idx:Int, prop_idx:Int):String
-    public get_node_property_value(idx:Int, prop_idx:Int):Variant
-    public get_node_type(idx:Int):String
-    public is_node_instance_placeholder(idx:Int):Bool
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/SceneTree.hpp')
-@:native('SceneTree')
-@:unreflective
-@:structAccess
-extern class SceneTree extends MainLoop {
-    public call_group(group:String, method:String):Variant
-    public call_group_flags(flags:Int, group:String, method:String):Variant
-    public change_scene(path:String):Int
-    public change_scene_to(packed_scene:PackedScene):Int
-    public create_timer(time_sec:Float, pause_mode_process:Bool):SceneTreeTimer
-    public get_frame():Int
-    public get_network_connected_peers():PoolIntArray
-    public get_network_unique_id():Int
-    public get_node_count():Int
-    public get_nodes_in_group(group:String):Array
-    public get_rpc_sender_id():Int
-    public has_group(name:String):Bool
-    public has_network_peer():Bool
-    public is_input_handled():Bool
-    public is_network_server():Bool
-    public notify_group(group:String, notification:Int):Void
-    public notify_group_flags(call_flags:Int, group:String, notification:Int):Void
-    public queue_delete(obj:Object):Void
-    public quit():Void
-    public reload_current_scene():Int
-    public set_auto_accept_quit(enabled:Bool):Void
-    public set_group(group:String, property:String, value:Variant):Void
-    public set_group_flags(call_flags:Int, group:String, property:String, value:Variant):Void
-    public set_input_as_handled():Void
-    public set_quit_on_go_back(enabled:Bool):Void
-    public set_screen_stretch(mode:Int, aspect:Int, minsize:Vector2, shrink:Float):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/SceneTreeTimer.hpp')
-@:native('SceneTreeTimer')
-@:unreflective
-@:structAccess
-extern class SceneTreeTimer extends Reference {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Script.hpp')
-@:native('Script')
-@:unreflective
-@:structAccess
-extern class Script extends Resource {
-    public can_instance():Bool
-    public get_base_script():Script
-    public get_instance_base_type():String
-    public has_script_signal(signal_name:String):Bool
-    public has_source_code():Bool
-    public instance_has(base_object:Object):Bool
-    public is_tool():Bool
-    public reload(keep_state:Bool):Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ScriptCreateDialog.hpp')
-@:native('ScriptCreateDialog')
-@:unreflective
-@:structAccess
-extern class ScriptCreateDialog extends ConfirmationDialog {
-    public config(inherits:String, path:String):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ScriptEditor.hpp')
-@:native('ScriptEditor')
-@:unreflective
-@:structAccess
-extern class ScriptEditor extends PanelContainer {
-    public can_drop_data_fw(point:Vector2, data:Variant, from:Control):Bool
-    public drop_data_fw(point:Vector2, data:Variant, from:Control):Void
-    public get_current_script():Script
-    public get_drag_data_fw(point:Vector2, from:Control):Variant
-    public get_open_scripts():Array
-    public open_script_create_dialog(base_name:String, base_path:String):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ScrollBar.hpp')
-@:native('ScrollBar')
-@:unreflective
-@:structAccess
-extern class ScrollBar extends Range {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ScrollContainer.hpp')
-@:native('ScrollContainer')
-@:unreflective
-@:structAccess
-extern class ScrollContainer extends Container {
-    public get_h_scrollbar():HScrollBar
-    public get_v_scrollbar():VScrollBar
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/SegmentShape2D.hpp')
-@:native('SegmentShape2D')
-@:unreflective
-@:structAccess
-extern class SegmentShape2D extends Shape2D {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Semaphore.hpp')
-@:native('Semaphore')
-@:unreflective
-@:structAccess
-extern class Semaphore extends Reference {
-    public post():Int
-    public wait():Int
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Separator.hpp')
-@:native('Separator')
-@:unreflective
-@:structAccess
-extern class Separator extends Control {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Shader.hpp')
-@:native('Shader')
-@:unreflective
-@:structAccess
-extern class Shader extends Resource {
-    public get_default_texture_param(param:String):Texture
-    public get_mode():Int
-    public has_param(name:String):Bool
-    public set_default_texture_param(param:String, texture:Texture):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ShaderMaterial.hpp')
-@:native('ShaderMaterial')
-@:unreflective
-@:structAccess
-extern class ShaderMaterial extends Material {
-    public get_shader_param(param:String):Variant
-    public set_shader_param(param:String, value:Variant):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Shape.hpp')
-@:native('Shape')
-@:unreflective
-@:structAccess
-extern class Shape extends Resource {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Shape2D.hpp')
-@:native('Shape2D')
-@:unreflective
-@:structAccess
-extern class Shape2D extends Resource {
-    public collide(local_xform:Transform2D, with_shape:Shape2D, shape_xform:Transform2D):Bool
-    public collide_and_get_contacts(local_xform:Transform2D, with_shape:Shape2D, shape_xform:Transform2D):Variant
-    public collide_with_motion(local_xform:Transform2D, local_motion:Vector2, with_shape:Shape2D, shape_xform:Transform2D, shape_motion:Vector2):Bool
-    public collide_with_motion_and_get_contacts(local_xform:Transform2D, local_motion:Vector2, with_shape:Shape2D, shape_xform:Transform2D, shape_motion:Vector2):Variant
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ShortCut.hpp')
-@:native('ShortCut')
-@:unreflective
-@:structAccess
-extern class ShortCut extends Resource {
-    public get_as_text():String
-    public is_shortcut(event:InputEvent):Bool
-    public is_valid():Bool
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Skeleton.hpp')
-@:native('Skeleton')
-@:unreflective
-@:structAccess
-extern class Skeleton extends Spatial {
-    public add_bone(name:String):Void
-    public bind_child_node_to_bone(bone_idx:Int, node:Node):Void
-    public clear_bones():Void
-    public find_bone(name:String):Int
-    public get_bone_count():Int
-    public get_bone_custom_pose(bone_idx:Int):Transform
-    public get_bone_global_pose(bone_idx:Int):Transform
-    public get_bone_name(bone_idx:Int):String
-    public get_bone_parent(bone_idx:Int):Int
-    public get_bone_pose(bone_idx:Int):Transform
-    public get_bone_rest(bone_idx:Int):Transform
-    public get_bone_transform(bone_idx:Int):Transform
-    public get_bound_child_nodes_to_bone(bone_idx:Int):Array
-    public is_bone_rest_disabled(bone_idx:Int):Bool
-    public physical_bones_add_collision_exception(exception:Rid):Void
-    public physical_bones_remove_collision_exception(exception:Rid):Void
-    public physical_bones_start_simulation(bones:Array):Void
-    public physical_bones_stop_simulation():Void
-    public set_bone_custom_pose(bone_idx:Int, custom_pose:Transform):Void
-    public set_bone_disable_rest(bone_idx:Int, disable:Bool):Void
-    public set_bone_global_pose(bone_idx:Int, pose:Transform):Void
-    public set_bone_parent(bone_idx:Int, parent_idx:Int):Void
-    public set_bone_pose(bone_idx:Int, pose:Transform):Void
-    public set_bone_rest(bone_idx:Int, rest:Transform):Void
-    public unbind_child_node_from_bone(bone_idx:Int, node:Node):Void
-    public unparent_bone_and_rest(bone_idx:Int):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Skeleton2D.hpp')
-@:native('Skeleton2D')
-@:unreflective
-@:structAccess
-extern class Skeleton2D extends Node2D {
-    public get_bone(arg0:Int):Bone2D
-    public get_bone_count():Int
-    public get_skeleton():Rid
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Sky.hpp')
-@:native('Sky')
-@:unreflective
-@:structAccess
-extern class Sky extends Resource {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Slider.hpp')
-@:native('Slider')
-@:unreflective
-@:structAccess
-extern class Slider extends Range {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/SliderJoint.hpp')
-@:native('SliderJoint')
-@:unreflective
-@:structAccess
-extern class SliderJoint extends Joint {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/SoftBody.hpp')
-@:native('SoftBody')
-@:unreflective
-@:structAccess
-extern class SoftBody extends MeshInstance {
-    public add_collision_exception_with(body:Node):Void
-    public get_collision_layer_bit(bit:Int):Bool
-    public get_collision_mask_bit(bit:Int):Bool
-    public is_ray_pickable():Bool
-    public remove_collision_exception_with(body:Node):Void
-    public set_collision_layer_bit(bit:Int, value:Bool):Void
-    public set_collision_mask_bit(bit:Int, value:Bool):Void
-    public set_ray_pickable(ray_pickable:Bool):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Spatial.hpp')
-@:native('Spatial')
-@:unreflective
-@:structAccess
-extern class Spatial extends Node {
-    public get_parent_spatial():Spatial
-    public get_world():World
-    public global_rotate(axis:Vector3, angle:Float):Void
-    public global_scale(scale:Vector3):Void
-    public global_translate(offset:Vector3):Void
-    public hide():Void
-    public is_local_transform_notification_enabled():Bool
-    public is_scale_disabled():Bool
-    public is_set_as_toplevel():Bool
-    public is_transform_notification_enabled():Bool
-    public is_visible_in_tree():Bool
-    public look_at(target:Vector3, up:Vector3):Void
-    public look_at_from_position(position:Vector3, target:Vector3, up:Vector3):Void
-    public orthonormalize():Void
-    public rotate(axis:Vector3, angle:Float):Void
-    public rotate_object_local(axis:Vector3, angle:Float):Void
-    public rotate_x(angle:Float):Void
-    public rotate_y(angle:Float):Void
-    public rotate_z(angle:Float):Void
-    public scale_object_local(scale:Vector3):Void
-    public set_as_toplevel(enable:Bool):Void
-    public set_disable_scale(disable:Bool):Void
-    public set_identity():Void
-    public set_ignore_transform_notification(enabled:Bool):Void
-    public set_notify_local_transform(enable:Bool):Void
-    public set_notify_transform(enable:Bool):Void
-    public show():Void
-    public to_global(local_point:Vector3):Vector3
-    public to_local(global_point:Vector3):Vector3
-    public translate(offset:Vector3):Void
-    public translate_object_local(offset:Vector3):Void
-    public update_gizmo():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/SpatialGizmo.hpp')
-@:native('SpatialGizmo')
-@:unreflective
-@:structAccess
-extern class SpatialGizmo extends Reference {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/SpatialMaterial.hpp')
-@:native('SpatialMaterial')
-@:unreflective
-@:structAccess
-extern class SpatialMaterial extends Material {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/SpatialVelocityTracker.hpp')
-@:native('SpatialVelocityTracker')
-@:unreflective
-@:structAccess
-extern class SpatialVelocityTracker extends Reference {
-    public get_tracked_linear_velocity():Vector3
-    public reset(position:Vector3):Void
-    public update_position(position:Vector3):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/SphereMesh.hpp')
-@:native('SphereMesh')
-@:unreflective
-@:structAccess
-extern class SphereMesh extends PrimitiveMesh {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/SphereShape.hpp')
-@:native('SphereShape')
-@:unreflective
-@:structAccess
-extern class SphereShape extends Shape {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/SpinBox.hpp')
-@:native('SpinBox')
-@:unreflective
-@:structAccess
-extern class SpinBox extends Range {
-    public get_line_edit():LineEdit
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/SplitContainer.hpp')
-@:native('SplitContainer')
-@:unreflective
-@:structAccess
-extern class SplitContainer extends Container {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/SpotLight.hpp')
-@:native('SpotLight')
-@:unreflective
-@:structAccess
-extern class SpotLight extends Light {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Sprite.hpp')
-@:native('Sprite')
-@:unreflective
-@:structAccess
-extern class Sprite extends Node2D {
-    public get_rect():Rect2
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Sprite3D.hpp')
-@:native('Sprite3D')
-@:unreflective
-@:structAccess
-extern class Sprite3D extends SpriteBase3D {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/SpriteBase3D.hpp')
-@:native('SpriteBase3D')
-@:unreflective
-@:structAccess
-extern class SpriteBase3D extends GeometryInstance {
-    public generate_triangle_mesh():TriangleMesh
-    public get_item_rect():Rect2
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/SpriteFrames.hpp')
-@:native('SpriteFrames')
-@:unreflective
-@:structAccess
-extern class SpriteFrames extends Resource {
-    public add_animation(anim:String):Void
-    public add_frame(anim:String, frame:Texture, at_position:Int):Void
-    public clear(anim:String):Void
-    public clear_all():Void
-    public get_animation_loop(anim:String):Bool
-    public get_animation_names():PoolStringArray
-    public get_animation_speed(anim:String):Float
-    public get_frame(anim:String, idx:Int):Texture
-    public get_frame_count(anim:String):Int
-    public has_animation(anim:String):Bool
-    public remove_animation(anim:String):Void
-    public remove_frame(anim:String, idx:Int):Void
-    public rename_animation(anim:String, newname:String):Void
-    public set_animation_loop(anim:String, loop:Bool):Void
-    public set_animation_speed(anim:String, speed:Float):Void
-    public set_frame(anim:String, idx:Int, txt:Texture):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/StaticBody.hpp')
-@:native('StaticBody')
-@:unreflective
-@:structAccess
-extern class StaticBody extends PhysicsBody {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/StaticBody2D.hpp')
-@:native('StaticBody2D')
-@:unreflective
-@:structAccess
-extern class StaticBody2D extends PhysicsBody2D {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/StreamPeer.hpp')
-@:native('StreamPeer')
-@:unreflective
-@:structAccess
-extern class StreamPeer extends Reference {
-    public get_16():Int
-    public get_32():Int
-    public get_64():Int
-    public get_8():Int
-    public get_available_bytes():Int
-    public get_data(bytes:Int):Array
-    public get_double():Float
-    public get_float():Float
-    public get_partial_data(bytes:Int):Array
-    public get_string(bytes:Int):String
-    public get_u16():Int
-    public get_u32():Int
-    public get_u64():Int
-    public get_u8():Int
-    public get_utf8_string(bytes:Int):String
-    public get_var():Variant
-    public put_16(value:Int):Void
-    public put_32(value:Int):Void
-    public put_64(value:Int):Void
-    public put_8(value:Int):Void
-    public put_data(data:PoolByteArray):Int
-    public put_double(value:Float):Void
-    public put_float(value:Float):Void
-    public put_partial_data(data:PoolByteArray):Array
-    public put_u16(value:Int):Void
-    public put_u32(value:Int):Void
-    public put_u64(value:Int):Void
-    public put_u8(value:Int):Void
-    public put_utf8_string(value:String):Void
-    public put_var(value:Variant):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/StreamPeerBuffer.hpp')
-@:native('StreamPeerBuffer')
-@:unreflective
-@:structAccess
-extern class StreamPeerBuffer extends StreamPeer {
-    public clear():Void
-    public duplicate():StreamPeerBuffer
-    public get_position():Int
-    public get_size():Int
-    public resize(size:Int):Void
-    public seek(position:Int):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/StreamPeerSSL.hpp')
-@:native('StreamPeerSSL')
-@:unreflective
-@:structAccess
-extern class StreamPeerSSL extends StreamPeer {
-    public accept_stream(base:StreamPeer):Int
-    public connect_to_stream(stream:StreamPeer, validate_certs:Bool, for_hostname:String):Int
-    public disconnect_from_stream():Void
-    public get_status():Int
-    public poll():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/StreamPeerTCP.hpp')
-@:native('StreamPeerTCP')
-@:unreflective
-@:structAccess
-extern class StreamPeerTCP extends StreamPeer {
-    public connect_to_host(host:String, port:Int):Int
-    public disconnect_from_host():Void
-    public get_connected_host():String
-    public get_connected_port():Int
-    public get_status():Int
-    public is_connected_to_host():Bool
-    public set_no_delay(enabled:Bool):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/StreamTexture.hpp')
-@:native('StreamTexture')
-@:unreflective
-@:structAccess
-extern class StreamTexture extends Texture {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/core/String.hpp')
-@:native('String')
-@:unreflective
-@:structAccess
-extern class String {
-    public String(from:Bool):String
-    public String(from:Int):String
-    public String(from:Float):String
-    public String(from:Vector2):String
-    public String(from:Rect2):String
-    public String(from:Vector3):String
-    public String(from:Transform2D):String
-    public String(from:Plane):String
-    public String(from:Quat):String
-    public String(from:Aabb):String
-    public String(from:Basis):String
-    public String(from:Transform):String
-    public String(from:Color):String
-    public String(from:NodePath):String
-    public String(from:Rid):String
-    public String(from:Dictionary):String
-    public String(from:Array):String
-    public String(from:PoolByteArray):String
-    public String(from:PoolIntArray):String
-    public String(from:PoolRealArray):String
-    public String(from:PoolStringArray):String
-    public String(from:PoolVector2Array):String
-    public String(from:PoolVector3Array):String
-    public String(from:PoolColorArray):String
-    public begins_with(text:String):Bool
-    public bigrams():PoolStringArray
-    public c_escape():String
-    public c_unescape():String
-    public capitalize():String
-    public casecmp_to(to:String):Int
-    public dedent():String
-    public empty():Bool
-    public ends_with(text:String):Bool
-    public erase(position:Int, chars:Int):Void
-    public find(what:String, from:Int):Int
-    public find_last(what:String):Int
-    public findn(what:String, from:Int):Int
-    public format(values:var, placeholder:String):String
-    public get_base_dir():String
-    public get_basename():String
-    public get_extension():String
-    public get_file():String
-    public hash():Int
-    public hex_to_int():Int
-    public insert(position:Int, what:String):String
-    public is_abs_path():Bool
-    public is_rel_path():Bool
-    public is_subsequence_of(text:String):Bool
-    public is_subsequence_ofi(text:String):Bool
-    public is_valid_float():Bool
-    public is_valid_html_color():Bool
-    public is_valid_identifier():Bool
-    public is_valid_integer():Bool
-    public is_valid_ip_address():Bool
-    public json_escape():String
-    public left(position:Int):String
-    public length():Int
-    public lstrip(chars:String):String
-    public match(expr:String):Bool
-    public matchn(expr:String):Bool
-    public md5_buffer():PoolByteArray
-    public md5_text():String
-    public nocasecmp_to(to:String):Int
-    public ord_at(at:Int):Int
-    public pad_decimals(digits:Int):String
-    public pad_zeros(digits:Int):String
-    public percent_decode():String
-    public percent_encode():String
-    public plus_file(file:String):String
-    public replace(what:String, forwhat:String):String
-    public replacen(what:String, forwhat:String):String
-    public rfind(what:String, from:Int):Int
-    public rfindn(what:String, from:Int):Int
-    public right(position:Int):String
-    public rsplit(divisor:String, allow_empty:Bool, maxsplit:Int):PoolStringArray
-    public rstrip(chars:String):String
-    public sha256_buffer():PoolByteArray
-    public sha256_text():String
-    public similarity(text:String):Float
-    public split(divisor:String, allow_empty:Bool, maxsplit:Int):PoolStringArray
-    public split_floats(divisor:String, allow_empty:Bool):PoolRealArray
-    public strip_edges(left:Bool, right:Bool):String
-    public substr(from:Int, len:Int):String
-    public to_ascii():PoolByteArray
-    public to_float():Float
-    public to_int():Int
-    public to_lower():String
-    public to_upper():String
-    public to_utf8():PoolByteArray
-    public trim_prefix(prefix:String):String
-    public trim_suffix(suffix:String):String
-    public xml_escape():String
-    public xml_unescape():String
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/StyleBox.hpp')
-@:native('StyleBox')
-@:unreflective
-@:structAccess
-extern class StyleBox extends Resource {
-    public draw(canvas_item:Rid, rect:Rect2):Void
-    public get_center_size():Vector2
-    public get_margin(margin:Int):Float
-    public get_minimum_size():Vector2
-    public get_offset():Vector2
-    public test_mask(point:Vector2, rect:Rect2):Bool
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/StyleBoxEmpty.hpp')
-@:native('StyleBoxEmpty')
-@:unreflective
-@:structAccess
-extern class StyleBoxEmpty extends StyleBox {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/StyleBoxFlat.hpp')
-@:native('StyleBoxFlat')
-@:unreflective
-@:structAccess
-extern class StyleBoxFlat extends StyleBox {
-    public get_border_width_min():Int
-    public set_border_width_all(width:Int):Void
-    public set_corner_radius_all(radius:Int):Void
-    public set_corner_radius_individual(radius_top_left:Int, radius_top_right:Int, radius_bottom_right:Int, radius_bottom_left:Int):Void
-    public set_expand_margin_all(size:Float):Void
-    public set_expand_margin_individual(size_left:Float, size_top:Float, size_right:Float, size_bottom:Float):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/StyleBoxLine.hpp')
-@:native('StyleBoxLine')
-@:unreflective
-@:structAccess
-extern class StyleBoxLine extends StyleBox {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/StyleBoxTexture.hpp')
-@:native('StyleBoxTexture')
-@:unreflective
-@:structAccess
-extern class StyleBoxTexture extends StyleBox {
-    public set_expand_margin_all(size:Float):Void
-    public set_expand_margin_individual(size_left:Float, size_top:Float, size_right:Float, size_bottom:Float):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/SurfaceTool.hpp')
-@:native('SurfaceTool')
-@:unreflective
-@:structAccess
-extern class SurfaceTool extends Reference {
-    public add_bones(bones:PoolIntArray):Void
-    public add_color(color:Color):Void
-    public add_index(index:Int):Void
-    public add_normal(normal:Vector3):Void
-    public add_smooth_group(smooth:Bool):Void
-    public add_tangent(tangent:Plane):Void
-    public add_to_format(flags:Int):Void
-    public add_triangle_fan(vertexes:PoolVector3Array, uvs:PoolVector2Array, colors:PoolColorArray, uv2s:PoolVector2Array, normals:PoolVector3Array, tangents:Array):Void
-    public add_uv(uv:Vector2):Void
-    public add_uv2(uv2:Vector2):Void
-    public add_vertex(vertex:Vector3):Void
-    public add_weights(weights:PoolRealArray):Void
-    public append_from(existing:Mesh, surface:Int, transform:Transform):Void
-    public begin(primitive:Int):Void
-    public clear():Void
-    public commit(existing:ArrayMesh, flags:Int):ArrayMesh
-    public create_from(existing:Mesh, surface:Int):Void
-    public deindex():Void
-    public generate_normals(flip:Bool):Void
-    public generate_tangents():Void
-    public index():Void
-    public set_material(material:Material):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/TabContainer.hpp')
-@:native('TabContainer')
-@:unreflective
-@:structAccess
-extern class TabContainer extends Container {
-    public get_current_tab_control():Control
-    public get_popup():Popup
-    public get_previous_tab():Int
-    public get_tab_control(idx:Int):Control
-    public get_tab_count():Int
-    public get_tab_disabled(tab_idx:Int):Bool
-    public get_tab_icon(tab_idx:Int):Texture
-    public get_tab_title(tab_idx:Int):String
-    public get_tabs_rearrange_group():Int
-    public set_popup(popup:Node):Void
-    public set_tab_disabled(tab_idx:Int, disabled:Bool):Void
-    public set_tab_icon(tab_idx:Int, icon:Texture):Void
-    public set_tab_title(tab_idx:Int, title:String):Void
-    public set_tabs_rearrange_group(group_id:Int):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Tabs.hpp')
-@:native('Tabs')
-@:unreflective
-@:structAccess
-extern class Tabs extends Control {
-    public add_tab(title:String, icon:Texture):Void
-    public ensure_tab_visible(idx:Int):Void
-    public get_offset_buttons_visible():Bool
-    public get_tab_count():Int
-    public get_tab_disabled(tab_idx:Int):Bool
-    public get_tab_icon(tab_idx:Int):Texture
-    public get_tab_offset():Int
-    public get_tab_rect(tab_idx:Int):Rect2
-    public get_tab_title(tab_idx:Int):String
-    public get_tabs_rearrange_group():Int
-    public move_tab(from:Int, to:Int):Void
-    public remove_tab(tab_idx:Int):Void
-    public set_tab_disabled(tab_idx:Int, disabled:Bool):Void
-    public set_tab_icon(tab_idx:Int, icon:Texture):Void
-    public set_tab_title(tab_idx:Int, title:String):Void
-    public set_tabs_rearrange_group(group_id:Int):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/TCP_Server.hpp')
-@:native('TCP_Server')
-@:unreflective
-@:structAccess
-extern class TCP_Server extends Reference {
-    public is_connection_available():Bool
-    public listen(port:Int, bind_address:String):Int
-    public stop():Void
-    public take_connection():StreamPeerTCP
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/TextEdit.hpp')
-@:native('TextEdit')
-@:unreflective
-@:structAccess
-extern class TextEdit extends Control {
-    public add_color_region(begin_key:String, end_key:String, color:Color, line_only:Bool):Void
-    public add_keyword_color(keyword:String, color:Color):Void
-    public can_fold(line:Int):Bool
-    public clear_colors():Void
-    public clear_undo_history():Void
-    public copy():Void
-    public cursor_get_column():Int
-    public cursor_get_line():Int
-    public cursor_set_column(column:Int, adjust_viewport:Bool):Void
-    public cursor_set_line(line:Int, adjust_viewport:Bool, can_be_hidden:Bool, wrap_index:Int):Void
-    public cut():Void
-    public deselect():Void
-    public fold_all_lines():Void
-    public fold_line(line:Int):Void
-    public get_breakpoints():Array
-    public get_keyword_color(keyword:String):Color
-    public get_line(line:Int):String
-    public get_line_count():Int
-    public get_menu():PopupMenu
-    public get_selection_from_column():Int
-    public get_selection_from_line():Int
-    public get_selection_text():String
-    public get_selection_to_column():Int
-    public get_selection_to_line():Int
-    public get_word_under_cursor():String
-    public has_keyword_color(keyword:String):Bool
-    public insert_text_at_cursor(text:String):Void
-    public is_folded(line:Int):Bool
-    public is_line_hidden(line:Int):Bool
-    public is_selection_active():Bool
-    public menu_option(option:Int):Void
-    public paste():Void
-    public redo():Void
-    public remove_breakpoints():Void
-    public search(key:String, flags:Int, from_line:Int, from_column:Int):PoolIntArray
-    public select(from_line:Int, from_column:Int, to_line:Int, to_column:Int):Void
-    public select_all():Void
-    public set_line_as_hidden(line:Int, enable:Bool):Void
-    public toggle_fold_line(line:Int):Void
-    public undo():Void
-    public unfold_line(line:Int):Void
-    public unhide_all_lines():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/TextFile.hpp')
-@:native('TextFile')
-@:unreflective
-@:structAccess
-extern class TextFile extends Resource {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Texture.hpp')
-@:native('Texture')
-@:unreflective
-@:structAccess
-extern class Texture extends Resource {
-    public draw(canvas_item:Rid, position:Vector2, modulate:Color, transpose:Bool, normal_map:Texture):Void
-    public draw_rect(canvas_item:Rid, rect:Rect2, tile:Bool, modulate:Color, transpose:Bool, normal_map:Texture):Void
-    public draw_rect_region(canvas_item:Rid, rect:Rect2, src_rect:Rect2, modulate:Color, transpose:Bool, normal_map:Texture, clip_uv:Bool):Void
-    public get_data():Image
-    public get_height():Int
-    public get_size():Vector2
-    public get_width():Int
-    public has_alpha():Bool
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/TextureButton.hpp')
-@:native('TextureButton')
-@:unreflective
-@:structAccess
-extern class TextureButton extends BaseButton {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/TextureProgress.hpp')
-@:native('TextureProgress')
-@:unreflective
-@:structAccess
-extern class TextureProgress extends Range {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/TextureRect.hpp')
-@:native('TextureRect')
-@:unreflective
-@:structAccess
-extern class TextureRect extends Control {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Theme.hpp')
-@:native('Theme')
-@:unreflective
-@:structAccess
-extern class Theme extends Resource {
-    public clear_color(name:String, type:String):Void
-    public clear_constant(name:String, type:String):Void
-    public clear_font(name:String, type:String):Void
-    public clear_icon(name:String, type:String):Void
-    public clear_stylebox(name:String, type:String):Void
-    public copy_default_theme():Void
-    public get_color(name:String, type:String):Color
-    public get_color_list(type:String):PoolStringArray
-    public get_constant(name:String, type:String):Int
-    public get_constant_list(type:String):PoolStringArray
-    public get_font(name:String, type:String):Font
-    public get_font_list(type:String):PoolStringArray
-    public get_icon(name:String, type:String):Texture
-    public get_icon_list(type:String):PoolStringArray
-    public get_stylebox(name:String, type:String):StyleBox
-    public get_stylebox_list(type:String):PoolStringArray
-    public get_stylebox_types():PoolStringArray
-    public get_type_list(type:String):PoolStringArray
-    public has_color(name:String, type:String):Bool
-    public has_constant(name:String, type:String):Bool
-    public has_font(name:String, type:String):Bool
-    public has_icon(name:String, type:String):Bool
-    public has_stylebox(name:String, type:String):Bool
-    public set_color(name:String, type:String, color:Color):Void
-    public set_constant(name:String, type:String, constant:Int):Void
-    public set_font(name:String, type:String, font:Font):Void
-    public set_icon(name:String, type:String, texture:Texture):Void
-    public set_stylebox(name:String, type:String, texture:StyleBox):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Thread.hpp')
-@:native('Thread')
-@:unreflective
-@:structAccess
-extern class Thread extends Reference {
-    public get_id():String
-    public is_active():Bool
-    public start(instance:Object, method:String, userdata:Variant, priority:Int):Int
-    public wait_to_finish():Variant
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/TileMap.hpp')
-@:native('TileMap')
-@:unreflective
-@:structAccess
-extern class TileMap extends Node2D {
-    public clear():Void
-    public fix_invalid_tiles():Void
-    public get_cell(x:Int, y:Int):Int
-    public get_cellv(position:Vector2):Int
-    public get_collision_layer_bit(bit:Int):Bool
-    public get_collision_mask_bit(bit:Int):Bool
-    public get_used_cells():Array
-    public get_used_cells_by_id(id:Int):Array
-    public get_used_rect():Rect2
-    public is_cell_transposed(x:Int, y:Int):Bool
-    public is_cell_x_flipped(x:Int, y:Int):Bool
-    public is_cell_y_flipped(x:Int, y:Int):Bool
-    public map_to_world(map_position:Vector2, ignore_half_ofs:Bool):Vector2
-    public set_cell(x:Int, y:Int, tile:Int, flip_x:Bool, flip_y:Bool, transpose:Bool, autotile_coord:Vector2):Void
-    public set_celld(position:Vector2, data:Dictionary):Void
-    public set_cellv(position:Vector2, tile:Int, flip_x:Bool, flip_y:Bool, transpose:Bool):Void
-    public set_collision_layer_bit(bit:Int, value:Bool):Void
-    public set_collision_mask_bit(bit:Int, value:Bool):Void
-    public update_bitmask_area(position:Vector2):Void
-    public update_bitmask_region(start:Vector2, end:Vector2):Void
-    public update_dirty_quadrants():Void
-    public world_to_map(world_position:Vector2):Vector2
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/TileSet.hpp')
-@:native('TileSet')
-@:unreflective
-@:structAccess
-extern class TileSet extends Resource {
-    public _forward_subtile_selection(autotile_id:Int, bitmask:Int, tilemap:Object, tile_location:Vector2):Vector2
-    public _is_tile_bound(drawn_id:Int, neighbor_id:Int):Bool
-    public autotile_get_bitmask_mode(id:Int):Int
-    public autotile_set_bitmask_mode(id:Int, mode:Int):Void
-    public clear():Void
-    public create_tile(id:Int):Void
-    public find_tile_by_name(name:String):Int
-    public get_last_unused_tile_id():Int
-    public get_tiles_ids():Array
-    public remove_tile(id:Int):Void
-    public tile_add_shape(id:Int, shape:Shape2D, shape_transform:Transform2D, one_way:Bool, autotile_coord:Vector2):Void
-    public tile_get_light_occluder(id:Int):OccluderPolygon2D
-    public tile_get_material(id:Int):ShaderMaterial
-    public tile_get_modulate(id:Int):Color
-    public tile_get_name(id:Int):String
-    public tile_get_navigation_polygon(id:Int):NavigationPolygon
-    public tile_get_navigation_polygon_offset(id:Int):Vector2
-    public tile_get_normal_map(id:Int):Texture
-    public tile_get_occluder_offset(id:Int):Vector2
-    public tile_get_region(id:Int):Rect2
-    public tile_get_shape(id:Int, shape_id:Int):Shape2D
-    public tile_get_shape_count(id:Int):Int
-    public tile_get_shape_one_way(id:Int, shape_id:Int):Bool
-    public tile_get_shape_transform(id:Int, shape_id:Int):Transform2D
-    public tile_get_shapes(id:Int):Array
-    public tile_get_texture(id:Int):Texture
-    public tile_get_texture_offset(id:Int):Vector2
-    public tile_get_tile_mode(id:Int):Int
-    public tile_get_z_index(id:Int):Int
-    public tile_set_light_occluder(id:Int, light_occluder:OccluderPolygon2D):Void
-    public tile_set_material(id:Int, material:ShaderMaterial):Void
-    public tile_set_modulate(id:Int, color:Color):Void
-    public tile_set_name(id:Int, name:String):Void
-    public tile_set_navigation_polygon(id:Int, navigation_polygon:NavigationPolygon):Void
-    public tile_set_navigation_polygon_offset(id:Int, navigation_polygon_offset:Vector2):Void
-    public tile_set_normal_map(id:Int, normal_map:Texture):Void
-    public tile_set_occluder_offset(id:Int, occluder_offset:Vector2):Void
-    public tile_set_region(id:Int, region:Rect2):Void
-    public tile_set_shape(id:Int, shape_id:Int, shape:Shape2D):Void
-    public tile_set_shape_one_way(id:Int, shape_id:Int, one_way:Bool):Void
-    public tile_set_shape_transform(id:Int, shape_id:Int, shape_transform:Transform2D):Void
-    public tile_set_shapes(id:Int, shapes:Array):Void
-    public tile_set_texture(id:Int, texture:Texture):Void
-    public tile_set_texture_offset(id:Int, texture_offset:Vector2):Void
-    public tile_set_tile_mode(id:Int, tilemode:Int):Void
-    public tile_set_z_index(id:Int, z_index:Int):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Timer.hpp')
-@:native('Timer')
-@:unreflective
-@:structAccess
-extern class Timer extends Node {
-    public is_stopped():Bool
-    public start(time_sec:Float):Void
-    public stop():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ToolButton.hpp')
-@:native('ToolButton')
-@:unreflective
-@:structAccess
-extern class ToolButton extends Button {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/TouchScreenButton.hpp')
-@:native('TouchScreenButton')
-@:unreflective
-@:structAccess
-extern class TouchScreenButton extends Node2D {
-    public is_pressed():Bool
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/core/Transform.hpp')
-@:native('Transform')
-@:unreflective
-@:structAccess
-extern class Transform {
-    public Transform(x_axis:Vector3, y_axis:Vector3, z_axis:Vector3, origin:Vector3):Transform
-    public Transform(basis:Basis, origin:Vector3):Transform
-    public Transform(from:Transform2D):Transform
-    public Transform(from:Quat):Transform
-    public Transform(from:Basis):Transform
-    public affine_inverse():Transform
-    public interpolate_with(transform:Transform, weight:Float):Transform
-    public inverse():Transform
-    public looking_at(target:Vector3, up:Vector3):Transform
-    public orthonormalized():Transform
-    public rotated(axis:Vector3, phi:Float):Transform
-    public scaled(scale:Vector3):Transform
-    public translated(ofs:Vector3):Transform
-    public xform(v:var):var
-    public xform_inv(v:var):var
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/core/Transform2D.hpp')
-@:native('Transform2D')
-@:unreflective
-@:structAccess
-extern class Transform2D {
-    public Transform2D(from:Transform):Transform2D
-    public Transform2D(x_axis:Vector2, y_axis:Vector2, origin:Vector2):Transform2D
-    public Transform2D(rotation:Float, position:Vector2):Transform2D
-    public affine_inverse():Transform2D
-    public basis_xform(v:Vector2):Vector2
-    public basis_xform_inv(v:Vector2):Vector2
-    public get_origin():Vector2
-    public get_rotation():Float
-    public get_scale():Vector2
-    public interpolate_with(transform:Transform2D, weight:Float):Transform2D
-    public inverse():Transform2D
-    public orthonormalized():Transform2D
-    public rotated(phi:Float):Transform2D
-    public scaled(scale:Vector2):Transform2D
-    public translated(offset:Vector2):Transform2D
-    public xform(v:var):var
-    public xform_inv(v:var):var
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Translation.hpp')
-@:native('Translation')
-@:unreflective
-@:structAccess
-extern class Translation extends Resource {
-    public add_message(src_message:String, xlated_message:String):Void
-    public erase_message(src_message:String):Void
-    public get_message(src_message:String):String
-    public get_message_count():Int
-    public get_message_list():PoolStringArray
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/TranslationServer.hpp')
-@:native('TranslationServer')
-@:unreflective
-@:structAccess
-extern class TranslationServer extends Object {
-    public add_translation(translation:Translation):Void
-    public clear():Void
-    public get_locale():String
-    public get_locale_name(locale:String):String
-    public remove_translation(translation:Translation):Void
-    public set_locale(locale:String):Void
-    public translate(message:String):String
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Tree.hpp')
-@:native('Tree')
-@:unreflective
-@:structAccess
-extern class Tree extends Control {
-    public are_column_titles_visible():Bool
-    public clear():Void
-    public create_item(parent:Object, idx:Int):Object
-    public ensure_cursor_is_visible():Void
-    public get_column_at_position(position:Vector2):Int
-    public get_column_title(column:Int):String
-    public get_column_width(column:Int):Int
-    public get_custom_popup_rect():Rect2
-    public get_drop_section_at_position(position:Vector2):Int
-    public get_edited():TreeItem
-    public get_edited_column():Int
-    public get_item_area_rect(item:Object, column:Int):Rect2
-    public get_item_at_position(position:Vector2):TreeItem
-    public get_next_selected(from:Object):TreeItem
-    public get_pressed_button():Int
-    public get_root():TreeItem
-    public get_scroll():Vector2
-    public get_selected():TreeItem
-    public get_selected_column():Int
-    public set_column_expand(column:Int, expand:Bool):Void
-    public set_column_min_width(column:Int, min_width:Int):Void
-    public set_column_title(column:Int, title:String):Void
-    public set_column_titles_visible(visible:Bool):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/TreeItem.hpp')
-@:native('TreeItem')
-@:unreflective
-@:structAccess
-extern class TreeItem extends Object {
-    public add_button(column:Int, button:Texture, button_idx:Int, disabled:Bool, tooltip:String):Void
-    public clear_custom_bg_color(column:Int):Void
-    public clear_custom_color(column:Int):Void
-    public deselect(column:Int):Void
-    public erase_button(column:Int, button_idx:Int):Void
-    public get_button(column:Int, button_idx:Int):Texture
-    public get_button_count(column:Int):Int
-    public get_cell_mode(column:Int):Int
-    public get_children():TreeItem
-    public get_custom_bg_color(column:Int):Color
-    public get_expand_right(column:Int):Bool
-    public get_icon(column:Int):Texture
-    public get_icon_max_width(column:Int):Int
-    public get_icon_region(column:Int):Rect2
-    public get_metadata(column:Int):Variant
-    public get_next():TreeItem
-    public get_next_visible():TreeItem
-    public get_parent():TreeItem
-    public get_prev():TreeItem
-    public get_prev_visible():TreeItem
-    public get_range(column:Int):Float
-    public get_range_config(column:Int):Dictionary
-    public get_text(column:Int):String
-    public get_text_align(column:Int):Int
-    public get_tooltip(column:Int):String
-    public is_button_disabled(column:Int, button_idx:Int):Bool
-    public is_checked(column:Int):Bool
-    public is_custom_set_as_button(column:Int):Bool
-    public is_editable(column:Int):Bool
-    public is_selectable(column:Int):Bool
-    public is_selected(column:Int):Bool
-    public move_to_bottom():Void
-    public move_to_top():Void
-    public remove_child(child:Object):Void
-    public select(column:Int):Void
-    public set_button(column:Int, button_idx:Int, button:Texture):Void
-    public set_cell_mode(column:Int, mode:Int):Void
-    public set_checked(column:Int, checked:Bool):Void
-    public set_custom_as_button(column:Int, enable:Bool):Void
-    public set_custom_bg_color(column:Int, color:Color, just_outline:Bool):Void
-    public set_custom_color(column:Int, color:Color):Void
-    public set_custom_draw(column:Int, object:Object, callback:String):Void
-    public set_editable(column:Int, enabled:Bool):Void
-    public set_expand_right(column:Int, enable:Bool):Void
-    public set_icon(column:Int, texture:Texture):Void
-    public set_icon_max_width(column:Int, width:Int):Void
-    public set_icon_region(column:Int, region:Rect2):Void
-    public set_metadata(column:Int, meta:Variant):Void
-    public set_range(column:Int, value:Float):Void
-    public set_range_config(column:Int, min:Float, max:Float, step:Float, expr:Bool):Void
-    public set_selectable(column:Int, selectable:Bool):Void
-    public set_text(column:Int, text:String):Void
-    public set_text_align(column:Int, text_align:Int):Void
-    public set_tooltip(column:Int, tooltip:String):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/TriangleMesh.hpp')
-@:native('TriangleMesh')
-@:unreflective
-@:structAccess
-extern class TriangleMesh extends Reference {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Tween.hpp')
-@:native('Tween')
-@:unreflective
-@:structAccess
-extern class Tween extends Node {
-    public follow_method(object:Object, method:String, initial_val:Variant, target:Object, target_method:String, duration:Float, trans_type:Int, ease_type:Int, delay:Float):Bool
-    public follow_property(object:Object, property:NodePath, initial_val:Variant, target:Object, target_property:NodePath, duration:Float, trans_type:Int, ease_type:Int, delay:Float):Bool
-    public get_runtime():Float
-    public interpolate_callback(object:Object, duration:Float, callback:String, arg1:Variant, arg2:Variant, arg3:Variant, arg4:Variant, arg5:Variant):Bool
-    public interpolate_deferred_callback(object:Object, duration:Float, callback:String, arg1:Variant, arg2:Variant, arg3:Variant, arg4:Variant, arg5:Variant):Bool
-    public interpolate_method(object:Object, method:String, initial_val:Variant, final_val:Variant, duration:Float, trans_type:Int, ease_type:Int, delay:Float):Bool
-    public interpolate_property(object:Object, property:NodePath, initial_val:Variant, final_val:Variant, duration:Float, trans_type:Int, ease_type:Int, delay:Float):Bool
-    public is_active():Bool
-    public remove(object:Object, key:String):Bool
-    public remove_all():Bool
-    public reset(object:Object, key:String):Bool
-    public reset_all():Bool
-    public resume(object:Object, key:String):Bool
-    public resume_all():Bool
-    public seek(time:Float):Bool
-    public set_active(active:Bool):Void
-    public start():Bool
-    public stop(object:Object, key:String):Bool
-    public stop_all():Bool
-    public targeting_method(object:Object, method:String, initial:Object, initial_method:String, final_val:Variant, duration:Float, trans_type:Int, ease_type:Int, delay:Float):Bool
-    public targeting_property(object:Object, property:NodePath, initial:Object, initial_val:NodePath, final_val:Variant, duration:Float, trans_type:Int, ease_type:Int, delay:Float):Bool
-    public tell():Float
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/UndoRedo.hpp')
-@:native('UndoRedo')
-@:unreflective
-@:structAccess
-extern class UndoRedo extends Object {
-    public add_do_method(object:Object, method:String):Variant
-    public add_do_property(object:Object, property:String, value:Variant):Void
-    public add_do_reference(object:Object):Void
-    public add_undo_method(object:Object, method:String):Variant
-    public add_undo_property(object:Object, property:String, value:Variant):Void
-    public add_undo_reference(object:Object):Void
-    public clear_history():Void
-    public commit_action():Void
-    public create_action(name:String, merge_mode:Int):Void
-    public get_current_action_name():String
-    public get_version():Int
-    public redo():Bool
-    public undo():Bool
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/core/Variant.hpp')
-@:native('Variant')
-@:unreflective
-@:structAccess
-extern class Variant {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VBoxContainer.hpp')
-@:native('VBoxContainer')
-@:unreflective
-@:structAccess
-extern class VBoxContainer extends BoxContainer {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/core/Vector2.hpp')
-@:native('Vector2')
-@:unreflective
-@:structAccess
-extern class Vector2 {
-    public Vector2(x:Float, y:Float):Vector2
-    public abs():Vector2
-    public angle():Float
-    public angle_to(to:Vector2):Float
-    public angle_to_point(to:Vector2):Float
-    public aspect():Float
-    public bounce(n:Vector2):Vector2
-    public ceil():Vector2
-    public clamped(length:Float):Vector2
-    public cross(with:Vector2):Float
-    public cubic_interpolate(b:Vector2, pre_a:Vector2, post_b:Vector2, t:Float):Vector2
-    public distance_squared_to(to:Vector2):Float
-    public distance_to(to:Vector2):Float
-    public dot(with:Vector2):Float
-    public floor():Vector2
-    public is_normalized():Bool
-    public length():Float
-    public length_squared():Float
-    public linear_interpolate(b:Vector2, t:Float):Vector2
-    public normalized():Vector2
-    public reflect(n:Vector2):Vector2
-    public rotated(phi:Float):Vector2
-    public round():Vector2
-    public slerp(b:Vector2, t:Float):Vector2
-    public slide(n:Vector2):Vector2
-    public snapped(by:Vector2):Vector2
-    public tangent():Vector2
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/core/Vector3.hpp')
-@:native('Vector3')
-@:unreflective
-@:structAccess
-extern class Vector3 {
-    public Vector3(x:Float, y:Float, z:Float):Vector3
-    public abs():Vector3
-    public angle_to(to:Vector3):Float
-    public bounce(n:Vector3):Vector3
-    public ceil():Vector3
-    public cross(b:Vector3):Vector3
-    public cubic_interpolate(b:Vector3, pre_a:Vector3, post_b:Vector3, t:Float):Vector3
-    public distance_squared_to(b:Vector3):Float
-    public distance_to(b:Vector3):Float
-    public dot(b:Vector3):Float
-    public floor():Vector3
-    public inverse():Vector3
-    public is_normalized():Bool
-    public length():Float
-    public length_squared():Float
-    public linear_interpolate(b:Vector3, t:Float):Vector3
-    public max_axis():Int
-    public min_axis():Int
-    public normalized():Vector3
-    public outer(b:Vector3):Basis
-    public reflect(n:Vector3):Vector3
-    public rotated(axis:Vector3, phi:Float):Vector3
-    public round():Vector3
-    public slerp(b:Vector3, t:Float):Vector3
-    public slide(n:Vector3):Vector3
-    public snapped(by:Vector3):Vector3
-    public to_diagonal_matrix():Basis
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VehicleBody.hpp')
-@:native('VehicleBody')
-@:unreflective
-@:structAccess
-extern class VehicleBody extends RigidBody {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VehicleWheel.hpp')
-@:native('VehicleWheel')
-@:unreflective
-@:structAccess
-extern class VehicleWheel extends Spatial {
-    public get_skidinfo():Float
-    public is_in_contact():Bool
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VideoPlayer.hpp')
-@:native('VideoPlayer')
-@:unreflective
-@:structAccess
-extern class VideoPlayer extends Control {
-    public get_stream_name():String
-    public get_video_texture():Texture
-    public is_playing():Bool
-    public play():Void
-    public stop():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VideoStream.hpp')
-@:native('VideoStream')
-@:unreflective
-@:structAccess
-extern class VideoStream extends Resource {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/Viewport.hpp')
-@:native('Viewport')
-@:unreflective
-@:structAccess
-extern class Viewport extends Node {
-    public find_world():World
-    public find_world_2d():World2D
-    public get_camera():Camera
-    public get_final_transform():Transform2D
-    public get_mouse_position():Vector2
-    public get_render_info(info:Int):Int
-    public get_size_override():Vector2
-    public get_texture():ViewportTexture
-    public get_viewport_rid():Rid
-    public get_visible_rect():Rect2
-    public gui_get_drag_data():Variant
-    public gui_has_modal_stack():Bool
-    public input(local_event:InputEvent):Void
-    public is_size_override_enabled():Bool
-    public is_size_override_stretch_enabled():Bool
-    public set_attach_to_screen_rect(rect:Rect2):Void
-    public set_size_override(enable:Bool, size:Vector2, margin:Vector2):Void
-    public set_size_override_stretch(enabled:Bool):Void
-    public unhandled_input(local_event:InputEvent):Void
-    public update_worlds():Void
-    public warp_mouse(to_position:Vector2):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ViewportContainer.hpp')
-@:native('ViewportContainer')
-@:unreflective
-@:structAccess
-extern class ViewportContainer extends Container {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/ViewportTexture.hpp')
-@:native('ViewportTexture')
-@:unreflective
-@:structAccess
-extern class ViewportTexture extends Texture {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisibilityEnabler.hpp')
-@:native('VisibilityEnabler')
-@:unreflective
-@:structAccess
-extern class VisibilityEnabler extends VisibilityNotifier {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisibilityEnabler2D.hpp')
-@:native('VisibilityEnabler2D')
-@:unreflective
-@:structAccess
-extern class VisibilityEnabler2D extends VisibilityNotifier2D {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisibilityNotifier.hpp')
-@:native('VisibilityNotifier')
-@:unreflective
-@:structAccess
-extern class VisibilityNotifier extends Spatial {
-    public is_on_screen():Bool
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisibilityNotifier2D.hpp')
-@:native('VisibilityNotifier2D')
-@:unreflective
-@:structAccess
-extern class VisibilityNotifier2D extends Node2D {
-    public is_on_screen():Bool
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualInstance.hpp')
-@:native('VisualInstance')
-@:unreflective
-@:structAccess
-extern class VisualInstance extends Spatial {
-    public get_aabb():Aabb
-    public get_transformed_aabb():Aabb
-    public set_base(base:Rid):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualServer.hpp')
-@:native('VisualServer')
-@:unreflective
-@:structAccess
-extern class VisualServer extends Object {
-    public black_bars_set_images(left:Rid, top:Rid, right:Rid, bottom:Rid):Void
-    public black_bars_set_margins(left:Int, top:Int, right:Int, bottom:Int):Void
-    public camera_create():Rid
-    public camera_set_cull_mask(camera:Rid, layers:Int):Void
-    public camera_set_environment(camera:Rid, env:Rid):Void
-    public camera_set_orthogonal(camera:Rid, size:Float, z_near:Float, z_far:Float):Void
-    public camera_set_perspective(camera:Rid, fovy_degrees:Float, z_near:Float, z_far:Float):Void
-    public camera_set_transform(camera:Rid, transform:Transform):Void
-    public camera_set_use_vertical_aspect(camera:Rid, enable:Bool):Void
-    public canvas_create():Rid
-    public canvas_item_add_circle(item:Rid, pos:Vector2, radius:Float, color:Color):Void
-    public canvas_item_add_clip_ignore(item:Rid, ignore:Bool):Void
-    public canvas_item_add_line(item:Rid, from:Vector2, to:Vector2, color:Color, width:Float, antialiased:Bool):Void
-    public canvas_item_add_mesh(item:Rid, mesh:Rid, texture:Rid, normal_map:Rid):Void
-    public canvas_item_add_multimesh(item:Rid, mesh:Rid, texture:Rid, normal_map:Rid):Void
-    public canvas_item_add_nine_patch(item:Rid, rect:Rect2, source:Rect2, texture:Rid, topleft:Vector2, bottomright:Vector2, x_axis_mode:Int, y_axis_mode:Int, draw_center:Bool, modulate:Color, normal_map:Rid):Void
-    public canvas_item_add_particles(item:Rid, particles:Rid, texture:Rid, normal_map:Rid, h_frames:Int, v_frames:Int):Void
-    public canvas_item_add_polygon(item:Rid, points:PoolVector2Array, colors:PoolColorArray, uvs:PoolVector2Array, texture:Rid, normal_map:Rid, antialiased:Bool):Void
-    public canvas_item_add_polyline(item:Rid, points:PoolVector2Array, colors:PoolColorArray, width:Float, antialiased:Bool):Void
-    public canvas_item_add_primitive(item:Rid, points:PoolVector2Array, colors:PoolColorArray, uvs:PoolVector2Array, texture:Rid, width:Float, normal_map:Rid):Void
-    public canvas_item_add_rect(item:Rid, rect:Rect2, color:Color):Void
-    public canvas_item_add_set_transform(item:Rid, transform:Transform2D):Void
-    public canvas_item_add_texture_rect(item:Rid, rect:Rect2, texture:Rid, tile:Bool, modulate:Color, transpose:Bool, normal_map:Rid):Void
-    public canvas_item_add_texture_rect_region(item:Rid, rect:Rect2, texture:Rid, src_rect:Rect2, modulate:Color, transpose:Bool, normal_map:Rid, clip_uv:Bool):Void
-    public canvas_item_add_triangle_array(item:Rid, indices:PoolIntArray, points:PoolVector2Array, colors:PoolColorArray, uvs:PoolVector2Array, bones:PoolIntArray, weights:PoolRealArray, texture:Rid, count:Int, normal_map:Rid):Void
-    public canvas_item_clear(item:Rid):Void
-    public canvas_item_create():Rid
-    public canvas_item_set_clip(item:Rid, clip:Bool):Void
-    public canvas_item_set_copy_to_backbuffer(item:Rid, enabled:Bool, rect:Rect2):Void
-    public canvas_item_set_custom_rect(item:Rid, use_custom_rect:Bool, rect:Rect2):Void
-    public canvas_item_set_distance_field_mode(item:Rid, enabled:Bool):Void
-    public canvas_item_set_draw_behind_parent(item:Rid, enabled:Bool):Void
-    public canvas_item_set_draw_index(item:Rid, index:Int):Void
-    public canvas_item_set_light_mask(item:Rid, mask:Int):Void
-    public canvas_item_set_material(item:Rid, material:Rid):Void
-    public canvas_item_set_modulate(item:Rid, color:Color):Void
-    public canvas_item_set_parent(item:Rid, parent:Rid):Void
-    public canvas_item_set_self_modulate(item:Rid, color:Color):Void
-    public canvas_item_set_sort_children_by_y(item:Rid, enabled:Bool):Void
-    public canvas_item_set_transform(item:Rid, transform:Transform2D):Void
-    public canvas_item_set_use_parent_material(item:Rid, enabled:Bool):Void
-    public canvas_item_set_visible(item:Rid, visible:Bool):Void
-    public canvas_item_set_z_as_relative_to_parent(item:Rid, enabled:Bool):Void
-    public canvas_item_set_z_index(item:Rid, z_index:Int):Void
-    public canvas_light_attach_to_canvas(light:Rid, canvas:Rid):Void
-    public canvas_light_create():Rid
-    public canvas_light_occluder_attach_to_canvas(occluder:Rid, canvas:Rid):Void
-    public canvas_light_occluder_create():Rid
-    public canvas_light_occluder_set_enabled(occluder:Rid, enabled:Bool):Void
-    public canvas_light_occluder_set_light_mask(occluder:Rid, mask:Int):Void
-    public canvas_light_occluder_set_polygon(occluder:Rid, polygon:Rid):Void
-    public canvas_light_occluder_set_transform(occluder:Rid, transform:Transform2D):Void
-    public canvas_light_set_color(light:Rid, color:Color):Void
-    public canvas_light_set_enabled(light:Rid, enabled:Bool):Void
-    public canvas_light_set_energy(light:Rid, energy:Float):Void
-    public canvas_light_set_height(light:Rid, height:Float):Void
-    public canvas_light_set_item_cull_mask(light:Rid, mask:Int):Void
-    public canvas_light_set_item_shadow_cull_mask(light:Rid, mask:Int):Void
-    public canvas_light_set_layer_range(light:Rid, min_layer:Int, max_layer:Int):Void
-    public canvas_light_set_mode(light:Rid, mode:Int):Void
-    public canvas_light_set_scale(light:Rid, scale:Float):Void
-    public canvas_light_set_shadow_buffer_size(light:Rid, size:Int):Void
-    public canvas_light_set_shadow_color(light:Rid, color:Color):Void
-    public canvas_light_set_shadow_enabled(light:Rid, enabled:Bool):Void
-    public canvas_light_set_shadow_filter(light:Rid, filter:Int):Void
-    public canvas_light_set_shadow_gradient_length(light:Rid, length:Float):Void
-    public canvas_light_set_shadow_smooth(light:Rid, smooth:Float):Void
-    public canvas_light_set_texture(light:Rid, texture:Rid):Void
-    public canvas_light_set_texture_offset(light:Rid, offset:Vector2):Void
-    public canvas_light_set_transform(light:Rid, transform:Transform2D):Void
-    public canvas_light_set_z_range(light:Rid, min_z:Int, max_z:Int):Void
-    public canvas_occluder_polygon_create():Rid
-    public canvas_occluder_polygon_set_cull_mode(occluder_polygon:Rid, mode:Int):Void
-    public canvas_occluder_polygon_set_shape(occluder_polygon:Rid, shape:PoolVector2Array, closed:Bool):Void
-    public canvas_occluder_polygon_set_shape_as_lines(occluder_polygon:Rid, shape:PoolVector2Array):Void
-    public canvas_set_item_mirroring(canvas:Rid, item:Rid, mirroring:Vector2):Void
-    public canvas_set_modulate(canvas:Rid, color:Color):Void
-    public directional_light_create():Rid
-    public draw(swap_buffers:Bool, frame_step:Float):Void
-    public environment_create():Rid
-    public environment_set_adjustment(env:Rid, enable:Bool, brightness:Float, contrast:Float, saturation:Float, ramp:Rid):Void
-    public environment_set_ambient_light(env:Rid, color:Color, energy:Float, sky_contibution:Float):Void
-    public environment_set_background(env:Rid, bg:Int):Void
-    public environment_set_bg_color(env:Rid, color:Color):Void
-    public environment_set_bg_energy(env:Rid, energy:Float):Void
-    public environment_set_canvas_max_layer(env:Rid, max_layer:Int):Void
-    public environment_set_dof_blur_far(env:Rid, enable:Bool, distance:Float, transition:Float, far_amount:Float, quality:Int):Void
-    public environment_set_dof_blur_near(env:Rid, enable:Bool, distance:Float, transition:Float, far_amount:Float, quality:Int):Void
-    public environment_set_fog(env:Rid, enable:Bool, color:Color, sun_color:Color, sun_amount:Float):Void
-    public environment_set_fog_depth(env:Rid, enable:Bool, depth_begin:Float, depth_curve:Float, transmit:Bool, transmit_curve:Float):Void
-    public environment_set_fog_height(env:Rid, enable:Bool, min_height:Float, max_height:Float, height_curve:Float):Void
-    public environment_set_glow(env:Rid, enable:Bool, level_flags:Int, intensity:Float, strength:Float, bloom_threshold:Float, blend_mode:Int, hdr_bleed_threshold:Float, hdr_bleed_scale:Float, bicubic_upscale:Bool):Void
-    public environment_set_sky(env:Rid, sky:Rid):Void
-    public environment_set_sky_custom_fov(env:Rid, scale:Float):Void
-    public environment_set_ssao(env:Rid, enable:Bool, radius:Float, intensity:Float, radius2:Float, intensity2:Float, bias:Float, light_affect:Float, ao_channel_affect:Float, color:Color, quality:Int, blur:Int, bilateral_sharpness:Float):Void
-    public environment_set_ssr(env:Rid, enable:Bool, max_steps:Int, fade_in:Float, fade_out:Float, depth_tolerance:Float, roughness:Bool):Void
-    public environment_set_tonemap(env:Rid, tone_mapper:Int, exposure:Float, white:Float, auto_exposure:Bool, min_luminance:Float, max_luminance:Float, auto_exp_speed:Float, auto_exp_grey:Float):Void
-    public finish():Void
-    public force_draw(swap_buffers:Bool, frame_step:Float):Void
-    public force_sync():Void
-    public free_rid(rid:Rid):Void
-    public get_render_info(info:Int):Int
-    public get_test_cube():Rid
-    public get_test_texture():Rid
-    public get_white_texture():Rid
-    public gi_probe_create():Rid
-    public gi_probe_get_bias(arg0:Rid):Float
-    public gi_probe_get_bounds(probe:Rid):Aabb
-    public gi_probe_get_cell_size(probe:Rid):Float
-    public gi_probe_get_dynamic_data(arg0:Rid):PoolIntArray
-    public gi_probe_get_dynamic_range(arg0:Rid):Int
-    public gi_probe_get_energy(arg0:Rid):Float
-    public gi_probe_get_normal_bias(arg0:Rid):Float
-    public gi_probe_get_propagation(arg0:Rid):Float
-    public gi_probe_get_to_cell_xform(arg0:Rid):Transform
-    public gi_probe_is_compressed(arg0:Rid):Bool
-    public gi_probe_is_interior(arg0:Rid):Bool
-    public gi_probe_set_bias(bias:Rid, arg1:Float):Void
-    public gi_probe_set_bounds(probe:Rid, bounds:Aabb):Void
-    public gi_probe_set_cell_size(probe:Rid, range:Float):Void
-    public gi_probe_set_compress(enable:Rid, arg1:Bool):Void
-    public gi_probe_set_dynamic_data(data:Rid, arg1:PoolIntArray):Void
-    public gi_probe_set_dynamic_range(range:Rid, arg1:Int):Void
-    public gi_probe_set_energy(energy:Rid, arg1:Float):Void
-    public gi_probe_set_interior(enable:Rid, arg1:Bool):Void
-    public gi_probe_set_normal_bias(bias:Rid, arg1:Float):Void
-    public gi_probe_set_propagation(propagation:Rid, arg1:Float):Void
-    public gi_probe_set_to_cell_xform(xform:Rid, arg1:Transform):Void
-    public has_changed():Bool
-    public has_feature(feature:Int):Bool
-    public has_os_feature(feature:String):Bool
-    public immediate_begin(immediate:Rid, primitive:Int, texture:Rid):Void
-    public immediate_clear(immediate:Rid):Void
-    public immediate_color(immediate:Rid, color:Color):Void
-    public immediate_create():Rid
-    public immediate_end(immediate:Rid):Void
-    public immediate_get_material(immediate:Rid):Rid
-    public immediate_normal(immediate:Rid, normal:Vector3):Void
-    public immediate_set_material(immediate:Rid, material:Rid):Void
-    public immediate_tangent(immediate:Rid, tangent:Plane):Void
-    public immediate_uv(immediate:Rid, tex_uv:Vector2):Void
-    public immediate_uv2(immediate:Rid, tex_uv:Vector2):Void
-    public immediate_vertex(immediate:Rid, vertex:Vector3):Void
-    public immediate_vertex_2d(immediate:Rid, vertex:Vector2):Void
-    public init():Void
-    public instance_attach_object_instance_id(instance:Rid, id:Int):Void
-    public instance_attach_skeleton(instance:Rid, skeleton:Rid):Void
-    public instance_create():Rid
-    public instance_create2(base:Rid, scenario:Rid):Rid
-    public instance_geometry_set_as_instance_lod(instance:Rid, as_lod_of_instance:Rid):Void
-    public instance_geometry_set_cast_shadows_setting(instance:Rid, shadow_casting_setting:Int):Void
-    public instance_geometry_set_draw_range(instance:Rid, min:Float, max:Float, min_margin:Float, max_margin:Float):Void
-    public instance_geometry_set_flag(instance:Rid, flag:Int, enabled:Bool):Void
-    public instance_geometry_set_material_override(instance:Rid, material:Rid):Void
-    public instance_set_base(instance:Rid, base:Rid):Void
-    public instance_set_blend_shape_weight(instance:Rid, shape:Int, weight:Float):Void
-    public instance_set_custom_aabb(instance:Rid, aabb:Aabb):Void
-    public instance_set_exterior(instance:Rid, enabled:Bool):Void
-    public instance_set_extra_visibility_margin(instance:Rid, margin:Float):Void
-    public instance_set_layer_mask(instance:Rid, mask:Int):Void
-    public instance_set_scenario(instance:Rid, scenario:Rid):Void
-    public instance_set_surface_material(instance:Rid, surface:Int, material:Rid):Void
-    public instance_set_transform(instance:Rid, transform:Transform):Void
-    public instance_set_use_lightmap(instance:Rid, lightmap_instance:Rid, lightmap:Rid):Void
-    public instance_set_visible(instance:Rid, visible:Bool):Void
-    public instances_cull_aabb(aabb:Aabb, scenario:Rid):Array
-    public instances_cull_convex(convex:Array, scenario:Rid):Array
-    public instances_cull_ray(from:Vector3, to:Vector3, scenario:Rid):Array
-    public light_directional_set_blend_splits(light:Rid, enable:Bool):Void
-    public light_directional_set_shadow_depth_range_mode(light:Rid, range_mode:Int):Void
-    public light_directional_set_shadow_mode(light:Rid, mode:Int):Void
-    public light_omni_set_shadow_detail(light:Rid, detail:Int):Void
-    public light_omni_set_shadow_mode(light:Rid, mode:Int):Void
-    public light_set_color(light:Rid, color:Color):Void
-    public light_set_cull_mask(light:Rid, mask:Int):Void
-    public light_set_negative(light:Rid, enable:Bool):Void
-    public light_set_param(light:Rid, param:Int, value:Float):Void
-    public light_set_projector(light:Rid, texture:Rid):Void
-    public light_set_reverse_cull_face_mode(light:Rid, enabled:Bool):Void
-    public light_set_shadow(light:Rid, enabled:Bool):Void
-    public light_set_shadow_color(light:Rid, color:Color):Void
-    public lightmap_capture_create():Rid
-    public lightmap_capture_get_bounds(capture:Rid):Aabb
-    public lightmap_capture_get_energy(capture:Rid):Float
-    public lightmap_capture_get_octree(capture:Rid):PoolByteArray
-    public lightmap_capture_get_octree_cell_subdiv(capture:Rid):Int
-    public lightmap_capture_get_octree_cell_transform(capture:Rid):Transform
-    public lightmap_capture_set_bounds(capture:Rid, bounds:Aabb):Void
-    public lightmap_capture_set_energy(capture:Rid, energy:Float):Void
-    public lightmap_capture_set_octree(capture:Rid, octree:PoolByteArray):Void
-    public lightmap_capture_set_octree_cell_subdiv(capture:Rid, subdiv:Int):Void
-    public lightmap_capture_set_octree_cell_transform(capture:Rid, xform:Transform):Void
-    public make_sphere_mesh(latitudes:Int, longitudes:Int, radius:Float):Rid
-    public material_create():Rid
-    public material_get_param(material:Rid, parameter:String):Variant
-    public material_get_shader(shader_material:Rid):Rid
-    public material_set_line_width(material:Rid, width:Float):Void
-    public material_set_next_pass(material:Rid, next_material:Rid):Void
-    public material_set_param(material:Rid, parameter:String, value:Variant):Void
-    public material_set_render_priority(material:Rid, priority:Int):Void
-    public material_set_shader(shader_material:Rid, shader:Rid):Void
-    public mesh_add_surface_from_arrays(mesh:Rid, primtive:Int, arrays:Array, blend_shapes:Array, compress_format:Int):Void
-    public mesh_clear(mesh:Rid):Void
-    public mesh_create():Rid
-    public mesh_get_blend_shape_count(mesh:Rid):Int
-    public mesh_get_blend_shape_mode(mesh:Rid):Int
-    public mesh_get_custom_aabb(mesh:Rid):Aabb
-    public mesh_get_surface_count(mesh:Rid):Int
-    public mesh_remove_surface(mesh:Rid, index:Int):Void
-    public mesh_set_blend_shape_count(mesh:Rid, amount:Int):Void
-    public mesh_set_blend_shape_mode(mesh:Rid, mode:Int):Void
-    public mesh_set_custom_aabb(mesh:Rid, aabb:Aabb):Void
-    public mesh_surface_get_aabb(mesh:Rid, surface:Int):Aabb
-    public mesh_surface_get_array(mesh:Rid, surface:Int):PoolByteArray
-    public mesh_surface_get_array_index_len(mesh:Rid, surface:Int):Int
-    public mesh_surface_get_array_len(mesh:Rid, surface:Int):Int
-    public mesh_surface_get_arrays(mesh:Rid, surface:Int):Array
-    public mesh_surface_get_blend_shape_arrays(mesh:Rid, surface:Int):Array
-    public mesh_surface_get_format(mesh:Rid, surface:Int):Int
-    public mesh_surface_get_format_offset(format:Int, vertex_len:Int, index_len:Int, array_index:Int):Int
-    public mesh_surface_get_format_stride(format:Int, vertex_len:Int, index_len:Int):Int
-    public mesh_surface_get_index_array(mesh:Rid, surface:Int):PoolByteArray
-    public mesh_surface_get_material(mesh:Rid, surface:Int):Rid
-    public mesh_surface_get_primitive_type(mesh:Rid, surface:Int):Int
-    public mesh_surface_get_skeleton_aabb(mesh:Rid, surface:Int):Array
-    public mesh_surface_set_material(mesh:Rid, surface:Int, material:Rid):Void
-    public mesh_surface_update_region(mesh:Rid, surface:Int, offset:Int, data:PoolByteArray):Void
-    public multimesh_allocate(multimesh:Rid, instances:Int, transform_format:Int, color_format:Int, custom_data_format:Int):Void
-    public multimesh_get_aabb(multimesh:Rid):Aabb
-    public multimesh_get_instance_count(multimesh:Rid):Int
-    public multimesh_get_mesh(multimesh:Rid):Rid
-    public multimesh_get_visible_instances(multimesh:Rid):Int
-    public multimesh_instance_get_color(multimesh:Rid, index:Int):Color
-    public multimesh_instance_get_custom_data(multimesh:Rid, index:Int):Color
-    public multimesh_instance_get_transform(multimesh:Rid, index:Int):Transform
-    public multimesh_instance_get_transform_2d(multimesh:Rid, index:Int):Transform2D
-    public multimesh_instance_set_color(multimesh:Rid, index:Int, color:Color):Void
-    public multimesh_instance_set_custom_data(multimesh:Rid, index:Int, custom_data:Color):Void
-    public multimesh_instance_set_transform(multimesh:Rid, index:Int, transform:Transform):Void
-    public multimesh_instance_set_transform_2d(multimesh:Rid, index:Int, transform:Transform2D):Void
-    public multimesh_set_as_bulk_array(multimesh:Rid, array:PoolRealArray):Void
-    public multimesh_set_mesh(multimesh:Rid, mesh:Rid):Void
-    public multimesh_set_visible_instances(multimesh:Rid, visible:Int):Void
-    public omni_light_create():Rid
-    public particles_create():Rid
-    public particles_get_current_aabb(particles:Rid):Aabb
-    public particles_get_emitting(particles:Rid):Bool
-    public particles_restart(particles:Rid):Void
-    public particles_set_amount(particles:Rid, amount:Int):Void
-    public particles_set_custom_aabb(particles:Rid, aabb:Aabb):Void
-    public particles_set_draw_order(particles:Rid, order:Int):Void
-    public particles_set_draw_pass_mesh(particles:Rid, pass:Int, mesh:Rid):Void
-    public particles_set_draw_passes(particles:Rid, count:Int):Void
-    public particles_set_emission_transform(particles:Rid, transform:Transform):Void
-    public particles_set_emitting(particles:Rid, emitting:Bool):Void
-    public particles_set_explosiveness_ratio(particles:Rid, ratio:Float):Void
-    public particles_set_fixed_fps(particles:Rid, fps:Int):Void
-    public particles_set_fractional_delta(particles:Rid, enable:Bool):Void
-    public particles_set_lifetime(particles:Rid, lifetime:Float):Void
-    public particles_set_one_shot(particles:Rid, one_shot:Bool):Void
-    public particles_set_pre_process_time(particles:Rid, time:Float):Void
-    public particles_set_process_material(particles:Rid, material:Rid):Void
-    public particles_set_randomness_ratio(particles:Rid, ratio:Float):Void
-    public particles_set_speed_scale(particles:Rid, scale:Float):Void
-    public particles_set_use_local_coordinates(particles:Rid, enable:Bool):Void
-    public reflection_probe_create():Rid
-    public reflection_probe_set_as_interior(probe:Rid, enable:Bool):Void
-    public reflection_probe_set_cull_mask(probe:Rid, layers:Int):Void
-    public reflection_probe_set_enable_box_projection(probe:Rid, enable:Bool):Void
-    public reflection_probe_set_enable_shadows(probe:Rid, enable:Bool):Void
-    public reflection_probe_set_extents(probe:Rid, extents:Vector3):Void
-    public reflection_probe_set_intensity(probe:Rid, intensity:Float):Void
-    public reflection_probe_set_interior_ambient(probe:Rid, color:Color):Void
-    public reflection_probe_set_interior_ambient_energy(probe:Rid, energy:Float):Void
-    public reflection_probe_set_interior_ambient_probe_contribution(probe:Rid, contrib:Float):Void
-    public reflection_probe_set_max_distance(probe:Rid, distance:Float):Void
-    public reflection_probe_set_origin_offset(probe:Rid, offset:Vector3):Void
-    public reflection_probe_set_update_mode(probe:Rid, mode:Int):Void
-    public request_frame_drawn_callback(where:Object, method:String, userdata:Variant):Void
-    public scenario_create():Rid
-    public scenario_set_debug(scenario:Rid, debug_mode:Int):Void
-    public scenario_set_environment(scenario:Rid, environment:Rid):Void
-    public scenario_set_fallback_environment(scenario:Rid, environment:Rid):Void
-    public scenario_set_reflection_atlas_size(scenario:Rid, p_size:Int, subdiv:Int):Void
-    public set_boot_image(image:Image, color:Color, scale:Bool):Void
-    public set_debug_generate_wireframes(generate:Bool):Void
-    public set_default_clear_color(color:Color):Void
-    public shader_create():Rid
-    public shader_get_code(shader:Rid):String
-    public shader_get_default_texture_param(shader:Rid, name:String):Rid
-    public shader_get_param_list(shader:Rid):Array
-    public shader_set_code(shader:Rid, code:String):Void
-    public shader_set_default_texture_param(shader:Rid, name:String, texture:Rid):Void
-    public skeleton_allocate(skeleton:Rid, bones:Int, is_2d_skeleton:Bool):Void
-    public skeleton_bone_get_transform(skeleton:Rid, bone:Int):Transform
-    public skeleton_bone_get_transform_2d(skeleton:Rid, bone:Int):Transform2D
-    public skeleton_bone_set_transform(skeleton:Rid, bone:Int, transform:Transform):Void
-    public skeleton_bone_set_transform_2d(skeleton:Rid, bone:Int, transform:Transform2D):Void
-    public skeleton_create():Rid
-    public skeleton_get_bone_count(skeleton:Rid):Int
-    public sky_create():Rid
-    public sky_set_texture(sky:Rid, cube_map:Rid, radiance_size:Int):Void
-    public spot_light_create():Rid
-    public sync():Void
-    public texture_allocate(texture:Rid, width:Int, height:Int, format:Int, flags:Int):Void
-    public texture_create():Rid
-    public texture_create_from_image(image:Image, flags:Int):Rid
-    public texture_debug_usage():Array
-    public texture_get_data(texture:Rid, cube_side:Int):Image
-    public texture_get_flags(texture:Rid):Int
-    public texture_get_format(texture:Rid):Int
-    public texture_get_height(texture:Rid):Int
-    public texture_get_path(texture:Rid):String
-    public texture_get_texid(texture:Rid):Int
-    public texture_get_width(texture:Rid):Int
-    public texture_set_data(texture:Rid, image:Image, cube_side:Int):Void
-    public texture_set_data_partial(texture:Rid, image:Image, src_x:Int, src_y:Int, src_w:Int, src_h:Int, dst_x:Int, dst_y:Int, dst_mip:Int, cube_side:Int):Void
-    public texture_set_flags(texture:Rid, flags:Int):Void
-    public texture_set_path(texture:Rid, path:String):Void
-    public texture_set_shrink_all_x2_on_set_data(shrink:Bool):Void
-    public texture_set_size_override(texture:Rid, width:Int, height:Int):Void
-    public textures_keep_original(enable:Bool):Void
-    public viewport_attach_camera(viewport:Rid, camera:Rid):Void
-    public viewport_attach_canvas(viewport:Rid, canvas:Rid):Void
-    public viewport_attach_to_screen(viewport:Rid, rect:Rect2, screen:Int):Void
-    public viewport_create():Rid
-    public viewport_detach(viewport:Rid):Void
-    public viewport_get_render_info(viewport:Rid, info:Int):Int
-    public viewport_get_texture(viewport:Rid):Rid
-    public viewport_remove_canvas(viewport:Rid, canvas:Rid):Void
-    public viewport_set_active(viewport:Rid, active:Bool):Void
-    public viewport_set_canvas_layer(viewport:Rid, canvas:Rid, layer:Int):Void
-    public viewport_set_canvas_transform(viewport:Rid, canvas:Rid, offset:Transform2D):Void
-    public viewport_set_clear_mode(viewport:Rid, clear_mode:Int):Void
-    public viewport_set_debug_draw(viewport:Rid, draw:Int):Void
-    public viewport_set_disable_3d(viewport:Rid, disabled:Bool):Void
-    public viewport_set_disable_environment(viewport:Rid, disabled:Bool):Void
-    public viewport_set_global_canvas_transform(viewport:Rid, transform:Transform2D):Void
-    public viewport_set_hdr(viewport:Rid, enabled:Bool):Void
-    public viewport_set_hide_canvas(viewport:Rid, hidden:Bool):Void
-    public viewport_set_hide_scenario(viewport:Rid, hidden:Bool):Void
-    public viewport_set_msaa(viewport:Rid, msaa:Int):Void
-    public viewport_set_parent_viewport(viewport:Rid, parent_viewport:Rid):Void
-    public viewport_set_scenario(viewport:Rid, scenario:Rid):Void
-    public viewport_set_shadow_atlas_quadrant_subdivision(viewport:Rid, quadrant:Int, subdivision:Int):Void
-    public viewport_set_shadow_atlas_size(viewport:Rid, size:Int):Void
-    public viewport_set_size(viewport:Rid, width:Int, height:Int):Void
-    public viewport_set_transparent_background(viewport:Rid, enabled:Bool):Void
-    public viewport_set_update_mode(viewport:Rid, update_mode:Int):Void
-    public viewport_set_usage(viewport:Rid, usage:Int):Void
-    public viewport_set_use_arvr(viewport:Rid, use_arvr:Bool):Void
-    public viewport_set_vflip(viewport:Rid, enabled:Bool):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShader.hpp')
-@:native('VisualShader')
-@:unreflective
-@:structAccess
-extern class VisualShader extends Shader {
-    public add_node(type:Int, node:VisualShaderNode, position:Vector2, id:Int):Void
-    public can_connect_nodes(type:Int, from_node:Int, from_port:Int, to_node:Int, to_port:Int):Bool
-    public connect_nodes(type:Int, from_node:Int, from_port:Int, to_node:Int, to_port:Int):Int
-    public disconnect_nodes(type:Int, from_node:Int, from_port:Int, to_node:Int, to_port:Int):Void
-    public get_node(type:Int, id:Int):VisualShaderNode
-    public get_node_connections(type:Int):Array
-    public get_node_list(type:Int):PoolIntArray
-    public get_node_position(type:Int, id:Int):Vector2
-    public get_valid_node_id(type:Int):Int
-    public is_node_connection(type:Int, from_node:Int, from_port:Int, to_node:Int, to_port:Int):Bool
-    public remove_node(type:Int, id:Int):Void
-    public set_mode(mode:Int):Void
-    public set_node_position(type:Int, id:Int, position:Vector2):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNode.hpp')
-@:native('VisualShaderNode')
-@:unreflective
-@:structAccess
-extern class VisualShaderNode extends Resource {
-    public get_input_port_default_value(port:Int):Variant
-    public set_input_port_default_value(port:Int, value:Variant):Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeColorConstant.hpp')
-@:native('VisualShaderNodeColorConstant')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeColorConstant extends VisualShaderNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeColorOp.hpp')
-@:native('VisualShaderNodeColorOp')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeColorOp extends VisualShaderNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeColorUniform.hpp')
-@:native('VisualShaderNodeColorUniform')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeColorUniform extends VisualShaderNodeUniform {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeCubeMap.hpp')
-@:native('VisualShaderNodeCubeMap')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeCubeMap extends VisualShaderNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeCubeMapUniform.hpp')
-@:native('VisualShaderNodeCubeMapUniform')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeCubeMapUniform extends VisualShaderNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeDotProduct.hpp')
-@:native('VisualShaderNodeDotProduct')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeDotProduct extends VisualShaderNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeInput.hpp')
-@:native('VisualShaderNodeInput')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeInput extends VisualShaderNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeOutput.hpp')
-@:native('VisualShaderNodeOutput')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeOutput extends VisualShaderNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeScalarConstant.hpp')
-@:native('VisualShaderNodeScalarConstant')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeScalarConstant extends VisualShaderNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeScalarFunc.hpp')
-@:native('VisualShaderNodeScalarFunc')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeScalarFunc extends VisualShaderNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeScalarInterp.hpp')
-@:native('VisualShaderNodeScalarInterp')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeScalarInterp extends VisualShaderNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeScalarOp.hpp')
-@:native('VisualShaderNodeScalarOp')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeScalarOp extends VisualShaderNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeScalarUniform.hpp')
-@:native('VisualShaderNodeScalarUniform')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeScalarUniform extends VisualShaderNodeUniform {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeTexture.hpp')
-@:native('VisualShaderNodeTexture')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeTexture extends VisualShaderNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeTextureUniform.hpp')
-@:native('VisualShaderNodeTextureUniform')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeTextureUniform extends VisualShaderNodeUniform {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeTransformCompose.hpp')
-@:native('VisualShaderNodeTransformCompose')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeTransformCompose extends VisualShaderNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeTransformConstant.hpp')
-@:native('VisualShaderNodeTransformConstant')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeTransformConstant extends VisualShaderNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeTransformDecompose.hpp')
-@:native('VisualShaderNodeTransformDecompose')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeTransformDecompose extends VisualShaderNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeTransformMult.hpp')
-@:native('VisualShaderNodeTransformMult')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeTransformMult extends VisualShaderNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeTransformUniform.hpp')
-@:native('VisualShaderNodeTransformUniform')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeTransformUniform extends VisualShaderNodeUniform {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeTransformVecMult.hpp')
-@:native('VisualShaderNodeTransformVecMult')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeTransformVecMult extends VisualShaderNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeUniform.hpp')
-@:native('VisualShaderNodeUniform')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeUniform extends VisualShaderNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeVec3Constant.hpp')
-@:native('VisualShaderNodeVec3Constant')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeVec3Constant extends VisualShaderNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeVec3Uniform.hpp')
-@:native('VisualShaderNodeVec3Uniform')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeVec3Uniform extends VisualShaderNodeUniform {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeVectorCompose.hpp')
-@:native('VisualShaderNodeVectorCompose')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeVectorCompose extends VisualShaderNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeVectorDecompose.hpp')
-@:native('VisualShaderNodeVectorDecompose')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeVectorDecompose extends VisualShaderNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeVectorFunc.hpp')
-@:native('VisualShaderNodeVectorFunc')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeVectorFunc extends VisualShaderNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeVectorInterp.hpp')
-@:native('VisualShaderNodeVectorInterp')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeVectorInterp extends VisualShaderNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeVectorLen.hpp')
-@:native('VisualShaderNodeVectorLen')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeVectorLen extends VisualShaderNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VisualShaderNodeVectorOp.hpp')
-@:native('VisualShaderNodeVectorOp')
-@:unreflective
-@:structAccess
-extern class VisualShaderNodeVectorOp extends VisualShaderNode {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VScrollBar.hpp')
-@:native('VScrollBar')
-@:unreflective
-@:structAccess
-extern class VScrollBar extends ScrollBar {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VSeparator.hpp')
-@:native('VSeparator')
-@:unreflective
-@:structAccess
-extern class VSeparator extends Separator {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VSlider.hpp')
-@:native('VSlider')
-@:unreflective
-@:structAccess
-extern class VSlider extends Slider {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/VSplitContainer.hpp')
-@:native('VSplitContainer')
-@:unreflective
-@:structAccess
-extern class VSplitContainer extends SplitContainer {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/WeakRef.hpp')
-@:native('WeakRef')
-@:unreflective
-@:structAccess
-extern class WeakRef extends Reference {
-    public get_ref():Variant
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/WindowDialog.hpp')
-@:native('WindowDialog')
-@:unreflective
-@:structAccess
-extern class WindowDialog extends Popup {
-    public get_close_button():TextureButton
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/World.hpp')
-@:native('World')
-@:unreflective
-@:structAccess
-extern class World extends Resource {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/World2D.hpp')
-@:native('World2D')
-@:unreflective
-@:structAccess
-extern class World2D extends Resource {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/WorldEnvironment.hpp')
-@:native('WorldEnvironment')
-@:unreflective
-@:structAccess
-extern class WorldEnvironment extends Node {
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/XMLParser.hpp')
-@:native('XMLParser')
-@:unreflective
-@:structAccess
-extern class XMLParser extends Reference {
-    public get_attribute_count():Int
-    public get_attribute_name(idx:Int):String
-    public get_attribute_value(idx:Int):String
-    public get_current_line():Int
-    public get_named_attribute_value(name:String):String
-    public get_named_attribute_value_safe(name:String):String
-    public get_node_data():String
-    public get_node_name():String
-    public get_node_offset():Int
-    public get_node_type():Int
-    public has_attribute(name:String):Bool
-    public is_empty():Bool
-    public open(file:String):Int
-    public open_buffer(buffer:PoolByteArray):Int
-    public read():Int
-    public seek(position:Int):Int
-    public skip_section():Void
-
-}
-// ------------------version:3.1-----------------------------
-@:include('godot-cpp/include/gen/YSort.hpp')
-@:native('YSort')
-@:unreflective
-@:structAccess
-extern class YSort extends Node2D {
-
+class CSGPrimitive  extends CSGShape {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function set_invert_faces(invert_faces:Bool ):Void
+    public function is_inverting_faces():Bool
+    public function CSGPrimitive():Void
+    public function CSGPrimitive(arg0:cpp.Reference<Csgprimitive >):Void
+}
+class DirectionalLight  extends Light {
+    enum abstract ShadowMode(Int) {
+        SHADOW_PARALLEL_2_SPLITS = 1;
+        SHADOW_ORTHOGONAL = 0;
+        SHADOW_PARALLEL_4_SPLITS = 2;
+    }
+    enum abstract ShadowDepthRange(Int) {
+        SHADOW_DEPTH_RANGE_OPTIMIZED = 1;
+        SHADOW_DEPTH_RANGE_STABLE = 0;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Directionallight>
+    public function set_shadow_mode(mode:Int64_t ):Void
+    public function get_shadow_mode():Directionallightshadowmode
+    public function set_shadow_depth_range(mode:Int64_t ):Void
+    public function get_shadow_depth_range():Directionallightshadowdepthrange
+    public function set_blend_splits(enabled:Bool ):Void
+    public function is_blend_splits_enabled():Bool
+    public function DirectionalLight():Void
+    public function DirectionalLight(arg0:cpp.Reference<Directionallight >):Void
+}
+class VisualScriptMathConstant  extends VisualScriptNode {
+    enum abstract MathConstant(Int) {
+        MATH_CONSTANT_INF = 6;
+        MATH_CONSTANT_NAN = 7;
+        MATH_CONSTANT_PI = 1;
+        MATH_CONSTANT_HALF_PI = 2;
+        MATH_CONSTANT_ONE = 0;
+        MATH_CONSTANT_E = 4;
+        MATH_CONSTANT_TAU = 3;
+        MATH_CONSTANT_MAX = 8;
+        MATH_CONSTANT_SQRT2 = 5;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualscriptmathconstant>
+    public function set_math_constant(which:Int64_t ):Void
+    public function get_math_constant():Visualscriptmathconstantmathconstant
+    public function VisualScriptMathConstant():Void
+    public function VisualScriptMathConstant(arg0:cpp.Reference<Visualscriptmathconstant >):Void
+}
+class AudioEffectPitchShift  extends AudioEffect {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Audioeffectpitchshift>
+    public function set_pitch_scale(rate:Double ):Void
+    public function get_pitch_scale():Double
+    public function AudioEffectPitchShift():Void
+    public function AudioEffectPitchShift(arg0:cpp.Reference<Audioeffectpitchshift >):Void
+}
+class VisualScriptEditor  extends Object {
+    public function get_singleton():cpp.Star<Visualscripteditor>
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function add_custom_node(name:String , category:String , script:Ref<script> ):Void
+    public function remove_custom_node(name:String , category:String ):Void
+    public function VisualScriptEditor(arg0:cpp.Reference<Visualscripteditor >):Void
+}
+class SpatialMaterial  extends Material {
+    enum abstract EmissionOperator(Int) {
+        EMISSION_OP_MULTIPLY = 1;
+        EMISSION_OP_ADD = 0;
+    }
+    enum abstract DiffuseMode(Int) {
+        DIFFUSE_BURLEY = 0;
+        DIFFUSE_LAMBERT_WRAP = 2;
+        DIFFUSE_LAMBERT = 1;
+        DIFFUSE_OREN_NAYAR = 3;
+        DIFFUSE_TOON = 4;
+    }
+    enum abstract SpecularMode(Int) {
+        SPECULAR_BLINN = 1;
+        SPECULAR_TOON = 3;
+        SPECULAR_PHONG = 2;
+        SPECULAR_SCHLICK_GGX = 0;
+        SPECULAR_DISABLED = 4;
+    }
+    enum abstract Feature(Int) {
+        FEATURE_CLEARCOAT = 4;
+        FEATURE_REFRACTION = 10;
+        FEATURE_DEPTH_MAPPING = 7;
+        FEATURE_SUBSURACE_SCATTERING = 8;
+        FEATURE_MAX = 12;
+        FEATURE_DETAIL = 11;
+        FEATURE_RIM = 3;
+        FEATURE_ANISOTROPY = 5;
+        FEATURE_TRANSMISSION = 9;
+        FEATURE_NORMAL_MAPPING = 2;
+        FEATURE_TRANSPARENT = 0;
+        FEATURE_AMBIENT_OCCLUSION = 6;
+        FEATURE_EMISSION = 1;
+    }
+    enum abstract Flags(Int) {
+        FLAG_USE_VERTEX_LIGHTING = 1;
+        FLAG_UV2_USE_TRIPLANAR = 8;
+        FLAG_DISABLE_DEPTH_TEST = 2;
+        FLAG_USE_ALPHA_SCISSOR = 12;
+        FLAG_AO_ON_UV2 = 10;
+        FLAG_MAX = 17;
+        FLAG_ALBEDO_FROM_VERTEX_COLOR = 3;
+        FLAG_SRGB_VERTEX_COLOR = 4;
+        FLAG_USE_POINT_SIZE = 5;
+        FLAG_ENSURE_CORRECT_NORMALS = 15;
+        FLAG_DISABLE_AMBIENT_LIGHT = 16;
+        FLAG_TRIPLANAR_USE_WORLD = 9;
+        FLAG_UV1_USE_TRIPLANAR = 7;
+        FLAG_DONT_RECEIVE_SHADOWS = 14;
+        FLAG_FIXED_SIZE = 6;
+        FLAG_ALBEDO_TEXTURE_FORCE_SRGB = 13;
+        FLAG_EMISSION_ON_UV2 = 11;
+        FLAG_UNSHADED = 0;
+    }
+    enum abstract CullMode(Int) {
+        CULL_DISABLED = 2;
+        CULL_FRONT = 1;
+        CULL_BACK = 0;
+    }
+    enum abstract DetailUV(Int) {
+        DETAIL_UV_2 = 1;
+        DETAIL_UV_1 = 0;
+    }
+    enum abstract BillboardMode(Int) {
+        BILLBOARD_FIXED_Y = 2;
+        BILLBOARD_PARTICLES = 3;
+        BILLBOARD_DISABLED = 0;
+        BILLBOARD_ENABLED = 1;
+    }
+    enum abstract DepthDrawMode(Int) {
+        DEPTH_DRAW_OPAQUE_ONLY = 0;
+        DEPTH_DRAW_ALPHA_OPAQUE_PREPASS = 3;
+        DEPTH_DRAW_ALWAYS = 1;
+        DEPTH_DRAW_DISABLED = 2;
+    }
+    enum abstract TextureChannel(Int) {
+        TEXTURE_CHANNEL_ALPHA = 3;
+        TEXTURE_CHANNEL_GREEN = 1;
+        TEXTURE_CHANNEL_RED = 0;
+        TEXTURE_CHANNEL_BLUE = 2;
+        TEXTURE_CHANNEL_GRAYSCALE = 4;
+    }
+    enum abstract BlendMode(Int) {
+        BLEND_MODE_MUL = 3;
+        BLEND_MODE_SUB = 2;
+        BLEND_MODE_MIX = 0;
+        BLEND_MODE_ADD = 1;
+    }
+    enum abstract TextureParam(Int) {
+        TEXTURE_NORMAL = 4;
+        TEXTURE_DETAIL_MASK = 13;
+        TEXTURE_FLOWMAP = 7;
+        TEXTURE_EMISSION = 3;
+        TEXTURE_ALBEDO = 0;
+        TEXTURE_SUBSURFACE_SCATTERING = 10;
+        TEXTURE_CLEARCOAT = 6;
+        TEXTURE_RIM = 5;
+        TEXTURE_MAX = 16;
+        TEXTURE_DETAIL_NORMAL = 15;
+        TEXTURE_DETAIL_ALBEDO = 14;
+        TEXTURE_TRANSMISSION = 11;
+        TEXTURE_ROUGHNESS = 2;
+        TEXTURE_DEPTH = 9;
+        TEXTURE_REFRACTION = 12;
+        TEXTURE_METALLIC = 1;
+        TEXTURE_AMBIENT_OCCLUSION = 8;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Spatialmaterial>
+    public function set_albedo(albedo:Color ):Void
+    public function get_albedo():Color
+    public function set_specular(specular:Double ):Void
+    public function get_specular():Double
+    public function set_metallic(metallic:Double ):Void
+    public function get_metallic():Double
+    public function set_roughness(roughness:Double ):Void
+    public function get_roughness():Double
+    public function set_emission(emission:Color ):Void
+    public function get_emission():Color
+    public function set_emission_energy(emission_energy:Double ):Void
+    public function get_emission_energy():Double
+    public function set_normal_scale(normal_scale:Double ):Void
+    public function get_normal_scale():Double
+    public function set_rim(rim:Double ):Void
+    public function get_rim():Double
+    public function set_rim_tint(rim_tint:Double ):Void
+    public function get_rim_tint():Double
+    public function set_clearcoat(clearcoat:Double ):Void
+    public function get_clearcoat():Double
+    public function set_clearcoat_gloss(clearcoat_gloss:Double ):Void
+    public function get_clearcoat_gloss():Double
+    public function set_anisotropy(anisotropy:Double ):Void
+    public function get_anisotropy():Double
+    public function set_depth_scale(depth_scale:Double ):Void
+    public function get_depth_scale():Double
+    public function set_subsurface_scattering_strength(strength:Double ):Void
+    public function get_subsurface_scattering_strength():Double
+    public function set_transmission(transmission:Color ):Void
+    public function get_transmission():Color
+    public function set_refraction(refraction:Double ):Void
+    public function get_refraction():Double
+    public function set_line_width(line_width:Double ):Void
+    public function get_line_width():Double
+    public function set_point_size(point_size:Double ):Void
+    public function get_point_size():Double
+    public function set_detail_uv(detail_uv:Int64_t ):Void
+    public function get_detail_uv():Spatialmaterialdetailuv
+    public function set_blend_mode(blend_mode:Int64_t ):Void
+    public function get_blend_mode():Spatialmaterialblendmode
+    public function set_depth_draw_mode(depth_draw_mode:Int64_t ):Void
+    public function get_depth_draw_mode():Spatialmaterialdepthdrawmode
+    public function set_cull_mode(cull_mode:Int64_t ):Void
+    public function get_cull_mode():Spatialmaterialcullmode
+    public function set_diffuse_mode(diffuse_mode:Int64_t ):Void
+    public function get_diffuse_mode():Spatialmaterialdiffusemode
+    public function set_specular_mode(specular_mode:Int64_t ):Void
+    public function get_specular_mode():Spatialmaterialspecularmode
+    public function set_flag(flag:Int64_t , enable:Bool ):Void
+    public function get_flag(flag:Int64_t ):Bool
+    public function set_feature(feature:Int64_t , enable:Bool ):Void
+    public function get_feature(feature:Int64_t ):Bool
+    public function set_texture(param:Int64_t , texture:Ref<texture> ):Void
+    public function get_texture(param:Int64_t ):Ref<texture>
+    public function set_detail_blend_mode(detail_blend_mode:Int64_t ):Void
+    public function get_detail_blend_mode():Spatialmaterialblendmode
+    public function set_uv1_scale(scale:Vector3 ):Void
+    public function get_uv1_scale():Vector3
+    public function set_uv1_offset(offset:Vector3 ):Void
+    public function get_uv1_offset():Vector3
+    public function set_uv1_triplanar_blend_sharpness(sharpness:Double ):Void
+    public function get_uv1_triplanar_blend_sharpness():Double
+    public function set_uv2_scale(scale:Vector3 ):Void
+    public function get_uv2_scale():Vector3
+    public function set_uv2_offset(offset:Vector3 ):Void
+    public function get_uv2_offset():Vector3
+    public function set_uv2_triplanar_blend_sharpness(sharpness:Double ):Void
+    public function get_uv2_triplanar_blend_sharpness():Double
+    public function set_billboard_mode(mode:Int64_t ):Void
+    public function get_billboard_mode():Spatialmaterialbillboardmode
+    public function set_particles_anim_h_frames(frames:Int64_t ):Void
+    public function get_particles_anim_h_frames():Int64_t
+    public function set_particles_anim_v_frames(frames:Int64_t ):Void
+    public function get_particles_anim_v_frames():Int64_t
+    public function set_particles_anim_loop(frames:Int64_t ):Void
+    public function get_particles_anim_loop():Int64_t
+    public function set_depth_deep_parallax(enable:Bool ):Void
+    public function is_depth_deep_parallax_enabled():Bool
+    public function set_depth_deep_parallax_min_layers(layer:Int64_t ):Void
+    public function get_depth_deep_parallax_min_layers():Int64_t
+    public function set_depth_deep_parallax_max_layers(layer:Int64_t ):Void
+    public function get_depth_deep_parallax_max_layers():Int64_t
+    public function set_grow(amount:Double ):Void
+    public function get_grow():Double
+    public function set_emission_operator(_operator:Int64_t ):Void
+    public function get_emission_operator():Spatialmaterialemissionoperator
+    public function set_ao_light_affect(amount:Double ):Void
+    public function get_ao_light_affect():Double
+    public function set_alpha_scissor_threshold(threshold:Double ):Void
+    public function get_alpha_scissor_threshold():Double
+    public function set_grow_enabled(enable:Bool ):Void
+    public function is_grow_enabled():Bool
+    public function set_metallic_texture_channel(channel:Int64_t ):Void
+    public function get_metallic_texture_channel():Spatialmaterialtexturechannel
+    public function set_roughness_texture_channel(channel:Int64_t ):Void
+    public function get_roughness_texture_channel():Spatialmaterialtexturechannel
+    public function set_ao_texture_channel(channel:Int64_t ):Void
+    public function get_ao_texture_channel():Spatialmaterialtexturechannel
+    public function set_refraction_texture_channel(channel:Int64_t ):Void
+    public function get_refraction_texture_channel():Spatialmaterialtexturechannel
+    public function set_proximity_fade(enabled:Bool ):Void
+    public function is_proximity_fade_enabled():Bool
+    public function set_proximity_fade_distance(distance:Double ):Void
+    public function get_proximity_fade_distance():Double
+    public function set_distance_fade(enabled:Bool ):Void
+    public function is_distance_fade_enabled():Bool
+    public function set_distance_fade_max_distance(distance:Double ):Void
+    public function get_distance_fade_max_distance():Double
+    public function set_distance_fade_min_distance(distance:Double ):Void
+    public function get_distance_fade_min_distance():Double
+    public function SpatialMaterial():Void
+    public function SpatialMaterial(arg0:cpp.Reference<Spatialmaterial >):Void
+}
+class CollisionPolygon  extends Spatial {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Collisionpolygon>
+    public function set_depth(depth:Double ):Void
+    public function get_depth():Double
+    public function set_polygon(polygon:Poolvector2array ):Void
+    public function get_polygon():Poolvector2array
+    public function set_disabled(disabled:Bool ):Void
+    public function is_disabled():Bool
+    public function _is_editable_3d_polygon():Bool
+    public function CollisionPolygon():Void
+    public function CollisionPolygon(arg0:cpp.Reference<Collisionpolygon >):Void
+}
+class AnimationTree  extends Node {
+    enum abstract AnimationProcessMode(Int) {
+        ANIMATION_PROCESS_IDLE = 1;
+        ANIMATION_PROCESS_PHYSICS = 0;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Animationtree>
+    public function set_active(active:Bool ):Void
+    public function is_active():Bool
+    public function set_tree_root(root:Ref<animationnode> ):Void
+    public function get_tree_root():Ref<animationnode>
+    public function set_process_mode(mode:Int64_t ):Void
+    public function get_process_mode():Animationtreeanimationprocessmode
+    public function set_animation_player(root:Nodepath ):Void
+    public function get_animation_player():Nodepath
+    public function set_root_motion_track(path:Nodepath ):Void
+    public function get_root_motion_track():Nodepath
+    public function get_root_motion_transform():Transform
+    public function _node_removed(arg0:cpp.Star<Object >):Void
+    public function AnimationTree():Void
+    public function AnimationTree(arg0:cpp.Reference<Animationtree >):Void
+}
+class ARVRCamera  extends Camera {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Arvrcamera>
+    public function ARVRCamera():Void
+    public function ARVRCamera(arg0:cpp.Reference<Arvrcamera >):Void
+}
+class GDScript  extends Script {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Gdscript>
+    public function new_(__var_args:cpp.Reference<Array >):cpp.Star<Object>
+    public function get_as_byte_code():Poolbytearray
+    public function GDScript():Void
+    public function GDScript(arg0:cpp.Reference<Gdscript >):Void
+}
+class BulletPhysicsServer  extends PhysicsServer {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function BulletPhysicsServer(arg0:cpp.Reference<Bulletphysicsserver >):Void
+}
+class SphereShape  extends Shape {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Sphereshape>
+    public function set_radius(radius:Double ):Void
+    public function get_radius():Double
+    public function SphereShape():Void
+    public function SphereShape(arg0:cpp.Reference<Sphereshape >):Void
+}
+class AudioStreamSample  extends AudioStream {
+    enum abstract LoopMode(Int) {
+        LOOP_FORWARD = 1;
+        LOOP_PING_PONG = 2;
+        LOOP_DISABLED = 0;
+    }
+    enum abstract Format(Int) {
+        FORMAT_IMA_ADPCM = 2;
+        FORMAT_16_BITS = 1;
+        FORMAT_8_BITS = 0;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Audiostreamsample>
+    public function set_data(data:Poolbytearray ):Void
+    public function get_data():Poolbytearray
+    public function set_format(format:Int64_t ):Void
+    public function get_format():Audiostreamsampleformat
+    public function set_loop_mode(loop_mode:Int64_t ):Void
+    public function get_loop_mode():Audiostreamsampleloopmode
+    public function set_loop_begin(loop_begin:Int64_t ):Void
+    public function get_loop_begin():Int64_t
+    public function set_loop_end(loop_end:Int64_t ):Void
+    public function get_loop_end():Int64_t
+    public function set_mix_rate(mix_rate:Int64_t ):Void
+    public function get_mix_rate():Int64_t
+    public function set_stereo(stereo:Bool ):Void
+    public function is_stereo():Bool
+    public function AudioStreamSample():Void
+    public function AudioStreamSample(arg0:cpp.Reference<Audiostreamsample >):Void
+}
+class IP_Unix  extends IP {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function IP_Unix(arg0:cpp.Reference<Ip_unix >):Void
+}
+class ARVRInterfaceGDNative  extends ARVRInterface {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Arvrinterfacegdnative>
+    public function ARVRInterfaceGDNative():Void
+    public function ARVRInterfaceGDNative(arg0:cpp.Reference<Arvrinterfacegdnative >):Void
+}
+class VisualScriptCondition  extends VisualScriptNode {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualscriptcondition>
+    public function VisualScriptCondition():Void
+    public function VisualScriptCondition(arg0:cpp.Reference<Visualscriptcondition >):Void
+}
+class VisualShaderNodeVectorCompose  extends VisualShaderNode {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualshadernodevectorcompose>
+    public function VisualShaderNodeVectorCompose():Void
+    public function VisualShaderNodeVectorCompose(arg0:cpp.Reference<Visualshadernodevectorcompose >):Void
+}
+class ConcavePolygonShape  extends Shape {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Concavepolygonshape>
+    public function set_faces(faces:Poolvector3array ):Void
+    public function get_faces():Poolvector3array
+    public function ConcavePolygonShape():Void
+    public function ConcavePolygonShape(arg0:cpp.Reference<Concavepolygonshape >):Void
+}
+class SplitContainer  extends Container {
+    enum abstract DraggerVisibility(Int) {
+        DRAGGER_HIDDEN_COLLAPSED = 2;
+        DRAGGER_VISIBLE = 0;
+        DRAGGER_HIDDEN = 1;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _gui_input(arg0:Ref<inputevent> ):Void
+    public function set_split_offset(offset:Int64_t ):Void
+    public function get_split_offset():Int64_t
+    public function set_collapsed(collapsed:Bool ):Void
+    public function is_collapsed():Bool
+    public function set_dragger_visibility(mode:Int64_t ):Void
+    public function get_dragger_visibility():Splitcontainerdraggervisibility
+    public function SplitContainer():Void
+    public function SplitContainer(arg0:cpp.Reference<Splitcontainer >):Void
+}
+class VisualScriptNode  extends Resource {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function get_visual_script():Ref<visualscript>
+    public function set_default_input_value(port_idx:Int64_t , value:Variant ):Void
+    public function get_default_input_value(port_idx:Int64_t ):Variant
+    public function ports_changed_notify():Void
+    public function _set_default_input_values(values:Array ):Void
+    public function _get_default_input_values():Array
+    public function VisualScriptNode():Void
+    public function VisualScriptNode(arg0:cpp.Reference<Visualscriptnode >):Void
+}
+class AnimationNodeOutput  extends AnimationNode {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Animationnodeoutput>
+    public function AnimationNodeOutput():Void
+    public function AnimationNodeOutput(arg0:cpp.Reference<Animationnodeoutput >):Void
+}
+class YSort  extends Node2D {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Ysort>
+    public function set_sort_enabled(enabled:Bool ):Void
+    public function is_sort_enabled():Bool
+    public function YSort():Void
+    public function YSort(arg0:cpp.Reference<Ysort >):Void
+}
+class VisualScriptExpression  extends VisualScriptNode {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualscriptexpression>
+    public function VisualScriptExpression():Void
+    public function VisualScriptExpression(arg0:cpp.Reference<Visualscriptexpression >):Void
+}
+class ConeTwistJoint  extends Joint {
+    enum abstract Param(Int) {
+        PARAM_MAX = 5;
+        PARAM_SWING_SPAN = 0;
+        PARAM_TWIST_SPAN = 1;
+        PARAM_SOFTNESS = 3;
+        PARAM_RELAXATION = 4;
+        PARAM_BIAS = 2;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Conetwistjoint>
+    public function set_param(param:Int64_t , value:Double ):Void
+    public function get_param(param:Int64_t ):Double
+    public function _set_swing_span(swing_span:Double ):Void
+    public function _get_swing_span():Double
+    public function _set_twist_span(twist_span:Double ):Void
+    public function _get_twist_span():Double
+    public function ConeTwistJoint():Void
+    public function ConeTwistJoint(arg0:cpp.Reference<Conetwistjoint >):Void
+}
+class PinJoint2D  extends Joint2D {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Pinjoint2d>
+    public function set_softness(softness:Double ):Void
+    public function get_softness():Double
+    public function PinJoint2D():Void
+    public function PinJoint2D(arg0:cpp.Reference<Pinjoint2d >):Void
+}
+class CanvasItemMaterial  extends Material {
+    enum abstract LightMode(Int) {
+        LIGHT_MODE_NORMAL = 0;
+        LIGHT_MODE_UNSHADED = 1;
+        LIGHT_MODE_LIGHT_ONLY = 2;
+    }
+    enum abstract BlendMode(Int) {
+        BLEND_MODE_MUL = 3;
+        BLEND_MODE_SUB = 2;
+        BLEND_MODE_MIX = 0;
+        BLEND_MODE_PREMULT_ALPHA = 4;
+        BLEND_MODE_ADD = 1;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Canvasitemmaterial>
+    public function set_blend_mode(blend_mode:Int64_t ):Void
+    public function get_blend_mode():Canvasitemmaterialblendmode
+    public function set_light_mode(light_mode:Int64_t ):Void
+    public function get_light_mode():Canvasitemmateriallightmode
+    public function CanvasItemMaterial():Void
+    public function CanvasItemMaterial(arg0:cpp.Reference<Canvasitemmaterial >):Void
+}
+class PCKPacker  extends Reference {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Pckpacker>
+    public function pck_start(pck_name:String , alignment:Int64_t ):Error
+    public function add_file(pck_path:String , source_path:String ):Error
+    public function flush(verbose:Bool ):Error
+    public function PCKPacker():Void
+    public function PCKPacker(arg0:cpp.Reference<Pckpacker >):Void
+}
+class ButtonGroup  extends Resource {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Buttongroup>
+    public function get_pressed_button():cpp.Star<Basebutton>
+    public function ButtonGroup():Void
+    public function ButtonGroup(arg0:cpp.Reference<Buttongroup >):Void
+}
+class VisibilityNotifier2D  extends Node2D {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visibilitynotifier2d>
+    public function set_rect(rect:Rect2 ):Void
+    public function get_rect():Rect2
+    public function is_on_screen():Bool
+    public function VisibilityNotifier2D():Void
+    public function VisibilityNotifier2D(arg0:cpp.Reference<Visibilitynotifier2d >):Void
+}
+class CPUParticles  extends GeometryInstance {
+    enum abstract Flags(Int) {
+        FLAG_ALIGN_Y_TO_VELOCITY = 0;
+        FLAG_MAX = 4;
+        FLAG_ROTATE_Y = 1;
+    }
+    enum abstract EmissionShape(Int) {
+        EMISSION_SHAPE_POINTS = 3;
+        EMISSION_SHAPE_BOX = 2;
+        EMISSION_SHAPE_SPHERE = 1;
+        EMISSION_SHAPE_POINT = 0;
+        EMISSION_SHAPE_DIRECTED_POINTS = 4;
+    }
+    enum abstract Parameter(Int) {
+        PARAM_LINEAR_ACCEL = 2;
+        PARAM_DAMPING = 5;
+        PARAM_MAX = 11;
+        PARAM_RADIAL_ACCEL = 3;
+        PARAM_ANIM_OFFSET = 10;
+        PARAM_HUE_VARIATION = 8;
+        PARAM_ANGULAR_VELOCITY = 1;
+        PARAM_SCALE = 7;
+        PARAM_ANIM_SPEED = 9;
+        PARAM_INITIAL_LINEAR_VELOCITY = 0;
+        PARAM_ANGLE = 6;
+        PARAM_TANGENTIAL_ACCEL = 4;
+    }
+    enum abstract DrawOrder(Int) {
+        DRAW_ORDER_LIFETIME = 1;
+        DRAW_ORDER_INDEX = 0;
+        DRAW_ORDER_VIEW_DEPTH = 2;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Cpuparticles>
+    public function set_emitting(emitting:Bool ):Void
+    public function set_amount(amount:Int64_t ):Void
+    public function set_lifetime(secs:Double ):Void
+    public function set_one_shot(enable:Bool ):Void
+    public function set_pre_process_time(secs:Double ):Void
+    public function set_explosiveness_ratio(ratio:Double ):Void
+    public function set_randomness_ratio(ratio:Double ):Void
+    public function set_use_local_coordinates(enable:Bool ):Void
+    public function set_fixed_fps(fps:Int64_t ):Void
+    public function set_fractional_delta(enable:Bool ):Void
+    public function set_speed_scale(scale:Double ):Void
+    public function is_emitting():Bool
+    public function get_amount():Int64_t
+    public function get_lifetime():Double
+    public function get_one_shot():Bool
+    public function get_pre_process_time():Double
+    public function get_explosiveness_ratio():Double
+    public function get_randomness_ratio():Double
+    public function get_use_local_coordinates():Bool
+    public function get_fixed_fps():Int64_t
+    public function get_fractional_delta():Bool
+    public function get_speed_scale():Double
+    public function set_draw_order(order:Int64_t ):Void
+    public function get_draw_order():Cpuparticlesdraworder
+    public function set_mesh(mesh:Ref<mesh> ):Void
+    public function get_mesh():Ref<mesh>
+    public function restart():Void
+    public function set_spread(degrees:Double ):Void
+    public function get_spread():Double
+    public function set_flatness(amount:Double ):Void
+    public function get_flatness():Double
+    public function set_param(param:Int64_t , value:Double ):Void
+    public function get_param(param:Int64_t ):Double
+    public function set_param_randomness(param:Int64_t , randomness:Double ):Void
+    public function get_param_randomness(param:Int64_t ):Double
+    public function set_param_curve(param:Int64_t , curve:Ref<curve> ):Void
+    public function get_param_curve(param:Int64_t ):Ref<curve>
+    public function set_color(color:Color ):Void
+    public function get_color():Color
+    public function set_color_ramp(ramp:Ref<gradient> ):Void
+    public function get_color_ramp():Ref<gradient>
+    public function set_particle_flag(flag:Int64_t , enable:Bool ):Void
+    public function get_particle_flag(flag:Int64_t ):Bool
+    public function set_emission_shape(shape:Int64_t ):Void
+    public function get_emission_shape():Cpuparticlesemissionshape
+    public function set_emission_sphere_radius(radius:Double ):Void
+    public function get_emission_sphere_radius():Double
+    public function set_emission_box_extents(extents:Vector3 ):Void
+    public function get_emission_box_extents():Vector3
+    public function set_emission_points(array:Poolvector3array ):Void
+    public function get_emission_points():Poolvector3array
+    public function set_emission_normals(array:Poolvector3array ):Void
+    public function get_emission_normals():Poolvector3array
+    public function set_emission_colors(array:Poolcolorarray ):Void
+    public function get_emission_colors():Poolcolorarray
+    public function get_gravity():Vector3
+    public function set_gravity(accel_vec:Vector3 ):Void
+    public function convert_from_particles(particles:cpp.Star<Object >):Void
+    public function _update_render_thread():Void
+    public function CPUParticles():Void
+    public function CPUParticles(arg0:cpp.Reference<Cpuparticles >):Void
+}
+class ResourceImporterOGGVorbis  extends ResourceImporter {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function ResourceImporterOGGVorbis():Void
+    public function ResourceImporterOGGVorbis(arg0:cpp.Reference<Resourceimporteroggvorbis >):Void
+}
+class RID  {
+    public function get_rid():Int32_t
+    public function is_valid():Bool
+    public function RID():Void
+    public function RID(p:cpp.Star<Object>):Void
+    public function RID(arg0:cpp.Reference<Rid >):Void
+}
+class InputEventGesture  extends InputEventWithModifiers {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function set_position(position:Vector2 ):Void
+    public function get_position():Vector2
+    public function InputEventGesture():Void
+    public function InputEventGesture(arg0:cpp.Reference<Inputeventgesture >):Void
+}
+class CanvasLayer  extends Node {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Canvaslayer>
+    public function set_layer(layer:Int64_t ):Void
+    public function get_layer():Int64_t
+    public function set_transform(transform:Transform2d ):Void
+    public function get_transform():Transform2d
+    public function set_offset(offset:Vector2 ):Void
+    public function get_offset():Vector2
+    public function set_rotation(radians:Double ):Void
+    public function get_rotation():Double
+    public function set_rotation_degrees(degrees:Double ):Void
+    public function get_rotation_degrees():Double
+    public function set_scale(scale:Vector2 ):Void
+    public function get_scale():Vector2
+    public function set_custom_viewport(viewport:cpp.Star<Object >):Void
+    public function get_custom_viewport():cpp.Star<Node>
+    public function get_canvas():Rid
+    public function CanvasLayer():Void
+    public function CanvasLayer(arg0:cpp.Reference<Canvaslayer >):Void
+}
+class Node  extends Object {
+    enum abstract PauseMode(Int) {
+        PAUSE_MODE_STOP = 1;
+        PAUSE_MODE_PROCESS = 2;
+        PAUSE_MODE_INHERIT = 0;
+    }
+    enum abstract DuplicateFlags(Int) {
+        DUPLICATE_USE_INSTANCING = 8;
+        DUPLICATE_GROUPS = 2;
+        DUPLICATE_SCRIPTS = 4;
+        DUPLICATE_SIGNALS = 1;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Node>
+    public function _process(delta:Double ):Void
+    public function _physics_process(delta:Double ):Void
+    public function _enter_tree():Void
+    public function _exit_tree():Void
+    public function _ready():Void
+    public function _input(event:Ref<inputevent> ):Void
+    public function _unhandled_input(event:Ref<inputevent> ):Void
+    public function _unhandled_key_input(event:Ref<inputeventkey> ):Void
+    public function add_child_below_node(node:cpp.Star<Object >, child_node:cpp.Star<Object >, legible_unique_name:Bool ):Void
+    public function set_name(name:String ):Void
+    public function get_name():String
+    public function add_child(node:cpp.Star<Object >, legible_unique_name:Bool ):Void
+    public function remove_child(node:cpp.Star<Object >):Void
+    public function get_child_count():Int64_t
+    public function get_children():Array
+    public function get_child(idx:Int64_t ):cpp.Star<Node>
+    public function has_node(path:Nodepath ):Bool
+    public function get_node(path:Nodepath ):cpp.Star<Node>
+    public function get_parent():cpp.Star<Node>
+    public function find_node(mask:String , recursive:Bool , owned:Bool ):cpp.Star<Node>
+    public function has_node_and_resource(path:Nodepath ):Bool
+    public function get_node_and_resource(path:Nodepath ):Array
+    public function is_inside_tree():Bool
+    public function is_a_parent_of(node:cpp.Star<Object >):Bool
+    public function is_greater_than(node:cpp.Star<Object >):Bool
+    public function get_path():Nodepath
+    public function get_path_to(node:cpp.Star<Object >):Nodepath
+    public function add_to_group(group:String , persistent:Bool ):Void
+    public function remove_from_group(group:String ):Void
+    public function is_in_group(group:String ):Bool
+    public function move_child(child_node:cpp.Star<Object >, to_position:Int64_t ):Void
+    public function get_groups():Array
+    public function raise():Void
+    public function set_owner(owner:cpp.Star<Object >):Void
+    public function get_owner():cpp.Star<Node>
+    public function remove_and_skip():Void
+    public function get_index():Int64_t
+    public function print_tree():Void
+    public function print_tree_pretty():Void
+    public function set_filename(filename:String ):Void
+    public function get_filename():String
+    public function propagate_notification(what:Int64_t ):Void
+    public function propagate_call(method:String , args:Array , parent_first:Bool ):Void
+    public function set_physics_process(enable:Bool ):Void
+    public function get_physics_process_delta_time():Double
+    public function is_physics_processing():Bool
+    public function get_process_delta_time():Double
+    public function set_process(enable:Bool ):Void
+    public function set_process_priority(priority:Int64_t ):Void
+    public function is_processing():Bool
+    public function set_process_input(enable:Bool ):Void
+    public function is_processing_input():Bool
+    public function set_process_unhandled_input(enable:Bool ):Void
+    public function is_processing_unhandled_input():Bool
+    public function set_process_unhandled_key_input(enable:Bool ):Void
+    public function is_processing_unhandled_key_input():Bool
+    public function set_pause_mode(mode:Int64_t ):Void
+    public function get_pause_mode():Nodepausemode
+    public function can_process():Bool
+    public function print_stray_nodes():Void
+    public function get_position_in_parent():Int64_t
+    public function set_display_folded(fold:Bool ):Void
+    public function is_displayed_folded():Bool
+    public function set_process_internal(enable:Bool ):Void
+    public function is_processing_internal():Bool
+    public function set_physics_process_internal(enable:Bool ):Void
+    public function is_physics_processing_internal():Bool
+    public function get_tree():cpp.Star<Scenetree>
+    public function duplicate(flags:Int64_t ):cpp.Star<Node>
+    public function replace_by(node:cpp.Star<Object >, keep_data:Bool ):Void
+    public function set_scene_instance_load_placeholder(load_placeholder:Bool ):Void
+    public function get_scene_instance_load_placeholder():Bool
+    public function get_viewport():cpp.Star<Viewport>
+    public function queue_free():Void
+    public function request_ready():Void
+    public function set_network_master(id:Int64_t , recursive:Bool ):Void
+    public function get_network_master():Int64_t
+    public function is_network_master():Bool
+    public function get_multiplayer():Ref<multiplayerapi>
+    public function get_custom_multiplayer():Ref<multiplayerapi>
+    public function set_custom_multiplayer(api:Ref<multiplayerapi> ):Void
+    public function rpc_config(method:String , mode:Int64_t ):Void
+    public function rset_config(property:String , mode:Int64_t ):Void
+    public function _set_import_path(import_path:Nodepath ):Void
+    public function _get_import_path():Nodepath
+    public function rpc(method:String , __var_args:cpp.Reference<Array >):Variant
+    public function rpc_unreliable(method:String , __var_args:cpp.Reference<Array >):Variant
+    public function rpc_id(peer_id:Int64_t , method:String , __var_args:cpp.Reference<Array >):Variant
+    public function rpc_unreliable_id(peer_id:Int64_t , method:String , __var_args:cpp.Reference<Array >):Variant
+    public function rset(property:String , value:Variant ):Void
+    public function rset_id(peer_id:Int64_t , property:String , value:Variant ):Void
+    public function rset_unreliable(property:String , value:Variant ):Void
+    public function rset_unreliable_id(peer_id:Int64_t , property:String , value:Variant ):Void
+    public function create():Node
+    public function create(arg0:cpp.Reference<Node >):Node
+}
+class EditorFileSystem  extends Node {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function get_filesystem():cpp.Star<Editorfilesystemdirectory>
+    public function is_scanning():Bool
+    public function get_scanning_progress():Double
+    public function scan():Void
+    public function scan_sources():Void
+    public function update_file(path:String ):Void
+    public function get_filesystem_path(path:String ):cpp.Star<Editorfilesystemdirectory>
+    public function get_file_type(path:String ):String
+    public function update_script_classes():Void
+    public function EditorFileSystem():Void
+    public function EditorFileSystem(arg0:cpp.Reference<Editorfilesystem >):Void
+}
+class AudioEffectNotchFilter  extends AudioEffectFilter {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Audioeffectnotchfilter>
+    public function AudioEffectNotchFilter():Void
+    public function AudioEffectNotchFilter(arg0:cpp.Reference<Audioeffectnotchfilter >):Void
+}
+class MultiMeshInstance  extends GeometryInstance {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Multimeshinstance>
+    public function set_multimesh(multimesh:Ref<multimesh> ):Void
+    public function get_multimesh():Ref<multimesh>
+    public function MultiMeshInstance():Void
+    public function MultiMeshInstance(arg0:cpp.Reference<Multimeshinstance >):Void
+}
+class ScrollBar  extends Range {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _gui_input(arg0:Ref<inputevent> ):Void
+    public function set_custom_step(step:Double ):Void
+    public function get_custom_step():Double
+    public function _drag_slave_input(arg0:Ref<inputevent> ):Void
+    public function _drag_slave_exit():Void
+    public function ScrollBar():Void
+    public function ScrollBar(arg0:cpp.Reference<Scrollbar >):Void
+}
+class InputEventWithModifiers  extends InputEvent {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function set_alt(enable:Bool ):Void
+    public function get_alt():Bool
+    public function set_shift(enable:Bool ):Void
+    public function get_shift():Bool
+    public function set_control(enable:Bool ):Void
+    public function get_control():Bool
+    public function set_metakey(enable:Bool ):Void
+    public function get_metakey():Bool
+    public function set_command(enable:Bool ):Void
+    public function get_command():Bool
+    public function InputEventWithModifiers():Void
+    public function InputEventWithModifiers(arg0:cpp.Reference<Inputeventwithmodifiers >):Void
+}
+class PacketPeerUDP  extends PacketPeer {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Packetpeerudp>
+    public function listen(port:Int64_t , bind_address:String , recv_buf_size:Int64_t ):Error
+    public function close():Void
+    public function wait():Error
+    public function is_listening():Bool
+    public function get_packet_ip():String
+    public function get_packet_port():Int64_t
+    public function set_dest_address(host:String , port:Int64_t ):Error
+    public function PacketPeerUDP():Void
+    public function PacketPeerUDP(arg0:cpp.Reference<Packetpeerudp >):Void
+}
+class EditorSpatialGizmo  extends SpatialGizmo {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Editorspatialgizmo>
+    public function redraw():Void
+    public function get_handle_name(index:Int64_t ):String
+    public function get_handle_value(index:Int64_t ):Variant
+    public function set_handle(index:Int64_t , camera:cpp.Star<Camera >, point:Vector2 ):Void
+    public function commit_handle(index:Int64_t , restore:Variant , cancel:Bool ):Void
+    public function add_lines(lines:Poolvector3array , material:Ref<material> , billboard:Bool ):Void
+    public function add_mesh(mesh:Ref<arraymesh> , billboard:Bool , skeleton:Rid ):Void
+    public function add_collision_segments(segments:Poolvector3array ):Void
+    public function add_collision_triangles(triangles:Ref<trianglemesh> ):Void
+    public function add_unscaled_billboard(material:Ref<material> , default_scale:Double ):Void
+    public function add_handles(handles:Poolvector3array , billboard:Bool , secondary:Bool ):Void
+    public function set_spatial_node(node:cpp.Star<Object >):Void
+    public function clear():Void
+    public function EditorSpatialGizmo():Void
+    public function EditorSpatialGizmo(arg0:cpp.Reference<Editorspatialgizmo >):Void
+}
+class VisualShaderNodeTransformUniform  extends VisualShaderNodeUniform {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualshadernodetransformuniform>
+    public function VisualShaderNodeTransformUniform():Void
+    public function VisualShaderNodeTransformUniform(arg0:cpp.Reference<Visualshadernodetransformuniform >):Void
+}
+class UPNP  extends Reference {
+    enum abstract UPNPResult(Int) {
+        UPNP_RESULT_SAME_PORT_VALUES_REQUIRED = 14;
+        UPNP_RESULT_EXT_PORT_WILDCARD_NOT_PERMITTED = 7;
+        UPNP_RESULT_NO_DEVICES = 27;
+        UPNP_RESULT_PORT_MAPPING_NOT_FOUND = 2;
+        UPNP_RESULT_MEM_ALLOC_ERROR = 25;
+        UPNP_RESULT_NO_PORT_MAPS_AVAILABLE = 11;
+        UPNP_RESULT_CONFLICT_WITH_OTHER_MAPPING = 13;
+        UPNP_RESULT_SUCCESS = 0;
+        UPNP_RESULT_NOT_AUTHORIZED = 1;
+        UPNP_RESULT_INVALID_GATEWAY = 16;
+        UPNP_RESULT_NO_SUCH_ENTRY_IN_ARRAY = 4;
+        UPNP_RESULT_INT_PORT_WILDCARD_NOT_PERMITTED = 8;
+        UPNP_RESULT_INCONSISTENT_PARAMETERS = 3;
+        UPNP_RESULT_SOCKET_ERROR = 24;
+        UPNP_RESULT_CONFLICT_WITH_OTHER_MECHANISM = 12;
+        UPNP_RESULT_EXT_PORT_MUST_BE_WILDCARD = 10;
+        UPNP_RESULT_HTTP_ERROR = 23;
+        UPNP_RESULT_INVALID_ARGS = 20;
+        UPNP_RESULT_REMOTE_HOST_MUST_BE_WILDCARD = 9;
+        UPNP_RESULT_UNKNOWN_ERROR = 28;
+        UPNP_RESULT_INVALID_PORT = 17;
+        UPNP_RESULT_ACTION_FAILED = 5;
+        UPNP_RESULT_NO_GATEWAY = 26;
+        UPNP_RESULT_INVALID_RESPONSE = 21;
+        UPNP_RESULT_INVALID_PROTOCOL = 18;
+        UPNP_RESULT_SRC_IP_WILDCARD_NOT_PERMITTED = 6;
+        UPNP_RESULT_INVALID_DURATION = 19;
+        UPNP_RESULT_INVALID_PARAM = 22;
+        UPNP_RESULT_ONLY_PERMANENT_LEASE_SUPPORTED = 15;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Upnp>
+    public function get_device_count():Int64_t
+    public function get_device(index:Int64_t ):Ref<upnpdevice>
+    public function add_device(device:Ref<upnpdevice> ):Void
+    public function set_device(index:Int64_t , device:Ref<upnpdevice> ):Void
+    public function remove_device(index:Int64_t ):Void
+    public function clear_devices():Void
+    public function get_gateway():Ref<upnpdevice>
+    public function discover(timeout:Int64_t , ttl:Int64_t , device_filter:String ):Int64_t
+    public function query_external_address():String
+    public function add_port_mapping(port:Int64_t , port_internal:Int64_t , desc:String , proto:String , duration:Int64_t ):Int64_t
+    public function delete_port_mapping(port:Int64_t , proto:String ):Int64_t
+    public function set_discover_multicast_if(m_if:String ):Void
+    public function get_discover_multicast_if():String
+    public function set_discover_local_port(port:Int64_t ):Void
+    public function get_discover_local_port():Int64_t
+    public function set_discover_ipv6(ipv6:Bool ):Void
+    public function is_discover_ipv6():Bool
+    public function UPNP():Void
+    public function UPNP(arg0:cpp.Reference<Upnp >):Void
+}
+class TextureButton  extends BaseButton {
+    enum abstract StretchMode(Int) {
+        STRETCH_KEEP_ASPECT = 4;
+        STRETCH_TILE = 1;
+        STRETCH_KEEP = 2;
+        STRETCH_SCALE = 0;
+        STRETCH_KEEP_ASPECT_CENTERED = 5;
+        STRETCH_KEEP_CENTERED = 3;
+        STRETCH_KEEP_ASPECT_COVERED = 6;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Texturebutton>
+    public function set_normal_texture(texture:Ref<texture> ):Void
+    public function set_pressed_texture(texture:Ref<texture> ):Void
+    public function set_hover_texture(texture:Ref<texture> ):Void
+    public function set_disabled_texture(texture:Ref<texture> ):Void
+    public function set_focused_texture(texture:Ref<texture> ):Void
+    public function set_click_mask(mask:Ref<bitmap> ):Void
+    public function set_expand(p_expand:Bool ):Void
+    public function set_stretch_mode(p_mode:Int64_t ):Void
+    public function get_normal_texture():Ref<texture>
+    public function get_pressed_texture():Ref<texture>
+    public function get_hover_texture():Ref<texture>
+    public function get_disabled_texture():Ref<texture>
+    public function get_focused_texture():Ref<texture>
+    public function get_click_mask():Ref<bitmap>
+    public function get_expand():Bool
+    public function get_stretch_mode():Texturebuttonstretchmode
+    public function TextureButton():Void
+    public function TextureButton(arg0:cpp.Reference<Texturebutton >):Void
+}
+class NodePath  {
+    public function get_name(idx:Int ):String
+    public function get_name_count():Int
+    public function get_subname(idx:Int ):String
+    public function get_subname_count():Int
+    public function is_absolute():Bool
+    public function is_empty():Bool
+    public function NodePath():Void
+    public function NodePath(other:cpp.Reference<Nodepath >):Void
+    public function NodePath(from:cpp.Reference<String >):Void
+    public function NodePath(contents:cpp.Star<Char >):Void
+}
+class VisualScriptVariableGet  extends VisualScriptNode {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualscriptvariableget>
+    public function set_variable(name:String ):Void
+    public function get_variable():String
+    public function VisualScriptVariableGet():Void
+    public function VisualScriptVariableGet(arg0:cpp.Reference<Visualscriptvariableget >):Void
+}
+class Plane  {
+    public function set_normal(p_normal:cpp.Reference<Vector3 >):Void
+    public function get_normal():Vector3
+    public function normalize():Void
+    public function normalized():Plane
+    public function center():Vector3
+    public function get_any_point():Vector3
+    public function get_any_perpendicular_normal():Vector3
+    public function is_point_over(p_point:cpp.Reference<Vector3 >):Bool
+    public function distance_to(p_point:cpp.Reference<Vector3 >):Real_t
+    public function has_point(p_point:cpp.Reference<Vector3 >, _epsilon:Real_t):Bool
+    public function intersect_3(p_plane1:cpp.Reference<Plane >, p_plane2:cpp.Reference<Plane >, r_result:cpp.Star<Vector3>):Bool
+    public function intersects_ray(p_from:Vector3, p_dir:Vector3, p_intersection:cpp.Star<Vector3>):Bool
+    public function intersects_segment(p_begin:Vector3, p_end:Vector3, p_intersection:cpp.Star<Vector3>):Bool
+    public function project(p_point:cpp.Reference<Vector3 >):Vector3
+    public function is_almost_like(p_plane:cpp.Reference<Plane >):Bool
+    public function create():Plane
+    public function create(p_a:Real_t, p_b:Real_t, p_c:Real_t, p_d:Real_t):Plane
+    public function create(p_normal:cpp.Reference<Vector3 >, p_d:Real_t):Plane
+    public function create(p_point:cpp.Reference<Vector3 >, p_normal:cpp.Reference<Vector3 >):Plane
+    public function create(p_point1:cpp.Reference<Vector3 >, p_point2:cpp.Reference<Vector3 >, p_point3:cpp.Reference<Vector3 >, p_dir:Clockdirection):Plane
+    public function create(arg0:cpp.Reference<Plane >):Plane
+}
+class Vector3  {
+    enum abstract Axis(Int) {
+        AXIS_X = 0;
+        AXIS_Y = 1;
+        AXIS_Z = 2;
+    }
+    public function abs():Vector3
+    public function ceil():Vector3
+    public function cross(b:cpp.Reference<Vector3 >):Vector3
+    public function linear_interpolate(p_b:cpp.Reference<Vector3 >, p_t:Real_t):Vector3
+    public function cubic_interpolate(b:cpp.Reference<Vector3 >, pre_a:cpp.Reference<Vector3 >, post_b:cpp.Reference<Vector3 >, t:Real_t ):Vector3
+    public function length():Real_t
+    public function length_squared():Real_t
+    public function distance_squared_to(b:cpp.Reference<Vector3 >):Real_t
+    public function distance_to(b:cpp.Reference<Vector3 >):Real_t
+    public function dot(b:cpp.Reference<Vector3 >):Real_t
+    public function floor():Vector3
+    public function inverse():Vector3
+    public function max_axis():Int
+    public function min_axis():Int
+    public function normalize():Void
+    public function normalized():Vector3
+    public function reflect(by:cpp.Reference<Vector3 >):Vector3
+    public function rotated(axis:cpp.Reference<Vector3 >, phi:Real_t ):Vector3
+    public function rotate(p_axis:cpp.Reference<Vector3 >, p_phi:Real_t):Void
+    public function slide(by:cpp.Reference<Vector3 >):Vector3
+    public function snap(p_val:Real_t):Void
+    public function snapped(by:Float ):Vector3
+    public function create(x:Real_t, y:Real_t, z:Real_t):Vector3
+    public function create():Vector3
+    public function create(arg0:cpp.Reference<Vector3 >):Vector3
+}
+class CSGBox  extends CSGPrimitive {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Csgbox>
+    public function set_width(width:Double ):Void
+    public function get_width():Double
+    public function set_height(height:Double ):Void
+    public function get_height():Double
+    public function set_depth(depth:Double ):Void
+    public function get_depth():Double
+    public function set_material(material:Ref<material> ):Void
+    public function get_material():Ref<material>
+    public function CSGBox():Void
+    public function CSGBox(arg0:cpp.Reference<Csgbox >):Void
+}
+class Material  extends Resource {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function set_next_pass(next_pass:Ref<material> ):Void
+    public function get_next_pass():Ref<material>
+    public function set_render_priority(priority:Int64_t ):Void
+    public function get_render_priority():Int64_t
+    public function create():Material
+    public function create(arg0:cpp.Reference<Material >):Material
+}
+class Listener  extends Spatial {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Listener>
+    public function make_current():Void
+    public function clear_current():Void
+    public function is_current():Bool
+    public function get_listener_transform():Transform
+    public function create():Listener
+    public function create(arg0:cpp.Reference<Listener >):Listener
+}
+class ArrayMesh  extends Mesh {
+    enum abstract ArrayFormat(Int) {
+        ARRAY_FORMAT_INDEX = 256;
+        ARRAY_FORMAT_BONES = 64;
+        ARRAY_FORMAT_TANGENT = 4;
+        ARRAY_FORMAT_NORMAL = 2;
+        ARRAY_FORMAT_VERTEX = 1;
+        ARRAY_FORMAT_TEX_UV = 16;
+        ARRAY_FORMAT_TEX_UV2 = 32;
+        ARRAY_FORMAT_WEIGHTS = 128;
+        ARRAY_FORMAT_COLOR = 8;
+    }
+    enum abstract ArrayType(Int) {
+        ARRAY_WEIGHTS = 7;
+        ARRAY_NORMAL = 1;
+        ARRAY_TANGENT = 2;
+        ARRAY_TEX_UV2 = 5;
+        ARRAY_TEX_UV = 4;
+        ARRAY_MAX = 9;
+        ARRAY_COLOR = 3;
+        ARRAY_BONES = 6;
+        ARRAY_VERTEX = 0;
+        ARRAY_INDEX = 8;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Arraymesh>
+    public function add_blend_shape(name:String ):Void
+    public function get_blend_shape_count():Int64_t
+    public function get_blend_shape_name(index:Int64_t ):String
+    public function clear_blend_shapes():Void
+    public function set_blend_shape_mode(mode:Int64_t ):Void
+    public function get_blend_shape_mode():Meshblendshapemode
+    public function add_surface_from_arrays(primitive:Int64_t , arrays:Array , blend_shapes:Array , compress_flags:Int64_t ):Void
+    public function get_surface_count():Int64_t
+    public function surface_remove(surf_idx:Int64_t ):Void
+    public function surface_update_region(surf_idx:Int64_t , offset:Int64_t , data:Poolbytearray ):Void
+    public function surface_get_array_len(surf_idx:Int64_t ):Int64_t
+    public function surface_get_array_index_len(surf_idx:Int64_t ):Int64_t
+    public function surface_get_format(surf_idx:Int64_t ):Int64_t
+    public function surface_get_primitive_type(surf_idx:Int64_t ):Meshprimitivetype
+    public function surface_set_material(surf_idx:Int64_t , material:Ref<material> ):Void
+    public function surface_get_material(surf_idx:Int64_t ):Ref<material>
+    public function surface_set_name(surf_idx:Int64_t , name:String ):Void
+    public function surface_get_name(surf_idx:Int64_t ):String
+    public function surface_get_arrays(surf_idx:Int64_t ):Array
+    public function surface_get_blend_shape_arrays(surf_idx:Int64_t ):Array
+    public function center_geometry():Void
+    public function regen_normalmaps():Void
+    public function lightmap_unwrap(arg0:Transform , arg1:Double ):Error
+    public function set_custom_aabb(aabb:Aabb ):Void
+    public function get_custom_aabb():Aabb
+    public function ArrayMesh():Void
+    public function ArrayMesh(arg0:cpp.Reference<Arraymesh >):Void
+}
+class ParallaxBackground  extends CanvasLayer {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Parallaxbackground>
+    public function _camera_moved(arg0:Transform2d , arg1:Vector2 ):Void
+    public function set_scroll_offset(ofs:Vector2 ):Void
+    public function get_scroll_offset():Vector2
+    public function set_scroll_base_offset(ofs:Vector2 ):Void
+    public function get_scroll_base_offset():Vector2
+    public function set_scroll_base_scale(scale:Vector2 ):Void
+    public function get_scroll_base_scale():Vector2
+    public function set_limit_begin(ofs:Vector2 ):Void
+    public function get_limit_begin():Vector2
+    public function set_limit_end(ofs:Vector2 ):Void
+    public function get_limit_end():Vector2
+    public function set_ignore_camera_zoom(ignore:Bool ):Void
+    public function is_ignore_camera_zoom():Bool
+    public function ParallaxBackground():Void
+    public function ParallaxBackground(arg0:cpp.Reference<Parallaxbackground >):Void
+}
+class WeakRef  extends Reference {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Weakref>
+    public function get_ref():Variant
+    public function WeakRef():Void
+    public function WeakRef(arg0:cpp.Reference<Weakref >):Void
+}
+class StyleBoxFlat  extends StyleBox {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Styleboxflat>
+    public function set_bg_color(color:Color ):Void
+    public function get_bg_color():Color
+    public function set_border_color(color:Color ):Void
+    public function get_border_color():Color
+    public function set_border_width_all(width:Int64_t ):Void
+    public function get_border_width_min():Int64_t
+    public function set_border_width(margin:Int64_t , width:Int64_t ):Void
+    public function get_border_width(margin:Int64_t ):Int64_t
+    public function set_border_blend(blend:Bool ):Void
+    public function get_border_blend():Bool
+    public function set_corner_radius_individual(radius_top_left:Int64_t , radius_top_right:Int64_t , radius_bottom_right:Int64_t , radius_bottom_left:Int64_t ):Void
+    public function set_corner_radius_all(radius:Int64_t ):Void
+    public function set_corner_radius(corner:Int64_t , radius:Int64_t ):Void
+    public function get_corner_radius(corner:Int64_t ):Int64_t
+    public function set_expand_margin(margin:Int64_t , size:Double ):Void
+    public function set_expand_margin_all(size:Double ):Void
+    public function set_expand_margin_individual(size_left:Double , size_top:Double , size_right:Double , size_bottom:Double ):Void
+    public function get_expand_margin(margin:Int64_t ):Double
+    public function set_draw_center(draw_center:Bool ):Void
+    public function is_draw_center_enabled():Bool
+    public function set_shadow_color(color:Color ):Void
+    public function get_shadow_color():Color
+    public function set_shadow_size(size:Int64_t ):Void
+    public function get_shadow_size():Int64_t
+    public function set_anti_aliased(anti_aliased:Bool ):Void
+    public function is_anti_aliased():Bool
+    public function set_aa_size(size:Int64_t ):Void
+    public function get_aa_size():Int64_t
+    public function set_corner_detail(detail:Int64_t ):Void
+    public function get_corner_detail():Int64_t
+    public function StyleBoxFlat():Void
+    public function StyleBoxFlat(arg0:cpp.Reference<Styleboxflat >):Void
+}
+class CollisionObject2D  extends Node2D {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _input_event(viewport:cpp.Star<Object >, event:Ref<inputevent> , shape_idx:Int64_t ):Void
+    public function get_rid():Rid
+    public function set_pickable(enabled:Bool ):Void
+    public function is_pickable():Bool
+    public function create_shape_owner(owner:cpp.Star<Object >):Int64_t
+    public function remove_shape_owner(owner_id:Int64_t ):Void
+    public function get_shape_owners():Array
+    public function shape_owner_set_transform(owner_id:Int64_t , transform:Transform2d ):Void
+    public function shape_owner_get_transform(owner_id:Int64_t ):Transform2d
+    public function shape_owner_get_owner(owner_id:Int64_t ):cpp.Star<Object>
+    public function shape_owner_set_disabled(owner_id:Int64_t , disabled:Bool ):Void
+    public function is_shape_owner_disabled(owner_id:Int64_t ):Bool
+    public function shape_owner_set_one_way_collision(owner_id:Int64_t , enable:Bool ):Void
+    public function is_shape_owner_one_way_collision_enabled(owner_id:Int64_t ):Bool
+    public function shape_owner_add_shape(owner_id:Int64_t , shape:Ref<shape2d> ):Void
+    public function shape_owner_get_shape_count(owner_id:Int64_t ):Int64_t
+    public function shape_owner_get_shape(owner_id:Int64_t , shape_id:Int64_t ):Ref<shape2d>
+    public function shape_owner_get_shape_index(owner_id:Int64_t , shape_id:Int64_t ):Int64_t
+    public function shape_owner_remove_shape(owner_id:Int64_t , shape_id:Int64_t ):Void
+    public function shape_owner_clear_shapes(owner_id:Int64_t ):Void
+    public function shape_find_owner(shape_index:Int64_t ):Int64_t
+    public function CollisionObject2D():Void
+    public function CollisionObject2D(arg0:cpp.Reference<Collisionobject2d >):Void
+}
+class ImmediateGeometry  extends GeometryInstance {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Immediategeometry>
+    public function begin(primitive:Int64_t , texture:Ref<texture> ):Void
+    public function set_normal(normal:Vector3 ):Void
+    public function set_tangent(tangent:Plane ):Void
+    public function set_color(color:Color ):Void
+    public function set_uv(uv:Vector2 ):Void
+    public function set_uv2(uv:Vector2 ):Void
+    public function add_vertex(position:Vector3 ):Void
+    public function add_sphere(lats:Int64_t , lons:Int64_t , radius:Double , add_uv:Bool ):Void
+    public function end():Void
+    public function clear():Void
+    public function ImmediateGeometry():Void
+    public function ImmediateGeometry(arg0:cpp.Reference<Immediategeometry >):Void
+}
+class ScrollContainer  extends Container {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Scrollcontainer>
+    public function _scroll_moved(arg0:Double ):Void
+    public function _gui_input(arg0:Ref<inputevent> ):Void
+    public function set_enable_h_scroll(enable:Bool ):Void
+    public function is_h_scroll_enabled():Bool
+    public function set_enable_v_scroll(enable:Bool ):Void
+    public function is_v_scroll_enabled():Bool
+    public function _update_scrollbar_position():Void
+    public function set_h_scroll(value:Int64_t ):Void
+    public function get_h_scroll():Int64_t
+    public function set_v_scroll(value:Int64_t ):Void
+    public function get_v_scroll():Int64_t
+    public function set_deadzone(deadzone:Int64_t ):Void
+    public function get_deadzone():Int64_t
+    public function get_h_scrollbar():cpp.Star<Hscrollbar>
+    public function get_v_scrollbar():cpp.Star<Vscrollbar>
+    public function ScrollContainer():Void
+    public function ScrollContainer(arg0:cpp.Reference<Scrollcontainer >):Void
+}
+class ImageTexture  extends Texture {
+    enum abstract Storage(Int) {
+        STORAGE_COMPRESS_LOSSY = 1;
+        STORAGE_RAW = 0;
+        STORAGE_COMPRESS_LOSSLESS = 2;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Imagetexture>
+    public function create(width:Int64_t , height:Int64_t , format:Int64_t , flags:Int64_t ):Void
+    public function create_from_image(image:Ref<image> , flags:Int64_t ):Void
+    public function get_format():Imageformat
+    public function load(path:String ):Error
+    public function set_data(image:Ref<image> ):Void
+    public function set_storage(mode:Int64_t ):Void
+    public function get_storage():Imagetexturestorage
+    public function set_lossy_storage_quality(quality:Double ):Void
+    public function get_lossy_storage_quality():Double
+    public function set_size_override(size:Vector2 ):Void
+    public function _reload_hook(rid:Rid ):Void
+    public function ImageTexture():Void
+    public function ImageTexture(arg0:cpp.Reference<Imagetexture >):Void
+}
+class VisualScriptBasicTypeConstant  extends VisualScriptNode {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualscriptbasictypeconstant>
+    public function set_basic_type(name:Int64_t ):Void
+    public function get_basic_type():Varianttype
+    public function set_basic_type_constant(name:String ):Void
+    public function get_basic_type_constant():String
+    public function VisualScriptBasicTypeConstant():Void
+    public function VisualScriptBasicTypeConstant(arg0:cpp.Reference<Visualscriptbasictypeconstant >):Void
+}
+class MultiplayerPeerGDNative  extends NetworkedMultiplayerPeer {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Multiplayerpeergdnative>
+    public function MultiplayerPeerGDNative():Void
+    public function MultiplayerPeerGDNative(arg0:cpp.Reference<Multiplayerpeergdnative >):Void
+}
+class OptionButton  extends Button {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Optionbutton>
+    public function _selected(arg0:Int64_t ):Void
+    public function _focused(arg0:Int64_t ):Void
+    public function add_item(label:String , id:Int64_t ):Void
+    public function add_icon_item(texture:Ref<texture> , label:String , id:Int64_t ):Void
+    public function set_item_text(idx:Int64_t , text:String ):Void
+    public function set_item_icon(idx:Int64_t , texture:Ref<texture> ):Void
+    public function set_item_disabled(idx:Int64_t , disabled:Bool ):Void
+    public function set_item_id(idx:Int64_t , id:Int64_t ):Void
+    public function set_item_metadata(idx:Int64_t , metadata:Variant ):Void
+    public function get_item_text(idx:Int64_t ):String
+    public function get_item_icon(idx:Int64_t ):Ref<texture>
+    public function get_item_id(idx:Int64_t ):Int64_t
+    public function get_item_metadata(idx:Int64_t ):Variant
+    public function is_item_disabled(idx:Int64_t ):Bool
+    public function get_item_count():Int64_t
+    public function add_separator():Void
+    public function clear():Void
+    public function select(idx:Int64_t ):Void
+    public function get_selected():Int64_t
+    public function get_selected_id():Int64_t
+    public function get_selected_metadata():Variant
+    public function remove_item(idx:Int64_t ):Void
+    public function _select_int(arg0:Int64_t ):Void
+    public function get_popup():cpp.Star<Popupmenu>
+    public function _set_items(arg0:Array ):Void
+    public function _get_items():Array
+    public function OptionButton():Void
+    public function OptionButton(arg0:cpp.Reference<Optionbutton >):Void
+}
+class VisualScriptSelf  extends VisualScriptNode {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualscriptself>
+    public function VisualScriptSelf():Void
+    public function VisualScriptSelf(arg0:cpp.Reference<Visualscriptself >):Void
+}
+class NavigationPolygonInstance  extends Node2D {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Navigationpolygoninstance>
+    public function set_navigation_polygon(navpoly:Ref<navigationpolygon> ):Void
+    public function get_navigation_polygon():Ref<navigationpolygon>
+    public function set_enabled(enabled:Bool ):Void
+    public function is_enabled():Bool
+    public function _navpoly_changed():Void
+    public function NavigationPolygonInstance():Void
+    public function NavigationPolygonInstance(arg0:cpp.Reference<Navigationpolygoninstance >):Void
+}
+class LargeTexture  extends Texture {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Largetexture>
+    public function add_piece(ofs:Vector2 , texture:Ref<texture> ):Int64_t
+    public function set_piece_offset(idx:Int64_t , ofs:Vector2 ):Void
+    public function set_piece_texture(idx:Int64_t , texture:Ref<texture> ):Void
+    public function set_size(size:Vector2 ):Void
+    public function clear():Void
+    public function get_piece_count():Int64_t
+    public function get_piece_offset(idx:Int64_t ):Vector2
+    public function get_piece_texture(idx:Int64_t ):Ref<texture>
+    public function _set_data(data:Array ):Void
+    public function _get_data():Array
+    public function LargeTexture():Void
+    public function LargeTexture(arg0:cpp.Reference<Largetexture >):Void
+}
+class InstancePlaceholder  extends Node {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function get_stored_values(with_order:Bool ):Dictionary
+    public function create_instance(replace:Bool , custom_scene:Ref<packedscene> ):cpp.Star<Node>
+    public function replace_by_instance(custom_scene:Ref<packedscene> ):Void
+    public function get_instance_path():String
+    public function InstancePlaceholder():Void
+    public function InstancePlaceholder(arg0:cpp.Reference<Instanceplaceholder >):Void
+}
+class InputDefault  extends Input {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function InputDefault(arg0:cpp.Reference<Inputdefault >):Void
+}
+class SegmentShape2D  extends Shape2D {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Segmentshape2d>
+    public function set_a(a:Vector2 ):Void
+    public function get_a():Vector2
+    public function set_b(b:Vector2 ):Void
+    public function get_b():Vector2
+    public function SegmentShape2D():Void
+    public function SegmentShape2D(arg0:cpp.Reference<Segmentshape2d >):Void
+}
+class TextFile  extends Resource {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Textfile>
+    public function TextFile():Void
+    public function TextFile(arg0:cpp.Reference<Textfile >):Void
+}
+class Curve  extends Resource {
+    enum abstract TangentMode(Int) {
+        TANGENT_FREE = 0;
+        TANGENT_MODE_COUNT = 2;
+        TANGENT_LINEAR = 1;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Curve>
+    public function add_point(position:Vector2 , left_tangent:Double , right_tangent:Double , left_mode:Int64_t , right_mode:Int64_t ):Int64_t
+    public function remove_point(index:Int64_t ):Void
+    public function clear_points():Void
+    public function get_point_position(index:Int64_t ):Vector2
+    public function set_point_value(index:Int64_t , y:Double ):Void
+    public function set_point_offset(index:Int64_t , offset:Double ):Int64_t
+    public function interpolate(offset:Double ):Double
+    public function interpolate_baked(offset:Double ):Double
+    public function get_point_left_tangent(index:Int64_t ):Double
+    public function get_point_right_tangent(index:Int64_t ):Double
+    public function get_point_left_mode(index:Int64_t ):Curvetangentmode
+    public function get_point_right_mode(index:Int64_t ):Curvetangentmode
+    public function set_point_left_tangent(index:Int64_t , tangent:Double ):Void
+    public function set_point_right_tangent(index:Int64_t , tangent:Double ):Void
+    public function set_point_left_mode(index:Int64_t , mode:Int64_t ):Void
+    public function set_point_right_mode(index:Int64_t , mode:Int64_t ):Void
+    public function get_min_value():Double
+    public function set_min_value(min:Double ):Void
+    public function get_max_value():Double
+    public function set_max_value(max:Double ):Void
+    public function clean_dupes():Void
+    public function bake():Void
+    public function get_bake_resolution():Int64_t
+    public function set_bake_resolution(resolution:Int64_t ):Void
+    public function _get_data():Array
+    public function _set_data(data:Array ):Void
+    public function create():Curve
+    public function create(arg0:cpp.Reference<Curve >):Curve
+}
+class OccluderPolygon2D  extends Resource {
+    enum abstract CullMode(Int) {
+        CULL_DISABLED = 0;
+        CULL_CLOCKWISE = 1;
+        CULL_COUNTER_CLOCKWISE = 2;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Occluderpolygon2d>
+    public function set_closed(closed:Bool ):Void
+    public function is_closed():Bool
+    public function set_cull_mode(cull_mode:Int64_t ):Void
+    public function get_cull_mode():Occluderpolygon2dcullmode
+    public function set_polygon(polygon:Poolvector2array ):Void
+    public function get_polygon():Poolvector2array
+    public function OccluderPolygon2D():Void
+    public function OccluderPolygon2D(arg0:cpp.Reference<Occluderpolygon2d >):Void
+}
+class SphereMesh  extends PrimitiveMesh {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Spheremesh>
+    public function set_radius(radius:Double ):Void
+    public function get_radius():Double
+    public function set_height(height:Double ):Void
+    public function get_height():Double
+    public function set_radial_segments(radial_segments:Int64_t ):Void
+    public function get_radial_segments():Int64_t
+    public function set_rings(rings:Int64_t ):Void
+    public function get_rings():Int64_t
+    public function set_is_hemisphere(is_hemisphere:Bool ):Void
+    public function get_is_hemisphere():Bool
+    public function SphereMesh():Void
+    public function SphereMesh(arg0:cpp.Reference<Spheremesh >):Void
+}
+class CapsuleShape2D  extends Shape2D {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Capsuleshape2d>
+    public function set_radius(radius:Double ):Void
+    public function get_radius():Double
+    public function set_height(height:Double ):Void
+    public function get_height():Double
+    public function CapsuleShape2D():Void
+    public function CapsuleShape2D(arg0:cpp.Reference<Capsuleshape2d >):Void
+}
+class VisualShaderNodeColorOp  extends VisualShaderNode {
+    enum abstract Operator(Int) {
+        OP_DODGE = 5;
+        OP_SCREEN = 0;
+        OP_LIGHTEN = 3;
+        OP_DARKEN = 2;
+        OP_SOFT_LIGHT = 7;
+        OP_BURN = 6;
+        OP_OVERLAY = 4;
+        OP_HARD_LIGHT = 8;
+        OP_DIFFERENCE = 1;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualshadernodecolorop>
+    public function set_operator(op:Int64_t ):Void
+    public function get_operator():Visualshadernodecoloropoperator
+    public function VisualShaderNodeColorOp():Void
+    public function VisualShaderNodeColorOp(arg0:cpp.Reference<Visualshadernodecolorop >):Void
+}
+class Variant  {
+    enum abstract Type(Int) {
+        NIL = 0;
+        NODE_PATH = 15;
+        INT = 2;
+        OBJECT = 17;
+        VECTOR2 = 5;
+        COLOR = 14;
+        TRANSFORM = 13;
+        ARRAY = 19;
+        POOL_REAL_ARRAY = 22;
+        REAL = 3;
+        POOL_COLOR_ARRAY = 26;
+        BASIS = 12;
+        VARIANT_MAX = 27;
+        STRING = 4;
+        RECT3 = 11;
+        POOL_BYTE_ARRAY = 20;
+        POOL_STRING_ARRAY = 23;
+        POOL_VECTOR3_ARRAY = 25;
+        BOOL = 1;
+        RECT2 = 6;
+        TRANSFORM2D = 8;
+        PLANE = 9;
+        DICTIONARY = 18;
+        POOL_INT_ARRAY = 21;
+        VECTOR3 = 7;
+        _RID = 16;
+        POOL_VECTOR2_ARRAY = 24;
+        QUAT = 10;
+    }
+    enum abstract Operator(Int) {
+        OP_NEGATE = 10;
+        OP_MODULE = 12;
+        OP_SHIFT_LEFT = 14;
+        OP_BIT_OR = 17;
+        OP_SUBSTRACT = 7;
+        OP_DIVIDE = 9;
+        OP_XOR = 22;
+        OP_ADD = 6;
+        OP_MULTIPLY = 8;
+        OP_BIT_AND = 16;
+        OP_OR = 21;
+        OP_GREATER = 4;
+        OP_POSITIVE = 11;
+        OP_EQUAL = 0;
+        OP_NOT_EQUAL = 1;
+        OP_SHIFT_RIGHT = 15;
+        OP_NOT = 23;
+        OP_LESS = 2;
+        OP_GREATER_EQUAL = 5;
+        OP_STRING_CONCAT = 13;
+        OP_AND = 20;
+        OP_BIT_XOR = 18;
+        OP_LESS_EQUAL = 3;
+        OP_BIT_NEGATE = 19;
+        OP_MAX = 25;
+        OP_IN = 24;
+    }
+    public function get_type():Varianttype
+    public function call(method:cpp.Reference<String >, args:cpp.Star<Variant  *>, arg_count:Int ):Variant
+    public function has_method(method:cpp.Reference<String >):Bool
+    public function hash_compare(b:cpp.Reference<Variant >):Bool
+    public function booleanize():Bool
+    public function create():Variant
+    public function create(v:cpp.Reference<Variant >):Variant
+    public function create(p_bool:Bool):Variant
+    public function create(p_int:Int):Variant
+    public function create(p_int:Unsigned int):Variant
+    public function create(p_short:Short int):Variant
+    public function create(p_short:Short unsigned int):Variant
+    public function create(p_char:Signed char):Variant
+    public function create(p_char:Unsigned char):Variant
+    public function create(p_char:Int64_t):Variant
+    public function create(p_char:Uint64_t):Variant
+    public function create(p_float:Float):Variant
+    public function create(p_double:Double):Variant
+    public function create(p_string:cpp.Reference<String >):Variant
+    public function create(p_cstring:cpp.Star<Char  >):Variant
+    public function create(p_wstring:cpp.Star<Wchar_t >):Variant
+    public function create(p_vector2:cpp.Reference<Vector2 >):Variant
+    public function create(p_rect2:cpp.Reference<Rect2 >):Variant
+    public function create(p_vector3:cpp.Reference<Vector3 >):Variant
+    public function create(p_plane:cpp.Reference<Plane >):Variant
+    public function create(p_aabb:cpp.Reference<Aabb >):Variant
+    public function create(p_quat:cpp.Reference<Quat >):Variant
+    public function create(p_transform:cpp.Reference<Basis >):Variant
+    public function create(p_transform:cpp.Reference<Transform2d >):Variant
+    public function create(p_transform:cpp.Reference<Transform >):Variant
+    public function create(p_color:cpp.Reference<Color >):Variant
+    public function create(p_path:cpp.Reference<Nodepath >):Variant
+    public function create(p_rid:cpp.Reference<Rid >):Variant
+    public function create(p_object:cpp.Star<Object >):Variant
+    public function create(p_dictionary:cpp.Reference<Dictionary >):Variant
+    public function create(p_array:cpp.Reference<Array >):Variant
+    public function create(p_raw_array:cpp.Reference<Poolbytearray >):Variant
+    public function create(p_int_array:cpp.Reference<Poolintarray >):Variant
+    public function create(p_real_array:cpp.Reference<Poolrealarray >):Variant
+    public function create(p_string_array:cpp.Reference<Poolstringarray >):Variant
+    public function create(p_vector2_array:cpp.Reference<Poolvector2array >):Variant
+    public function create(p_vector3_array:cpp.Reference<Poolvector3array >):Variant
+    public function create(p_color_array:cpp.Reference<Poolcolorarray >):Variant
+}
+class VisualScriptSequence  extends VisualScriptNode {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualscriptsequence>
+    public function set_steps(steps:Int64_t ):Void
+    public function get_steps():Int64_t
+    public function VisualScriptSequence():Void
+    public function VisualScriptSequence(arg0:cpp.Reference<Visualscriptsequence >):Void
+}
+class HTTPRequest  extends Node {
+    enum abstract Result(Int) {
+        RESULT_CANT_CONNECT = 2;
+        RESULT_CONNECTION_ERROR = 4;
+        RESULT_SUCCESS = 0;
+        RESULT_CANT_RESOLVE = 3;
+        RESULT_NO_RESPONSE = 6;
+        RESULT_SSL_HANDSHAKE_ERROR = 5;
+        RESULT_REQUEST_FAILED = 8;
+        RESULT_DOWNLOAD_FILE_WRITE_ERROR = 10;
+        RESULT_DOWNLOAD_FILE_CANT_OPEN = 9;
+        RESULT_BODY_SIZE_LIMIT_EXCEEDED = 7;
+        RESULT_CHUNKED_BODY_SIZE_MISMATCH = 1;
+        RESULT_REDIRECT_LIMIT_REACHED = 11;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Httprequest>
+    public function request(url:String , custom_headers:Poolstringarray , ssl_validate_domain:Bool , method:Int64_t , request_data:String ):Error
+    public function cancel_request():Void
+    public function get_http_client_status():Httpclientstatus
+    public function set_use_threads(enable:Bool ):Void
+    public function is_using_threads():Bool
+    public function set_body_size_limit(bytes:Int64_t ):Void
+    public function get_body_size_limit():Int64_t
+    public function set_max_redirects(amount:Int64_t ):Void
+    public function get_max_redirects():Int64_t
+    public function set_download_file(path:String ):Void
+    public function get_download_file():String
+    public function get_downloaded_bytes():Int64_t
+    public function get_body_size():Int64_t
+    public function _redirect_request(arg0:String ):Void
+    public function _request_done(arg0:Int64_t , arg1:Int64_t , arg2:Poolstringarray , arg3:Poolbytearray ):Void
+    public function HTTPRequest():Void
+    public function HTTPRequest(arg0:cpp.Reference<Httprequest >):Void
+}
+class ConvexPolygonShape2D  extends Shape2D {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Convexpolygonshape2d>
+    public function set_point_cloud(point_cloud:Poolvector2array ):Void
+    public function set_points(points:Poolvector2array ):Void
+    public function get_points():Poolvector2array
+    public function ConvexPolygonShape2D():Void
+    public function ConvexPolygonShape2D(arg0:cpp.Reference<Convexpolygonshape2d >):Void
+}
+class AudioStreamPlayback  extends Reference {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function AudioStreamPlayback():Void
+    public function AudioStreamPlayback(arg0:cpp.Reference<Audiostreamplayback >):Void
+}
+class GraphNode  extends Container {
+    enum abstract Overlay(Int) {
+        OVERLAY_BREAKPOINT = 1;
+        OVERLAY_DISABLED = 0;
+        OVERLAY_POSITION = 2;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Graphnode>
+    public function set_title(title:String ):Void
+    public function get_title():String
+    public function _gui_input(arg0:Ref<inputevent> ):Void
+    public function set_slot(idx:Int64_t , enable_left:Bool , type_left:Int64_t , color_left:Color , enable_right:Bool , type_right:Int64_t , color_right:Color , custom_left:Ref<texture> , custom_right:Ref<texture> ):Void
+    public function clear_slot(idx:Int64_t ):Void
+    public function clear_all_slots():Void
+    public function is_slot_enabled_left(idx:Int64_t ):Bool
+    public function get_slot_type_left(idx:Int64_t ):Int64_t
+    public function get_slot_color_left(idx:Int64_t ):Color
+    public function is_slot_enabled_right(idx:Int64_t ):Bool
+    public function get_slot_type_right(idx:Int64_t ):Int64_t
+    public function get_slot_color_right(idx:Int64_t ):Color
+    public function set_offset(offset:Vector2 ):Void
+    public function get_offset():Vector2
+    public function set_comment(comment:Bool ):Void
+    public function is_comment():Bool
+    public function set_resizable(resizable:Bool ):Void
+    public function is_resizable():Bool
+    public function set_selected(selected:Bool ):Void
+    public function is_selected():Bool
+    public function get_connection_output_count():Int64_t
+    public function get_connection_input_count():Int64_t
+    public function get_connection_output_position(idx:Int64_t ):Vector2
+    public function get_connection_output_type(idx:Int64_t ):Int64_t
+    public function get_connection_output_color(idx:Int64_t ):Color
+    public function get_connection_input_position(idx:Int64_t ):Vector2
+    public function get_connection_input_type(idx:Int64_t ):Int64_t
+    public function get_connection_input_color(idx:Int64_t ):Color
+    public function set_show_close_button(show:Bool ):Void
+    public function is_close_button_visible():Bool
+    public function set_overlay(overlay:Int64_t ):Void
+    public function get_overlay():Graphnodeoverlay
+    public function GraphNode():Void
+    public function GraphNode(arg0:cpp.Reference<Graphnode >):Void
+}
+class CubeMesh  extends PrimitiveMesh {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Cubemesh>
+    public function set_size(size:Vector3 ):Void
+    public function get_size():Vector3
+    public function set_subdivide_width(subdivide:Int64_t ):Void
+    public function get_subdivide_width():Int64_t
+    public function set_subdivide_height(divisions:Int64_t ):Void
+    public function get_subdivide_height():Int64_t
+    public function set_subdivide_depth(divisions:Int64_t ):Void
+    public function get_subdivide_depth():Int64_t
+    public function CubeMesh():Void
+    public function CubeMesh(arg0:cpp.Reference<Cubemesh >):Void
+}
+class AudioStream  extends Resource {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function get_length():Double
+    public function AudioStream():Void
+    public function AudioStream(arg0:cpp.Reference<Audiostream >):Void
+}
+class PhysicsBody2D  extends CollisionObject2D {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function set_collision_layer(layer:Int64_t ):Void
+    public function get_collision_layer():Int64_t
+    public function set_collision_mask(mask:Int64_t ):Void
+    public function get_collision_mask():Int64_t
+    public function set_collision_mask_bit(bit:Int64_t , value:Bool ):Void
+    public function get_collision_mask_bit(bit:Int64_t ):Bool
+    public function set_collision_layer_bit(bit:Int64_t , value:Bool ):Void
+    public function get_collision_layer_bit(bit:Int64_t ):Bool
+    public function _set_layers(mask:Int64_t ):Void
+    public function _get_layers():Int64_t
+    public function add_collision_exception_with(body:cpp.Star<Object >):Void
+    public function remove_collision_exception_with(body:cpp.Star<Object >):Void
+    public function PhysicsBody2D():Void
+    public function PhysicsBody2D(arg0:cpp.Reference<Physicsbody2d >):Void
+}
+class PhysicsMaterial  extends Resource {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Physicsmaterial>
+    public function PhysicsMaterial():Void
+    public function PhysicsMaterial(arg0:cpp.Reference<Physicsmaterial >):Void
+}
+class AudioEffectReverb  extends AudioEffect {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Audioeffectreverb>
+    public function set_predelay_msec(msec:Double ):Void
+    public function get_predelay_msec():Double
+    public function set_predelay_feedback(feedback:Double ):Void
+    public function get_predelay_feedback():Double
+    public function set_room_size(size:Double ):Void
+    public function get_room_size():Double
+    public function set_damping(amount:Double ):Void
+    public function get_damping():Double
+    public function set_spread(amount:Double ):Void
+    public function get_spread():Double
+    public function set_dry(amount:Double ):Void
+    public function get_dry():Double
+    public function set_wet(amount:Double ):Void
+    public function get_wet():Double
+    public function set_hpf(amount:Double ):Void
+    public function get_hpf():Double
+    public function AudioEffectReverb():Void
+    public function AudioEffectReverb(arg0:cpp.Reference<Audioeffectreverb >):Void
+}
+class ConfigFile  extends Reference {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Configfile>
+    public function set_value(section:String , key:String , value:Variant ):Void
+    public function get_value(section:String , key:String , _default:Variant ):Variant
+    public function has_section(section:String ):Bool
+    public function has_section_key(section:String , key:String ):Bool
+    public function get_sections():Poolstringarray
+    public function get_section_keys(section:String ):Poolstringarray
+    public function erase_section(section:String ):Void
+    public function load(path:String ):Error
+    public function save(path:String ):Error
+    public function ConfigFile():Void
+    public function ConfigFile(arg0:cpp.Reference<Configfile >):Void
+}
+class CapsuleMesh  extends PrimitiveMesh {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Capsulemesh>
+    public function set_radius(radius:Double ):Void
+    public function get_radius():Double
+    public function set_mid_height(mid_height:Double ):Void
+    public function get_mid_height():Double
+    public function set_radial_segments(segments:Int64_t ):Void
+    public function get_radial_segments():Int64_t
+    public function set_rings(rings:Int64_t ):Void
+    public function get_rings():Int64_t
+    public function CapsuleMesh():Void
+    public function CapsuleMesh(arg0:cpp.Reference<Capsulemesh >):Void
+}
+class PrimitiveMesh  extends Mesh {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _update():Void
+    public function set_material(material:Ref<material> ):Void
+    public function get_material():Ref<material>
+    public function get_mesh_arrays():Array
+    public function set_custom_aabb(aabb:Aabb ):Void
+    public function get_custom_aabb():Aabb
+    public function set_flip_faces(flip_faces:Bool ):Void
+    public function get_flip_faces():Bool
+    public function PrimitiveMesh():Void
+    public function PrimitiveMesh(arg0:cpp.Reference<Primitivemesh >):Void
+}
+class VisualServer  extends Object {
+    enum abstract ReflectionProbeUpdateMode(Int) {
+        REFLECTION_PROBE_UPDATE_ONCE = 0;
+        REFLECTION_PROBE_UPDATE_ALWAYS = 1;
+    }
+    enum abstract LightDirectionalShadowDepthRangeMode(Int) {
+        LIGHT_DIRECTIONAL_SHADOW_DEPTH_RANGE_OPTIMIZED = 1;
+        LIGHT_DIRECTIONAL_SHADOW_DEPTH_RANGE_STABLE = 0;
+    }
+    enum abstract BlendShapeMode(Int) {
+        BLEND_SHAPE_MODE_RELATIVE = 1;
+        BLEND_SHAPE_MODE_NORMALIZED = 0;
+    }
+    enum abstract PrimitiveType(Int) {
+        PRIMITIVE_LINES = 1;
+        PRIMITIVE_LINE_STRIP = 2;
+        PRIMITIVE_TRIANGLE_FAN = 6;
+        PRIMITIVE_POINTS = 0;
+        PRIMITIVE_TRIANGLES = 4;
+        PRIMITIVE_MAX = 7;
+        PRIMITIVE_LINE_LOOP = 3;
+        PRIMITIVE_TRIANGLE_STRIP = 5;
+    }
+    enum abstract EnvironmentSSAOQuality(Int) {
+        ENV_SSAO_QUALITY_HIGH = 2;
+        ENV_SSAO_QUALITY_LOW = 0;
+        ENV_SSAO_QUALITY_MEDIUM = 1;
+    }
+    enum abstract EnvironmentDOFBlurQuality(Int) {
+        ENV_DOF_BLUR_QUALITY_HIGH = 2;
+        ENV_DOF_BLUR_QUALITY_LOW = 0;
+        ENV_DOF_BLUR_QUALITY_MEDIUM = 1;
+    }
+    enum abstract RenderInfo(Int) {
+        INFO_VERTICES_IN_FRAME = 1;
+        INFO_SURFACE_CHANGES_IN_FRAME = 4;
+        INFO_MATERIAL_CHANGES_IN_FRAME = 2;
+        INFO_VERTEX_MEM_USED = 9;
+        INFO_VIDEO_MEM_USED = 7;
+        INFO_TEXTURE_MEM_USED = 8;
+        INFO_USAGE_VIDEO_MEM_TOTAL = 6;
+        INFO_SHADER_CHANGES_IN_FRAME = 3;
+        INFO_OBJECTS_IN_FRAME = 0;
+        INFO_DRAW_CALLS_IN_FRAME = 5;
+    }
+    enum abstract NinePatchAxisMode(Int) {
+        NINE_PATCH_STRETCH = 0;
+        NINE_PATCH_TILE = 1;
+        NINE_PATCH_TILE_FIT = 2;
+    }
+    enum abstract ViewportRenderInfo(Int) {
+        VIEWPORT_RENDER_INFO_OBJECTS_IN_FRAME = 0;
+        VIEWPORT_RENDER_INFO_SHADER_CHANGES_IN_FRAME = 3;
+        VIEWPORT_RENDER_INFO_DRAW_CALLS_IN_FRAME = 5;
+        VIEWPORT_RENDER_INFO_SURFACE_CHANGES_IN_FRAME = 4;
+        VIEWPORT_RENDER_INFO_VERTICES_IN_FRAME = 1;
+        VIEWPORT_RENDER_INFO_MAX = 6;
+        VIEWPORT_RENDER_INFO_MATERIAL_CHANGES_IN_FRAME = 2;
+    }
+    enum abstract ViewportClearMode(Int) {
+        VIEWPORT_CLEAR_ALWAYS = 0;
+        VIEWPORT_CLEAR_ONLY_NEXT_FRAME = 2;
+        VIEWPORT_CLEAR_NEVER = 1;
+    }
+    enum abstract LightOmniShadowDetail(Int) {
+        LIGHT_OMNI_SHADOW_DETAIL_VERTICAL = 0;
+        LIGHT_OMNI_SHADOW_DETAIL_HORIZONTAL = 1;
+    }
+    enum abstract ShaderMode(Int) {
+        SHADER_CANVAS_ITEM = 1;
+        SHADER_MAX = 3;
+        SHADER_PARTICLES = 2;
+        SHADER_SPATIAL = 0;
+    }
+    enum abstract MultimeshTransformFormat(Int) {
+        MULTIMESH_TRANSFORM_2D = 0;
+        MULTIMESH_TRANSFORM_3D = 1;
+    }
+    enum abstract ShadowCastingSetting(Int) {
+        SHADOW_CASTING_SETTING_DOUBLE_SIDED = 2;
+        SHADOW_CASTING_SETTING_SHADOWS_ONLY = 3;
+        SHADOW_CASTING_SETTING_OFF = 0;
+        SHADOW_CASTING_SETTING_ON = 1;
+    }
+    enum abstract ViewportDebugDraw(Int) {
+        VIEWPORT_DEBUG_DRAW_OVERDRAW = 2;
+        VIEWPORT_DEBUG_DRAW_DISABLED = 0;
+        VIEWPORT_DEBUG_DRAW_UNSHADED = 1;
+        VIEWPORT_DEBUG_DRAW_WIREFRAME = 3;
+    }
+    enum abstract ViewportUsage(Int) {
+        VIEWPORT_USAGE_3D = 2;
+        VIEWPORT_USAGE_2D_NO_SAMPLING = 1;
+        VIEWPORT_USAGE_3D_NO_EFFECTS = 3;
+        VIEWPORT_USAGE_2D = 0;
+    }
+    enum abstract EnvironmentBG(Int) {
+        ENV_BG_CLEAR_COLOR = 0;
+        ENV_BG_COLOR_SKY = 3;
+        ENV_BG_COLOR = 1;
+        ENV_BG_SKY = 2;
+        ENV_BG_KEEP = 5;
+        ENV_BG_MAX = 6;
+        ENV_BG_CANVAS = 4;
+    }
+    enum abstract LightOmniShadowMode(Int) {
+        LIGHT_OMNI_SHADOW_DUAL_PARABOLOID = 0;
+        LIGHT_OMNI_SHADOW_CUBE = 1;
+    }
+    enum abstract TextureFlags(Int) {
+        TEXTURE_FLAG_CONVERT_TO_LINEAR = 16;
+        TEXTURE_FLAG_MIPMAPS = 1;
+        TEXTURE_FLAG_ANISOTROPIC_FILTER = 8;
+        TEXTURE_FLAG_MIRRORED_REPEAT = 32;
+        TEXTURE_FLAG_USED_FOR_STREAMING = 4096;
+        TEXTURE_FLAG_FILTER = 4;
+        TEXTURE_FLAG_CUBEMAP = 2048;
+        TEXTURE_FLAG_REPEAT = 2;
+        TEXTURE_FLAGS_DEFAULT = 7;
+    }
+    enum abstract Features(Int) {
+        FEATURE_MULTITHREADED = 1;
+        FEATURE_SHADERS = 0;
+    }
+    enum abstract InstanceType(Int) {
+        INSTANCE_MAX = 9;
+        INSTANCE_LIGHT = 5;
+        INSTANCE_MULTIMESH = 2;
+        INSTANCE_GEOMETRY_MASK = 30;
+        INSTANCE_LIGHTMAP_CAPTURE = 8;
+        INSTANCE_NONE = 0;
+        INSTANCE_MESH = 1;
+        INSTANCE_PARTICLES = 4;
+        INSTANCE_GI_PROBE = 7;
+        INSTANCE_REFLECTION_PROBE = 6;
+        INSTANCE_IMMEDIATE = 3;
+    }
+    enum abstract EnvironmentSSAOBlur(Int) {
+        ENV_SSAO_BLUR_DISABLED = 0;
+        ENV_SSAO_BLUR_1x1 = 1;
+        ENV_SSAO_BLUR_2x2 = 2;
+        ENV_SSAO_BLUR_3x3 = 3;
+    }
+    enum abstract EnvironmentToneMapper(Int) {
+        ENV_TONE_MAPPER_FILMIC = 2;
+        ENV_TONE_MAPPER_LINEAR = 0;
+        ENV_TONE_MAPPER_REINHARDT = 1;
+        ENV_TONE_MAPPER_ACES = 3;
+    }
+    enum abstract EnvironmentGlowBlendMode(Int) {
+        GLOW_BLEND_MODE_SCREEN = 1;
+        GLOW_BLEND_MODE_SOFTLIGHT = 2;
+        GLOW_BLEND_MODE_REPLACE = 3;
+        GLOW_BLEND_MODE_ADDITIVE = 0;
+    }
+    enum abstract MultimeshColorFormat(Int) {
+        MULTIMESH_COLOR_8BIT = 1;
+        MULTIMESH_COLOR_NONE = 0;
+        MULTIMESH_COLOR_FLOAT = 2;
+    }
+    enum abstract CanvasLightShadowFilter(Int) {
+        CANVAS_LIGHT_FILTER_PCF5 = 2;
+        CANVAS_LIGHT_FILTER_PCF9 = 4;
+        CANVAS_LIGHT_FILTER_NONE = 0;
+        CANVAS_LIGHT_FILTER_PCF3 = 1;
+        CANVAS_LIGHT_FILTER_PCF13 = 5;
+        CANVAS_LIGHT_FILTER_PCF7 = 3;
+    }
+    enum abstract ScenarioDebugMode(Int) {
+        SCENARIO_DEBUG_OVERDRAW = 2;
+        SCENARIO_DEBUG_SHADELESS = 3;
+        SCENARIO_DEBUG_DISABLED = 0;
+        SCENARIO_DEBUG_WIREFRAME = 1;
+    }
+    enum abstract ViewportUpdateMode(Int) {
+        VIEWPORT_UPDATE_DISABLED = 0;
+        VIEWPORT_UPDATE_ALWAYS = 3;
+        VIEWPORT_UPDATE_WHEN_VISIBLE = 2;
+        VIEWPORT_UPDATE_ONCE = 1;
+    }
+    enum abstract ArrayFormat(Int) {
+        ARRAY_FORMAT_INDEX = 256;
+        ARRAY_COMPRESS_COLOR = 4096;
+        ARRAY_COMPRESS_BONES = 32768;
+        ARRAY_FORMAT_BONES = 64;
+        ARRAY_COMPRESS_DEFAULT = 97280;
+        ARRAY_FORMAT_TANGENT = 4;
+        ARRAY_FORMAT_NORMAL = 2;
+        ARRAY_COMPRESS_VERTEX = 512;
+        ARRAY_FORMAT_VERTEX = 1;
+        ARRAY_FLAG_USE_16_BIT_BONES = 524288;
+        ARRAY_COMPRESS_INDEX = 131072;
+        ARRAY_FORMAT_TEX_UV = 16;
+        ARRAY_COMPRESS_TANGENT = 2048;
+        ARRAY_COMPRESS_TEX_UV = 8192;
+        ARRAY_COMPRESS_WEIGHTS = 65536;
+        ARRAY_FORMAT_TEX_UV2 = 32;
+        ARRAY_COMPRESS_TEX_UV2 = 16384;
+        ARRAY_COMPRESS_NORMAL = 1024;
+        ARRAY_FORMAT_WEIGHTS = 128;
+        ARRAY_FLAG_USE_2D_VERTICES = 262144;
+        ARRAY_FORMAT_COLOR = 8;
+    }
+    enum abstract ParticlesDrawOrder(Int) {
+        PARTICLES_DRAW_ORDER_INDEX = 0;
+        PARTICLES_DRAW_ORDER_LIFETIME = 1;
+        PARTICLES_DRAW_ORDER_VIEW_DEPTH = 2;
+    }
+    enum abstract CanvasLightMode(Int) {
+        CANVAS_LIGHT_MODE_SUB = 1;
+        CANVAS_LIGHT_MODE_MASK = 3;
+        CANVAS_LIGHT_MODE_ADD = 0;
+        CANVAS_LIGHT_MODE_MIX = 2;
+    }
+    enum abstract LightDirectionalShadowMode(Int) {
+        LIGHT_DIRECTIONAL_SHADOW_PARALLEL_4_SPLITS = 2;
+        LIGHT_DIRECTIONAL_SHADOW_ORTHOGONAL = 0;
+        LIGHT_DIRECTIONAL_SHADOW_PARALLEL_2_SPLITS = 1;
+    }
+    enum abstract LightParam(Int) {
+        LIGHT_PARAM_SHADOW_SPLIT_1_OFFSET = 9;
+        LIGHT_PARAM_CONTACT_SHADOW_SIZE = 7;
+        LIGHT_PARAM_SHADOW_NORMAL_BIAS = 12;
+        LIGHT_PARAM_ENERGY = 0;
+        LIGHT_PARAM_SHADOW_BIAS_SPLIT_SCALE = 14;
+        LIGHT_PARAM_SHADOW_SPLIT_3_OFFSET = 11;
+        LIGHT_PARAM_SHADOW_MAX_DISTANCE = 8;
+        LIGHT_PARAM_MAX = 15;
+        LIGHT_PARAM_SHADOW_BIAS = 13;
+        LIGHT_PARAM_SHADOW_SPLIT_2_OFFSET = 10;
+        LIGHT_PARAM_ATTENUATION = 4;
+        LIGHT_PARAM_SPOT_ANGLE = 5;
+        LIGHT_PARAM_RANGE = 3;
+        LIGHT_PARAM_SPOT_ATTENUATION = 6;
+        LIGHT_PARAM_SPECULAR = 2;
+    }
+    enum abstract ArrayType(Int) {
+        ARRAY_WEIGHTS = 7;
+        ARRAY_NORMAL = 1;
+        ARRAY_TANGENT = 2;
+        ARRAY_TEX_UV2 = 5;
+        ARRAY_TEX_UV = 4;
+        ARRAY_MAX = 9;
+        ARRAY_COLOR = 3;
+        ARRAY_BONES = 6;
+        ARRAY_VERTEX = 0;
+        ARRAY_INDEX = 8;
+    }
+    enum abstract CanvasOccluderPolygonCullMode(Int) {
+        CANVAS_OCCLUDER_POLYGON_CULL_CLOCKWISE = 1;
+        CANVAS_OCCLUDER_POLYGON_CULL_COUNTER_CLOCKWISE = 2;
+        CANVAS_OCCLUDER_POLYGON_CULL_DISABLED = 0;
+    }
+    enum abstract InstanceFlags(Int) {
+        INSTANCE_FLAG_USE_BAKED_LIGHT = 0;
+        INSTANCE_FLAG_MAX = 2;
+        INSTANCE_FLAG_REDRAW_FRAME_IF_VISIBLE = 1;
+    }
+    enum abstract ViewportMSAA(Int) {
+        VIEWPORT_MSAA_16X = 4;
+        VIEWPORT_MSAA_4X = 2;
+        VIEWPORT_MSAA_8X = 3;
+        VIEWPORT_MSAA_DISABLED = 0;
+        VIEWPORT_MSAA_2X = 1;
+    }
+    enum abstract LightType(Int) {
+        LIGHT_OMNI = 1;
+        LIGHT_DIRECTIONAL = 0;
+        LIGHT_SPOT = 2;
+    }
+    enum abstract CubeMapSide(Int) {
+        CUBEMAP_BACK = 5;
+        CUBEMAP_FRONT = 4;
+        CUBEMAP_BOTTOM = 2;
+        CUBEMAP_LEFT = 0;
+        CUBEMAP_RIGHT = 1;
+        CUBEMAP_TOP = 3;
+    }
+    public function get_singleton():cpp.Star<Visualserver>
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function force_sync():Void
+    public function force_draw(swap_buffers:Bool , frame_step:Double ):Void
+    public function sync():Void
+    public function draw(swap_buffers:Bool , frame_step:Double ):Void
+    public function texture_create():Rid
+    public function texture_create_from_image(image:Ref<image> , flags:Int64_t ):Rid
+    public function texture_allocate(texture:Rid , width:Int64_t , height:Int64_t , format:Int64_t , flags:Int64_t ):Void
+    public function texture_set_data(texture:Rid , image:Ref<image> , cube_side:Int64_t ):Void
+    public function texture_set_data_partial(texture:Rid , image:Ref<image> , src_x:Int64_t , src_y:Int64_t , src_w:Int64_t , src_h:Int64_t , dst_x:Int64_t , dst_y:Int64_t , dst_mip:Int64_t , cube_side:Int64_t ):Void
+    public function texture_get_data(texture:Rid , cube_side:Int64_t ):Ref<image>
+    public function texture_set_flags(texture:Rid , flags:Int64_t ):Void
+    public function texture_get_flags(texture:Rid ):Int64_t
+    public function texture_get_format(texture:Rid ):Imageformat
+    public function texture_get_texid(texture:Rid ):Int64_t
+    public function texture_get_width(texture:Rid ):Int64_t
+    public function texture_get_height(texture:Rid ):Int64_t
+    public function texture_set_size_override(texture:Rid , width:Int64_t , height:Int64_t ):Void
+    public function texture_set_path(texture:Rid , path:String ):Void
+    public function texture_get_path(texture:Rid ):String
+    public function texture_set_shrink_all_x2_on_set_data(shrink:Bool ):Void
+    public function texture_debug_usage():Array
+    public function textures_keep_original(enable:Bool ):Void
+    public function sky_create():Rid
+    public function sky_set_texture(sky:Rid , cube_map:Rid , radiance_size:Int64_t ):Void
+    public function shader_create():Rid
+    public function shader_set_code(shader:Rid , code:String ):Void
+    public function shader_get_code(shader:Rid ):String
+    public function shader_get_param_list(shader:Rid ):Array
+    public function shader_set_default_texture_param(shader:Rid , name:String , texture:Rid ):Void
+    public function shader_get_default_texture_param(shader:Rid , name:String ):Rid
+    public function material_create():Rid
+    public function material_set_shader(shader_material:Rid , shader:Rid ):Void
+    public function material_get_shader(shader_material:Rid ):Rid
+    public function material_set_param(material:Rid , parameter:String , value:Variant ):Void
+    public function material_get_param(material:Rid , parameter:String ):Variant
+    public function material_set_render_priority(material:Rid , priority:Int64_t ):Void
+    public function material_set_line_width(material:Rid , width:Double ):Void
+    public function material_set_next_pass(material:Rid , next_material:Rid ):Void
+    public function mesh_create():Rid
+    public function mesh_surface_get_format_offset(format:Int64_t , vertex_len:Int64_t , index_len:Int64_t , array_index:Int64_t ):Int64_t
+    public function mesh_surface_get_format_stride(format:Int64_t , vertex_len:Int64_t , index_len:Int64_t ):Int64_t
+    public function mesh_add_surface_from_arrays(mesh:Rid , primtive:Int64_t , arrays:Array , blend_shapes:Array , compress_format:Int64_t ):Void
+    public function mesh_set_blend_shape_count(mesh:Rid , amount:Int64_t ):Void
+    public function mesh_get_blend_shape_count(mesh:Rid ):Int64_t
+    public function mesh_set_blend_shape_mode(mesh:Rid , mode:Int64_t ):Void
+    public function mesh_get_blend_shape_mode(mesh:Rid ):Visualserverblendshapemode
+    public function mesh_surface_update_region(mesh:Rid , surface:Int64_t , offset:Int64_t , data:Poolbytearray ):Void
+    public function mesh_surface_set_material(mesh:Rid , surface:Int64_t , material:Rid ):Void
+    public function mesh_surface_get_material(mesh:Rid , surface:Int64_t ):Rid
+    public function mesh_surface_get_array_len(mesh:Rid , surface:Int64_t ):Int64_t
+    public function mesh_surface_get_array_index_len(mesh:Rid , surface:Int64_t ):Int64_t
+    public function mesh_surface_get_array(mesh:Rid , surface:Int64_t ):Poolbytearray
+    public function mesh_surface_get_index_array(mesh:Rid , surface:Int64_t ):Poolbytearray
+    public function mesh_surface_get_arrays(mesh:Rid , surface:Int64_t ):Array
+    public function mesh_surface_get_blend_shape_arrays(mesh:Rid , surface:Int64_t ):Array
+    public function mesh_surface_get_format(mesh:Rid , surface:Int64_t ):Int64_t
+    public function mesh_surface_get_primitive_type(mesh:Rid , surface:Int64_t ):Visualserverprimitivetype
+    public function mesh_surface_get_aabb(mesh:Rid , surface:Int64_t ):Aabb
+    public function mesh_surface_get_skeleton_aabb(mesh:Rid , surface:Int64_t ):Array
+    public function mesh_remove_surface(mesh:Rid , index:Int64_t ):Void
+    public function mesh_get_surface_count(mesh:Rid ):Int64_t
+    public function mesh_set_custom_aabb(mesh:Rid , aabb:Aabb ):Void
+    public function mesh_get_custom_aabb(mesh:Rid ):Aabb
+    public function mesh_clear(mesh:Rid ):Void
+    public function multimesh_allocate(multimesh:Rid , instances:Int64_t , transform_format:Int64_t , color_format:Int64_t , custom_data_format:Int64_t ):Void
+    public function multimesh_get_instance_count(multimesh:Rid ):Int64_t
+    public function multimesh_set_mesh(multimesh:Rid , mesh:Rid ):Void
+    public function multimesh_instance_set_transform(multimesh:Rid , index:Int64_t , transform:Transform ):Void
+    public function multimesh_instance_set_transform_2d(multimesh:Rid , index:Int64_t , transform:Transform2d ):Void
+    public function multimesh_instance_set_color(multimesh:Rid , index:Int64_t , color:Color ):Void
+    public function multimesh_instance_set_custom_data(multimesh:Rid , index:Int64_t , custom_data:Color ):Void
+    public function multimesh_get_mesh(multimesh:Rid ):Rid
+    public function multimesh_get_aabb(multimesh:Rid ):Aabb
+    public function multimesh_instance_get_transform(multimesh:Rid , index:Int64_t ):Transform
+    public function multimesh_instance_get_transform_2d(multimesh:Rid , index:Int64_t ):Transform2d
+    public function multimesh_instance_get_color(multimesh:Rid , index:Int64_t ):Color
+    public function multimesh_instance_get_custom_data(multimesh:Rid , index:Int64_t ):Color
+    public function multimesh_set_visible_instances(multimesh:Rid , visible:Int64_t ):Void
+    public function multimesh_get_visible_instances(multimesh:Rid ):Int64_t
+    public function multimesh_set_as_bulk_array(multimesh:Rid , array:Poolrealarray ):Void
+    public function immediate_create():Rid
+    public function immediate_begin(immediate:Rid , primitive:Int64_t , texture:Rid ):Void
+    public function immediate_vertex(immediate:Rid , vertex:Vector3 ):Void
+    public function immediate_vertex_2d(immediate:Rid , vertex:Vector2 ):Void
+    public function immediate_normal(immediate:Rid , normal:Vector3 ):Void
+    public function immediate_tangent(immediate:Rid , tangent:Plane ):Void
+    public function immediate_color(immediate:Rid , color:Color ):Void
+    public function immediate_uv(immediate:Rid , tex_uv:Vector2 ):Void
+    public function immediate_uv2(immediate:Rid , tex_uv:Vector2 ):Void
+    public function immediate_end(immediate:Rid ):Void
+    public function immediate_clear(immediate:Rid ):Void
+    public function immediate_set_material(immediate:Rid , material:Rid ):Void
+    public function immediate_get_material(immediate:Rid ):Rid
+    public function skeleton_create():Rid
+    public function skeleton_allocate(skeleton:Rid , bones:Int64_t , is_2d_skeleton:Bool ):Void
+    public function skeleton_get_bone_count(skeleton:Rid ):Int64_t
+    public function skeleton_bone_set_transform(skeleton:Rid , bone:Int64_t , transform:Transform ):Void
+    public function skeleton_bone_get_transform(skeleton:Rid , bone:Int64_t ):Transform
+    public function skeleton_bone_set_transform_2d(skeleton:Rid , bone:Int64_t , transform:Transform2d ):Void
+    public function skeleton_bone_get_transform_2d(skeleton:Rid , bone:Int64_t ):Transform2d
+    public function directional_light_create():Rid
+    public function omni_light_create():Rid
+    public function spot_light_create():Rid
+    public function light_set_color(light:Rid , color:Color ):Void
+    public function light_set_param(light:Rid , param:Int64_t , value:Double ):Void
+    public function light_set_shadow(light:Rid , enabled:Bool ):Void
+    public function light_set_shadow_color(light:Rid , color:Color ):Void
+    public function light_set_projector(light:Rid , texture:Rid ):Void
+    public function light_set_negative(light:Rid , enable:Bool ):Void
+    public function light_set_cull_mask(light:Rid , mask:Int64_t ):Void
+    public function light_set_reverse_cull_face_mode(light:Rid , enabled:Bool ):Void
+    public function light_omni_set_shadow_mode(light:Rid , mode:Int64_t ):Void
+    public function light_omni_set_shadow_detail(light:Rid , detail:Int64_t ):Void
+    public function light_directional_set_shadow_mode(light:Rid , mode:Int64_t ):Void
+    public function light_directional_set_blend_splits(light:Rid , enable:Bool ):Void
+    public function light_directional_set_shadow_depth_range_mode(light:Rid , range_mode:Int64_t ):Void
+    public function reflection_probe_create():Rid
+    public function reflection_probe_set_update_mode(probe:Rid , mode:Int64_t ):Void
+    public function reflection_probe_set_intensity(probe:Rid , intensity:Double ):Void
+    public function reflection_probe_set_interior_ambient(probe:Rid , color:Color ):Void
+    public function reflection_probe_set_interior_ambient_energy(probe:Rid , energy:Double ):Void
+    public function reflection_probe_set_interior_ambient_probe_contribution(probe:Rid , contrib:Double ):Void
+    public function reflection_probe_set_max_distance(probe:Rid , distance:Double ):Void
+    public function reflection_probe_set_extents(probe:Rid , extents:Vector3 ):Void
+    public function reflection_probe_set_origin_offset(probe:Rid , offset:Vector3 ):Void
+    public function reflection_probe_set_as_interior(probe:Rid , enable:Bool ):Void
+    public function reflection_probe_set_enable_box_projection(probe:Rid , enable:Bool ):Void
+    public function reflection_probe_set_enable_shadows(probe:Rid , enable:Bool ):Void
+    public function reflection_probe_set_cull_mask(probe:Rid , layers:Int64_t ):Void
+    public function gi_probe_create():Rid
+    public function gi_probe_set_bounds(probe:Rid , bounds:Aabb ):Void
+    public function gi_probe_get_bounds(probe:Rid ):Aabb
+    public function gi_probe_set_cell_size(probe:Rid , range:Double ):Void
+    public function gi_probe_get_cell_size(probe:Rid ):Double
+    public function gi_probe_set_to_cell_xform(xform:Rid , arg1:Transform ):Void
+    public function gi_probe_get_to_cell_xform(arg0:Rid ):Transform
+    public function gi_probe_set_dynamic_data(data:Rid , arg1:Poolintarray ):Void
+    public function gi_probe_get_dynamic_data(arg0:Rid ):Poolintarray
+    public function gi_probe_set_dynamic_range(range:Rid , arg1:Int64_t ):Void
+    public function gi_probe_get_dynamic_range(arg0:Rid ):Int64_t
+    public function gi_probe_set_energy(energy:Rid , arg1:Double ):Void
+    public function gi_probe_get_energy(arg0:Rid ):Double
+    public function gi_probe_set_bias(bias:Rid , arg1:Double ):Void
+    public function gi_probe_get_bias(arg0:Rid ):Double
+    public function gi_probe_set_normal_bias(bias:Rid , arg1:Double ):Void
+    public function gi_probe_get_normal_bias(arg0:Rid ):Double
+    public function gi_probe_set_propagation(propagation:Rid , arg1:Double ):Void
+    public function gi_probe_get_propagation(arg0:Rid ):Double
+    public function gi_probe_set_interior(enable:Rid , arg1:Bool ):Void
+    public function gi_probe_is_interior(arg0:Rid ):Bool
+    public function gi_probe_set_compress(enable:Rid , arg1:Bool ):Void
+    public function gi_probe_is_compressed(arg0:Rid ):Bool
+    public function lightmap_capture_create():Rid
+    public function lightmap_capture_set_bounds(capture:Rid , bounds:Aabb ):Void
+    public function lightmap_capture_get_bounds(capture:Rid ):Aabb
+    public function lightmap_capture_set_octree(capture:Rid , octree:Poolbytearray ):Void
+    public function lightmap_capture_set_octree_cell_transform(capture:Rid , xform:Transform ):Void
+    public function lightmap_capture_get_octree_cell_transform(capture:Rid ):Transform
+    public function lightmap_capture_set_octree_cell_subdiv(capture:Rid , subdiv:Int64_t ):Void
+    public function lightmap_capture_get_octree_cell_subdiv(capture:Rid ):Int64_t
+    public function lightmap_capture_get_octree(capture:Rid ):Poolbytearray
+    public function lightmap_capture_set_energy(capture:Rid , energy:Double ):Void
+    public function lightmap_capture_get_energy(capture:Rid ):Double
+    public function particles_create():Rid
+    public function particles_set_emitting(particles:Rid , emitting:Bool ):Void
+    public function particles_get_emitting(particles:Rid ):Bool
+    public function particles_set_amount(particles:Rid , amount:Int64_t ):Void
+    public function particles_set_lifetime(particles:Rid , lifetime:Double ):Void
+    public function particles_set_one_shot(particles:Rid , one_shot:Bool ):Void
+    public function particles_set_pre_process_time(particles:Rid , time:Double ):Void
+    public function particles_set_explosiveness_ratio(particles:Rid , ratio:Double ):Void
+    public function particles_set_randomness_ratio(particles:Rid , ratio:Double ):Void
+    public function particles_set_custom_aabb(particles:Rid , aabb:Aabb ):Void
+    public function particles_set_speed_scale(particles:Rid , scale:Double ):Void
+    public function particles_set_use_local_coordinates(particles:Rid , enable:Bool ):Void
+    public function particles_set_process_material(particles:Rid , material:Rid ):Void
+    public function particles_set_fixed_fps(particles:Rid , fps:Int64_t ):Void
+    public function particles_set_fractional_delta(particles:Rid , enable:Bool ):Void
+    public function particles_restart(particles:Rid ):Void
+    public function particles_set_draw_order(particles:Rid , order:Int64_t ):Void
+    public function particles_set_draw_passes(particles:Rid , count:Int64_t ):Void
+    public function particles_set_draw_pass_mesh(particles:Rid , pass:Int64_t , mesh:Rid ):Void
+    public function particles_get_current_aabb(particles:Rid ):Aabb
+    public function particles_set_emission_transform(particles:Rid , transform:Transform ):Void
+    public function camera_create():Rid
+    public function camera_set_perspective(camera:Rid , fovy_degrees:Double , z_near:Double , z_far:Double ):Void
+    public function camera_set_orthogonal(camera:Rid , size:Double , z_near:Double , z_far:Double ):Void
+    public function camera_set_transform(camera:Rid , transform:Transform ):Void
+    public function camera_set_cull_mask(camera:Rid , layers:Int64_t ):Void
+    public function camera_set_environment(camera:Rid , env:Rid ):Void
+    public function camera_set_use_vertical_aspect(camera:Rid , enable:Bool ):Void
+    public function viewport_create():Rid
+    public function viewport_set_use_arvr(viewport:Rid , use_arvr:Bool ):Void
+    public function viewport_set_size(viewport:Rid , width:Int64_t , height:Int64_t ):Void
+    public function viewport_set_active(viewport:Rid , active:Bool ):Void
+    public function viewport_set_parent_viewport(viewport:Rid , parent_viewport:Rid ):Void
+    public function viewport_attach_to_screen(viewport:Rid , rect:Rect2 , screen:Int64_t ):Void
+    public function viewport_detach(viewport:Rid ):Void
+    public function viewport_set_update_mode(viewport:Rid , update_mode:Int64_t ):Void
+    public function viewport_set_vflip(viewport:Rid , enabled:Bool ):Void
+    public function viewport_set_clear_mode(viewport:Rid , clear_mode:Int64_t ):Void
+    public function viewport_get_texture(viewport:Rid ):Rid
+    public function viewport_set_hide_scenario(viewport:Rid , hidden:Bool ):Void
+    public function viewport_set_hide_canvas(viewport:Rid , hidden:Bool ):Void
+    public function viewport_set_disable_environment(viewport:Rid , disabled:Bool ):Void
+    public function viewport_set_disable_3d(viewport:Rid , disabled:Bool ):Void
+    public function viewport_attach_camera(viewport:Rid , camera:Rid ):Void
+    public function viewport_set_scenario(viewport:Rid , scenario:Rid ):Void
+    public function viewport_attach_canvas(viewport:Rid , canvas:Rid ):Void
+    public function viewport_remove_canvas(viewport:Rid , canvas:Rid ):Void
+    public function viewport_set_canvas_transform(viewport:Rid , canvas:Rid , offset:Transform2d ):Void
+    public function viewport_set_transparent_background(viewport:Rid , enabled:Bool ):Void
+    public function viewport_set_global_canvas_transform(viewport:Rid , transform:Transform2d ):Void
+    public function viewport_set_canvas_layer(viewport:Rid , canvas:Rid , layer:Int64_t ):Void
+    public function viewport_set_shadow_atlas_size(viewport:Rid , size:Int64_t ):Void
+    public function viewport_set_shadow_atlas_quadrant_subdivision(viewport:Rid , quadrant:Int64_t , subdivision:Int64_t ):Void
+    public function viewport_set_msaa(viewport:Rid , msaa:Int64_t ):Void
+    public function viewport_set_hdr(viewport:Rid , enabled:Bool ):Void
+    public function viewport_set_usage(viewport:Rid , usage:Int64_t ):Void
+    public function viewport_get_render_info(viewport:Rid , info:Int64_t ):Int64_t
+    public function viewport_set_debug_draw(viewport:Rid , draw:Int64_t ):Void
+    public function environment_create():Rid
+    public function environment_set_background(env:Rid , bg:Int64_t ):Void
+    public function environment_set_sky(env:Rid , sky:Rid ):Void
+    public function environment_set_sky_custom_fov(env:Rid , scale:Double ):Void
+    public function environment_set_bg_color(env:Rid , color:Color ):Void
+    public function environment_set_bg_energy(env:Rid , energy:Double ):Void
+    public function environment_set_canvas_max_layer(env:Rid , max_layer:Int64_t ):Void
+    public function environment_set_ambient_light(env:Rid , color:Color , energy:Double , sky_contibution:Double ):Void
+    public function environment_set_dof_blur_near(env:Rid , enable:Bool , distance:Double , transition:Double , far_amount:Double , quality:Int64_t ):Void
+    public function environment_set_dof_blur_far(env:Rid , enable:Bool , distance:Double , transition:Double , far_amount:Double , quality:Int64_t ):Void
+    public function environment_set_glow(env:Rid , enable:Bool , level_flags:Int64_t , intensity:Double , strength:Double , bloom_threshold:Double , blend_mode:Int64_t , hdr_bleed_threshold:Double , hdr_bleed_scale:Double , bicubic_upscale:Bool ):Void
+    public function environment_set_tonemap(env:Rid , tone_mapper:Int64_t , exposure:Double , white:Double , auto_exposure:Bool , min_luminance:Double , max_luminance:Double , auto_exp_speed:Double , auto_exp_grey:Double ):Void
+    public function environment_set_adjustment(env:Rid , enable:Bool , brightness:Double , contrast:Double , saturation:Double , ramp:Rid ):Void
+    public function environment_set_ssr(env:Rid , enable:Bool , max_steps:Int64_t , fade_in:Double , fade_out:Double , depth_tolerance:Double , roughness:Bool ):Void
+    public function environment_set_ssao(env:Rid , enable:Bool , radius:Double , intensity:Double , radius2:Double , intensity2:Double , bias:Double , light_affect:Double , color:Double , quality:Color , blur:Int64_t , bilateral_sharpness:Int64_t , arg12:Double ):Void
+    public function environment_set_fog(env:Rid , enable:Bool , color:Color , sun_color:Color , sun_amount:Double ):Void
+    public function environment_set_fog_depth(env:Rid , enable:Bool , depth_begin:Double , depth_curve:Double , transmit:Bool , transmit_curve:Double ):Void
+    public function environment_set_fog_height(env:Rid , enable:Bool , min_height:Double , max_height:Double , height_curve:Double ):Void
+    public function scenario_create():Rid
+    public function scenario_set_debug(scenario:Rid , debug_mode:Int64_t ):Void
+    public function scenario_set_environment(scenario:Rid , environment:Rid ):Void
+    public function scenario_set_reflection_atlas_size(scenario:Rid , p_size:Int64_t , subdiv:Int64_t ):Void
+    public function scenario_set_fallback_environment(scenario:Rid , environment:Rid ):Void
+    public function instance_create2(base:Rid , scenario:Rid ):Rid
+    public function instance_create():Rid
+    public function instance_set_base(instance:Rid , base:Rid ):Void
+    public function instance_set_scenario(instance:Rid , scenario:Rid ):Void
+    public function instance_set_layer_mask(instance:Rid , mask:Int64_t ):Void
+    public function instance_set_transform(instance:Rid , transform:Transform ):Void
+    public function instance_attach_object_instance_id(instance:Rid , id:Int64_t ):Void
+    public function instance_set_blend_shape_weight(instance:Rid , shape:Int64_t , weight:Double ):Void
+    public function instance_set_surface_material(instance:Rid , surface:Int64_t , material:Rid ):Void
+    public function instance_set_visible(instance:Rid , visible:Bool ):Void
+    public function instance_set_use_lightmap(instance:Rid , lightmap_instance:Rid , lightmap:Rid ):Void
+    public function instance_set_custom_aabb(instance:Rid , aabb:Aabb ):Void
+    public function instance_attach_skeleton(instance:Rid , skeleton:Rid ):Void
+    public function instance_set_exterior(instance:Rid , enabled:Bool ):Void
+    public function instance_set_extra_visibility_margin(instance:Rid , margin:Double ):Void
+    public function instance_geometry_set_flag(instance:Rid , flag:Int64_t , enabled:Bool ):Void
+    public function instance_geometry_set_cast_shadows_setting(instance:Rid , shadow_casting_setting:Int64_t ):Void
+    public function instance_geometry_set_material_override(instance:Rid , material:Rid ):Void
+    public function instance_geometry_set_draw_range(instance:Rid , min:Double , max:Double , min_margin:Double , max_margin:Double ):Void
+    public function instance_geometry_set_as_instance_lod(instance:Rid , as_lod_of_instance:Rid ):Void
+    public function instances_cull_aabb(aabb:Aabb , scenario:Rid ):Array
+    public function instances_cull_ray(from:Vector3 , to:Vector3 , scenario:Rid ):Array
+    public function instances_cull_convex(convex:Array , scenario:Rid ):Array
+    public function canvas_create():Rid
+    public function canvas_set_item_mirroring(canvas:Rid , item:Rid , mirroring:Vector2 ):Void
+    public function canvas_set_modulate(canvas:Rid , color:Color ):Void
+    public function canvas_item_create():Rid
+    public function canvas_item_set_parent(item:Rid , parent:Rid ):Void
+    public function canvas_item_set_visible(item:Rid , visible:Bool ):Void
+    public function canvas_item_set_light_mask(item:Rid , mask:Int64_t ):Void
+    public function canvas_item_set_transform(item:Rid , transform:Transform2d ):Void
+    public function canvas_item_set_clip(item:Rid , clip:Bool ):Void
+    public function canvas_item_set_distance_field_mode(item:Rid , enabled:Bool ):Void
+    public function canvas_item_set_custom_rect(item:Rid , use_custom_rect:Bool , rect:Rect2 ):Void
+    public function canvas_item_set_modulate(item:Rid , color:Color ):Void
+    public function canvas_item_set_self_modulate(item:Rid , color:Color ):Void
+    public function canvas_item_set_draw_behind_parent(item:Rid , enabled:Bool ):Void
+    public function canvas_item_add_line(item:Rid , from:Vector2 , to:Vector2 , color:Color , width:Double , antialiased:Bool ):Void
+    public function canvas_item_add_polyline(item:Rid , points:Poolvector2array , colors:Poolcolorarray , width:Double , antialiased:Bool ):Void
+    public function canvas_item_add_rect(item:Rid , rect:Rect2 , color:Color ):Void
+    public function canvas_item_add_circle(item:Rid , pos:Vector2 , radius:Double , color:Color ):Void
+    public function canvas_item_add_texture_rect(item:Rid , rect:Rect2 , texture:Rid , tile:Bool , modulate:Color , transpose:Bool , normal_map:Rid ):Void
+    public function canvas_item_add_texture_rect_region(item:Rid , rect:Rect2 , texture:Rid , src_rect:Rect2 , modulate:Color , transpose:Bool , normal_map:Rid , clip_uv:Bool ):Void
+    public function canvas_item_add_nine_patch(item:Rid , rect:Rect2 , source:Rect2 , texture:Rid , topleft:Vector2 , bottomright:Vector2 , x_axis_mode:Int64_t , y_axis_mode:Int64_t , draw_center:Bool , modulate:Color , normal_map:Rid ):Void
+    public function canvas_item_add_primitive(item:Rid , points:Poolvector2array , colors:Poolcolorarray , uvs:Poolvector2array , texture:Rid , width:Double , normal_map:Rid ):Void
+    public function canvas_item_add_polygon(item:Rid , points:Poolvector2array , colors:Poolcolorarray , uvs:Poolvector2array , texture:Rid , normal_map:Rid , antialiased:Bool ):Void
+    public function canvas_item_add_triangle_array(item:Rid , indices:Poolintarray , points:Poolvector2array , colors:Poolcolorarray , uvs:Poolvector2array , bones:Poolintarray , weights:Poolrealarray , texture:Rid , count:Int64_t , normal_map:Rid ):Void
+    public function canvas_item_add_mesh(item:Rid , mesh:Rid , texture:Rid , normal_map:Rid ):Void
+    public function canvas_item_add_multimesh(item:Rid , mesh:Rid , texture:Rid , normal_map:Rid ):Void
+    public function canvas_item_add_particles(item:Rid , particles:Rid , texture:Rid , normal_map:Rid , h_frames:Int64_t , v_frames:Int64_t ):Void
+    public function canvas_item_add_set_transform(item:Rid , transform:Transform2d ):Void
+    public function canvas_item_add_clip_ignore(item:Rid , ignore:Bool ):Void
+    public function canvas_item_set_sort_children_by_y(item:Rid , enabled:Bool ):Void
+    public function canvas_item_set_z_index(item:Rid , z_index:Int64_t ):Void
+    public function canvas_item_set_z_as_relative_to_parent(item:Rid , enabled:Bool ):Void
+    public function canvas_item_set_copy_to_backbuffer(item:Rid , enabled:Bool , rect:Rect2 ):Void
+    public function canvas_item_clear(item:Rid ):Void
+    public function canvas_item_set_draw_index(item:Rid , index:Int64_t ):Void
+    public function canvas_item_set_material(item:Rid , material:Rid ):Void
+    public function canvas_item_set_use_parent_material(item:Rid , enabled:Bool ):Void
+    public function canvas_light_create():Rid
+    public function canvas_light_attach_to_canvas(light:Rid , canvas:Rid ):Void
+    public function canvas_light_set_enabled(light:Rid , enabled:Bool ):Void
+    public function canvas_light_set_scale(light:Rid , scale:Double ):Void
+    public function canvas_light_set_transform(light:Rid , transform:Transform2d ):Void
+    public function canvas_light_set_texture(light:Rid , texture:Rid ):Void
+    public function canvas_light_set_texture_offset(light:Rid , offset:Vector2 ):Void
+    public function canvas_light_set_color(light:Rid , color:Color ):Void
+    public function canvas_light_set_height(light:Rid , height:Double ):Void
+    public function canvas_light_set_energy(light:Rid , energy:Double ):Void
+    public function canvas_light_set_z_range(light:Rid , min_z:Int64_t , max_z:Int64_t ):Void
+    public function canvas_light_set_layer_range(light:Rid , min_layer:Int64_t , max_layer:Int64_t ):Void
+    public function canvas_light_set_item_cull_mask(light:Rid , mask:Int64_t ):Void
+    public function canvas_light_set_item_shadow_cull_mask(light:Rid , mask:Int64_t ):Void
+    public function canvas_light_set_mode(light:Rid , mode:Int64_t ):Void
+    public function canvas_light_set_shadow_enabled(light:Rid , enabled:Bool ):Void
+    public function canvas_light_set_shadow_buffer_size(light:Rid , size:Int64_t ):Void
+    public function canvas_light_set_shadow_gradient_length(light:Rid , length:Double ):Void
+    public function canvas_light_set_shadow_filter(light:Rid , filter:Int64_t ):Void
+    public function canvas_light_set_shadow_color(light:Rid , color:Color ):Void
+    public function canvas_light_set_shadow_smooth(light:Rid , smooth:Double ):Void
+    public function canvas_light_occluder_create():Rid
+    public function canvas_light_occluder_attach_to_canvas(occluder:Rid , canvas:Rid ):Void
+    public function canvas_light_occluder_set_enabled(occluder:Rid , enabled:Bool ):Void
+    public function canvas_light_occluder_set_polygon(occluder:Rid , polygon:Rid ):Void
+    public function canvas_light_occluder_set_transform(occluder:Rid , transform:Transform2d ):Void
+    public function canvas_light_occluder_set_light_mask(occluder:Rid , mask:Int64_t ):Void
+    public function canvas_occluder_polygon_create():Rid
+    public function canvas_occluder_polygon_set_shape(occluder_polygon:Rid , shape:Poolvector2array , closed:Bool ):Void
+    public function canvas_occluder_polygon_set_shape_as_lines(occluder_polygon:Rid , shape:Poolvector2array ):Void
+    public function canvas_occluder_polygon_set_cull_mode(occluder_polygon:Rid , mode:Int64_t ):Void
+    public function black_bars_set_margins(left:Int64_t , top:Int64_t , right:Int64_t , bottom:Int64_t ):Void
+    public function black_bars_set_images(left:Rid , top:Rid , right:Rid , bottom:Rid ):Void
+    public function free_rid(rid:Rid ):Void
+    public function request_frame_drawn_callback(where:cpp.Star<Object >, method:String , userdata:Variant ):Void
+    public function has_changed():Bool
+    public function init():Void
+    public function finish():Void
+    public function get_render_info(info:Int64_t ):Int64_t
+    public function make_sphere_mesh(latitudes:Int64_t , longitudes:Int64_t , radius:Double ):Rid
+    public function get_test_cube():Rid
+    public function get_test_texture():Rid
+    public function get_white_texture():Rid
+    public function set_boot_image(image:Ref<image> , color:Color , scale:Bool ):Void
+    public function set_default_clear_color(color:Color ):Void
+    public function has_feature(feature:Int64_t ):Bool
+    public function has_os_feature(feature:String ):Bool
+    public function set_debug_generate_wireframes(generate:Bool ):Void
+    public function VisualServer(arg0:cpp.Reference<Visualserver >):Void
+}
+class PopupPanel  extends Popup {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Popuppanel>
+    public function PopupPanel():Void
+    public function PopupPanel(arg0:cpp.Reference<Popuppanel >):Void
+}
+class VisualScriptSelect  extends VisualScriptNode {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualscriptselect>
+    public function set_typed(type:Int64_t ):Void
+    public function get_typed():Varianttype
+    public function VisualScriptSelect():Void
+    public function VisualScriptSelect(arg0:cpp.Reference<Visualscriptselect >):Void
+}
+class MeshDataTool  extends Reference {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Meshdatatool>
+    public function clear():Void
+    public function create_from_surface(mesh:Ref<arraymesh> , surface:Int64_t ):Error
+    public function commit_to_surface(mesh:Ref<arraymesh> ):Error
+    public function get_format():Int64_t
+    public function get_vertex_count():Int64_t
+    public function get_edge_count():Int64_t
+    public function get_face_count():Int64_t
+    public function set_vertex(idx:Int64_t , vertex:Vector3 ):Void
+    public function get_vertex(idx:Int64_t ):Vector3
+    public function set_vertex_normal(idx:Int64_t , normal:Vector3 ):Void
+    public function get_vertex_normal(idx:Int64_t ):Vector3
+    public function set_vertex_tangent(idx:Int64_t , tangent:Plane ):Void
+    public function get_vertex_tangent(idx:Int64_t ):Plane
+    public function set_vertex_uv(idx:Int64_t , uv:Vector2 ):Void
+    public function get_vertex_uv(idx:Int64_t ):Vector2
+    public function set_vertex_uv2(idx:Int64_t , uv2:Vector2 ):Void
+    public function get_vertex_uv2(idx:Int64_t ):Vector2
+    public function set_vertex_color(idx:Int64_t , color:Color ):Void
+    public function get_vertex_color(idx:Int64_t ):Color
+    public function set_vertex_bones(idx:Int64_t , bones:Poolintarray ):Void
+    public function get_vertex_bones(idx:Int64_t ):Poolintarray
+    public function set_vertex_weights(idx:Int64_t , weights:Poolrealarray ):Void
+    public function get_vertex_weights(idx:Int64_t ):Poolrealarray
+    public function set_vertex_meta(idx:Int64_t , meta:Variant ):Void
+    public function get_vertex_meta(idx:Int64_t ):Variant
+    public function get_vertex_edges(idx:Int64_t ):Poolintarray
+    public function get_vertex_faces(idx:Int64_t ):Poolintarray
+    public function get_edge_vertex(idx:Int64_t , vertex:Int64_t ):Int64_t
+    public function get_edge_faces(idx:Int64_t ):Poolintarray
+    public function set_edge_meta(idx:Int64_t , meta:Variant ):Void
+    public function get_edge_meta(idx:Int64_t ):Variant
+    public function get_face_vertex(idx:Int64_t , vertex:Int64_t ):Int64_t
+    public function get_face_edge(idx:Int64_t , edge:Int64_t ):Int64_t
+    public function set_face_meta(idx:Int64_t , meta:Variant ):Void
+    public function get_face_meta(idx:Int64_t ):Variant
+    public function get_face_normal(idx:Int64_t ):Vector3
+    public function set_material(material:Ref<material> ):Void
+    public function get_material():Ref<material>
+    public function MeshDataTool():Void
+    public function MeshDataTool(arg0:cpp.Reference<Meshdatatool >):Void
+}
+class PolygonPathFinder  extends Resource {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Polygonpathfinder>
+    public function setup(points:Poolvector2array , connections:Poolintarray ):Void
+    public function find_path(from:Vector2 , to:Vector2 ):Poolvector2array
+    public function get_intersections(from:Vector2 , to:Vector2 ):Poolvector2array
+    public function get_closest_point(point:Vector2 ):Vector2
+    public function is_point_inside(point:Vector2 ):Bool
+    public function set_point_penalty(idx:Int64_t , penalty:Double ):Void
+    public function get_point_penalty(idx:Int64_t ):Double
+    public function get_bounds():Rect2
+    public function _set_data(arg0:Dictionary ):Void
+    public function _get_data():Dictionary
+    public function PolygonPathFinder():Void
+    public function PolygonPathFinder(arg0:cpp.Reference<Polygonpathfinder >):Void
+}
+class VisualScriptYield  extends VisualScriptNode {
+    enum abstract YieldMode(Int) {
+        YIELD_PHYSICS_FRAME = 2;
+        YIELD_FRAME = 1;
+        YIELD_WAIT = 3;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualscriptyield>
+    public function set_yield_mode(mode:Int64_t ):Void
+    public function get_yield_mode():Visualscriptyieldyieldmode
+    public function set_wait_time(sec:Double ):Void
+    public function get_wait_time():Double
+    public function VisualScriptYield():Void
+    public function VisualScriptYield(arg0:cpp.Reference<Visualscriptyield >):Void
+}
+class InputEventScreenTouch  extends InputEvent {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Inputeventscreentouch>
+    public function set_index(index:Int64_t ):Void
+    public function get_index():Int64_t
+    public function set_position(position:Vector2 ):Void
+    public function get_position():Vector2
+    public function set_pressed(pressed:Bool ):Void
+    public function InputEventScreenTouch():Void
+    public function InputEventScreenTouch(arg0:cpp.Reference<Inputeventscreentouch >):Void
+}
+class VisualScriptFunction  extends VisualScriptNode {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualscriptfunction>
+    public function VisualScriptFunction():Void
+    public function VisualScriptFunction(arg0:cpp.Reference<Visualscriptfunction >):Void
+}
+class PinJoint  extends Joint {
+    enum abstract Param(Int) {
+        PARAM_DAMPING = 1;
+        PARAM_IMPULSE_CLAMP = 2;
+        PARAM_BIAS = 0;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Pinjoint>
+    public function set_param(param:Int64_t , value:Double ):Void
+    public function get_param(param:Int64_t ):Double
+    public function PinJoint():Void
+    public function PinJoint(arg0:cpp.Reference<Pinjoint >):Void
+}
+class CSGPolygon  extends CSGPrimitive {
+    enum abstract PathRotation(Int) {
+        PATH_ROTATION_PATH = 1;
+        PATH_ROTATION_POLYGON = 0;
+        PATH_ROTATION_PATH_FOLLOW = 2;
+    }
+    enum abstract Mode(Int) {
+        MODE_PATH = 2;
+        MODE_DEPTH = 0;
+        MODE_SPIN = 1;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Csgpolygon>
+    public function set_polygon(polygon:Poolvector2array ):Void
+    public function get_polygon():Poolvector2array
+    public function set_mode(mode:Int64_t ):Void
+    public function get_mode():Csgpolygonmode
+    public function set_depth(depth:Double ):Void
+    public function get_depth():Double
+    public function set_spin_degrees(degrees:Double ):Void
+    public function get_spin_degrees():Double
+    public function set_spin_sides(spin_sides:Int64_t ):Void
+    public function get_spin_sides():Int64_t
+    public function set_path_node(path:Nodepath ):Void
+    public function get_path_node():Nodepath
+    public function set_path_interval(distance:Double ):Void
+    public function get_path_interval():Double
+    public function set_path_rotation(mode:Int64_t ):Void
+    public function get_path_rotation():Csgpolygonpathrotation
+    public function set_path_local(enable:Bool ):Void
+    public function is_path_local():Bool
+    public function set_path_continuous_u(enable:Bool ):Void
+    public function is_path_continuous_u():Bool
+    public function set_path_joined(enable:Bool ):Void
+    public function is_path_joined():Bool
+    public function set_material(material:Ref<material> ):Void
+    public function get_material():Ref<material>
+    public function set_smooth_faces(smooth_faces:Bool ):Void
+    public function get_smooth_faces():Bool
+    public function _is_editable_3d_polygon():Bool
+    public function _has_editable_3d_polygon_no_depth():Bool
+    public function _path_exited():Void
+    public function _path_changed():Void
+    public function CSGPolygon():Void
+    public function CSGPolygon(arg0:cpp.Reference<Csgpolygon >):Void
+}
+class PhysicsShapeQueryParameters  extends Reference {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Physicsshapequeryparameters>
+    public function set_shape(shape:Ref<resource> ):Void
+    public function set_shape_rid(shape:Rid ):Void
+    public function get_shape_rid():Rid
+    public function set_transform(transform:Transform ):Void
+    public function get_transform():Transform
+    public function set_margin(margin:Double ):Void
+    public function get_margin():Double
+    public function set_collision_mask(collision_mask:Int64_t ):Void
+    public function get_collision_mask():Int64_t
+    public function set_exclude(exclude:Array ):Void
+    public function get_exclude():Array
+    public function PhysicsShapeQueryParameters():Void
+    public function PhysicsShapeQueryParameters(arg0:cpp.Reference<Physicsshapequeryparameters >):Void
+}
+class EditorInspector  extends ScrollContainer {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Editorinspector>
+    public function _property_changed(arg0:String , arg1:Variant , arg2:Bool ):Void
+    public function _multiple_properties_changed(arg0:Poolstringarray , arg1:Array ):Void
+    public function _property_changed_update_all(arg0:String , arg1:Variant ):Void
+    public function _edit_request_change(arg0:cpp.Star<Object >, arg1:String ):Void
+    public function _node_removed(arg0:cpp.Star<Object >):Void
+    public function _filter_changed(arg0:String ):Void
+    public function _property_keyed(arg0:String ):Void
+    public function _property_keyed_with_value(arg0:String , arg1:Variant ):Void
+    public function _property_checked(arg0:String , arg1:Bool ):Void
+    public function _property_selected(arg0:String , arg1:Int64_t ):Void
+    public function _resource_selected(arg0:String , arg1:Ref<resource> ):Void
+    public function _object_id_selected(arg0:String , arg1:Int64_t ):Void
+    public function _vscroll_changed(arg0:Double ):Void
+    public function refresh():Void
+    public function EditorInspector():Void
+    public function EditorInspector(arg0:cpp.Reference<Editorinspector >):Void
+}
+class PanelContainer  extends Container {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Panelcontainer>
+    public function PanelContainer():Void
+    public function PanelContainer(arg0:cpp.Reference<Panelcontainer >):Void
+}
+class HSeparator  extends Separator {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Hseparator>
+    public function HSeparator():Void
+    public function HSeparator(arg0:cpp.Reference<Hseparator >):Void
+}
+class VScrollBar  extends ScrollBar {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Vscrollbar>
+    public function VScrollBar():Void
+    public function VScrollBar(arg0:cpp.Reference<Vscrollbar >):Void
+}
+class ARVRAnchor  extends Spatial {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Arvranchor>
+    public function set_anchor_id(anchor_id:Int64_t ):Void
+    public function get_anchor_id():Int64_t
+    public function get_anchor_name():String
+    public function get_is_active():Bool
+    public function get_size():Vector3
+    public function get_plane():Plane
+    public function ARVRAnchor():Void
+    public function ARVRAnchor(arg0:cpp.Reference<Arvranchor >):Void
+}
+class Physics2DServerSW  extends Physics2DServer {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function Physics2DServerSW(arg0:cpp.Reference<Physics2dserversw >):Void
+}
+class Joint2D  extends Node2D {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function set_node_a(node:Nodepath ):Void
+    public function get_node_a():Nodepath
+    public function set_node_b(node:Nodepath ):Void
+    public function get_node_b():Nodepath
+    public function set_bias(bias:Double ):Void
+    public function get_bias():Double
+    public function set_exclude_nodes_from_collision(enable:Bool ):Void
+    public function get_exclude_nodes_from_collision():Bool
+    public function Joint2D():Void
+    public function Joint2D(arg0:cpp.Reference<Joint2d >):Void
+}
+class ParallaxLayer  extends Node2D {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Parallaxlayer>
+    public function set_motion_scale(scale:Vector2 ):Void
+    public function get_motion_scale():Vector2
+    public function set_motion_offset(offset:Vector2 ):Void
+    public function get_motion_offset():Vector2
+    public function set_mirroring(mirror:Vector2 ):Void
+    public function get_mirroring():Vector2
+    public function ParallaxLayer():Void
+    public function ParallaxLayer(arg0:cpp.Reference<Parallaxlayer >):Void
+}
+class PackedDataContainer  extends Resource {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Packeddatacontainer>
+    public function _set_data(arg0:Poolbytearray ):Void
+    public function _get_data():Poolbytearray
+    public function _iter_init(arg0:Array ):Variant
+    public function _iter_get(arg0:Variant ):Variant
+    public function _iter_next(arg0:Array ):Variant
+    public function pack(value:Variant ):Error
+    public function size():Int64_t
+    public function PackedDataContainer():Void
+    public function PackedDataContainer(arg0:cpp.Reference<Packeddatacontainer >):Void
+}
+class ReferenceRect  extends Control {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Referencerect>
+    public function ReferenceRect():Void
+    public function ReferenceRect(arg0:cpp.Reference<Referencerect >):Void
+}
+class Physics2DServer  extends Object {
+    enum abstract ProcessInfo(Int) {
+        INFO_ISLAND_COUNT = 2;
+        INFO_ACTIVE_OBJECTS = 0;
+        INFO_COLLISION_PAIRS = 1;
+    }
+    enum abstract AreaBodyStatus(Int) {
+        AREA_BODY_REMOVED = 1;
+        AREA_BODY_ADDED = 0;
+    }
+    enum abstract DampedStringParam(Int) {
+        DAMPED_STRING_DAMPING = 2;
+        DAMPED_STRING_STIFFNESS = 1;
+        DAMPED_STRING_REST_LENGTH = 0;
+    }
+    enum abstract BodyMode(Int) {
+        BODY_MODE_STATIC = 0;
+        BODY_MODE_RIGID = 2;
+        BODY_MODE_KINEMATIC = 1;
+        BODY_MODE_CHARACTER = 3;
+    }
+    enum abstract ShapeType(Int) {
+        SHAPE_CONVEX_POLYGON = 6;
+        SHAPE_CAPSULE = 5;
+        SHAPE_CUSTOM = 8;
+        SHAPE_RAY = 1;
+        SHAPE_LINE = 0;
+        SHAPE_SEGMENT = 2;
+        SHAPE_RECTANGLE = 4;
+        SHAPE_CIRCLE = 3;
+        SHAPE_CONCAVE_POLYGON = 7;
+    }
+    enum abstract JointParam(Int) {
+        JOINT_PARAM_MAX_FORCE = 2;
+        JOINT_PARAM_BIAS = 0;
+        JOINT_PARAM_MAX_BIAS = 1;
+    }
+    enum abstract SpaceParameter(Int) {
+        SPACE_PARAM_BODY_MAX_ALLOWED_PENETRATION = 2;
+        SPACE_PARAM_BODY_ANGULAR_VELOCITY_SLEEP_THRESHOLD = 4;
+        SPACE_PARAM_BODY_TIME_TO_SLEEP = 5;
+        SPACE_PARAM_CONTACT_MAX_SEPARATION = 1;
+        SPACE_PARAM_CONSTRAINT_DEFAULT_BIAS = 6;
+        SPACE_PARAM_BODY_LINEAR_VELOCITY_SLEEP_THRESHOLD = 3;
+        SPACE_PARAM_CONTACT_RECYCLE_RADIUS = 0;
+    }
+    enum abstract JointType(Int) {
+        JOINT_GROOVE = 1;
+        JOINT_PIN = 0;
+        JOINT_DAMPED_SPRING = 2;
+    }
+    enum abstract CCDMode(Int) {
+        CCD_MODE_CAST_RAY = 1;
+        CCD_MODE_CAST_SHAPE = 2;
+        CCD_MODE_DISABLED = 0;
+    }
+    enum abstract BodyState(Int) {
+        BODY_STATE_CAN_SLEEP = 4;
+        BODY_STATE_TRANSFORM = 0;
+        BODY_STATE_SLEEPING = 3;
+        BODY_STATE_ANGULAR_VELOCITY = 2;
+        BODY_STATE_LINEAR_VELOCITY = 1;
+    }
+    enum abstract BodyParameter(Int) {
+        BODY_PARAM_MAX = 7;
+        BODY_PARAM_BOUNCE = 0;
+        BODY_PARAM_INERTIA = 3;
+        BODY_PARAM_LINEAR_DAMP = 5;
+        BODY_PARAM_ANGULAR_DAMP = 6;
+        BODY_PARAM_GRAVITY_SCALE = 4;
+        BODY_PARAM_FRICTION = 1;
+        BODY_PARAM_MASS = 2;
+    }
+    enum abstract AreaSpaceOverrideMode(Int) {
+        AREA_SPACE_OVERRIDE_REPLACE_COMBINE = 4;
+        AREA_SPACE_OVERRIDE_COMBINE_REPLACE = 2;
+        AREA_SPACE_OVERRIDE_COMBINE = 1;
+        AREA_SPACE_OVERRIDE_REPLACE = 3;
+        AREA_SPACE_OVERRIDE_DISABLED = 0;
+    }
+    enum abstract AreaParameter(Int) {
+        AREA_PARAM_GRAVITY_DISTANCE_SCALE = 3;
+        AREA_PARAM_PRIORITY = 7;
+        AREA_PARAM_GRAVITY_POINT_ATTENUATION = 4;
+        AREA_PARAM_ANGULAR_DAMP = 6;
+        AREA_PARAM_GRAVITY_VECTOR = 1;
+        AREA_PARAM_GRAVITY_IS_POINT = 2;
+        AREA_PARAM_LINEAR_DAMP = 5;
+        AREA_PARAM_GRAVITY = 0;
+    }
+    public function get_singleton():cpp.Star<Physics2dserver>
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function line_shape_create():Rid
+    public function ray_shape_create():Rid
+    public function segment_shape_create():Rid
+    public function circle_shape_create():Rid
+    public function rectangle_shape_create():Rid
+    public function capsule_shape_create():Rid
+    public function convex_polygon_shape_create():Rid
+    public function concave_polygon_shape_create():Rid
+    public function shape_set_data(shape:Rid , data:Variant ):Void
+    public function shape_get_type(shape:Rid ):Physics2dservershapetype
+    public function shape_get_data(shape:Rid ):Variant
+    public function space_create():Rid
+    public function space_set_active(space:Rid , active:Bool ):Void
+    public function space_is_active(space:Rid ):Bool
+    public function space_set_param(space:Rid , param:Int64_t , value:Double ):Void
+    public function space_get_param(space:Rid , param:Int64_t ):Double
+    public function space_get_direct_state(space:Rid ):cpp.Star<Physics2ddirectspacestate>
+    public function area_create():Rid
+    public function area_set_space(area:Rid , space:Rid ):Void
+    public function area_get_space(area:Rid ):Rid
+    public function area_set_space_override_mode(area:Rid , mode:Int64_t ):Void
+    public function area_get_space_override_mode(area:Rid ):Physics2dserverareaspaceoverridemode
+    public function area_add_shape(area:Rid , shape:Rid , transform:Transform2d ):Void
+    public function area_set_shape(area:Rid , shape_idx:Int64_t , shape:Rid ):Void
+    public function area_set_shape_transform(area:Rid , shape_idx:Int64_t , transform:Transform2d ):Void
+    public function area_set_shape_disabled(area:Rid , shape_idx:Int64_t , disable:Bool ):Void
+    public function area_get_shape_count(area:Rid ):Int64_t
+    public function area_get_shape(area:Rid , shape_idx:Int64_t ):Rid
+    public function area_get_shape_transform(area:Rid , shape_idx:Int64_t ):Transform2d
+    public function area_remove_shape(area:Rid , shape_idx:Int64_t ):Void
+    public function area_clear_shapes(area:Rid ):Void
+    public function area_set_collision_layer(area:Rid , layer:Int64_t ):Void
+    public function area_set_collision_mask(area:Rid , mask:Int64_t ):Void
+    public function area_set_param(area:Rid , param:Int64_t , value:Variant ):Void
+    public function area_set_transform(area:Rid , transform:Transform2d ):Void
+    public function area_get_param(area:Rid , param:Int64_t ):Variant
+    public function area_get_transform(area:Rid ):Transform2d
+    public function area_attach_object_instance_id(area:Rid , id:Int64_t ):Void
+    public function area_get_object_instance_id(area:Rid ):Int64_t
+    public function area_set_monitor_callback(area:Rid , receiver:cpp.Star<Object >, method:String ):Void
+    public function area_set_area_monitor_callback(area:Rid , receiver:cpp.Star<Object >, method:String ):Void
+    public function area_set_monitorable(area:Rid , monitorable:Bool ):Void
+    public function body_create():Rid
+    public function body_set_space(body:Rid , space:Rid ):Void
+    public function body_get_space(body:Rid ):Rid
+    public function body_set_mode(body:Rid , mode:Int64_t ):Void
+    public function body_get_mode(body:Rid ):Physics2dserverbodymode
+    public function body_add_shape(body:Rid , shape:Rid , transform:Transform2d ):Void
+    public function body_set_shape(body:Rid , shape_idx:Int64_t , shape:Rid ):Void
+    public function body_set_shape_transform(body:Rid , shape_idx:Int64_t , transform:Transform2d ):Void
+    public function body_set_shape_metadata(body:Rid , shape_idx:Int64_t , metadata:Variant ):Void
+    public function body_get_shape_count(body:Rid ):Int64_t
+    public function body_get_shape(body:Rid , shape_idx:Int64_t ):Rid
+    public function body_get_shape_transform(body:Rid , shape_idx:Int64_t ):Transform2d
+    public function body_get_shape_metadata(body:Rid , shape_idx:Int64_t ):Variant
+    public function body_remove_shape(body:Rid , shape_idx:Int64_t ):Void
+    public function body_clear_shapes(body:Rid ):Void
+    public function body_set_shape_disabled(body:Rid , shape_idx:Int64_t , disable:Bool ):Void
+    public function body_set_shape_as_one_way_collision(body:Rid , shape_idx:Int64_t , enable:Bool ):Void
+    public function body_attach_object_instance_id(body:Rid , id:Int64_t ):Void
+    public function body_get_object_instance_id(body:Rid ):Int64_t
+    public function body_set_continuous_collision_detection_mode(body:Rid , mode:Int64_t ):Void
+    public function body_get_continuous_collision_detection_mode(body:Rid ):Physics2dserverccdmode
+    public function body_set_collision_layer(body:Rid , layer:Int64_t ):Void
+    public function body_get_collision_layer(body:Rid ):Int64_t
+    public function body_set_collision_mask(body:Rid , mask:Int64_t ):Void
+    public function body_get_collision_mask(body:Rid ):Int64_t
+    public function body_set_param(body:Rid , param:Int64_t , value:Double ):Void
+    public function body_get_param(body:Rid , param:Int64_t ):Double
+    public function body_set_state(body:Rid , state:Int64_t , value:Variant ):Void
+    public function body_get_state(body:Rid , state:Int64_t ):Variant
+    public function body_apply_central_impulse(body:Rid , impulse:Vector2 ):Void
+    public function body_apply_torque_impulse(body:Rid , impulse:Double ):Void
+    public function body_apply_impulse(body:Rid , position:Vector2 , impulse:Vector2 ):Void
+    public function body_add_central_force(force:Rid , arg1:Vector2 ):Void
+    public function body_add_force(body:Rid , offset:Vector2 , force:Vector2 ):Void
+    public function body_add_torque(body:Rid , torque:Double ):Void
+    public function body_set_axis_velocity(body:Rid , axis_velocity:Vector2 ):Void
+    public function body_add_collision_exception(body:Rid , excepted_body:Rid ):Void
+    public function body_remove_collision_exception(body:Rid , excepted_body:Rid ):Void
+    public function body_set_max_contacts_reported(body:Rid , amount:Int64_t ):Void
+    public function body_get_max_contacts_reported(body:Rid ):Int64_t
+    public function body_set_omit_force_integration(body:Rid , enable:Bool ):Void
+    public function body_is_omitting_force_integration(body:Rid ):Bool
+    public function body_set_force_integration_callback(body:Rid , receiver:cpp.Star<Object >, method:String , userdata:Variant ):Void
+    public function body_test_motion(body:Rid , from:Transform2d , motion:Vector2 , infinite_inertia:Bool , margin:Double , result:Ref<physics2dtestmotionresult> ):Bool
+    public function body_get_direct_state(body:Rid ):cpp.Star<Physics2ddirectbodystate>
+    public function joint_set_param(joint:Rid , param:Int64_t , value:Double ):Void
+    public function joint_get_param(joint:Rid , param:Int64_t ):Double
+    public function pin_joint_create(anchor:Vector2 , body_a:Rid , body_b:Rid ):Rid
+    public function groove_joint_create(groove1_a:Vector2 , groove2_a:Vector2 , anchor_b:Vector2 , body_a:Rid , body_b:Rid ):Rid
+    public function damped_spring_joint_create(anchor_a:Vector2 , anchor_b:Vector2 , body_a:Rid , body_b:Rid ):Rid
+    public function damped_string_joint_set_param(joint:Rid , param:Int64_t , value:Double ):Void
+    public function damped_string_joint_get_param(joint:Rid , param:Int64_t ):Double
+    public function joint_get_type(joint:Rid ):Physics2dserverjointtype
+    public function free_rid(rid:Rid ):Void
+    public function set_active(active:Bool ):Void
+    public function get_process_info(process_info:Int64_t ):Int64_t
+    public function Physics2DServer(arg0:cpp.Reference<Physics2dserver >):Void
+}
+class Theme  extends Resource {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Theme>
+    public function set_icon(name:String , type:String , texture:Ref<texture> ):Void
+    public function get_icon(name:String , type:String ):Ref<texture>
+    public function has_icon(name:String , type:String ):Bool
+    public function clear_icon(name:String , type:String ):Void
+    public function get_icon_list(type:String ):Poolstringarray
+    public function set_stylebox(name:String , type:String , texture:Ref<stylebox> ):Void
+    public function get_stylebox(name:String , type:String ):Ref<stylebox>
+    public function has_stylebox(name:String , type:String ):Bool
+    public function clear_stylebox(name:String , type:String ):Void
+    public function get_stylebox_list(type:String ):Poolstringarray
+    public function get_stylebox_types():Poolstringarray
+    public function set_font(name:String , type:String , font:Ref<font> ):Void
+    public function get_font(name:String , type:String ):Ref<font>
+    public function has_font(name:String , type:String ):Bool
+    public function clear_font(name:String , type:String ):Void
+    public function get_font_list(type:String ):Poolstringarray
+    public function set_color(name:String , type:String , color:Color ):Void
+    public function get_color(name:String , type:String ):Color
+    public function has_color(name:String , type:String ):Bool
+    public function clear_color(name:String , type:String ):Void
+    public function get_color_list(type:String ):Poolstringarray
+    public function set_constant(name:String , type:String , constant:Int64_t ):Void
+    public function get_constant(name:String , type:String ):Int64_t
+    public function has_constant(name:String , type:String ):Bool
+    public function clear_constant(name:String , type:String ):Void
+    public function get_constant_list(type:String ):Poolstringarray
+    public function set_default_font(font:Ref<font> ):Void
+    public function get_default_font():Ref<font>
+    public function get_type_list(type:String ):Poolstringarray
+    public function _emit_theme_changed():Void
+    public function copy_default_theme():Void
+    public function create():Theme
+    public function create(arg0:cpp.Reference<Theme >):Theme
+}
+class GDNativeLibrary  extends Resource {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Gdnativelibrary>
+    public function get_config_file():Ref<configfile>
+    public function set_config_file(config_file:Ref<configfile> ):Void
+    public function get_current_library_path():String
+    public function get_current_dependencies():Poolstringarray
+    public function should_load_once():Bool
+    public function is_singleton():Bool
+    public function get_symbol_prefix():String
+    public function is_reloadable():Bool
+    public function set_load_once(load_once:Bool ):Void
+    public function set_singleton(singleton:Bool ):Void
+    public function set_symbol_prefix(symbol_prefix:String ):Void
+    public function set_reloadable(reloadable:Bool ):Void
+    public function GDNativeLibrary():Void
+    public function GDNativeLibrary(arg0:cpp.Reference<Gdnativelibrary >):Void
+}
+class VisualScript  extends Script {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualscript>
+    public function _node_ports_changed(arg0:Int64_t ):Void
+    public function add_function(name:String ):Void
+    public function has_function(name:String ):Bool
+    public function remove_function(name:String ):Void
+    public function rename_function(name:String , new_name:String ):Void
+    public function set_function_scroll(name:String , ofs:Vector2 ):Void
+    public function get_function_scroll(name:String ):Vector2
+    public function add_node(func:String , id:Int64_t , node:Ref<visualscriptnode> , position:Vector2 ):Void
+    public function remove_node(func:String , id:Int64_t ):Void
+    public function get_function_node_id(name:String ):Int64_t
+    public function get_node(func:String , id:Int64_t ):Ref<visualscriptnode>
+    public function has_node(func:String , id:Int64_t ):Bool
+    public function set_node_position(func:String , id:Int64_t , position:Vector2 ):Void
+    public function get_node_position(func:String , id:Int64_t ):Vector2
+    public function sequence_connect(func:String , from_node:Int64_t , from_output:Int64_t , to_node:Int64_t ):Void
+    public function sequence_disconnect(func:String , from_node:Int64_t , from_output:Int64_t , to_node:Int64_t ):Void
+    public function has_sequence_connection(func:String , from_node:Int64_t , from_output:Int64_t , to_node:Int64_t ):Bool
+    public function data_connect(func:String , from_node:Int64_t , from_port:Int64_t , to_node:Int64_t , to_port:Int64_t ):Void
+    public function data_disconnect(func:String , from_node:Int64_t , from_port:Int64_t , to_node:Int64_t , to_port:Int64_t ):Void
+    public function has_data_connection(func:String , from_node:Int64_t , from_port:Int64_t , to_node:Int64_t , to_port:Int64_t ):Bool
+    public function add_variable(name:String , default_value:Variant , _export:Bool ):Void
+    public function has_variable(name:String ):Bool
+    public function remove_variable(name:String ):Void
+    public function set_variable_default_value(name:String , value:Variant ):Void
+    public function get_variable_default_value(name:String ):Variant
+    public function set_variable_info(name:String , value:Dictionary ):Void
+    public function get_variable_info(name:String ):Dictionary
+    public function set_variable_export(name:String , enable:Bool ):Void
+    public function get_variable_export(name:String ):Bool
+    public function rename_variable(name:String , new_name:String ):Void
+    public function add_custom_signal(name:String ):Void
+    public function has_custom_signal(name:String ):Bool
+    public function custom_signal_add_argument(name:String , type:Int64_t , argname:String , index:Int64_t ):Void
+    public function custom_signal_set_argument_type(name:String , argidx:Int64_t , type:Int64_t ):Void
+    public function custom_signal_get_argument_type(name:String , argidx:Int64_t ):Varianttype
+    public function custom_signal_set_argument_name(name:String , argidx:Int64_t , argname:String ):Void
+    public function custom_signal_get_argument_name(name:String , argidx:Int64_t ):String
+    public function custom_signal_remove_argument(name:String , argidx:Int64_t ):Void
+    public function custom_signal_get_argument_count(name:String ):Int64_t
+    public function custom_signal_swap_argument(name:String , argidx:Int64_t , withidx:Int64_t ):Void
+    public function remove_custom_signal(name:String ):Void
+    public function rename_custom_signal(name:String , new_name:String ):Void
+    public function set_instance_base_type(type:String ):Void
+    public function _set_data(data:Dictionary ):Void
+    public function _get_data():Dictionary
+    public function VisualScript():Void
+    public function VisualScript(arg0:cpp.Reference<Visualscript >):Void
+}
+class ResourceInteractiveLoader  extends Reference {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function get_resource():Ref<resource>
+    public function poll():Error
+    public function wait():Error
+    public function get_stage():Int64_t
+    public function get_stage_count():Int64_t
+    public function ResourceInteractiveLoader():Void
+    public function ResourceInteractiveLoader(arg0:cpp.Reference<Resourceinteractiveloader >):Void
+}
+class ParticlesMaterial  extends Material {
+    enum abstract Flags(Int) {
+        FLAG_ALIGN_Y_TO_VELOCITY = 0;
+        FLAG_MAX = 4;
+        FLAG_ROTATE_Y = 1;
+    }
+    enum abstract EmissionShape(Int) {
+        EMISSION_SHAPE_POINTS = 3;
+        EMISSION_SHAPE_BOX = 2;
+        EMISSION_SHAPE_SPHERE = 1;
+        EMISSION_SHAPE_POINT = 0;
+        EMISSION_SHAPE_DIRECTED_POINTS = 4;
+    }
+    enum abstract Parameter(Int) {
+        PARAM_ORBIT_VELOCITY = 2;
+        PARAM_LINEAR_ACCEL = 3;
+        PARAM_DAMPING = 6;
+        PARAM_MAX = 12;
+        PARAM_RADIAL_ACCEL = 4;
+        PARAM_ANIM_OFFSET = 11;
+        PARAM_HUE_VARIATION = 9;
+        PARAM_ANGULAR_VELOCITY = 1;
+        PARAM_SCALE = 8;
+        PARAM_ANIM_SPEED = 10;
+        PARAM_INITIAL_LINEAR_VELOCITY = 0;
+        PARAM_ANGLE = 7;
+        PARAM_TANGENTIAL_ACCEL = 5;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Particlesmaterial>
+    public function set_spread(degrees:Double ):Void
+    public function get_spread():Double
+    public function set_flatness(amount:Double ):Void
+    public function get_flatness():Double
+    public function set_param(param:Int64_t , value:Double ):Void
+    public function get_param(param:Int64_t ):Double
+    public function set_param_randomness(param:Int64_t , randomness:Double ):Void
+    public function get_param_randomness(param:Int64_t ):Double
+    public function set_param_texture(param:Int64_t , texture:Ref<texture> ):Void
+    public function get_param_texture(param:Int64_t ):Ref<texture>
+    public function set_color(color:Color ):Void
+    public function get_color():Color
+    public function set_color_ramp(ramp:Ref<texture> ):Void
+    public function get_color_ramp():Ref<texture>
+    public function set_flag(flag:Int64_t , enable:Bool ):Void
+    public function get_flag(flag:Int64_t ):Bool
+    public function set_emission_shape(shape:Int64_t ):Void
+    public function get_emission_shape():Particlesmaterialemissionshape
+    public function set_emission_sphere_radius(radius:Double ):Void
+    public function get_emission_sphere_radius():Double
+    public function set_emission_box_extents(extents:Vector3 ):Void
+    public function get_emission_box_extents():Vector3
+    public function set_emission_point_texture(texture:Ref<texture> ):Void
+    public function get_emission_point_texture():Ref<texture>
+    public function set_emission_normal_texture(texture:Ref<texture> ):Void
+    public function get_emission_normal_texture():Ref<texture>
+    public function set_emission_color_texture(texture:Ref<texture> ):Void
+    public function get_emission_color_texture():Ref<texture>
+    public function set_emission_point_count(point_count:Int64_t ):Void
+    public function get_emission_point_count():Int64_t
+    public function set_trail_divisor(divisor:Int64_t ):Void
+    public function get_trail_divisor():Int64_t
+    public function set_trail_size_modifier(texture:Ref<curvetexture> ):Void
+    public function get_trail_size_modifier():Ref<curvetexture>
+    public function set_trail_color_modifier(texture:Ref<gradienttexture> ):Void
+    public function get_trail_color_modifier():Ref<gradienttexture>
+    public function get_gravity():Vector3
+    public function set_gravity(accel_vec:Vector3 ):Void
+    public function ParticlesMaterial():Void
+    public function ParticlesMaterial(arg0:cpp.Reference<Particlesmaterial >):Void
+}
+class PackedScene  extends Resource {
+    enum abstract GenEditState(Int) {
+        GEN_EDIT_STATE_MAIN = 2;
+        GEN_EDIT_STATE_INSTANCE = 1;
+        GEN_EDIT_STATE_DISABLED = 0;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Packedscene>
+    public function pack(path:cpp.Star<Object >):Error
+    public function instance(edit_state:Int64_t ):cpp.Star<Node>
+    public function can_instance():Bool
+    public function _set_bundled_scene(arg0:Dictionary ):Void
+    public function _get_bundled_scene():Dictionary
+    public function get_state():Ref<scenestate>
+    public function PackedScene():Void
+    public function PackedScene(arg0:cpp.Reference<Packedscene >):Void
+}
+class VisualScriptCustomNode  extends VisualScriptNode {
+    enum abstract StartMode(Int) {
+        START_MODE_RESUME_YIELD = 2;
+        START_MODE_CONTINUE_SEQUENCE = 1;
+        START_MODE_BEGIN_SEQUENCE = 0;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualscriptcustomnode>
+    public function _get_output_sequence_port_count():Int64_t
+    public function _has_input_sequence_port():Bool
+    public function _get_output_sequence_port_text(idx:Int64_t ):String
+    public function _get_input_value_port_count():Int64_t
+    public function _get_output_value_port_count():Int64_t
+    public function _get_input_value_port_type(idx:Int64_t ):Int64_t
+    public function _get_input_value_port_name(idx:Int64_t ):String
+    public function _get_output_value_port_type(idx:Int64_t ):Int64_t
+    public function _get_output_value_port_name(idx:Int64_t ):String
+    public function _get_caption():String
+    public function _get_text():String
+    public function _get_category():String
+    public function _get_working_memory_size():Int64_t
+    public function _step(inputs:Array , outputs:Array , start_mode:Int64_t , working_mem:Array ):Variant
+    public function _script_changed():Void
+    public function VisualScriptCustomNode():Void
+    public function VisualScriptCustomNode(arg0:cpp.Reference<Visualscriptcustomnode >):Void
+}
+class Path2D  extends Node2D {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Path2d>
+    public function set_curve(curve:Ref<curve2d> ):Void
+    public function get_curve():Ref<curve2d>
+    public function _curve_changed():Void
+    public function Path2D():Void
+    public function Path2D(arg0:cpp.Reference<Path2d >):Void
+}
+class VisualScriptEmitSignal  extends VisualScriptNode {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualscriptemitsignal>
+    public function set_signal(name:String ):Void
+    public function get_signal():String
+    public function VisualScriptEmitSignal():Void
+    public function VisualScriptEmitSignal(arg0:cpp.Reference<Visualscriptemitsignal >):Void
+}
+class AudioEffectHighShelfFilter  extends AudioEffectFilter {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Audioeffecthighshelffilter>
+    public function AudioEffectHighShelfFilter():Void
+    public function AudioEffectHighShelfFilter(arg0:cpp.Reference<Audioeffecthighshelffilter >):Void
+}
+class SceneState  extends Reference {
+    enum abstract GenEditState(Int) {
+        GEN_EDIT_STATE_MAIN = 2;
+        GEN_EDIT_STATE_INSTANCE = 1;
+        GEN_EDIT_STATE_DISABLED = 0;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function get_node_count():Int64_t
+    public function get_node_type(idx:Int64_t ):String
+    public function get_node_name(idx:Int64_t ):String
+    public function get_node_path(idx:Int64_t , for_parent:Bool ):Nodepath
+    public function get_node_owner_path(idx:Int64_t ):Nodepath
+    public function is_node_instance_placeholder(idx:Int64_t ):Bool
+    public function get_node_instance_placeholder(idx:Int64_t ):String
+    public function get_node_instance(idx:Int64_t ):Ref<packedscene>
+    public function get_node_groups(idx:Int64_t ):Poolstringarray
+    public function get_node_index(idx:Int64_t ):Int64_t
+    public function get_node_property_count(idx:Int64_t ):Int64_t
+    public function get_node_property_name(idx:Int64_t , prop_idx:Int64_t ):String
+    public function get_node_property_value(idx:Int64_t , prop_idx:Int64_t ):Variant
+    public function get_connection_count():Int64_t
+    public function get_connection_source(idx:Int64_t ):Nodepath
+    public function get_connection_signal(idx:Int64_t ):String
+    public function get_connection_target(idx:Int64_t ):Nodepath
+    public function get_connection_method(idx:Int64_t ):String
+    public function get_connection_flags(idx:Int64_t ):Int64_t
+    public function get_connection_binds(idx:Int64_t ):Array
+    public function SceneState():Void
+    public function SceneState(arg0:cpp.Reference<Scenestate >):Void
+}
+class AnimationNode  extends Resource {
+    enum abstract FilterAction(Int) {
+        FILTER_IGNORE = 0;
+        FILTER_BLEND = 3;
+        FILTER_PASS = 1;
+        FILTER_STOP = 2;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Animationnode>
+    public function process(time:Double , seek:Bool ):Void
+    public function get_caption():String
+    public function has_filter():String
+    public function _parent_set(parent:cpp.Star<Object >):Void
+    public function get_input_count():Int64_t
+    public function get_input_name(input:Int64_t ):String
+    public function get_input_connection(input:Int64_t ):String
+    public function get_input_activity(input:Int64_t ):Double
+    public function add_input(name:String ):Void
+    public function remove_input(index:Int64_t ):Void
+    public function set_filter_path(path:Nodepath , enable:Bool ):Void
+    public function is_path_filtered(path:Nodepath ):Bool
+    public function set_filter_enabled(enable:Bool ):Void
+    public function is_filter_enabled():Bool
+    public function set_position(position:Vector2 ):Void
+    public function get_position():Vector2
+    public function _set_filters(filters:Array ):Void
+    public function _get_filters():Array
+    public function blend_animation(animation:String , time:Double , delta:Double , seeked:Bool , blend:Double ):Void
+    public function blend_node(node:Ref<animationnode> , time:Double , seek:Bool , blend:Double , filter:Int64_t , optimize:Bool ):Double
+    public function blend_input(input_index:Int64_t , time:Double , seek:Bool , blend:Double , filter:Int64_t , optimize:Bool ):Double
+    public function set_parent(parent:cpp.Star<Object >):Void
+    public function get_parent():Ref<animationnode>
+    public function get_tree():cpp.Star<Animationtree>
+    public function AnimationNode():Void
+    public function AnimationNode(arg0:cpp.Reference<Animationnode >):Void
+}
+class WebSocketServer  extends WebSocketMultiplayerPeer {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Websocketserver>
+    public function is_listening():Bool
+    public function listen(port:Int64_t , protocols:Poolstringarray , gd_mp_api:Bool ):Error
+    public function stop():Void
+    public function has_peer(id:Int64_t ):Bool
+    public function get_peer_address(id:Int64_t ):String
+    public function get_peer_port(id:Int64_t ):Int64_t
+    public function disconnect_peer(id:Int64_t ):Void
+    public function WebSocketServer():Void
+    public function WebSocketServer(arg0:cpp.Reference<Websocketserver >):Void
+}
+class VisualShaderNodeTransformVecMult  extends VisualShaderNode {
+    enum abstract Operator(Int) {
+        OP_3x3_BxA = 3;
+        OP_BxA = 1;
+        OP_AxB = 0;
+        OP_3x3_AxB = 2;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualshadernodetransformvecmult>
+    public function set_operator(op:Int64_t ):Void
+    public function get_operator():Visualshadernodetransformvecmultoperator
+    public function VisualShaderNodeTransformVecMult():Void
+    public function VisualShaderNodeTransformVecMult(arg0:cpp.Reference<Visualshadernodetransformvecmult >):Void
+}
+class BoneAttachment  extends Spatial {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Boneattachment>
+    public function set_bone_name(bone_name:String ):Void
+    public function get_bone_name():String
+    public function BoneAttachment():Void
+    public function BoneAttachment(arg0:cpp.Reference<Boneattachment >):Void
+}
+class VideoStreamTheora  extends VideoStream {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Videostreamtheora>
+    public function set_file(file:String ):Void
+    public function get_file():String
+    public function VideoStreamTheora():Void
+    public function VideoStreamTheora(arg0:cpp.Reference<Videostreamtheora >):Void
+}
+class VisualScriptIndexGet  extends VisualScriptNode {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualscriptindexget>
+    public function VisualScriptIndexGet():Void
+    public function VisualScriptIndexGet(arg0:cpp.Reference<Visualscriptindexget >):Void
+}
+class Skeleton  extends Spatial {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Skeleton>
+    public function add_bone(name:String ):Void
+    public function find_bone(name:String ):Int64_t
+    public function get_bone_name(bone_idx:Int64_t ):String
+    public function get_bone_parent(bone_idx:Int64_t ):Int64_t
+    public function set_bone_parent(bone_idx:Int64_t , parent_idx:Int64_t ):Void
+    public function get_bone_count():Int64_t
+    public function unparent_bone_and_rest(bone_idx:Int64_t ):Void
+    public function get_bone_rest(bone_idx:Int64_t ):Transform
+    public function set_bone_rest(bone_idx:Int64_t , rest:Transform ):Void
+    public function set_bone_disable_rest(bone_idx:Int64_t , disable:Bool ):Void
+    public function is_bone_rest_disabled(bone_idx:Int64_t ):Bool
+    public function bind_child_node_to_bone(bone_idx:Int64_t , node:cpp.Star<Object >):Void
+    public function unbind_child_node_from_bone(bone_idx:Int64_t , node:cpp.Star<Object >):Void
+    public function get_bound_child_nodes_to_bone(bone_idx:Int64_t ):Array
+    public function clear_bones():Void
+    public function get_bone_pose(bone_idx:Int64_t ):Transform
+    public function set_bone_pose(bone_idx:Int64_t , pose:Transform ):Void
+    public function set_bone_global_pose(bone_idx:Int64_t , pose:Transform ):Void
+    public function get_bone_global_pose(bone_idx:Int64_t ):Transform
+    public function get_bone_custom_pose(bone_idx:Int64_t ):Transform
+    public function set_bone_custom_pose(bone_idx:Int64_t , custom_pose:Transform ):Void
+    public function get_bone_transform(bone_idx:Int64_t ):Transform
+    public function physical_bones_stop_simulation():Void
+    public function physical_bones_start_simulation(bones:Array ):Void
+    public function physical_bones_add_collision_exception(exception:Rid ):Void
+    public function physical_bones_remove_collision_exception(exception:Rid ):Void
+    public function create():Skeleton
+    public function create(arg0:cpp.Reference<Skeleton >):Skeleton
+}
+class VisualScriptConstructor  extends VisualScriptNode {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualscriptconstructor>
+    public function set_constructor_type(type:Int64_t ):Void
+    public function get_constructor_type():Varianttype
+    public function set_constructor(constructor:Dictionary ):Void
+    public function get_constructor():Dictionary
+    public function VisualScriptConstructor():Void
+    public function VisualScriptConstructor(arg0:cpp.Reference<Visualscriptconstructor >):Void
+}
+class UPNPDevice  extends Reference {
+    enum abstract IGDStatus(Int) {
+        IGD_STATUS_OK = 0;
+        IGD_STATUS_NO_IGD = 4;
+        IGD_STATUS_MALLOC_ERROR = 8;
+        IGD_STATUS_NO_URLS = 3;
+        IGD_STATUS_UNKNOWN_DEVICE = 6;
+        IGD_STATUS_HTTP_ERROR = 1;
+        IGD_STATUS_INVALID_CONTROL = 7;
+        IGD_STATUS_DISCONNECTED = 5;
+        IGD_STATUS_UNKNOWN_ERROR = 9;
+        IGD_STATUS_HTTP_EMPTY = 2;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Upnpdevice>
+    public function is_valid_gateway():Bool
+    public function query_external_address():String
+    public function add_port_mapping(port:Int64_t , port_internal:Int64_t , desc:String , proto:String , duration:Int64_t ):Int64_t
+    public function delete_port_mapping(port:Int64_t , proto:String ):Int64_t
+    public function set_description_url(url:String ):Void
+    public function get_description_url():String
+    public function set_service_type(type:String ):Void
+    public function get_service_type():String
+    public function set_igd_control_url(url:String ):Void
+    public function get_igd_control_url():String
+    public function set_igd_service_type(type:String ):Void
+    public function get_igd_service_type():String
+    public function set_igd_our_addr(addr:String ):Void
+    public function get_igd_our_addr():String
+    public function set_igd_status(status:Int64_t ):Void
+    public function get_igd_status():Upnpdeviceigdstatus
+    public function UPNPDevice():Void
+    public function UPNPDevice(arg0:cpp.Reference<Upnpdevice >):Void
+}
+class PHashTranslation  extends Translation {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Phashtranslation>
+    public function generate(from:Ref<translation> ):Void
+    public function PHashTranslation():Void
+    public function PHashTranslation(arg0:cpp.Reference<Phashtranslation >):Void
+}
+class NavigationMeshInstance  extends Spatial {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Navigationmeshinstance>
+    public function set_navigation_mesh(navmesh:Ref<navigationmesh> ):Void
+    public function get_navigation_mesh():Ref<navigationmesh>
+    public function set_enabled(enabled:Bool ):Void
+    public function is_enabled():Bool
+    public function NavigationMeshInstance():Void
+    public function NavigationMeshInstance(arg0:cpp.Reference<Navigationmeshinstance >):Void
+}
+class VisualShader  extends Shader {
+    enum abstract Type(Int) {
+        TYPE_MAX = 3;
+        TYPE_LIGHT = 2;
+        TYPE_VERTEX = 0;
+        TYPE_FRAGMENT = 1;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualshader>
+    public function set_mode(mode:Int64_t ):Void
+    public function add_node(type:Int64_t , node:Ref<visualshadernode> , position:Vector2 , id:Int64_t ):Void
+    public function set_node_position(type:Int64_t , id:Int64_t , position:Vector2 ):Void
+    public function get_node_position(type:Int64_t , id:Int64_t ):Vector2
+    public function get_node(type:Int64_t , arg1:Int64_t ):Ref<visualshadernode>
+    public function get_node_list(type:Int64_t ):Poolintarray
+    public function get_valid_node_id(type:Int64_t ):Int64_t
+    public function remove_node(type:Int64_t , id:Int64_t ):Void
+    public function is_node_connection(type:Int64_t , from_node:Int64_t , from_port:Int64_t , to_node:Int64_t , to_port:Int64_t ):Bool
+    public function can_connect_nodes(type:Int64_t , from_node:Int64_t , from_port:Int64_t , to_node:Int64_t , to_port:Int64_t ):Bool
+    public function connect_nodes(type:Int64_t , from_node:Int64_t , from_port:Int64_t , to_node:Int64_t , to_port:Int64_t ):Error
+    public function disconnect_nodes(type:Int64_t , from_node:Int64_t , from_port:Int64_t , to_node:Int64_t , to_port:Int64_t ):Void
+    public function get_node_connections(type:Int64_t ):Array
+    public function set_graph_offset(offset:Vector2 ):Void
+    public function get_graph_offset():Vector2
+    public function _queue_update():Void
+    public function _update_shader():Void
+    public function _input_type_changed(arg0:Int64_t , arg1:Int64_t ):Void
+    public function VisualShader():Void
+    public function VisualShader(arg0:cpp.Reference<Visualshader >):Void
+}
+class VisualShaderNodeVec3Constant  extends VisualShaderNode {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualshadernodevec3constant>
+    public function set_constant(value:Vector3 ):Void
+    public function get_constant():Vector3
+    public function VisualShaderNodeVec3Constant():Void
+    public function VisualShaderNodeVec3Constant(arg0:cpp.Reference<Visualshadernodevec3constant >):Void
+}
+class InputEventMouseButton  extends InputEventMouse {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Inputeventmousebutton>
+    public function set_factor(factor:Double ):Void
+    public function get_factor():Double
+    public function set_button_index(button_index:Int64_t ):Void
+    public function get_button_index():Int64_t
+    public function set_pressed(pressed:Bool ):Void
+    public function set_doubleclick(doubleclick:Bool ):Void
+    public function is_doubleclick():Bool
+    public function InputEventMouseButton():Void
+    public function InputEventMouseButton(arg0:cpp.Reference<Inputeventmousebutton >):Void
+}
+class VisualShaderNodeScalarFunc  extends VisualShaderNode {
+    enum abstract Function(Int) {
+        FUNC_ROUND = 15;
+        FUNC_LOG = 9;
+        FUNC_TANH = 8;
+        FUNC_SQRT = 11;
+        FUNC_SINH = 6;
+        FUNC_ABS = 12;
+        FUNC_SATURATE = 18;
+        FUNC_FLOOR = 14;
+        FUNC_COS = 1;
+        FUNC_FRAC = 17;
+        FUNC_COSH = 7;
+        FUNC_ASIN = 3;
+        FUNC_NEGATE = 19;
+        FUNC_TAN = 2;
+        FUNC_SIGN = 13;
+        FUNC_ACOS = 4;
+        FUNC_SIN = 0;
+        FUNC_EXP = 10;
+        FUNC_ATAN = 5;
+        FUNC_CEIL = 16;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualshadernodescalarfunc>
+    public function set_function(func:Int64_t ):Void
+    public function get_function():Visualshadernodescalarfuncfunction
+    public function VisualShaderNodeScalarFunc():Void
+    public function VisualShaderNodeScalarFunc(arg0:cpp.Reference<Visualshadernodescalarfunc >):Void
+}
+class VisualScriptSwitch  extends VisualScriptNode {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualscriptswitch>
+    public function VisualScriptSwitch():Void
+    public function VisualScriptSwitch(arg0:cpp.Reference<Visualscriptswitch >):Void
+}
+class Button  extends BaseButton {
+    enum abstract TextAlign(Int) {
+        ALIGN_RIGHT = 2;
+        ALIGN_LEFT = 0;
+        ALIGN_CENTER = 1;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Button>
+    public function set_text(text:String ):Void
+    public function get_text():String
+    public function set_button_icon(texture:Ref<texture> ):Void
+    public function get_button_icon():Ref<texture>
+    public function set_flat(enabled:Bool ):Void
+    public function set_clip_text(enabled:Bool ):Void
+    public function get_clip_text():Bool
+    public function set_text_align(align:Int64_t ):Void
+    public function get_text_align():Buttontextalign
+    public function is_flat():Bool
+    public function create():Button
+    public function create(arg0:cpp.Reference<Button >):Button
+}
+class AudioEffectHighPassFilter  extends AudioEffectFilter {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Audioeffecthighpassfilter>
+    public function AudioEffectHighPassFilter():Void
+    public function AudioEffectHighPassFilter(arg0:cpp.Reference<Audioeffecthighpassfilter >):Void
+}
+class NativeScript  extends Script {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Nativescript>
+    public function set_class_name(class_name:String ):Void
+    public function get_class_name():String
+    public function set_library(library:Ref<gdnativelibrary> ):Void
+    public function get_library():Ref<gdnativelibrary>
+    public function get_class_documentation():String
+    public function get_method_documentation(method:String ):String
+    public function get_signal_documentation(signal_name:String ):String
+    public function get_property_documentation(path:String ):String
+    public function new_(__var_args:cpp.Reference<Array >):cpp.Star<Object>
+    public function NativeScript():Void
+    public function NativeScript(arg0:cpp.Reference<Nativescript >):Void
+}
+class VideoStream  extends Resource {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function VideoStream():Void
+    public function VideoStream(arg0:cpp.Reference<Videostream >):Void
+}
+class VisualScriptGlobalConstant  extends VisualScriptNode {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualscriptglobalconstant>
+    public function set_global_constant(index:Int64_t ):Void
+    public function get_global_constant():Int64_t
+    public function VisualScriptGlobalConstant():Void
+    public function VisualScriptGlobalConstant(arg0:cpp.Reference<Visualscriptglobalconstant >):Void
+}
+class BitmapFont  extends Font {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Bitmapfont>
+    public function create_from_fnt(path:String ):Error
+    public function set_height(px:Double ):Void
+    public function set_ascent(px:Double ):Void
+    public function add_kerning_pair(char_a:Int64_t , char_b:Int64_t , kerning:Int64_t ):Void
+    public function get_kerning_pair(char_a:Int64_t , char_b:Int64_t ):Int64_t
+    public function add_texture(texture:Ref<texture> ):Void
+    public function add_char(character:Int64_t , texture:Int64_t , rect:Rect2 , align:Vector2 , advance:Double ):Void
+    public function get_texture_count():Int64_t
+    public function get_texture(idx:Int64_t ):Ref<texture>
+    public function get_char_size(_char:Int64_t , next:Int64_t ):Vector2
+    public function set_distance_field_hint(enable:Bool ):Void
+    public function clear():Void
+    public function _set_chars(arg0:Poolintarray ):Void
+    public function _get_chars():Poolintarray
+    public function _set_kernings(arg0:Poolintarray ):Void
+    public function _get_kernings():Poolintarray
+    public function _set_textures(arg0:Array ):Void
+    public function _get_textures():Array
+    public function set_fallback(fallback:Ref<bitmapfont> ):Void
+    public function get_fallback():Ref<bitmapfont>
+    public function BitmapFont():Void
+    public function BitmapFont(arg0:cpp.Reference<Bitmapfont >):Void
+}
+class VehicleWheel  extends Spatial {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Vehiclewheel>
+    public function set_radius(length:Double ):Void
+    public function get_radius():Double
+    public function set_suspension_rest_length(length:Double ):Void
+    public function get_suspension_rest_length():Double
+    public function set_suspension_travel(length:Double ):Void
+    public function get_suspension_travel():Double
+    public function set_suspension_stiffness(length:Double ):Void
+    public function get_suspension_stiffness():Double
+    public function set_suspension_max_force(length:Double ):Void
+    public function get_suspension_max_force():Double
+    public function set_damping_compression(length:Double ):Void
+    public function get_damping_compression():Double
+    public function set_damping_relaxation(length:Double ):Void
+    public function get_damping_relaxation():Double
+    public function set_use_as_traction(enable:Bool ):Void
+    public function is_used_as_traction():Bool
+    public function set_use_as_steering(enable:Bool ):Void
+    public function is_used_as_steering():Bool
+    public function set_friction_slip(length:Double ):Void
+    public function get_friction_slip():Double
+    public function is_in_contact():Bool
+    public function set_roll_influence(roll_influence:Double ):Void
+    public function get_roll_influence():Double
+    public function get_skidinfo():Double
+    public function VehicleWheel():Void
+    public function VehicleWheel(arg0:cpp.Reference<Vehiclewheel >):Void
+}
+class AnimationNodeOneShot  extends AnimationNode {
+    enum abstract MixMode(Int) {
+        MIX_MODE_ADD = 1;
+        MIX_MODE_BLEND = 0;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Animationnodeoneshot>
+    public function set_fadein_time(time:Double ):Void
+    public function get_fadein_time():Double
+    public function set_fadeout_time(time:Double ):Void
+    public function get_fadeout_time():Double
+    public function set_autorestart(enable:Bool ):Void
+    public function has_autorestart():Bool
+    public function set_autorestart_delay(enable:Double ):Void
+    public function get_autorestart_delay():Double
+    public function set_autorestart_random_delay(enable:Double ):Void
+    public function get_autorestart_random_delay():Double
+    public function set_mix_mode(mode:Int64_t ):Void
+    public function get_mix_mode():Animationnodeoneshotmixmode
+    public function start():Void
+    public function stop():Void
+    public function is_active():Bool
+    public function set_use_sync(enable:Bool ):Void
+    public function is_using_sync():Bool
+    public function AnimationNodeOneShot():Void
+    public function AnimationNodeOneShot(arg0:cpp.Reference<Animationnodeoneshot >):Void
+}
+class ClassDB  extends Object {
+    public function get_singleton():cpp.Star<Classdb>
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function get_class_list():Poolstringarray
+    public function get_inheriters_from_class(_class:String ):Poolstringarray
+    public function get_parent_class(_class:String ):String
+    public function class_exists(_class:String ):Bool
+    public function is_parent_class(_class:String , inherits:String ):Bool
+    public function can_instance(_class:String ):Bool
+    public function instance(_class:String ):Variant
+    public function class_has_signal(_class:String , signal:String ):Bool
+    public function class_get_signal(_class:String , signal:String ):Dictionary
+    public function class_get_signal_list(_class:String , no_inheritance:Bool ):Array
+    public function class_get_property_list(_class:String , no_inheritance:Bool ):Array
+    public function class_get_property(object:cpp.Star<Object >, property:String ):Variant
+    public function class_set_property(object:cpp.Star<Object >, property:String , value:Variant ):Error
+    public function class_has_method(_class:String , method:String , no_inheritance:Bool ):Bool
+    public function class_get_method_list(_class:String , no_inheritance:Bool ):Array
+    public function class_get_integer_constant_list(_class:String , no_inheritance:Bool ):Poolstringarray
+    public function class_has_integer_constant(_class:String , name:String ):Bool
+    public function class_get_integer_constant(_class:String , name:String ):Int64_t
+    public function class_get_category(_class:String ):String
+    public function is_class_enabled(_class:String ):Bool
+    public function ClassDB(arg0:cpp.Reference<Classdb >):Void
+}
+class ConfirmationDialog  extends AcceptDialog {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Confirmationdialog>
+    public function get_cancel():cpp.Star<Button>
+    public function ConfirmationDialog():Void
+    public function ConfirmationDialog(arg0:cpp.Reference<Confirmationdialog >):Void
+}
+class VisualShaderNodeScalarConstant  extends VisualShaderNode {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualshadernodescalarconstant>
+    public function set_constant(value:Double ):Void
+    public function get_constant():Double
+    public function VisualShaderNodeScalarConstant():Void
+    public function VisualShaderNodeScalarConstant(arg0:cpp.Reference<Visualshadernodescalarconstant >):Void
+}
+class ViewportContainer  extends Container {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Viewportcontainer>
+    public function _input(event:Ref<inputevent> ):Void
+    public function set_stretch(enable:Bool ):Void
+    public function is_stretch_enabled():Bool
+    public function set_stretch_shrink(amount:Int64_t ):Void
+    public function get_stretch_shrink():Int64_t
+    public function ViewportContainer():Void
+    public function ViewportContainer(arg0:cpp.Reference<Viewportcontainer >):Void
+}
+class Resource  extends Reference {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Resource>
+    public function _setup_local_to_scene():Void
+    public function set_path(path:String ):Void
+    public function take_over_path(path:String ):Void
+    public function get_path():String
+    public function set_name(name:String ):Void
+    public function get_name():String
+    public function get_rid():Rid
+    public function set_local_to_scene(enable:Bool ):Void
+    public function is_local_to_scene():Bool
+    public function get_local_scene():cpp.Star<Node>
+    public function setup_local_to_scene():Void
+    public function duplicate(subresources:Bool ):Ref<resource>
+    public function create():Resource
+    public function create(arg0:cpp.Reference<Resource >):Resource
+}
+class AnimationNodeAdd2  extends AnimationNode {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Animationnodeadd2>
+    public function set_amount(amount:Double ):Void
+    public function get_amount():Double
+    public function set_use_sync(enable:Bool ):Void
+    public function is_using_sync():Bool
+    public function AnimationNodeAdd2():Void
+    public function AnimationNodeAdd2(arg0:cpp.Reference<Animationnodeadd2 >):Void
+}
+class Physics2DDirectBodyState  extends Object {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function get_total_gravity():Vector2
+    public function get_total_linear_damp():Double
+    public function get_total_angular_damp():Double
+    public function get_inverse_mass():Double
+    public function get_inverse_inertia():Double
+    public function set_linear_velocity(velocity:Vector2 ):Void
+    public function get_linear_velocity():Vector2
+    public function set_angular_velocity(velocity:Double ):Void
+    public function get_angular_velocity():Double
+    public function set_transform(transform:Transform2d ):Void
+    public function get_transform():Transform2d
+    public function add_central_force(force:Vector2 ):Void
+    public function add_force(offset:Vector2 , force:Vector2 ):Void
+    public function add_torque(torque:Double ):Void
+    public function apply_central_impulse(impulse:Vector2 ):Void
+    public function apply_torque_impulse(impulse:Double ):Void
+    public function apply_impulse(offset:Vector2 , impulse:Vector2 ):Void
+    public function set_sleep_state(enabled:Bool ):Void
+    public function is_sleeping():Bool
+    public function get_contact_count():Int64_t
+    public function get_contact_local_position(contact_idx:Int64_t ):Vector2
+    public function get_contact_local_normal(contact_idx:Int64_t ):Vector2
+    public function get_contact_local_shape(contact_idx:Int64_t ):Int64_t
+    public function get_contact_collider(contact_idx:Int64_t ):Rid
+    public function get_contact_collider_position(contact_idx:Int64_t ):Vector2
+    public function get_contact_collider_id(contact_idx:Int64_t ):Int64_t
+    public function get_contact_collider_object(contact_idx:Int64_t ):cpp.Star<Object>
+    public function get_contact_collider_shape(contact_idx:Int64_t ):Int64_t
+    public function get_contact_collider_shape_metadata(contact_idx:Int64_t ):Variant
+    public function get_contact_collider_velocity_at_position(contact_idx:Int64_t ):Vector2
+    public function get_step():Double
+    public function integrate_forces():Void
+    public function get_space_state():cpp.Star<Physics2ddirectspacestate>
+    public function Physics2DDirectBodyState():Void
+    public function Physics2DDirectBodyState(arg0:cpp.Reference<Physics2ddirectbodystate >):Void
+}
+class ProjectSettings  extends Object {
+    public function get_singleton():cpp.Star<Projectsettings>
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function has_setting(name:String ):Bool
+    public function set_setting(name:String , value:Variant ):Void
+    public function get_setting(name:String ):Variant
+    public function set_order(name:String , position:Int64_t ):Void
+    public function get_order(name:String ):Int64_t
+    public function set_initial_value(name:String , value:Variant ):Void
+    public function add_property_info(hint:Dictionary ):Void
+    public function clear(name:String ):Void
+    public function localize_path(path:String ):String
+    public function globalize_path(path:String ):String
+    public function save():Error
+    public function load_resource_pack(pack:String ):Bool
+    public function property_can_revert(name:String ):Bool
+    public function property_get_revert(name:String ):Variant
+    public function save_custom(file:String ):Error
+    public function ProjectSettings(arg0:cpp.Reference<Projectsettings >):Void
+}
+class HSlider  extends Slider {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Hslider>
+    public function HSlider():Void
+    public function HSlider(arg0:cpp.Reference<Hslider >):Void
+}
+class EditorFileSystemDirectory  extends Object {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Editorfilesystemdirectory>
+    public function get_subdir_count():Int64_t
+    public function get_subdir(idx:Int64_t ):cpp.Star<Editorfilesystemdirectory>
+    public function get_file_count():Int64_t
+    public function get_file(idx:Int64_t ):String
+    public function get_file_path(idx:Int64_t ):String
+    public function get_file_type(idx:Int64_t ):String
+    public function get_file_script_class_name(idx:Int64_t ):String
+    public function get_file_script_class_extends(idx:Int64_t ):String
+    public function get_file_import_is_valid(idx:Int64_t ):Bool
+    public function get_name():String
+    public function get_path():String
+    public function get_parent():cpp.Star<Editorfilesystemdirectory>
+    public function find_file_index(name:String ):Int64_t
+    public function find_dir_index(name:String ):Int64_t
+    public function EditorFileSystemDirectory():Void
+    public function EditorFileSystemDirectory(arg0:cpp.Reference<Editorfilesystemdirectory >):Void
+}
+class DampedSpringJoint2D  extends Joint2D {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Dampedspringjoint2d>
+    public function set_length(length:Double ):Void
+    public function get_length():Double
+    public function set_rest_length(rest_length:Double ):Void
+    public function get_rest_length():Double
+    public function set_stiffness(stiffness:Double ):Void
+    public function get_stiffness():Double
+    public function set_damping(damping:Double ):Void
+    public function get_damping():Double
+    public function DampedSpringJoint2D():Void
+    public function DampedSpringJoint2D(arg0:cpp.Reference<Dampedspringjoint2d >):Void
+}
+class DynamicFontData  extends Resource {
+    enum abstract Hinting(Int) {
+        HINTING_NONE = 0;
+        HINTING_NORMAL = 2;
+        HINTING_LIGHT = 1;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Dynamicfontdata>
+    public function set_font_path(path:String ):Void
+    public function get_font_path():String
+    public function set_hinting(mode:Int64_t ):Void
+    public function get_hinting():Dynamicfontdatahinting
+    public function DynamicFontData():Void
+    public function DynamicFontData(arg0:cpp.Reference<Dynamicfontdata >):Void
+}
+class TextEdit  extends Control {
+    enum abstract SearchFlags(Int) {
+        SEARCH_BACKWARDS = 4;
+        SEARCH_MATCH_CASE = 1;
+        SEARCH_WHOLE_WORDS = 2;
+    }
+    enum abstract MenuItems(Int) {
+        MENU_MAX = 6;
+        MENU_UNDO = 5;
+        MENU_PASTE = 2;
+        MENU_CLEAR = 3;
+        MENU_CUT = 0;
+        MENU_SELECT_ALL = 4;
+        MENU_COPY = 1;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Textedit>
+    public function _gui_input(arg0:Ref<inputevent> ):Void
+    public function _scroll_moved(arg0:Double ):Void
+    public function _cursor_changed_emit():Void
+    public function _text_changed_emit():Void
+    public function _push_current_op():Void
+    public function _click_selection_held():Void
+    public function _toggle_draw_caret():Void
+    public function _v_scroll_input():Void
+    public function set_text(text:String ):Void
+    public function insert_text_at_cursor(text:String ):Void
+    public function get_line_count():Int64_t
+    public function get_text():String
+    public function get_line(line:Int64_t ):String
+    public function cursor_set_column(column:Int64_t , adjust_viewport:Bool ):Void
+    public function cursor_set_line(line:Int64_t , adjust_viewport:Bool , can_be_hidden:Bool , wrap_index:Int64_t ):Void
+    public function cursor_get_column():Int64_t
+    public function cursor_get_line():Int64_t
+    public function cursor_set_blink_enabled(enable:Bool ):Void
+    public function cursor_get_blink_enabled():Bool
+    public function cursor_set_blink_speed(blink_speed:Double ):Void
+    public function cursor_get_blink_speed():Double
+    public function cursor_set_block_mode(enable:Bool ):Void
+    public function cursor_is_block_mode():Bool
+    public function set_right_click_moves_caret(enable:Bool ):Void
+    public function is_right_click_moving_caret():Bool
+    public function set_readonly(enable:Bool ):Void
+    public function is_readonly():Bool
+    public function set_wrap_enabled(enable:Bool ):Void
+    public function is_wrap_enabled():Bool
+    public function set_context_menu_enabled(enable:Bool ):Void
+    public function is_context_menu_enabled():Bool
+    public function cut():Void
+    public function copy():Void
+    public function paste():Void
+    public function select(from_line:Int64_t , from_column:Int64_t , to_line:Int64_t , to_column:Int64_t ):Void
+    public function select_all():Void
+    public function deselect():Void
+    public function is_selection_active():Bool
+    public function get_selection_from_line():Int64_t
+    public function get_selection_from_column():Int64_t
+    public function get_selection_to_line():Int64_t
+    public function get_selection_to_column():Int64_t
+    public function get_selection_text():String
+    public function get_word_under_cursor():String
+    public function search(key:String , flags:Int64_t , from_line:Int64_t , from_column:Int64_t ):Poolintarray
+    public function undo():Void
+    public function redo():Void
+    public function clear_undo_history():Void
+    public function set_show_line_numbers(enable:Bool ):Void
+    public function is_show_line_numbers_enabled():Bool
+    public function set_breakpoint_gutter_enabled(enable:Bool ):Void
+    public function is_breakpoint_gutter_enabled():Bool
+    public function set_hiding_enabled(enable:Int64_t ):Void
+    public function is_hiding_enabled():Int64_t
+    public function set_line_as_hidden(line:Int64_t , enable:Bool ):Void
+    public function is_line_hidden(line:Int64_t ):Bool
+    public function fold_all_lines():Void
+    public function unhide_all_lines():Void
+    public function fold_line(line:Int64_t ):Void
+    public function unfold_line(line:Int64_t ):Void
+    public function toggle_fold_line(line:Int64_t ):Void
+    public function can_fold(line:Int64_t ):Bool
+    public function is_folded(line:Int64_t ):Bool
+    public function set_highlight_all_occurrences(enable:Bool ):Void
+    public function is_highlight_all_occurrences_enabled():Bool
+    public function set_override_selected_font_color(override:Bool ):Void
+    public function is_overriding_selected_font_color():Bool
+    public function set_syntax_coloring(enable:Bool ):Void
+    public function is_syntax_coloring_enabled():Bool
+    public function set_highlight_current_line(enabled:Bool ):Void
+    public function is_highlight_current_line_enabled():Bool
+    public function set_smooth_scroll_enable(enable:Bool ):Void
+    public function is_smooth_scroll_enabled():Bool
+    public function set_v_scroll_speed(speed:Double ):Void
+    public function get_v_scroll_speed():Double
+    public function add_keyword_color(keyword:String , color:Color ):Void
+    public function has_keyword_color(keyword:String ):Bool
+    public function get_keyword_color(keyword:String ):Color
+    public function add_color_region(begin_key:String , end_key:String , color:Color , line_only:Bool ):Void
+    public function clear_colors():Void
+    public function menu_option(option:Int64_t ):Void
+    public function get_menu():cpp.Star<Popupmenu>
+    public function get_breakpoints():Array
+    public function remove_breakpoints():Void
+    public function TextEdit():Void
+    public function TextEdit(arg0:cpp.Reference<Textedit >):Void
+}
+class PlaneShape  extends Shape {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Planeshape>
+    public function set_plane(plane:Plane ):Void
+    public function get_plane():Plane
+    public function PlaneShape():Void
+    public function PlaneShape(arg0:cpp.Reference<Planeshape >):Void
+}
+class PhysicsServer  extends Object {
+    enum abstract BodyAxis(Int) {
+        BODY_AXIS_LINEAR_X = 1;
+        BODY_AXIS_LINEAR_Z = 4;
+        BODY_AXIS_LINEAR_Y = 2;
+        BODY_AXIS_ANGULAR_Y = 16;
+        BODY_AXIS_ANGULAR_X = 8;
+        BODY_AXIS_ANGULAR_Z = 32;
+    }
+    enum abstract ProcessInfo(Int) {
+        INFO_ISLAND_COUNT = 2;
+        INFO_ACTIVE_OBJECTS = 0;
+        INFO_COLLISION_PAIRS = 1;
+    }
+    enum abstract AreaBodyStatus(Int) {
+        AREA_BODY_REMOVED = 1;
+        AREA_BODY_ADDED = 0;
+    }
+    enum abstract BodyMode(Int) {
+        BODY_MODE_STATIC = 0;
+        BODY_MODE_RIGID = 2;
+        BODY_MODE_SOFT = 3;
+        BODY_MODE_KINEMATIC = 1;
+        BODY_MODE_CHARACTER = 4;
+    }
+    enum abstract ShapeType(Int) {
+        SHAPE_CONVEX_POLYGON = 6;
+        SHAPE_CAPSULE = 4;
+        SHAPE_HEIGHTMAP = 8;
+        SHAPE_CUSTOM = 9;
+        SHAPE_SPHERE = 2;
+        SHAPE_PLANE = 0;
+        SHAPE_RAY = 1;
+        SHAPE_BOX = 3;
+        SHAPE_CYLINDER = 5;
+        SHAPE_CONCAVE_POLYGON = 7;
+    }
+    enum abstract PinJointParam(Int) {
+        PIN_JOINT_DAMPING = 1;
+        PIN_JOINT_IMPULSE_CLAMP = 2;
+        PIN_JOINT_BIAS = 0;
+    }
+    enum abstract SpaceParameter(Int) {
+        SPACE_PARAM_BODY_MAX_ALLOWED_PENETRATION = 2;
+        SPACE_PARAM_BODY_ANGULAR_VELOCITY_SLEEP_THRESHOLD = 4;
+        SPACE_PARAM_BODY_TIME_TO_SLEEP = 5;
+        SPACE_PARAM_CONTACT_MAX_SEPARATION = 1;
+        SPACE_PARAM_BODY_ANGULAR_VELOCITY_DAMP_RATIO = 6;
+        SPACE_PARAM_CONSTRAINT_DEFAULT_BIAS = 7;
+        SPACE_PARAM_BODY_LINEAR_VELOCITY_SLEEP_THRESHOLD = 3;
+        SPACE_PARAM_CONTACT_RECYCLE_RADIUS = 0;
+    }
+    enum abstract ConeTwistJointParam(Int) {
+        CONE_TWIST_JOINT_BIAS = 2;
+        CONE_TWIST_JOINT_RELAXATION = 4;
+        CONE_TWIST_JOINT_SOFTNESS = 3;
+        CONE_TWIST_JOINT_TWIST_SPAN = 1;
+        CONE_TWIST_JOINT_SWING_SPAN = 0;
+    }
+    enum abstract JointType(Int) {
+        JOINT_PIN = 0;
+        JOINT_CONE_TWIST = 3;
+        JOINT_HINGE = 1;
+        JOINT_SLIDER = 2;
+        JOINT_6DOF = 4;
+    }
+    enum abstract BodyState(Int) {
+        BODY_STATE_CAN_SLEEP = 4;
+        BODY_STATE_TRANSFORM = 0;
+        BODY_STATE_SLEEPING = 3;
+        BODY_STATE_ANGULAR_VELOCITY = 2;
+        BODY_STATE_LINEAR_VELOCITY = 1;
+    }
+    enum abstract BodyParameter(Int) {
+        BODY_PARAM_MAX = 6;
+        BODY_PARAM_BOUNCE = 0;
+        BODY_PARAM_LINEAR_DAMP = 4;
+        BODY_PARAM_ANGULAR_DAMP = 5;
+        BODY_PARAM_GRAVITY_SCALE = 3;
+        BODY_PARAM_FRICTION = 1;
+        BODY_PARAM_MASS = 2;
+    }
+    enum abstract G6DOFJointAxisParam(Int) {
+        G6DOF_JOINT_LINEAR_DAMPING = 4;
+        G6DOF_JOINT_ANGULAR_RESTITUTION = 11;
+        G6DOF_JOINT_ANGULAR_MOTOR_TARGET_VELOCITY = 14;
+        G6DOF_JOINT_ANGULAR_MOTOR_FORCE_LIMIT = 15;
+        G6DOF_JOINT_LINEAR_MOTOR_FORCE_LIMIT = 6;
+        G6DOF_JOINT_ANGULAR_ERP = 13;
+        G6DOF_JOINT_ANGULAR_DAMPING = 10;
+        G6DOF_JOINT_LINEAR_RESTITUTION = 3;
+        G6DOF_JOINT_LINEAR_LIMIT_SOFTNESS = 2;
+        G6DOF_JOINT_ANGULAR_UPPER_LIMIT = 8;
+        G6DOF_JOINT_ANGULAR_LOWER_LIMIT = 7;
+        G6DOF_JOINT_LINEAR_LOWER_LIMIT = 0;
+        G6DOF_JOINT_ANGULAR_FORCE_LIMIT = 12;
+        G6DOF_JOINT_LINEAR_MOTOR_TARGET_VELOCITY = 5;
+        G6DOF_JOINT_ANGULAR_LIMIT_SOFTNESS = 9;
+        G6DOF_JOINT_LINEAR_UPPER_LIMIT = 1;
+    }
+    enum abstract SliderJointParam(Int) {
+        SLIDER_JOINT_ANGULAR_LIMIT_DAMPING = 15;
+        SLIDER_JOINT_ANGULAR_MOTION_RESTITUTION = 17;
+        SLIDER_JOINT_LINEAR_MOTION_RESTITUTION = 6;
+        SLIDER_JOINT_LINEAR_LIMIT_UPPER = 0;
+        SLIDER_JOINT_LINEAR_ORTHOGONAL_RESTITUTION = 9;
+        SLIDER_JOINT_ANGULAR_ORTHOGONAL_SOFTNESS = 19;
+        SLIDER_JOINT_LINEAR_LIMIT_LOWER = 1;
+        SLIDER_JOINT_LINEAR_MOTION_DAMPING = 7;
+        SLIDER_JOINT_ANGULAR_LIMIT_LOWER = 12;
+        SLIDER_JOINT_ANGULAR_LIMIT_RESTITUTION = 14;
+        SLIDER_JOINT_ANGULAR_LIMIT_UPPER = 11;
+        SLIDER_JOINT_LINEAR_LIMIT_SOFTNESS = 2;
+        SLIDER_JOINT_ANGULAR_MOTION_DAMPING = 18;
+        SLIDER_JOINT_LINEAR_ORTHOGONAL_DAMPING = 10;
+        SLIDER_JOINT_ANGULAR_LIMIT_SOFTNESS = 13;
+        SLIDER_JOINT_ANGULAR_ORTHOGONAL_RESTITUTION = 20;
+        SLIDER_JOINT_LINEAR_ORTHOGONAL_SOFTNESS = 8;
+        SLIDER_JOINT_MAX = 22;
+        SLIDER_JOINT_LINEAR_LIMIT_DAMPING = 4;
+        SLIDER_JOINT_ANGULAR_MOTION_SOFTNESS = 16;
+        SLIDER_JOINT_LINEAR_MOTION_SOFTNESS = 5;
+        SLIDER_JOINT_ANGULAR_ORTHOGONAL_DAMPING = 21;
+        SLIDER_JOINT_LINEAR_LIMIT_RESTITUTION = 3;
+    }
+    enum abstract HingeJointParam(Int) {
+        HINGE_JOINT_MOTOR_MAX_IMPULSE = 7;
+        HINGE_JOINT_LIMIT_LOWER = 2;
+        HINGE_JOINT_LIMIT_BIAS = 3;
+        HINGE_JOINT_BIAS = 0;
+        HINGE_JOINT_LIMIT_UPPER = 1;
+        HINGE_JOINT_MOTOR_TARGET_VELOCITY = 6;
+        HINGE_JOINT_LIMIT_RELAXATION = 5;
+        HINGE_JOINT_LIMIT_SOFTNESS = 4;
+    }
+    enum abstract G6DOFJointAxisFlag(Int) {
+        G6DOF_JOINT_FLAG_ENABLE_LINEAR_LIMIT = 0;
+        G6DOF_JOINT_FLAG_ENABLE_ANGULAR_LIMIT = 1;
+        G6DOF_JOINT_FLAG_ENABLE_MOTOR = 2;
+        G6DOF_JOINT_FLAG_ENABLE_LINEAR_MOTOR = 3;
+    }
+    enum abstract HingeJointFlag(Int) {
+        HINGE_JOINT_FLAG_ENABLE_MOTOR = 1;
+        HINGE_JOINT_FLAG_USE_LIMIT = 0;
+    }
+    enum abstract AreaSpaceOverrideMode(Int) {
+        AREA_SPACE_OVERRIDE_REPLACE_COMBINE = 4;
+        AREA_SPACE_OVERRIDE_COMBINE_REPLACE = 2;
+        AREA_SPACE_OVERRIDE_COMBINE = 1;
+        AREA_SPACE_OVERRIDE_REPLACE = 3;
+        AREA_SPACE_OVERRIDE_DISABLED = 0;
+    }
+    enum abstract AreaParameter(Int) {
+        AREA_PARAM_GRAVITY_DISTANCE_SCALE = 3;
+        AREA_PARAM_PRIORITY = 7;
+        AREA_PARAM_GRAVITY_POINT_ATTENUATION = 4;
+        AREA_PARAM_ANGULAR_DAMP = 6;
+        AREA_PARAM_GRAVITY_VECTOR = 1;
+        AREA_PARAM_GRAVITY_IS_POINT = 2;
+        AREA_PARAM_LINEAR_DAMP = 5;
+        AREA_PARAM_GRAVITY = 0;
+    }
+    public function get_singleton():cpp.Star<Physicsserver>
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function shape_create(type:Int64_t ):Rid
+    public function shape_set_data(shape:Rid , data:Variant ):Void
+    public function shape_get_type(shape:Rid ):Physicsservershapetype
+    public function shape_get_data(shape:Rid ):Variant
+    public function space_create():Rid
+    public function space_set_active(space:Rid , active:Bool ):Void
+    public function space_is_active(space:Rid ):Bool
+    public function space_set_param(space:Rid , param:Int64_t , value:Double ):Void
+    public function space_get_param(space:Rid , param:Int64_t ):Double
+    public function space_get_direct_state(space:Rid ):cpp.Star<Physicsdirectspacestate>
+    public function area_create():Rid
+    public function area_set_space(area:Rid , space:Rid ):Void
+    public function area_get_space(area:Rid ):Rid
+    public function area_set_space_override_mode(area:Rid , mode:Int64_t ):Void
+    public function area_get_space_override_mode(area:Rid ):Physicsserverareaspaceoverridemode
+    public function area_add_shape(area:Rid , shape:Rid , transform:Transform ):Void
+    public function area_set_shape(area:Rid , shape_idx:Int64_t , shape:Rid ):Void
+    public function area_set_shape_transform(area:Rid , shape_idx:Int64_t , transform:Transform ):Void
+    public function area_get_shape_count(area:Rid ):Int64_t
+    public function area_get_shape(area:Rid , shape_idx:Int64_t ):Rid
+    public function area_get_shape_transform(area:Rid , shape_idx:Int64_t ):Transform
+    public function area_remove_shape(area:Rid , shape_idx:Int64_t ):Void
+    public function area_clear_shapes(area:Rid ):Void
+    public function area_set_collision_layer(area:Rid , layer:Int64_t ):Void
+    public function area_set_collision_mask(area:Rid , mask:Int64_t ):Void
+    public function area_set_param(area:Rid , param:Int64_t , value:Variant ):Void
+    public function area_set_transform(area:Rid , transform:Transform ):Void
+    public function area_get_param(area:Rid , param:Int64_t ):Variant
+    public function area_get_transform(area:Rid ):Transform
+    public function area_attach_object_instance_id(area:Rid , id:Int64_t ):Void
+    public function area_get_object_instance_id(area:Rid ):Int64_t
+    public function area_set_monitor_callback(area:Rid , receiver:cpp.Star<Object >, method:String ):Void
+    public function area_set_area_monitor_callback(area:Rid , receiver:cpp.Star<Object >, method:String ):Void
+    public function area_set_monitorable(area:Rid , monitorable:Bool ):Void
+    public function area_set_ray_pickable(area:Rid , enable:Bool ):Void
+    public function area_is_ray_pickable(area:Rid ):Bool
+    public function body_create(mode:Int64_t , init_sleeping:Bool ):Rid
+    public function body_set_space(body:Rid , space:Rid ):Void
+    public function body_get_space(body:Rid ):Rid
+    public function body_set_mode(body:Rid , mode:Int64_t ):Void
+    public function body_get_mode(body:Rid ):Physicsserverbodymode
+    public function body_set_collision_layer(body:Rid , layer:Int64_t ):Void
+    public function body_get_collision_layer(body:Rid ):Int64_t
+    public function body_set_collision_mask(body:Rid , mask:Int64_t ):Void
+    public function body_get_collision_mask(body:Rid ):Int64_t
+    public function body_add_shape(body:Rid , shape:Rid , transform:Transform ):Void
+    public function body_set_shape(body:Rid , shape_idx:Int64_t , shape:Rid ):Void
+    public function body_set_shape_transform(body:Rid , shape_idx:Int64_t , transform:Transform ):Void
+    public function body_get_shape_count(body:Rid ):Int64_t
+    public function body_get_shape(body:Rid , shape_idx:Int64_t ):Rid
+    public function body_get_shape_transform(body:Rid , shape_idx:Int64_t ):Transform
+    public function body_remove_shape(body:Rid , shape_idx:Int64_t ):Void
+    public function body_clear_shapes(body:Rid ):Void
+    public function body_attach_object_instance_id(body:Rid , id:Int64_t ):Void
+    public function body_get_object_instance_id(body:Rid ):Int64_t
+    public function body_set_enable_continuous_collision_detection(body:Rid , enable:Bool ):Void
+    public function body_is_continuous_collision_detection_enabled(body:Rid ):Bool
+    public function body_set_param(body:Rid , param:Int64_t , value:Double ):Void
+    public function body_get_param(body:Rid , param:Int64_t ):Double
+    public function body_set_kinematic_safe_margin(body:Rid , margin:Double ):Void
+    public function body_get_kinematic_safe_margin(body:Rid ):Double
+    public function body_set_state(body:Rid , state:Int64_t , value:Variant ):Void
+    public function body_get_state(body:Rid , state:Int64_t ):Variant
+    public function body_add_central_force(body:Rid , force:Vector3 ):Void
+    public function body_add_force(body:Rid , force:Vector3 , position:Vector3 ):Void
+    public function body_add_torque(body:Rid , torque:Vector3 ):Void
+    public function body_apply_central_impulse(body:Rid , impulse:Vector3 ):Void
+    public function body_apply_impulse(body:Rid , position:Vector3 , impulse:Vector3 ):Void
+    public function body_apply_torque_impulse(body:Rid , impulse:Vector3 ):Void
+    public function body_set_axis_velocity(body:Rid , axis_velocity:Vector3 ):Void
+    public function body_set_axis_lock(body:Rid , axis:Int64_t , lock:Bool ):Void
+    public function body_is_axis_locked(body:Rid , axis:Int64_t ):Bool
+    public function body_add_collision_exception(body:Rid , excepted_body:Rid ):Void
+    public function body_remove_collision_exception(body:Rid , excepted_body:Rid ):Void
+    public function body_set_max_contacts_reported(body:Rid , amount:Int64_t ):Void
+    public function body_get_max_contacts_reported(body:Rid ):Int64_t
+    public function body_set_omit_force_integration(body:Rid , enable:Bool ):Void
+    public function body_is_omitting_force_integration(body:Rid ):Bool
+    public function body_set_force_integration_callback(body:Rid , receiver:cpp.Star<Object >, method:String , userdata:Variant ):Void
+    public function body_set_ray_pickable(body:Rid , enable:Bool ):Void
+    public function body_is_ray_pickable(body:Rid ):Bool
+    public function body_get_direct_state(body:Rid ):cpp.Star<Physicsdirectbodystate>
+    public function joint_create_pin(body_A:Rid , local_A:Vector3 , body_B:Rid , local_B:Vector3 ):Rid
+    public function pin_joint_set_param(joint:Rid , param:Int64_t , value:Double ):Void
+    public function pin_joint_get_param(joint:Rid , param:Int64_t ):Double
+    public function pin_joint_set_local_a(joint:Rid , local_A:Vector3 ):Void
+    public function pin_joint_get_local_a(joint:Rid ):Vector3
+    public function pin_joint_set_local_b(joint:Rid , local_B:Vector3 ):Void
+    public function pin_joint_get_local_b(joint:Rid ):Vector3
+    public function joint_create_hinge(body_A:Rid , hinge_A:Transform , body_B:Rid , hinge_B:Transform ):Rid
+    public function hinge_joint_set_param(joint:Rid , param:Int64_t , value:Double ):Void
+    public function hinge_joint_get_param(joint:Rid , param:Int64_t ):Double
+    public function hinge_joint_set_flag(joint:Rid , flag:Int64_t , enabled:Bool ):Void
+    public function hinge_joint_get_flag(joint:Rid , flag:Int64_t ):Bool
+    public function joint_create_slider(body_A:Rid , local_ref_A:Transform , body_B:Rid , local_ref_B:Transform ):Rid
+    public function slider_joint_set_param(joint:Rid , param:Int64_t , value:Double ):Void
+    public function slider_joint_get_param(joint:Rid , param:Int64_t ):Double
+    public function joint_create_cone_twist(body_A:Rid , local_ref_A:Transform , body_B:Rid , local_ref_B:Transform ):Rid
+    public function cone_twist_joint_set_param(joint:Rid , param:Int64_t , value:Double ):Void
+    public function cone_twist_joint_get_param(joint:Rid , param:Int64_t ):Double
+    public function joint_get_type(joint:Rid ):Physicsserverjointtype
+    public function joint_set_solver_priority(joint:Rid , priority:Int64_t ):Void
+    public function joint_get_solver_priority(joint:Rid ):Int64_t
+    public function joint_create_generic_6dof(body_A:Rid , local_ref_A:Transform , body_B:Rid , local_ref_B:Transform ):Rid
+    public function generic_6dof_joint_set_param(joint:Rid , axis:Int64_t , param:Int64_t , value:Double ):Void
+    public function generic_6dof_joint_get_param(joint:Rid , axis:Int64_t , param:Int64_t ):Double
+    public function generic_6dof_joint_set_flag(joint:Rid , axis:Int64_t , flag:Int64_t , enable:Bool ):Void
+    public function generic_6dof_joint_get_flag(joint:Rid , axis:Int64_t , flag:Int64_t ):Bool
+    public function free_rid(rid:Rid ):Void
+    public function set_active(active:Bool ):Void
+    public function get_process_info(process_info:Int64_t ):Int64_t
+    public function PhysicsServer(arg0:cpp.Reference<Physicsserver >):Void
+}
+class AtlasTexture  extends Texture {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Atlastexture>
+    public function set_atlas(atlas:Ref<texture> ):Void
+    public function get_atlas():Ref<texture>
+    public function set_region(region:Rect2 ):Void
+    public function get_region():Rect2
+    public function set_margin(margin:Rect2 ):Void
+    public function get_margin():Rect2
+    public function set_filter_clip(enable:Bool ):Void
+    public function has_filter_clip():Bool
+    public function AtlasTexture():Void
+    public function AtlasTexture(arg0:cpp.Reference<Atlastexture >):Void
+}
+class VisibilityEnabler2D  extends VisibilityNotifier2D {
+    enum abstract Enabler(Int) {
+        ENABLER_MAX = 6;
+        ENABLER_FREEZE_BODIES = 1;
+        ENABLER_PAUSE_ANIMATED_SPRITES = 5;
+        ENABLER_PAUSE_ANIMATIONS = 0;
+        ENABLER_PARENT_PHYSICS_PROCESS = 4;
+        ENABLER_PARENT_PROCESS = 3;
+        ENABLER_PAUSE_PARTICLES = 2;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visibilityenabler2d>
+    public function set_enabler(enabler:Int64_t , enabled:Bool ):Void
+    public function is_enabler_enabled(enabler:Int64_t ):Bool
+    public function _node_removed(arg0:cpp.Star<Object >):Void
+    public function VisibilityEnabler2D():Void
+    public function VisibilityEnabler2D(arg0:cpp.Reference<Visibilityenabler2d >):Void
+}
+class UndoRedo  extends Object {
+    enum abstract MergeMode(Int) {
+        MERGE_ENDS = 1;
+        MERGE_ALL = 2;
+        MERGE_DISABLE = 0;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Undoredo>
+    public function create_action(name:String , merge_mode:Int64_t ):Void
+    public function commit_action():Void
+    public function add_do_method(object:cpp.Star<Object >, method:String , __var_args:cpp.Reference<Array >):Variant
+    public function add_undo_method(object:cpp.Star<Object >, method:String , __var_args:cpp.Reference<Array >):Variant
+    public function add_do_property(object:cpp.Star<Object >, property:String , value:Variant ):Void
+    public function add_undo_property(object:cpp.Star<Object >, property:String , value:Variant ):Void
+    public function add_do_reference(object:cpp.Star<Object >):Void
+    public function add_undo_reference(object:cpp.Star<Object >):Void
+    public function clear_history():Void
+    public function get_current_action_name():String
+    public function get_version():Int64_t
+    public function redo():Bool
+    public function undo():Bool
+    public function UndoRedo():Void
+    public function UndoRedo(arg0:cpp.Reference<Undoredo >):Void
+}
+class AnimationNodeAdd3  extends AnimationNode {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Animationnodeadd3>
+    public function set_amount(amount:Double ):Void
+    public function get_amount():Double
+    public function set_use_sync(enable:Bool ):Void
+    public function is_using_sync():Bool
+    public function AnimationNodeAdd3():Void
+    public function AnimationNodeAdd3(arg0:cpp.Reference<Animationnodeadd3 >):Void
+}
+class VisualScriptPropertySet  extends VisualScriptNode {
+    enum abstract AssignOp(Int) {
+        ASSIGN_OP_SUB = 2;
+        ASSIGN_OP_BIT_AND = 8;
+        ASSIGN_OP_MUL = 3;
+        ASSIGN_OP_SHIFT_LEFT = 6;
+        ASSIGN_OP_MOD = 5;
+        ASSIGN_OP_BIT_XOR = 10;
+        ASSIGN_OP_NONE = 0;
+        ASSIGN_OP_DIV = 4;
+        ASSIGN_OP_SHIFT_RIGHT = 7;
+        ASSIGN_OP_ADD = 1;
+        ASSIGN_OP_BIT_OR = 9;
+    }
+    enum abstract CallMode(Int) {
+        CALL_MODE_NODE_PATH = 1;
+        CALL_MODE_INSTANCE = 2;
+        CALL_MODE_BASIC_TYPE = 3;
+        CALL_MODE_SELF = 0;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualscriptpropertyset>
+    public function set_base_type(base_type:String ):Void
+    public function get_base_type():String
+    public function set_base_script(base_script:String ):Void
+    public function get_base_script():String
+    public function set_basic_type(basic_type:Int64_t ):Void
+    public function get_basic_type():Varianttype
+    public function _set_type_cache(type_cache:Dictionary ):Void
+    public function _get_type_cache():Dictionary
+    public function set_property(property:String ):Void
+    public function get_property():String
+    public function set_call_mode(mode:Int64_t ):Void
+    public function get_call_mode():Visualscriptpropertysetcallmode
+    public function set_base_path(base_path:Nodepath ):Void
+    public function get_base_path():Nodepath
+    public function set_index(index:String ):Void
+    public function get_index():String
+    public function set_assign_op(assign_op:Int64_t ):Void
+    public function get_assign_op():Visualscriptpropertysetassignop
+    public function VisualScriptPropertySet():Void
+    public function VisualScriptPropertySet(arg0:cpp.Reference<Visualscriptpropertyset >):Void
+}
+class VisualShaderNodeScalarOp  extends VisualShaderNode {
+    enum abstract Operator(Int) {
+        OP_SUB = 1;
+        OP_ADD = 0;
+        OP_MUL = 2;
+        OP_MOD = 4;
+        OP_POW = 5;
+        OP_ATAN2 = 8;
+        OP_MIN = 7;
+        OP_MAX = 6;
+        OP_DIV = 3;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualshadernodescalarop>
+    public function set_operator(op:Int64_t ):Void
+    public function get_operator():Visualshadernodescalaropoperator
+    public function VisualShaderNodeScalarOp():Void
+    public function VisualShaderNodeScalarOp(arg0:cpp.Reference<Visualshadernodescalarop >):Void
+}
+class World  extends Resource {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<World>
+    public function get_space():Rid
+    public function get_scenario():Rid
+    public function set_environment(env:Ref<environment> ):Void
+    public function get_environment():Ref<environment>
+    public function set_fallback_environment(env:Ref<environment> ):Void
+    public function get_fallback_environment():Ref<environment>
+    public function get_direct_space_state():cpp.Star<Physicsdirectspacestate>
+    public function create():World
+    public function create(arg0:cpp.Reference<World >):World
+}
+class Label  extends Control {
+    enum abstract Align(Int) {
+        ALIGN_FILL = 3;
+        ALIGN_RIGHT = 2;
+        ALIGN_LEFT = 0;
+        ALIGN_CENTER = 1;
+    }
+    enum abstract VAlign(Int) {
+        VALIGN_BOTTOM = 2;
+        VALIGN_TOP = 0;
+        VALIGN_FILL = 3;
+        VALIGN_CENTER = 1;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Label>
+    public function set_align(align:Int64_t ):Void
+    public function get_align():Labelalign
+    public function set_valign(valign:Int64_t ):Void
+    public function get_valign():Labelvalign
+    public function set_text(text:String ):Void
+    public function get_text():String
+    public function set_autowrap(enable:Bool ):Void
+    public function has_autowrap():Bool
+    public function set_clip_text(enable:Bool ):Void
+    public function is_clipping_text():Bool
+    public function set_uppercase(enable:Bool ):Void
+    public function is_uppercase():Bool
+    public function get_line_height():Int64_t
+    public function get_line_count():Int64_t
+    public function get_visible_line_count():Int64_t
+    public function get_total_character_count():Int64_t
+    public function set_visible_characters(amount:Int64_t ):Void
+    public function get_visible_characters():Int64_t
+    public function set_percent_visible(percent_visible:Double ):Void
+    public function get_percent_visible():Double
+    public function set_lines_skipped(lines_skipped:Int64_t ):Void
+    public function get_lines_skipped():Int64_t
+    public function set_max_lines_visible(lines_visible:Int64_t ):Void
+    public function get_max_lines_visible():Int64_t
+    public function create():Label
+    public function create(arg0:cpp.Reference<Label >):Label
+}
+class PlaneMesh  extends PrimitiveMesh {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Planemesh>
+    public function set_size(size:Vector2 ):Void
+    public function get_size():Vector2
+    public function set_subdivide_width(subdivide:Int64_t ):Void
+    public function get_subdivide_width():Int64_t
+    public function set_subdivide_depth(subdivide:Int64_t ):Void
+    public function get_subdivide_depth():Int64_t
+    public function PlaneMesh():Void
+    public function PlaneMesh(arg0:cpp.Reference<Planemesh >):Void
+}
+class WebSocketPeer  extends PacketPeer {
+    enum abstract WriteMode(Int) {
+        WRITE_MODE_BINARY = 1;
+        WRITE_MODE_TEXT = 0;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Websocketpeer>
+    public function get_write_mode():Websocketpeerwritemode
+    public function set_write_mode(mode:Int64_t ):Void
+    public function is_connected_to_host():Bool
+    public function was_string_packet():Bool
+    public function close():Void
+    public function get_connected_host():String
+    public function get_connected_port():Int64_t
+    public function WebSocketPeer():Void
+    public function WebSocketPeer(arg0:cpp.Reference<Websocketpeer >):Void
+}
+class Font  extends Resource {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function draw(canvas_item:Rid , position:Vector2 , string:String , modulate:Color , clip_w:Int64_t , outline_modulate:Color ):Void
+    public function get_ascent():Double
+    public function get_descent():Double
+    public function get_height():Double
+    public function is_distance_field_hint():Bool
+    public function get_string_size(string:String ):Vector2
+    public function has_outline():Bool
+    public function draw_char(canvas_item:Rid , position:Vector2 , _char:Int64_t , next:Int64_t , modulate:Color , outline:Bool ):Double
+    public function update_changes():Void
+    public function create():Font
+    public function create(arg0:cpp.Reference<Font >):Font
+}
+class NetworkedMultiplayerENet  extends NetworkedMultiplayerPeer {
+    enum abstract CompressionMode(Int) {
+        COMPRESS_ZSTD = 4;
+        COMPRESS_RANGE_CODER = 1;
+        COMPRESS_NONE = 0;
+        COMPRESS_FASTLZ = 2;
+        COMPRESS_ZLIB = 3;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Networkedmultiplayerenet>
+    public function create_server(port:Int64_t , max_clients:Int64_t , in_bandwidth:Int64_t , out_bandwidth:Int64_t ):Error
+    public function create_client(address:String , port:Int64_t , in_bandwidth:Int64_t , out_bandwidth:Int64_t , client_port:Int64_t ):Error
+    public function close_connection(wait_usec:Int64_t ):Void
+    public function disconnect_peer(id:Int64_t , now:Bool ):Void
+    public function set_compression_mode(mode:Int64_t ):Void
+    public function get_compression_mode():Networkedmultiplayerenetcompressionmode
+    public function set_bind_ip(ip:String ):Void
+    public function get_peer_address(id:Int64_t ):String
+    public function get_peer_port(id:Int64_t ):Int64_t
+    public function get_packet_channel():Int64_t
+    public function get_last_packet_channel():Int64_t
+    public function set_transfer_channel(channel:Int64_t ):Void
+    public function get_transfer_channel():Int64_t
+    public function set_channel_count(channels:Int64_t ):Void
+    public function get_channel_count():Int64_t
+    public function set_always_ordered(ordered:Bool ):Void
+    public function is_always_ordered():Bool
+    public function NetworkedMultiplayerENet():Void
+    public function NetworkedMultiplayerENet(arg0:cpp.Reference<Networkedmultiplayerenet >):Void
+}
+class VisualScriptFunctionCall  extends VisualScriptNode {
+    enum abstract RPCCallMode(Int) {
+        RPC_RELIABLE = 1;
+        RPC_UNRELIABLE = 2;
+        RPC_UNRELIABLE_TO_ID = 4;
+        RPC_RELIABLE_TO_ID = 3;
+        RPC_DISABLED = 0;
+    }
+    enum abstract CallMode(Int) {
+        CALL_MODE_NODE_PATH = 1;
+        CALL_MODE_INSTANCE = 2;
+        CALL_MODE_SINGLETON = 4;
+        CALL_MODE_BASIC_TYPE = 3;
+        CALL_MODE_SELF = 0;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualscriptfunctioncall>
+    public function set_base_type(base_type:String ):Void
+    public function get_base_type():String
+    public function set_base_script(base_script:String ):Void
+    public function get_base_script():String
+    public function set_basic_type(basic_type:Int64_t ):Void
+    public function get_basic_type():Varianttype
+    public function set_singleton(singleton:String ):Void
+    public function get_singleton():String
+    public function set_function(function:String ):Void
+    public function get_function():String
+    public function set_call_mode(mode:Int64_t ):Void
+    public function get_call_mode():Visualscriptfunctioncallcallmode
+    public function set_base_path(base_path:Nodepath ):Void
+    public function get_base_path():Nodepath
+    public function set_use_default_args(amount:Int64_t ):Void
+    public function get_use_default_args():Int64_t
+    public function _set_argument_cache(argument_cache:Dictionary ):Void
+    public function _get_argument_cache():Dictionary
+    public function set_rpc_call_mode(mode:Int64_t ):Void
+    public function get_rpc_call_mode():Visualscriptfunctioncallrpccallmode
+    public function set_validate(enable:Bool ):Void
+    public function get_validate():Bool
+    public function VisualScriptFunctionCall():Void
+    public function VisualScriptFunctionCall(arg0:cpp.Reference<Visualscriptfunctioncall >):Void
+}
+class TouchScreenButton  extends Node2D {
+    enum abstract VisibilityMode(Int) {
+        VISIBILITY_TOUCHSCREEN_ONLY = 1;
+        VISIBILITY_ALWAYS = 0;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Touchscreenbutton>
+    public function set_texture(texture:Ref<texture> ):Void
+    public function get_texture():Ref<texture>
+    public function set_texture_pressed(texture_pressed:Ref<texture> ):Void
+    public function get_texture_pressed():Ref<texture>
+    public function set_bitmask(bitmask:Ref<bitmap> ):Void
+    public function get_bitmask():Ref<bitmap>
+    public function set_shape(shape:Ref<shape2d> ):Void
+    public function get_shape():Ref<shape2d>
+    public function set_shape_centered(_bool:Bool ):Void
+    public function is_shape_centered():Bool
+    public function set_shape_visible(_bool:Bool ):Void
+    public function is_shape_visible():Bool
+    public function set_action(action:String ):Void
+    public function get_action():String
+    public function set_visibility_mode(mode:Int64_t ):Void
+    public function get_visibility_mode():Touchscreenbuttonvisibilitymode
+    public function set_passby_press(enabled:Bool ):Void
+    public function is_passby_press_enabled():Bool
+    public function is_pressed():Bool
+    public function _input(arg0:Ref<inputevent> ):Void
+    public function TouchScreenButton():Void
+    public function TouchScreenButton(arg0:cpp.Reference<Touchscreenbutton >):Void
+}
+class ToolButton  extends Button {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Toolbutton>
+    public function ToolButton():Void
+    public function ToolButton(arg0:cpp.Reference<Toolbutton >):Void
+}
+class InputEventMouseMotion  extends InputEventMouse {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Inputeventmousemotion>
+    public function set_relative(relative:Vector2 ):Void
+    public function get_relative():Vector2
+    public function set_speed(speed:Vector2 ):Void
+    public function get_speed():Vector2
+    public function InputEventMouseMotion():Void
+    public function InputEventMouseMotion(arg0:cpp.Reference<Inputeventmousemotion >):Void
+}
+class AnimationNodeStateMachineTransition  extends Resource {
+    enum abstract SwitchMode(Int) {
+        SWITCH_MODE_SYNC = 1;
+        SWITCH_MODE_IMMEDIATE = 0;
+        SWITCH_MODE_AT_END = 2;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Animationnodestatemachinetransition>
+    public function set_switch_mode(mode:Int64_t ):Void
+    public function get_switch_mode():Animationnodestatemachinetransitionswitchmode
+    public function set_auto_advance(auto_advance:Bool ):Void
+    public function has_auto_advance():Bool
+    public function set_xfade_time(secs:Double ):Void
+    public function get_xfade_time():Double
+    public function set_disabled(disabled:Bool ):Void
+    public function is_disabled():Bool
+    public function set_priority(priority:Int64_t ):Void
+    public function get_priority():Int64_t
+    public function AnimationNodeStateMachineTransition():Void
+    public function AnimationNodeStateMachineTransition(arg0:cpp.Reference<Animationnodestatemachinetransition >):Void
+}
+class OS  extends Object {
+    enum abstract SystemDir(Int) {
+        SYSTEM_DIR_MUSIC = 5;
+        SYSTEM_DIR_PICTURES = 6;
+        SYSTEM_DIR_DESKTOP = 0;
+        SYSTEM_DIR_DCIM = 1;
+        SYSTEM_DIR_DOWNLOADS = 3;
+        SYSTEM_DIR_DOCUMENTS = 2;
+        SYSTEM_DIR_RINGTONES = 7;
+        SYSTEM_DIR_MOVIES = 4;
+    }
+    enum abstract ScreenOrientation(Int) {
+        SCREEN_ORIENTATION_LANDSCAPE = 0;
+        SCREEN_ORIENTATION_PORTRAIT = 1;
+        SCREEN_ORIENTATION_SENSOR_PORTRAIT = 5;
+        SCREEN_ORIENTATION_REVERSE_LANDSCAPE = 2;
+        SCREEN_ORIENTATION_SENSOR = 6;
+        SCREEN_ORIENTATION_SENSOR_LANDSCAPE = 4;
+        SCREEN_ORIENTATION_REVERSE_PORTRAIT = 3;
+    }
+    enum abstract PowerState(Int) {
+        POWERSTATE_UNKNOWN = 0;
+        POWERSTATE_CHARGING = 3;
+        POWERSTATE_ON_BATTERY = 1;
+        POWERSTATE_NO_BATTERY = 2;
+        POWERSTATE_CHARGED = 4;
+    }
+    enum abstract Month(Int) {
+        MONTH_JUNE = 6;
+        MONTH_MAY = 5;
+        MONTH_NOVEMBER = 11;
+        MONTH_MARCH = 3;
+        MONTH_APRIL = 4;
+        MONTH_SEPTEMBER = 9;
+        MONTH_JULY = 7;
+        MONTH_FEBRUARY = 2;
+        MONTH_AUGUST = 8;
+        MONTH_OCTOBER = 10;
+        MONTH_JANUARY = 1;
+        MONTH_DECEMBER = 12;
+    }
+    enum abstract Weekday(Int) {
+        DAY_SATURDAY = 6;
+        DAY_FRIDAY = 5;
+        DAY_MONDAY = 1;
+        DAY_SUNDAY = 0;
+        DAY_TUESDAY = 2;
+        DAY_THURSDAY = 4;
+        DAY_WEDNESDAY = 3;
+    }
+    public function get_singleton():cpp.Star<Os>
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function set_clipboard(clipboard:String ):Void
+    public function get_clipboard():String
+    public function get_video_driver_count():Int64_t
+    public function get_video_driver_name(driver:Int64_t ):String
+    public function get_audio_driver_count():Int64_t
+    public function get_audio_driver_name(driver:Int64_t ):String
+    public function get_connected_midi_inputs():Poolstringarray
+    public function get_screen_count():Int64_t
+    public function get_current_screen():Int64_t
+    public function set_current_screen(screen:Int64_t ):Void
+    public function get_screen_position(screen:Int64_t ):Vector2
+    public function get_screen_size(screen:Int64_t ):Vector2
+    public function get_screen_dpi(screen:Int64_t ):Int64_t
+    public function get_window_position():Vector2
+    public function set_window_position(position:Vector2 ):Void
+    public function get_window_size():Vector2
+    public function set_window_size(size:Vector2 ):Void
+    public function get_window_safe_area():Rect2
+    public function set_window_fullscreen(enabled:Bool ):Void
+    public function is_window_fullscreen():Bool
+    public function set_window_resizable(enabled:Bool ):Void
+    public function is_window_resizable():Bool
+    public function set_window_minimized(enabled:Bool ):Void
+    public function is_window_minimized():Bool
+    public function set_window_maximized(enabled:Bool ):Void
+    public function is_window_maximized():Bool
+    public function set_window_always_on_top(enabled:Bool ):Void
+    public function is_window_always_on_top():Bool
+    public function request_attention():Void
+    public function get_real_window_size():Vector2
+    public function center_window():Void
+    public function set_borderless_window(borderless:Bool ):Void
+    public function get_borderless_window():Bool
+    public function get_window_per_pixel_transparency_enabled():Bool
+    public function set_window_per_pixel_transparency_enabled(enabled:Bool ):Void
+    public function set_ime_position(position:Vector2 ):Void
+    public function set_screen_orientation(orientation:Int64_t ):Void
+    public function get_screen_orientation():Osscreenorientation
+    public function set_keep_screen_on(enabled:Bool ):Void
+    public function is_keep_screen_on():Bool
+    public function has_touchscreen_ui_hint():Bool
+    public function set_window_title(title:String ):Void
+    public function set_low_processor_usage_mode(enable:Bool ):Void
+    public function is_in_low_processor_usage_mode():Bool
+    public function get_processor_count():Int64_t
+    public function get_executable_path():String
+    public function execute(path:String , arguments:Poolstringarray , blocking:Bool , output:Array ):Int64_t
+    public function kill(pid:Int64_t ):Error
+    public function shell_open(uri:String ):Error
+    public function get_process_id():Int64_t
+    public function get_environment(environment:String ):String
+    public function has_environment(environment:String ):Bool
+    public function get_name():String
+    public function get_cmdline_args():Poolstringarray
+    public function get_datetime(utc:Bool ):Dictionary
+    public function get_date(utc:Bool ):Dictionary
+    public function get_time(utc:Bool ):Dictionary
+    public function get_time_zone_info():Dictionary
+    public function get_unix_time():Int64_t
+    public function get_datetime_from_unix_time(unix_time_val:Int64_t ):Dictionary
+    public function get_unix_time_from_datetime(datetime:Dictionary ):Int64_t
+    public function get_system_time_secs():Int64_t
+    public function set_icon(icon:Ref<image> ):Void
+    public function get_exit_code():Int64_t
+    public function set_exit_code(code:Int64_t ):Void
+    public function delay_usec(usec:Int64_t ):Void
+    public function delay_msec(msec:Int64_t ):Void
+    public function get_ticks_msec():Int64_t
+    public function get_ticks_usec():Int64_t
+    public function get_splash_tick_msec():Int64_t
+    public function get_locale():String
+    public function get_latin_keyboard_variant():String
+    public function get_model_name():String
+    public function can_draw():Bool
+    public function is_userfs_persistent():Bool
+    public function is_stdout_verbose():Bool
+    public function can_use_threads():Bool
+    public function is_debug_build():Bool
+    public function dump_memory_to_file(file:String ):Void
+    public function dump_resources_to_file(file:String ):Void
+    public function has_virtual_keyboard():Bool
+    public function show_virtual_keyboard(existing_text:String ):Void
+    public function hide_virtual_keyboard():Void
+    public function get_virtual_keyboard_height():Int64_t
+    public function print_resources_in_use(_short:Bool ):Void
+    public function print_all_resources(tofile:String ):Void
+    public function get_static_memory_usage():Int64_t
+    public function get_static_memory_peak_usage():Int64_t
+    public function get_dynamic_memory_usage():Int64_t
+    public function get_user_data_dir():String
+    public function get_system_dir(dir:Int64_t ):String
+    public function get_unique_id():String
+    public function is_ok_left_and_cancel_right():Bool
+    public function print_all_textures_by_size():Void
+    public function print_resources_by_type(types:Poolstringarray ):Void
+    public function native_video_play(path:String , volume:Double , audio_track:String , subtitle_track:String ):Error
+    public function native_video_is_playing():Bool
+    public function native_video_stop():Void
+    public function native_video_pause():Void
+    public function native_video_unpause():Void
+    public function get_scancode_string(code:Int64_t ):String
+    public function is_scancode_unicode(code:Int64_t ):Bool
+    public function find_scancode_from_string(string:String ):Int64_t
+    public function set_use_file_access_save_and_swap(enabled:Bool ):Void
+    public function alert(text:String , title:String ):Void
+    public function set_thread_name(name:String ):Error
+    public function set_use_vsync(enable:Bool ):Void
+    public function is_vsync_enabled():Bool
+    public function has_feature(tag_name:String ):Bool
+    public function get_power_state():Ospowerstate
+    public function get_power_seconds_left():Int64_t
+    public function get_power_percent_left():Int64_t
+    public function OS(arg0:cpp.Reference<Os >):Void
+}
+class GridContainer  extends Container {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Gridcontainer>
+    public function set_columns(columns:Int64_t ):Void
+    public function get_columns():Int64_t
+    public function get_child_control_at_cell(row:Int64_t , column:Int64_t ):cpp.Star<Control>
+    public function GridContainer():Void
+    public function GridContainer(arg0:cpp.Reference<Gridcontainer >):Void
+}
+class Transform  {
+    public function invert():Void
+    public function inverse():Transform
+    public function affine_invert():Void
+    public function affine_inverse():Transform
+    public function rotated(p_axis:cpp.Reference<Vector3 >, p_phi:Real_t):Transform
+    public function rotate(p_axis:cpp.Reference<Vector3 >, p_phi:Real_t):Void
+    public function rotate_basis(p_axis:cpp.Reference<Vector3 >, p_phi:Real_t):Void
+    public function set_look_at(p_eye:cpp.Reference<Vector3 >, p_target:cpp.Reference<Vector3 >, p_up:cpp.Reference<Vector3 >):Void
+    public function looking_at(p_target:cpp.Reference<Vector3 >, p_up:cpp.Reference<Vector3 >):Transform
+    public function scale(p_scale:cpp.Reference<Vector3 >):Void
+    public function scaled(p_scale:cpp.Reference<Vector3 >):Transform
+    public function scale_basis(p_scale:cpp.Reference<Vector3 >):Void
+    public function translate(p_tx:Real_t, p_ty:Real_t, p_tz:Real_t):Void
+    public function translate(p_translation:cpp.Reference<Vector3 >):Void
+    public function translated(p_translation:cpp.Reference<Vector3 >):Transform
+    public function get_basis():cpp.Reference<Basis >
+    public function set_basis(p_basis:cpp.Reference<Basis >):Void
+    public function get_origin():cpp.Reference<Vector3 >
+    public function set_origin(p_origin:cpp.Reference<Vector3 >):Void
+    public function orthonormalize():Void
+    public function orthonormalized():Transform
+    public function xform(p_vector:cpp.Reference<Vector3 >):Vector3
+    public function xform_inv(p_vector:cpp.Reference<Vector3 >):Vector3
+    public function xform(p_plane:cpp.Reference<Plane >):Plane
+    public function xform_inv(p_plane:cpp.Reference<Plane >):Plane
+    public function xform(p_aabb:cpp.Reference<Aabb >):Aabb
+    public function xform_inv(p_aabb:cpp.Reference<Aabb >):Aabb
+    public function interpolate_with(p_transform:cpp.Reference<Transform >, p_c:Real_t):Transform
+    public function inverse_xform(t:cpp.Reference<Transform >):Transform
+    public function set(xx:Real_t, xy:Real_t, xz:Real_t, yx:Real_t, yy:Real_t, yz:Real_t, zx:Real_t, zy:Real_t, zz:Real_t, tx:Real_t, ty:Real_t, tz:Real_t):Void
+    public function create(xx:Real_t, xy:Real_t, xz:Real_t, yx:Real_t, yy:Real_t, yz:Real_t, zx:Real_t, zy:Real_t, zz:Real_t, tx:Real_t, ty:Real_t, tz:Real_t):Transform
+    public function create(p_basis:cpp.Reference<Basis >, p_origin:cpp.Reference<Vector3 >):Transform
+    public function create():Transform
+    public function create(arg0:cpp.Reference<Transform >):Transform
+}
+class World2D  extends Resource {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<World2d>
+    public function get_canvas():Rid
+    public function get_space():Rid
+    public function get_direct_space_state():cpp.Star<Physics2ddirectspacestate>
+    public function World2D():Void
+    public function World2D(arg0:cpp.Reference<World2d >):Void
+}
+class TileMap  extends Node2D {
+    enum abstract Mode(Int) {
+        MODE_CUSTOM = 2;
+        MODE_ISOMETRIC = 1;
+        MODE_SQUARE = 0;
+    }
+    enum abstract TileOrigin(Int) {
+        TILE_ORIGIN_BOTTOM_LEFT = 2;
+        TILE_ORIGIN_TOP_LEFT = 0;
+        TILE_ORIGIN_CENTER = 1;
+    }
+    enum abstract HalfOffset(Int) {
+        HALF_OFFSET_X = 0;
+        HALF_OFFSET_DISABLED = 2;
+        HALF_OFFSET_Y = 1;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Tilemap>
+    public function set_tileset(tileset:Ref<tileset> ):Void
+    public function get_tileset():Ref<tileset>
+    public function set_mode(mode:Int64_t ):Void
+    public function get_mode():Tilemapmode
+    public function set_half_offset(half_offset:Int64_t ):Void
+    public function get_half_offset():Tilemaphalfoffset
+    public function set_custom_transform(custom_transform:Transform2d ):Void
+    public function get_custom_transform():Transform2d
+    public function set_cell_size(size:Vector2 ):Void
+    public function get_cell_size():Vector2
+    public function _set_old_cell_size(size:Int64_t ):Void
+    public function _get_old_cell_size():Int64_t
+    public function set_quadrant_size(size:Int64_t ):Void
+    public function get_quadrant_size():Int64_t
+    public function set_tile_origin(origin:Int64_t ):Void
+    public function get_tile_origin():Tilemaptileorigin
+    public function set_clip_uv(enable:Bool ):Void
+    public function get_clip_uv():Bool
+    public function set_y_sort_mode(enable:Bool ):Void
+    public function is_y_sort_mode_enabled():Bool
+    public function set_collision_use_kinematic(use_kinematic:Bool ):Void
+    public function get_collision_use_kinematic():Bool
+    public function set_collision_layer(layer:Int64_t ):Void
+    public function get_collision_layer():Int64_t
+    public function set_collision_mask(mask:Int64_t ):Void
+    public function get_collision_mask():Int64_t
+    public function set_collision_layer_bit(bit:Int64_t , value:Bool ):Void
+    public function get_collision_layer_bit(bit:Int64_t ):Bool
+    public function set_collision_mask_bit(bit:Int64_t , value:Bool ):Void
+    public function get_collision_mask_bit(bit:Int64_t ):Bool
+    public function set_collision_friction(value:Double ):Void
+    public function get_collision_friction():Double
+    public function set_collision_bounce(value:Double ):Void
+    public function get_collision_bounce():Double
+    public function set_occluder_light_mask(mask:Int64_t ):Void
+    public function get_occluder_light_mask():Int64_t
+    public function set_cell(x:Int64_t , y:Int64_t , tile:Int64_t , flip_x:Bool , flip_y:Bool , transpose:Bool , autotile_coord:Vector2 ):Void
+    public function set_cellv(position:Vector2 , tile:Int64_t , flip_x:Bool , flip_y:Bool , transpose:Bool ):Void
+    public function set_celld(data:Vector2 , arg1:Dictionary ):Void
+    public function get_cell(x:Int64_t , y:Int64_t ):Int64_t
+    public function get_cellv(position:Vector2 ):Int64_t
+    public function is_cell_x_flipped(x:Int64_t , y:Int64_t ):Bool
+    public function is_cell_y_flipped(x:Int64_t , y:Int64_t ):Bool
+    public function is_cell_transposed(x:Int64_t , y:Int64_t ):Bool
+    public function fix_invalid_tiles():Void
+    public function clear():Void
+    public function get_used_cells():Array
+    public function get_used_cells_by_id(id:Int64_t ):Array
+    public function get_used_rect():Rect2
+    public function map_to_world(map_position:Vector2 , ignore_half_ofs:Bool ):Vector2
+    public function world_to_map(world_position:Vector2 ):Vector2
+    public function _clear_quadrants():Void
+    public function _recreate_quadrants():Void
+    public function update_dirty_quadrants():Void
+    public function update_bitmask_area(position:Vector2 ):Void
+    public function update_bitmask_region(start:Vector2 , end:Vector2 ):Void
+    public function _set_tile_data(arg0:Poolintarray ):Void
+    public function _get_tile_data():Poolintarray
+    public function TileMap():Void
+    public function TileMap(arg0:cpp.Reference<Tilemap >):Void
+}
+class LightOccluder2D  extends Node2D {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Lightoccluder2d>
+    public function set_occluder_polygon(polygon:Ref<occluderpolygon2d> ):Void
+    public function get_occluder_polygon():Ref<occluderpolygon2d>
+    public function set_occluder_light_mask(mask:Int64_t ):Void
+    public function get_occluder_light_mask():Int64_t
+    public function _poly_changed():Void
+    public function LightOccluder2D():Void
+    public function LightOccluder2D(arg0:cpp.Reference<Lightoccluder2d >):Void
+}
+class LineShape2D  extends Shape2D {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Lineshape2d>
+    public function set_normal(normal:Vector2 ):Void
+    public function get_normal():Vector2
+    public function set_d(d:Double ):Void
+    public function get_d():Double
+    public function LineShape2D():Void
+    public function LineShape2D(arg0:cpp.Reference<Lineshape2d >):Void
+}
+class Godot  {
+    public function print(message:cpp.Reference<String >):Void
+    public function print_warning(description:cpp.Reference<String >, function:cpp.Reference<String >, file:cpp.Reference<String >, line:Int):Void
+    public function print_error(description:cpp.Reference<String >, function:cpp.Reference<String >, file:cpp.Reference<String >, line:Int):Void
+    public function gdnative_init(o:cpp.Star<_gdnative_init_options>):Void
+    public function gdnative_terminate(o:cpp.Star<_gdnative_terminate_options>):Void
+    public function nativescript_init(handle:cpp.Star<Void>):Void
+    public function nativescript_terminate(handle:cpp.Star<Void>):Void
+    public function create():Godot
+    public function create(arg0:cpp.Reference<Godot >):Godot
+}
+class AudioEffectLowShelfFilter  extends AudioEffectFilter {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Audioeffectlowshelffilter>
+    public function AudioEffectLowShelfFilter():Void
+    public function AudioEffectLowShelfFilter(arg0:cpp.Reference<Audioeffectlowshelffilter >):Void
+}
+class RigidBody2D  extends PhysicsBody2D {
+    enum abstract Mode(Int) {
+        MODE_STATIC = 1;
+        MODE_KINEMATIC = 3;
+        MODE_CHARACTER = 2;
+        MODE_RIGID = 0;
+    }
+    enum abstract CCDMode(Int) {
+        CCD_MODE_CAST_RAY = 1;
+        CCD_MODE_CAST_SHAPE = 2;
+        CCD_MODE_DISABLED = 0;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Rigidbody2d>
+    public function _integrate_forces(state:cpp.Star<Physics2ddirectbodystate >):Void
+    public function set_mode(mode:Int64_t ):Void
+    public function get_mode():Rigidbody2dmode
+    public function set_mass(mass:Double ):Void
+    public function get_mass():Double
+    public function get_inertia():Double
+    public function set_inertia(inertia:Double ):Void
+    public function set_weight(weight:Double ):Void
+    public function get_weight():Double
+    public function set_friction(friction:Double ):Void
+    public function get_friction():Double
+    public function set_bounce(bounce:Double ):Void
+    public function get_bounce():Double
+    public function set_physics_material_override(physics_material_override:Ref<physicsmaterial> ):Void
+    public function get_physics_material_override():Ref<physicsmaterial>
+    public function _reload_physics_characteristics():Void
+    public function set_gravity_scale(gravity_scale:Double ):Void
+    public function get_gravity_scale():Double
+    public function set_linear_damp(linear_damp:Double ):Void
+    public function get_linear_damp():Double
+    public function set_angular_damp(angular_damp:Double ):Void
+    public function get_angular_damp():Double
+    public function set_linear_velocity(linear_velocity:Vector2 ):Void
+    public function get_linear_velocity():Vector2
+    public function set_angular_velocity(angular_velocity:Double ):Void
+    public function get_angular_velocity():Double
+    public function set_max_contacts_reported(amount:Int64_t ):Void
+    public function get_max_contacts_reported():Int64_t
+    public function set_use_custom_integrator(enable:Bool ):Void
+    public function is_using_custom_integrator():Bool
+    public function set_contact_monitor(enabled:Bool ):Void
+    public function is_contact_monitor_enabled():Bool
+    public function set_continuous_collision_detection_mode(mode:Int64_t ):Void
+    public function get_continuous_collision_detection_mode():Rigidbody2dccdmode
+    public function set_axis_velocity(axis_velocity:Vector2 ):Void
+    public function apply_central_impulse(impulse:Vector2 ):Void
+    public function apply_impulse(offset:Vector2 , impulse:Vector2 ):Void
+    public function apply_torque_impulse(torque:Double ):Void
+    public function set_applied_force(force:Vector2 ):Void
+    public function get_applied_force():Vector2
+    public function set_applied_torque(torque:Double ):Void
+    public function get_applied_torque():Double
+    public function add_central_force(force:Vector2 ):Void
+    public function add_force(offset:Vector2 , force:Vector2 ):Void
+    public function add_torque(torque:Double ):Void
+    public function set_sleeping(sleeping:Bool ):Void
+    public function is_sleeping():Bool
+    public function set_can_sleep(able_to_sleep:Bool ):Void
+    public function is_able_to_sleep():Bool
+    public function test_motion(motion:Vector2 , infinite_inertia:Bool , margin:Double , result:Ref<physics2dtestmotionresult> ):Bool
+    public function _direct_state_changed(arg0:cpp.Star<Object >):Void
+    public function _body_enter_tree(arg0:Int64_t ):Void
+    public function _body_exit_tree(arg0:Int64_t ):Void
+    public function get_colliding_bodies():Array
+    public function RigidBody2D():Void
+    public function RigidBody2D(arg0:cpp.Reference<Rigidbody2d >):Void
+}
+class VisibilityNotifier  extends Spatial {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visibilitynotifier>
+    public function set_aabb(rect:Aabb ):Void
+    public function get_aabb():Aabb
+    public function is_on_screen():Bool
+    public function VisibilityNotifier():Void
+    public function VisibilityNotifier(arg0:cpp.Reference<Visibilitynotifier >):Void
+}
+class FuncRef  extends Reference {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Funcref>
+    public function call_func(__var_args:cpp.Reference<Array >):Variant
+    public function set_instance(instance:cpp.Star<Object >):Void
+    public function set_function(name:String ):Void
+    public function FuncRef():Void
+    public function FuncRef(arg0:cpp.Reference<Funcref >):Void
+}
+class ARVRPositionalTracker  extends Object {
+    enum abstract TrackerHand(Int) {
+        TRACKER_LEFT_HAND = 1;
+        TRACKER_RIGHT_HAND = 2;
+        TRACKER_HAND_UNKNOWN = 0;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Arvrpositionaltracker>
+    public function get_type():Arvrservertrackertype
+    public function get_name():String
+    public function get_joy_id():Int64_t
+    public function get_tracks_orientation():Bool
+    public function get_orientation():Basis
+    public function get_tracks_position():Bool
+    public function get_position():Vector3
+    public function get_hand():Arvrpositionaltrackertrackerhand
+    public function get_transform(adjust_by_reference_frame:Bool ):Transform
+    public function _set_type(type:Int64_t ):Void
+    public function _set_name(name:String ):Void
+    public function _set_joy_id(joy_id:Int64_t ):Void
+    public function _set_orientation(orientation:Basis ):Void
+    public function _set_rw_position(rw_position:Vector3 ):Void
+    public function get_rumble():Double
+    public function set_rumble(rumble:Double ):Void
+    public function ARVRPositionalTracker():Void
+    public function ARVRPositionalTracker(arg0:cpp.Reference<Arvrpositionaltracker >):Void
+}
+class GrooveJoint2D  extends Joint2D {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Groovejoint2d>
+    public function set_length(length:Double ):Void
+    public function get_length():Double
+    public function set_initial_offset(offset:Double ):Void
+    public function get_initial_offset():Double
+    public function GrooveJoint2D():Void
+    public function GrooveJoint2D(arg0:cpp.Reference<Groovejoint2d >):Void
+}
+class AnimatedTexture  extends Texture {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Animatedtexture>
+    public function set_frames(frames:Int64_t ):Void
+    public function get_frames():Int64_t
+    public function set_fps(fps:Double ):Void
+    public function get_fps():Double
+    public function set_frame_texture(frame:Int64_t , texture:Ref<texture> ):Void
+    public function get_frame_texture(frame:Int64_t ):Ref<texture>
+    public function set_frame_delay(frame:Int64_t , delay:Double ):Void
+    public function get_frame_delay(frame:Int64_t ):Double
+    public function _update_proxy():Void
+    public function AnimatedTexture():Void
+    public function AnimatedTexture(arg0:cpp.Reference<Animatedtexture >):Void
+}
+class PhysicsShapeQueryResult  extends Reference {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function get_result_count():Int64_t
+    public function get_result_rid(idx:Int64_t ):Rid
+    public function get_result_object_id(idx:Int64_t ):Int64_t
+    public function get_result_object(idx:Int64_t ):cpp.Star<Object>
+    public function get_result_object_shape(idx:Int64_t ):Int64_t
+    public function PhysicsShapeQueryResult():Void
+    public function PhysicsShapeQueryResult(arg0:cpp.Reference<Physicsshapequeryresult >):Void
+}
+class VSeparator  extends Separator {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Vseparator>
+    public function VSeparator():Void
+    public function VSeparator(arg0:cpp.Reference<Vseparator >):Void
+}
+class EditorFileDialog  extends ConfirmationDialog {
+    enum abstract DisplayMode(Int) {
+        DISPLAY_LIST = 1;
+        DISPLAY_THUMBNAILS = 0;
+    }
+    enum abstract Mode(Int) {
+        MODE_OPEN_FILES = 1;
+        MODE_OPEN_ANY = 3;
+        MODE_OPEN_DIR = 2;
+        MODE_SAVE_FILE = 4;
+        MODE_OPEN_FILE = 0;
+    }
+    enum abstract Access(Int) {
+        ACCESS_USERDATA = 1;
+        ACCESS_RESOURCES = 0;
+        ACCESS_FILESYSTEM = 2;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Editorfiledialog>
+    public function _unhandled_input(arg0:Ref<inputevent> ):Void
+    public function _item_selected(arg0:Int64_t ):Void
+    public function _multi_selected(arg0:Int64_t , arg1:Bool ):Void
+    public function _items_clear_selection():Void
+    public function _item_list_item_rmb_selected(arg0:Int64_t , arg1:Vector2 ):Void
+    public function _item_list_rmb_clicked(arg0:Vector2 ):Void
+    public function _item_menu_id_pressed(arg0:Int64_t ):Void
+    public function _item_db_selected(arg0:Int64_t ):Void
+    public function _dir_entered(arg0:String ):Void
+    public function _file_entered(arg0:String ):Void
+    public function _action_pressed():Void
+    public function _cancel_pressed():Void
+    public function _filter_selected(arg0:Int64_t ):Void
+    public function _save_confirm_pressed():Void
+    public function clear_filters():Void
+    public function add_filter(filter:String ):Void
+    public function get_current_dir():String
+    public function get_current_file():String
+    public function get_current_path():String
+    public function set_current_dir(dir:String ):Void
+    public function set_current_file(file:String ):Void
+    public function set_current_path(path:String ):Void
+    public function set_mode(mode:Int64_t ):Void
+    public function get_mode():Editorfiledialogmode
+    public function get_vbox():cpp.Star<Vboxcontainer>
+    public function set_access(access:Int64_t ):Void
+    public function get_access():Editorfiledialogaccess
+    public function set_show_hidden_files(show:Bool ):Void
+    public function is_showing_hidden_files():Bool
+    public function _select_drive(arg0:Int64_t ):Void
+    public function _make_dir():Void
+    public function _make_dir_confirm():Void
+    public function _update_file_list():Void
+    public function _update_dir():Void
+    public function _thumbnail_done(arg0:String , arg1:Ref<texture> , arg2:Variant ):Void
+    public function set_display_mode(mode:Int64_t ):Void
+    public function get_display_mode():Editorfiledialogdisplaymode
+    public function _thumbnail_result(arg0:String , arg1:Ref<texture> , arg2:Variant ):Void
+    public function set_disable_overwrite_warning(disable:Bool ):Void
+    public function is_overwrite_warning_disabled():Bool
+    public function _recent_selected(arg0:Int64_t ):Void
+    public function _go_back():Void
+    public function _go_forward():Void
+    public function _go_up():Void
+    public function _favorite_toggled(arg0:Bool ):Void
+    public function _favorite_selected(arg0:Int64_t ):Void
+    public function _favorite_move_up():Void
+    public function _favorite_move_down():Void
+    public function invalidate():Void
+    public function EditorFileDialog():Void
+    public function EditorFileDialog(arg0:cpp.Reference<Editorfiledialog >):Void
+}
+class VisualScriptInputAction  extends VisualScriptNode {
+    enum abstract Mode(Int) {
+        MODE_PRESSED = 0;
+        MODE_JUST_RELEASED = 3;
+        MODE_JUST_PRESSED = 2;
+        MODE_RELEASED = 1;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualscriptinputaction>
+    public function set_action_name(name:String ):Void
+    public function get_action_name():String
+    public function set_action_mode(mode:Int64_t ):Void
+    public function get_action_mode():Visualscriptinputactionmode
+    public function VisualScriptInputAction():Void
+    public function VisualScriptInputAction(arg0:cpp.Reference<Visualscriptinputaction >):Void
+}
+class NetworkedMultiplayerPeer  extends PacketPeer {
+    enum abstract ConnectionStatus(Int) {
+        CONNECTION_CONNECTED = 2;
+        CONNECTION_CONNECTING = 1;
+        CONNECTION_DISCONNECTED = 0;
+    }
+    enum abstract TransferMode(Int) {
+        TRANSFER_MODE_RELIABLE = 2;
+        TRANSFER_MODE_UNRELIABLE_ORDERED = 1;
+        TRANSFER_MODE_UNRELIABLE = 0;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function set_transfer_mode(mode:Int64_t ):Void
+    public function get_transfer_mode():Networkedmultiplayerpeertransfermode
+    public function set_target_peer(id:Int64_t ):Void
+    public function get_packet_peer():Int64_t
+    public function poll():Void
+    public function get_connection_status():Networkedmultiplayerpeerconnectionstatus
+    public function get_unique_id():Int64_t
+    public function set_refuse_new_connections(enable:Bool ):Void
+    public function is_refusing_new_connections():Bool
+    public function NetworkedMultiplayerPeer():Void
+    public function NetworkedMultiplayerPeer(arg0:cpp.Reference<Networkedmultiplayerpeer >):Void
+}
+class StaticBody  extends PhysicsBody {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Staticbody>
+    public function set_constant_linear_velocity(vel:Vector3 ):Void
+    public function set_constant_angular_velocity(vel:Vector3 ):Void
+    public function get_constant_linear_velocity():Vector3
+    public function get_constant_angular_velocity():Vector3
+    public function set_friction(friction:Double ):Void
+    public function get_friction():Double
+    public function set_bounce(bounce:Double ):Void
+    public function get_bounce():Double
+    public function set_physics_material_override(physics_material_override:Ref<physicsmaterial> ):Void
+    public function get_physics_material_override():Ref<physicsmaterial>
+    public function _reload_physics_characteristics():Void
+    public function StaticBody():Void
+    public function StaticBody(arg0:cpp.Reference<Staticbody >):Void
+}
+class RemoteTransform  extends Spatial {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Remotetransform>
+    public function set_remote_node(path:Nodepath ):Void
+    public function get_remote_node():Nodepath
+    public function set_use_global_coordinates(use_global_coordinates:Bool ):Void
+    public function get_use_global_coordinates():Bool
+    public function set_update_position(update_remote_position:Bool ):Void
+    public function get_update_position():Bool
+    public function set_update_rotation(update_remote_rotation:Bool ):Void
+    public function get_update_rotation():Bool
+    public function set_update_scale(update_remote_scale:Bool ):Void
+    public function get_update_scale():Bool
+    public function RemoteTransform():Void
+    public function RemoteTransform(arg0:cpp.Reference<Remotetransform >):Void
+}
+class InputEvent  extends Resource {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function set_device(device:Int64_t ):Void
+    public function get_device():Int64_t
+    public function is_action(action:String ):Bool
+    public function is_action_pressed(action:String ):Bool
+    public function is_action_released(action:String ):Bool
+    public function get_action_strength(action:String ):Double
+    public function is_pressed():Bool
+    public function is_echo():Bool
+    public function as_text():String
+    public function shortcut_match(event:Ref<inputevent> ):Bool
+    public function is_action_type():Bool
+    public function xformed_by(xform:Transform2d , local_ofs:Vector2 ):Ref<inputevent>
+    public function InputEvent():Void
+    public function InputEvent(arg0:cpp.Reference<Inputevent >):Void
+}
+class ResourcePreloader  extends Node {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Resourcepreloader>
+    public function _set_resources(arg0:Array ):Void
+    public function _get_resources():Array
+    public function add_resource(name:String , resource:Ref<resource> ):Void
+    public function remove_resource(name:String ):Void
+    public function rename_resource(name:String , newname:String ):Void
+    public function has_resource(name:String ):Bool
+    public function get_resource(name:String ):Ref<resource>
+    public function get_resource_list():Poolstringarray
+    public function ResourcePreloader():Void
+    public function ResourcePreloader(arg0:cpp.Reference<Resourcepreloader >):Void
+}
+class Color  {
+    public function to_32():Uint32_t
+    public function to_ARGB32():Uint32_t
+    public function gray():Float
+    public function get_h():Float
+    public function get_s():Float
+    public function get_v():Float
+    public function set_hsv(p_h:Float, p_s:Float, p_v:Float, p_alpha:Float):Void
+    public function invert():Void
+    public function contrast():Void
+    public function inverted():Color
+    public function contrasted():Color
+    public function linear_interpolate(p_b:cpp.Reference<Color >, p_t:Float):Color
+    public function blend(p_over:cpp.Reference<Color >):Color
+    public function to_linear():Color
+    public function hex(p_hex:Uint32_t):Color
+    public function html(p_color:cpp.Reference<String >):Color
+    public function html_is_valid(p_color:cpp.Reference<String >):Bool
+    public function to_html(p_alpha:Bool):String
+    public function create():Color
+    public function create(p_r:Float, p_g:Float, p_b:Float, p_a:Float):Color
+    public function create(arg0:cpp.Reference<Color >):Color
+}
+class AnimationNodeBlendSpace1D  extends AnimationRootNode {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Animationnodeblendspace1d>
+    public function add_blend_point(node:Ref<animationrootnode> , pos:Double , at_index:Int64_t ):Void
+    public function set_blend_point_position(point:Int64_t , pos:Double ):Void
+    public function get_blend_point_position(point:Int64_t ):Double
+    public function set_blend_point_node(point:Int64_t , node:Ref<animationrootnode> ):Void
+    public function get_blend_point_node(point:Int64_t ):Ref<animationrootnode>
+    public function remove_blend_point(point:Int64_t ):Void
+    public function get_blend_point_count():Int64_t
+    public function set_min_space(min_space:Double ):Void
+    public function get_min_space():Double
+    public function set_max_space(max_space:Double ):Void
+    public function get_max_space():Double
+    public function set_snap(snap:Double ):Void
+    public function get_snap():Double
+    public function set_blend_pos(pos:Double ):Void
+    public function get_blend_pos():Double
+    public function set_value_label(text:String ):Void
+    public function get_value_label():String
+    public function _add_blend_point(index:Int64_t , node:Ref<animationrootnode> ):Void
+    public function AnimationNodeBlendSpace1D():Void
+    public function AnimationNodeBlendSpace1D(arg0:cpp.Reference<Animationnodeblendspace1d >):Void
+}
+class EditorSceneImporter  extends Reference {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Editorsceneimporter>
+    public function _get_import_flags():Int64_t
+    public function _get_extensions():Array
+    public function _import_scene(path:String , flags:Int64_t , bake_fps:Int64_t ):cpp.Star<Node>
+    public function _import_animation(path:String , flags:Int64_t , bake_fps:Int64_t ):Ref<animation>
+    public function import_scene_from_other_importer(path:String , flags:Int64_t , bake_fps:Int64_t ):cpp.Star<Node>
+    public function import_animation_from_other_importer(path:String , flags:Int64_t , bake_fps:Int64_t ):Ref<animation>
+    public function EditorSceneImporter():Void
+    public function EditorSceneImporter(arg0:cpp.Reference<Editorsceneimporter >):Void
+}
+class VisualScriptSceneNode  extends VisualScriptNode {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualscriptscenenode>
+    public function set_node_path(path:Nodepath ):Void
+    public function get_node_path():Nodepath
+    public function VisualScriptSceneNode():Void
+    public function VisualScriptSceneNode(arg0:cpp.Reference<Visualscriptscenenode >):Void
+}
+class PhysicsDirectBodyState  extends Object {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function get_total_gravity():Vector3
+    public function get_total_linear_damp():Double
+    public function get_total_angular_damp():Double
+    public function get_center_of_mass():Vector3
+    public function get_principal_inertia_axes():Basis
+    public function get_inverse_mass():Double
+    public function get_inverse_inertia():Vector3
+    public function set_linear_velocity(velocity:Vector3 ):Void
+    public function get_linear_velocity():Vector3
+    public function set_angular_velocity(velocity:Vector3 ):Void
+    public function get_angular_velocity():Vector3
+    public function set_transform(transform:Transform ):Void
+    public function get_transform():Transform
+    public function add_central_force(force:Vector3 ):Void
+    public function add_force(force:Vector3 , position:Vector3 ):Void
+    public function add_torque(torque:Vector3 ):Void
+    public function apply_central_impulse(j:Vector3 ):Void
+    public function apply_impulse(position:Vector3 , j:Vector3 ):Void
+    public function apply_torque_impulse(j:Vector3 ):Void
+    public function set_sleep_state(enabled:Bool ):Void
+    public function is_sleeping():Bool
+    public function get_contact_count():Int64_t
+    public function get_contact_local_position(contact_idx:Int64_t ):Vector3
+    public function get_contact_local_normal(contact_idx:Int64_t ):Vector3
+    public function get_contact_local_shape(contact_idx:Int64_t ):Int64_t
+    public function get_contact_collider(contact_idx:Int64_t ):Rid
+    public function get_contact_collider_position(contact_idx:Int64_t ):Vector3
+    public function get_contact_collider_id(contact_idx:Int64_t ):Int64_t
+    public function get_contact_collider_object(contact_idx:Int64_t ):cpp.Star<Object>
+    public function get_contact_collider_shape(contact_idx:Int64_t ):Int64_t
+    public function get_contact_collider_velocity_at_position(contact_idx:Int64_t ):Vector3
+    public function get_step():Double
+    public function integrate_forces():Void
+    public function get_space_state():cpp.Star<Physicsdirectspacestate>
+    public function PhysicsDirectBodyState():Void
+    public function PhysicsDirectBodyState(arg0:cpp.Reference<Physicsdirectbodystate >):Void
+}
+class Particles  extends GeometryInstance {
+    enum abstract DrawOrder(Int) {
+        DRAW_ORDER_LIFETIME = 1;
+        DRAW_ORDER_INDEX = 0;
+        DRAW_ORDER_VIEW_DEPTH = 2;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Particles>
+    public function set_emitting(emitting:Bool ):Void
+    public function set_amount(amount:Int64_t ):Void
+    public function set_lifetime(secs:Double ):Void
+    public function set_one_shot(enable:Bool ):Void
+    public function set_pre_process_time(secs:Double ):Void
+    public function set_explosiveness_ratio(ratio:Double ):Void
+    public function set_randomness_ratio(ratio:Double ):Void
+    public function set_visibility_aabb(aabb:Aabb ):Void
+    public function set_use_local_coordinates(enable:Bool ):Void
+    public function set_fixed_fps(fps:Int64_t ):Void
+    public function set_fractional_delta(enable:Bool ):Void
+    public function set_process_material(material:Ref<material> ):Void
+    public function set_speed_scale(scale:Double ):Void
+    public function is_emitting():Bool
+    public function get_amount():Int64_t
+    public function get_lifetime():Double
+    public function get_one_shot():Bool
+    public function get_pre_process_time():Double
+    public function get_explosiveness_ratio():Double
+    public function get_randomness_ratio():Double
+    public function get_visibility_aabb():Aabb
+    public function get_use_local_coordinates():Bool
+    public function get_fixed_fps():Int64_t
+    public function get_fractional_delta():Bool
+    public function get_process_material():Ref<material>
+    public function get_speed_scale():Double
+    public function set_draw_order(order:Int64_t ):Void
+    public function get_draw_order():Particlesdraworder
+    public function set_draw_passes(passes:Int64_t ):Void
+    public function set_draw_pass_mesh(pass:Int64_t , mesh:Ref<mesh> ):Void
+    public function get_draw_passes():Int64_t
+    public function get_draw_pass_mesh(pass:Int64_t ):Ref<mesh>
+    public function restart():Void
+    public function capture_aabb():Aabb
+    public function create():Particles
+    public function create(arg0:cpp.Reference<Particles >):Particles
+}
+class RegExMatch  extends Reference {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Regexmatch>
+    public function get_subject():String
+    public function get_group_count():Int64_t
+    public function get_names():Dictionary
+    public function get_strings():Array
+    public function get_string(name:Variant ):String
+    public function get_start(name:Variant ):Int64_t
+    public function get_end(name:Variant ):Int64_t
+    public function RegExMatch():Void
+    public function RegExMatch(arg0:cpp.Reference<Regexmatch >):Void
+}
+class Sky  extends Resource {
+    enum abstract RadianceSize(Int) {
+        RADIANCE_SIZE_512 = 4;
+        RADIANCE_SIZE_32 = 0;
+        RADIANCE_SIZE_2048 = 6;
+        RADIANCE_SIZE_1024 = 5;
+        RADIANCE_SIZE_256 = 3;
+        RADIANCE_SIZE_MAX = 7;
+        RADIANCE_SIZE_64 = 1;
+        RADIANCE_SIZE_128 = 2;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function set_radiance_size(size:Int64_t ):Void
+    public function get_radiance_size():Skyradiancesize
+    public function create():Sky
+    public function create(arg0:cpp.Reference<Sky >):Sky
+}
+class CylinderMesh  extends PrimitiveMesh {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Cylindermesh>
+    public function set_top_radius(radius:Double ):Void
+    public function get_top_radius():Double
+    public function set_bottom_radius(radius:Double ):Void
+    public function get_bottom_radius():Double
+    public function set_height(height:Double ):Void
+    public function get_height():Double
+    public function set_radial_segments(segments:Int64_t ):Void
+    public function get_radial_segments():Int64_t
+    public function set_rings(rings:Int64_t ):Void
+    public function get_rings():Int64_t
+    public function CylinderMesh():Void
+    public function CylinderMesh(arg0:cpp.Reference<Cylindermesh >):Void
+}
+class NavigationMesh  extends Resource {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Navigationmesh>
+    public function set_sample_partition_type(sample_partition_type:Int64_t ):Void
+    public function get_sample_partition_type():Int64_t
+    public function set_cell_size(cell_size:Double ):Void
+    public function get_cell_size():Double
+    public function set_cell_height(cell_height:Double ):Void
+    public function get_cell_height():Double
+    public function set_agent_height(agent_height:Double ):Void
+    public function get_agent_height():Double
+    public function set_agent_radius(agent_radius:Double ):Void
+    public function get_agent_radius():Double
+    public function set_agent_max_climb(agent_max_climb:Double ):Void
+    public function get_agent_max_climb():Double
+    public function set_agent_max_slope(agent_max_slope:Double ):Void
+    public function get_agent_max_slope():Double
+    public function set_region_min_size(region_min_size:Double ):Void
+    public function get_region_min_size():Double
+    public function set_region_merge_size(region_merge_size:Double ):Void
+    public function get_region_merge_size():Double
+    public function set_edge_max_length(edge_max_length:Double ):Void
+    public function get_edge_max_length():Double
+    public function set_edge_max_error(edge_max_error:Double ):Void
+    public function get_edge_max_error():Double
+    public function set_verts_per_poly(verts_per_poly:Double ):Void
+    public function get_verts_per_poly():Double
+    public function set_detail_sample_distance(detail_sample_dist:Double ):Void
+    public function get_detail_sample_distance():Double
+    public function set_detail_sample_max_error(detail_sample_max_error:Double ):Void
+    public function get_detail_sample_max_error():Double
+    public function set_filter_low_hanging_obstacles(filter_low_hanging_obstacles:Bool ):Void
+    public function get_filter_low_hanging_obstacles():Bool
+    public function set_filter_ledge_spans(filter_ledge_spans:Bool ):Void
+    public function get_filter_ledge_spans():Bool
+    public function set_filter_walkable_low_height_spans(filter_walkable_low_height_spans:Bool ):Void
+    public function get_filter_walkable_low_height_spans():Bool
+    public function set_vertices(vertices:Poolvector3array ):Void
+    public function get_vertices():Poolvector3array
+    public function add_polygon(polygon:Poolintarray ):Void
+    public function get_polygon_count():Int64_t
+    public function get_polygon(idx:Int64_t ):Poolintarray
+    public function clear_polygons():Void
+    public function create_from_mesh(mesh:Ref<mesh> ):Void
+    public function _set_polygons(polygons:Array ):Void
+    public function _get_polygons():Array
+    public function NavigationMesh():Void
+    public function NavigationMesh(arg0:cpp.Reference<Navigationmesh >):Void
+}
+class Navigation  extends Spatial {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Navigation>
+    public function navmesh_add(mesh:Ref<navigationmesh> , xform:Transform , owner:cpp.Star<Object >):Int64_t
+    public function navmesh_set_transform(id:Int64_t , xform:Transform ):Void
+    public function navmesh_remove(id:Int64_t ):Void
+    public function get_simple_path(start:Vector3 , end:Vector3 , optimize:Bool ):Poolvector3array
+    public function get_closest_point_to_segment(start:Vector3 , end:Vector3 , use_collision:Bool ):Vector3
+    public function get_closest_point(to_point:Vector3 ):Vector3
+    public function get_closest_point_normal(to_point:Vector3 ):Vector3
+    public function get_closest_point_owner(to_point:Vector3 ):cpp.Star<Object>
+    public function set_up_vector(up:Vector3 ):Void
+    public function get_up_vector():Vector3
+    public function create():Navigation
+    public function create(arg0:cpp.Reference<Navigation >):Navigation
+}
+class Performance  extends Object {
+    enum abstract Monitor(Int) {
+        MEMORY_DYNAMIC = 4;
+        RENDER_SHADER_CHANGES_IN_FRAME = 14;
+        OBJECT_COUNT = 8;
+        PHYSICS_3D_COLLISION_PAIRS = 25;
+        RENDER_DRAW_CALLS_IN_FRAME = 16;
+        MEMORY_DYNAMIC_MAX = 6;
+        MEMORY_STATIC = 3;
+        RENDER_SURFACE_CHANGES_IN_FRAME = 15;
+        PHYSICS_3D_ISLAND_COUNT = 26;
+        RENDER_VERTICES_IN_FRAME = 12;
+        RENDER_MATERIAL_CHANGES_IN_FRAME = 13;
+        PHYSICS_3D_ACTIVE_OBJECTS = 24;
+        RENDER_VERTEX_MEM_USED = 19;
+        MEMORY_STATIC_MAX = 5;
+        PHYSICS_2D_ISLAND_COUNT = 23;
+        TIME_FPS = 0;
+        TIME_PROCESS = 1;
+        OBJECT_NODE_COUNT = 10;
+        RENDER_OBJECTS_IN_FRAME = 11;
+        MEMORY_MESSAGE_BUFFER_MAX = 7;
+        RENDER_USAGE_VIDEO_MEM_TOTAL = 20;
+        TIME_PHYSICS_PROCESS = 2;
+        MONITOR_MAX = 28;
+        RENDER_VIDEO_MEM_USED = 17;
+        PHYSICS_2D_COLLISION_PAIRS = 22;
+        RENDER_TEXTURE_MEM_USED = 18;
+        PHYSICS_2D_ACTIVE_OBJECTS = 21;
+        OBJECT_RESOURCE_COUNT = 9;
+        AUDIO_OUTPUT_LATENCY = 27;
+    }
+    public function get_singleton():cpp.Star<Performance>
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function get_monitor(monitor:Int64_t ):Double
+    public function create(arg0:cpp.Reference<Performance >):Performance
+}
+class PopupMenu  extends Popup {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Popupmenu>
+    public function _gui_input(arg0:Ref<inputevent> ):Void
+    public function add_icon_item(texture:Ref<texture> , label:String , id:Int64_t , accel:Int64_t ):Void
+    public function add_item(label:String , id:Int64_t , accel:Int64_t ):Void
+    public function add_icon_check_item(texture:Ref<texture> , label:String , id:Int64_t , accel:Int64_t ):Void
+    public function add_check_item(label:String , id:Int64_t , accel:Int64_t ):Void
+    public function add_radio_check_item(label:String , id:Int64_t , accel:Int64_t ):Void
+    public function add_submenu_item(label:String , submenu:String , id:Int64_t ):Void
+    public function add_icon_shortcut(texture:Ref<texture> , shortcut:Ref<shortcut> , id:Int64_t , global:Bool ):Void
+    public function add_shortcut(shortcut:Ref<shortcut> , id:Int64_t , global:Bool ):Void
+    public function add_icon_check_shortcut(texture:Ref<texture> , shortcut:Ref<shortcut> , id:Int64_t , global:Bool ):Void
+    public function add_check_shortcut(shortcut:Ref<shortcut> , id:Int64_t , global:Bool ):Void
+    public function add_radio_check_shortcut(shortcut:Ref<shortcut> , id:Int64_t , global:Bool ):Void
+    public function set_item_text(idx:Int64_t , text:String ):Void
+    public function set_item_icon(idx:Int64_t , icon:Ref<texture> ):Void
+    public function set_item_checked(idx:Int64_t , checked:Bool ):Void
+    public function set_item_id(idx:Int64_t , id:Int64_t ):Void
+    public function set_item_accelerator(idx:Int64_t , accel:Int64_t ):Void
+    public function set_item_metadata(idx:Int64_t , metadata:Variant ):Void
+    public function set_item_disabled(idx:Int64_t , disabled:Bool ):Void
+    public function set_item_submenu(idx:Int64_t , submenu:String ):Void
+    public function set_item_as_separator(idx:Int64_t , enable:Bool ):Void
+    public function set_item_as_checkable(idx:Int64_t , enable:Bool ):Void
+    public function set_item_as_radio_checkable(idx:Int64_t , enable:Bool ):Void
+    public function set_item_tooltip(idx:Int64_t , tooltip:String ):Void
+    public function set_item_shortcut(idx:Int64_t , shortcut:Ref<shortcut> , global:Bool ):Void
+    public function set_item_multistate(idx:Int64_t , state:Int64_t ):Void
+    public function set_item_shortcut_disabled(idx:Int64_t , disabled:Bool ):Void
+    public function toggle_item_checked(idx:Int64_t ):Void
+    public function toggle_item_multistate(idx:Int64_t ):Void
+    public function get_item_text(idx:Int64_t ):String
+    public function get_item_icon(idx:Int64_t ):Ref<texture>
+    public function is_item_checked(idx:Int64_t ):Bool
+    public function get_item_id(idx:Int64_t ):Int64_t
+    public function get_item_index(id:Int64_t ):Int64_t
+    public function get_item_accelerator(idx:Int64_t ):Int64_t
+    public function get_item_metadata(idx:Int64_t ):Variant
+    public function is_item_disabled(idx:Int64_t ):Bool
+    public function get_item_submenu(idx:Int64_t ):String
+    public function is_item_separator(idx:Int64_t ):Bool
+    public function is_item_checkable(idx:Int64_t ):Bool
+    public function is_item_radio_checkable(idx:Int64_t ):Bool
+    public function is_item_shortcut_disabled(idx:Int64_t ):Bool
+    public function get_item_tooltip(idx:Int64_t ):String
+    public function get_item_shortcut(idx:Int64_t ):Ref<shortcut>
+    public function get_item_count():Int64_t
+    public function remove_item(idx:Int64_t ):Void
+    public function add_separator(label:String ):Void
+    public function clear():Void
+    public function _set_items(arg0:Array ):Void
+    public function _get_items():Array
+    public function set_hide_on_item_selection(enable:Bool ):Void
+    public function is_hide_on_item_selection():Bool
+    public function set_hide_on_checkable_item_selection(enable:Bool ):Void
+    public function is_hide_on_checkable_item_selection():Bool
+    public function set_hide_on_state_item_selection(enable:Bool ):Void
+    public function is_hide_on_state_item_selection():Bool
+    public function set_submenu_popup_delay(seconds:Double ):Void
+    public function get_submenu_popup_delay():Double
+    public function _submenu_timeout():Void
+    public function PopupMenu():Void
+    public function PopupMenu(arg0:cpp.Reference<Popupmenu >):Void
+}
+class EditorScenePostImport  extends Reference {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Editorscenepostimport>
+    public function post_import(scene:cpp.Star<Object >):cpp.Star<Object>
+    public function get_source_folder():String
+    public function get_source_file():String
+    public function EditorScenePostImport():Void
+    public function EditorScenePostImport(arg0:cpp.Reference<Editorscenepostimport >):Void
+}
+class RootMotionView  extends VisualInstance {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function RootMotionView():Void
+    public function RootMotionView(arg0:cpp.Reference<Rootmotionview >):Void
+}
+class Viewport  extends Node {
+    enum abstract ClearMode(Int) {
+        CLEAR_MODE_ONLY_NEXT_FRAME = 2;
+        CLEAR_MODE_NEVER = 1;
+        CLEAR_MODE_ALWAYS = 0;
+    }
+    enum abstract RenderInfo(Int) {
+        RENDER_INFO_SURFACE_CHANGES_IN_FRAME = 4;
+        RENDER_INFO_DRAW_CALLS_IN_FRAME = 5;
+        RENDER_INFO_VERTICES_IN_FRAME = 1;
+        RENDER_INFO_MATERIAL_CHANGES_IN_FRAME = 2;
+        RENDER_INFO_OBJECTS_IN_FRAME = 0;
+        RENDER_INFO_SHADER_CHANGES_IN_FRAME = 3;
+        RENDER_INFO_MAX = 6;
+    }
+    enum abstract Usage(Int) {
+        USAGE_3D = 2;
+        USAGE_2D = 0;
+        USAGE_3D_NO_EFFECTS = 3;
+        USAGE_2D_NO_SAMPLING = 1;
+    }
+    enum abstract DebugDraw(Int) {
+        DEBUG_DRAW_DISABLED = 0;
+        DEBUG_DRAW_OVERDRAW = 2;
+        DEBUG_DRAW_UNSHADED = 1;
+        DEBUG_DRAW_WIREFRAME = 3;
+    }
+    enum abstract ShadowAtlasQuadrantSubdiv(Int) {
+        SHADOW_ATLAS_QUADRANT_SUBDIV_4 = 2;
+        SHADOW_ATLAS_QUADRANT_SUBDIV_DISABLED = 0;
+        SHADOW_ATLAS_QUADRANT_SUBDIV_256 = 5;
+        SHADOW_ATLAS_QUADRANT_SUBDIV_64 = 4;
+        SHADOW_ATLAS_QUADRANT_SUBDIV_16 = 3;
+        SHADOW_ATLAS_QUADRANT_SUBDIV_1024 = 6;
+        SHADOW_ATLAS_QUADRANT_SUBDIV_MAX = 7;
+        SHADOW_ATLAS_QUADRANT_SUBDIV_1 = 1;
+    }
+    enum abstract UpdateMode(Int) {
+        UPDATE_ONCE = 1;
+        UPDATE_WHEN_VISIBLE = 2;
+        UPDATE_ALWAYS = 3;
+        UPDATE_DISABLED = 0;
+    }
+    enum abstract MSAA(Int) {
+        MSAA_8X = 3;
+        MSAA_16X = 4;
+        MSAA_4X = 2;
+        MSAA_DISABLED = 0;
+        MSAA_2X = 1;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Viewport>
+    public function set_use_arvr(use:Bool ):Void
+    public function use_arvr():Bool
+    public function set_size(size:Vector2 ):Void
+    public function get_size():Vector2
+    public function set_world_2d(world_2d:Ref<world2d> ):Void
+    public function get_world_2d():Ref<world2d>
+    public function find_world_2d():Ref<world2d>
+    public function set_world(world:Ref<world> ):Void
+    public function get_world():Ref<world>
+    public function find_world():Ref<world>
+    public function set_canvas_transform(xform:Transform2d ):Void
+    public function get_canvas_transform():Transform2d
+    public function set_global_canvas_transform(xform:Transform2d ):Void
+    public function get_global_canvas_transform():Transform2d
+    public function get_final_transform():Transform2d
+    public function get_visible_rect():Rect2
+    public function set_transparent_background(enable:Bool ):Void
+    public function has_transparent_background():Bool
+    public function _vp_input(arg0:Ref<inputevent> ):Void
+    public function _vp_input_text(text:String ):Void
+    public function _vp_unhandled_input(arg0:Ref<inputevent> ):Void
+    public function set_size_override(enable:Bool , size:Vector2 , margin:Vector2 ):Void
+    public function get_size_override():Vector2
+    public function is_size_override_enabled():Bool
+    public function set_size_override_stretch(enabled:Bool ):Void
+    public function is_size_override_stretch_enabled():Bool
+    public function set_vflip(enable:Bool ):Void
+    public function get_vflip():Bool
+    public function set_clear_mode(mode:Int64_t ):Void
+    public function get_clear_mode():Viewportclearmode
+    public function set_update_mode(mode:Int64_t ):Void
+    public function get_update_mode():Viewportupdatemode
+    public function set_msaa(msaa:Int64_t ):Void
+    public function get_msaa():Viewportmsaa
+    public function set_hdr(enable:Bool ):Void
+    public function get_hdr():Bool
+    public function set_usage(usage:Int64_t ):Void
+    public function get_usage():Viewportusage
+    public function set_debug_draw(debug_draw:Int64_t ):Void
+    public function get_debug_draw():Viewportdebugdraw
+    public function get_render_info(info:Int64_t ):Int64_t
+    public function get_texture():Ref<viewporttexture>
+    public function set_physics_object_picking(enable:Bool ):Void
+    public function get_physics_object_picking():Bool
+    public function get_viewport_rid():Rid
+    public function input(local_event:Ref<inputevent> ):Void
+    public function unhandled_input(local_event:Ref<inputevent> ):Void
+    public function update_worlds():Void
+    public function set_use_own_world(enable:Bool ):Void
+    public function is_using_own_world():Bool
+    public function get_camera():cpp.Star<Camera>
+    public function set_as_audio_listener(enable:Bool ):Void
+    public function is_audio_listener():Bool
+    public function set_as_audio_listener_2d(enable:Bool ):Void
+    public function is_audio_listener_2d():Bool
+    public function set_attach_to_screen_rect(rect:Rect2 ):Void
+    public function get_mouse_position():Vector2
+    public function warp_mouse(to_position:Vector2 ):Void
+    public function gui_has_modal_stack():Bool
+    public function gui_get_drag_data():Variant
+    public function set_disable_input(disable:Bool ):Void
+    public function is_input_disabled():Bool
+    public function set_disable_3d(disable:Bool ):Void
+    public function is_3d_disabled():Bool
+    public function set_keep_3d_linear(keep_3d_linear:Bool ):Void
+    public function get_keep_3d_linear():Bool
+    public function _gui_show_tooltip():Void
+    public function _gui_remove_focus():Void
+    public function _post_gui_grab_click_focus():Void
+    public function set_shadow_atlas_size(size:Int64_t ):Void
+    public function get_shadow_atlas_size():Int64_t
+    public function set_snap_controls_to_pixels(enabled:Bool ):Void
+    public function is_snap_controls_to_pixels_enabled():Bool
+    public function set_shadow_atlas_quadrant_subdiv(quadrant:Int64_t , subdiv:Int64_t ):Void
+    public function get_shadow_atlas_quadrant_subdiv(quadrant:Int64_t ):Viewportshadowatlasquadrantsubdiv
+    public function _subwindow_visibility_changed():Void
+    public function create():Viewport
+    public function create(arg0:cpp.Reference<Viewport >):Viewport
+}
+class Animation  extends Resource {
+    enum abstract TrackType(Int) {
+        TYPE_VALUE = 0;
+        TYPE_METHOD = 2;
+        TYPE_ANIMATION = 5;
+        TYPE_BEZIER = 3;
+        TYPE_AUDIO = 4;
+        TYPE_TRANSFORM = 1;
+    }
+    enum abstract UpdateMode(Int) {
+        UPDATE_TRIGGER = 2;
+        UPDATE_CONTINUOUS = 0;
+        UPDATE_CAPTURE = 3;
+        UPDATE_DISCRETE = 1;
+    }
+    enum abstract InterpolationType(Int) {
+        INTERPOLATION_NEAREST = 0;
+        INTERPOLATION_CUBIC = 2;
+        INTERPOLATION_LINEAR = 1;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Animation>
+    public function add_track(type:Int64_t , at_position:Int64_t ):Int64_t
+    public function remove_track(idx:Int64_t ):Void
+    public function get_track_count():Int64_t
+    public function track_get_type(idx:Int64_t ):Animationtracktype
+    public function track_get_path(idx:Int64_t ):Nodepath
+    public function track_set_path(idx:Int64_t , path:Nodepath ):Void
+    public function find_track(path:Nodepath ):Int64_t
+    public function track_move_up(idx:Int64_t ):Void
+    public function track_move_down(idx:Int64_t ):Void
+    public function track_swap(idx:Int64_t , with_idx:Int64_t ):Void
+    public function track_set_imported(idx:Int64_t , imported:Bool ):Void
+    public function track_is_imported(idx:Int64_t ):Bool
+    public function track_set_enabled(idx:Int64_t , enabled:Bool ):Void
+    public function track_is_enabled(idx:Int64_t ):Bool
+    public function transform_track_insert_key(idx:Int64_t , time:Double , location:Vector3 , rotation:Quat , scale:Vector3 ):Int64_t
+    public function track_insert_key(idx:Int64_t , time:Double , key:Variant , transition:Double ):Void
+    public function track_remove_key(idx:Int64_t , key_idx:Int64_t ):Void
+    public function track_remove_key_at_position(idx:Int64_t , position:Double ):Void
+    public function track_set_key_value(idx:Int64_t , key:Int64_t , value:Variant ):Void
+    public function track_set_key_transition(idx:Int64_t , key_idx:Int64_t , transition:Double ):Void
+    public function track_get_key_transition(idx:Int64_t , key_idx:Int64_t ):Double
+    public function track_get_key_count(idx:Int64_t ):Int64_t
+    public function track_get_key_value(idx:Int64_t , key_idx:Int64_t ):Variant
+    public function track_get_key_time(idx:Int64_t , key_idx:Int64_t ):Double
+    public function track_find_key(idx:Int64_t , time:Double , exact:Bool ):Int64_t
+    public function track_set_interpolation_type(idx:Int64_t , interpolation:Int64_t ):Void
+    public function track_get_interpolation_type(idx:Int64_t ):Animationinterpolationtype
+    public function track_set_interpolation_loop_wrap(idx:Int64_t , interpolation:Bool ):Void
+    public function track_get_interpolation_loop_wrap(idx:Int64_t ):Bool
+    public function transform_track_interpolate(idx:Int64_t , time_sec:Double ):Array
+    public function value_track_set_update_mode(idx:Int64_t , mode:Int64_t ):Void
+    public function value_track_get_update_mode(idx:Int64_t ):Animationupdatemode
+    public function value_track_get_key_indices(idx:Int64_t , time_sec:Double , delta:Double ):Poolintarray
+    public function method_track_get_key_indices(idx:Int64_t , time_sec:Double , delta:Double ):Poolintarray
+    public function method_track_get_name(idx:Int64_t , key_idx:Int64_t ):String
+    public function method_track_get_params(idx:Int64_t , key_idx:Int64_t ):Array
+    public function bezier_track_insert_key(track:Int64_t , time:Double , value:Double , in_handle:Vector2 , out_handle:Vector2 ):Int64_t
+    public function bezier_track_set_key_value(idx:Int64_t , key_idx:Int64_t , value:Double ):Void
+    public function bezier_track_set_key_in_handle(idx:Int64_t , key_idx:Int64_t , in_handle:Vector2 ):Void
+    public function bezier_track_set_key_out_handle(idx:Int64_t , key_idx:Int64_t , out_handle:Vector2 ):Void
+    public function bezier_track_get_key_value(idx:Int64_t , key_idx:Int64_t ):Double
+    public function bezier_track_get_key_in_handle(idx:Int64_t , key_idx:Int64_t ):Vector2
+    public function bezier_track_get_key_out_handle(idx:Int64_t , key_idx:Int64_t ):Vector2
+    public function bezier_track_interpolate(track:Int64_t , time:Double ):Double
+    public function audio_track_insert_key(track:Int64_t , time:Double , stream:Ref<resource> , start_offset:Double , end_offset:Double ):Int64_t
+    public function audio_track_set_key_stream(idx:Int64_t , key_idx:Int64_t , stream:Ref<resource> ):Void
+    public function audio_track_set_key_start_offset(idx:Int64_t , key_idx:Int64_t , offset:Double ):Void
+    public function audio_track_set_key_end_offset(idx:Int64_t , key_idx:Int64_t , offset:Double ):Void
+    public function audio_track_get_key_stream(idx:Int64_t , key_idx:Int64_t ):Ref<resource>
+    public function audio_track_get_key_start_offset(idx:Int64_t , key_idx:Int64_t ):Double
+    public function audio_track_get_key_end_offset(idx:Int64_t , key_idx:Int64_t ):Double
+    public function animation_track_insert_key(track:Int64_t , time:Double , animation:String ):Int64_t
+    public function animation_track_set_key_animation(idx:Int64_t , key_idx:Int64_t , animation:String ):Void
+    public function animation_track_get_key_animation(idx:Int64_t , key_idx:Int64_t ):String
+    public function set_length(time_sec:Double ):Void
+    public function get_length():Double
+    public function set_loop(enabled:Bool ):Void
+    public function has_loop():Bool
+    public function set_step(size_sec:Double ):Void
+    public function get_step():Double
+    public function clear():Void
+    public function copy_track(track:Int64_t , to_animation:Ref<animation> ):Void
+    public function create():Animation
+    public function create(arg0:cpp.Reference<Animation >):Animation
+}
+class Position3D  extends Spatial {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Position3d>
+    public function Position3D():Void
+    public function Position3D(arg0:cpp.Reference<Position3d >):Void
+}
+class PluginScript  extends Script {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Pluginscript>
+    public function PluginScript():Void
+    public function PluginScript(arg0:cpp.Reference<Pluginscript >):Void
+}
+class AnimationTrackEditPlugin  extends Reference {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Animationtrackeditplugin>
+    public function AnimationTrackEditPlugin():Void
+    public function AnimationTrackEditPlugin(arg0:cpp.Reference<Animationtrackeditplugin >):Void
+}
+class Node2D  extends CanvasItem {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Node2d>
+    public function set_position(position:Vector2 ):Void
+    public function set_rotation(radians:Double ):Void
+    public function set_rotation_degrees(degrees:Double ):Void
+    public function set_scale(scale:Vector2 ):Void
+    public function get_position():Vector2
+    public function get_rotation():Double
+    public function get_rotation_degrees():Double
+    public function get_scale():Vector2
+    public function rotate(radians:Double ):Void
+    public function move_local_x(delta:Double , scaled:Bool ):Void
+    public function move_local_y(delta:Double , scaled:Bool ):Void
+    public function translate(offset:Vector2 ):Void
+    public function global_translate(offset:Vector2 ):Void
+    public function apply_scale(ratio:Vector2 ):Void
+    public function set_global_position(position:Vector2 ):Void
+    public function get_global_position():Vector2
+    public function set_global_rotation(radians:Double ):Void
+    public function get_global_rotation():Double
+    public function set_global_rotation_degrees(degrees:Double ):Void
+    public function get_global_rotation_degrees():Double
+    public function set_global_scale(scale:Vector2 ):Void
+    public function get_global_scale():Vector2
+    public function set_transform(xform:Transform2d ):Void
+    public function set_global_transform(xform:Transform2d ):Void
+    public function look_at(point:Vector2 ):Void
+    public function get_angle_to(point:Vector2 ):Double
+    public function to_local(global_point:Vector2 ):Vector2
+    public function to_global(local_point:Vector2 ):Vector2
+    public function set_z_index(z_index:Int64_t ):Void
+    public function get_z_index():Int64_t
+    public function set_z_as_relative(enable:Bool ):Void
+    public function is_z_relative():Bool
+    public function get_relative_transform_to_parent(parent:cpp.Star<Object >):Transform2d
+    public function Node2D():Void
+    public function Node2D(arg0:cpp.Reference<Node2d >):Void
+}
+class AnimationNodeBlendTree  extends AnimationRootNode {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Animationnodeblendtree>
+    public function add_node(name:String , node:Ref<animationnode> ):Void
+    public function get_node(name:String ):Ref<animationnode>
+    public function remove_node(name:String ):Void
+    public function rename_node(name:String , new_name:String ):Void
+    public function has_node(name:String ):Bool
+    public function connect_node(input_node:String , input_index:Int64_t , output_node:String ):Void
+    public function disconnect_node(input_node:String , input_index:Int64_t ):Void
+    public function set_graph_offset(offset:Vector2 ):Void
+    public function get_graph_offset():Vector2
+    public function AnimationNodeBlendTree():Void
+    public function AnimationNodeBlendTree(arg0:cpp.Reference<Animationnodeblendtree >):Void
+}
+class ConcavePolygonShape2D  extends Shape2D {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Concavepolygonshape2d>
+    public function set_segments(segments:Poolvector2array ):Void
+    public function get_segments():Poolvector2array
+    public function ConcavePolygonShape2D():Void
+    public function ConcavePolygonShape2D(arg0:cpp.Reference<Concavepolygonshape2d >):Void
+}
+class WorldEnvironment  extends Node {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Worldenvironment>
+    public function set_environment(env:Ref<environment> ):Void
+    public function get_environment():Ref<environment>
+    public function WorldEnvironment():Void
+    public function WorldEnvironment(arg0:cpp.Reference<Worldenvironment >):Void
+}
+class VisualScriptSubCall  extends VisualScriptNode {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualscriptsubcall>
+    public function _subcall(arguments:Variant ):Variant
+    public function VisualScriptSubCall():Void
+    public function VisualScriptSubCall(arg0:cpp.Reference<Visualscriptsubcall >):Void
+}
+class AnimationNodeAnimation  extends AnimationRootNode {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Animationnodeanimation>
+    public function set_animation(name:String ):Void
+    public function get_animation():String
+    public function get_playback_time():Double
+    public function AnimationNodeAnimation():Void
+    public function AnimationNodeAnimation(arg0:cpp.Reference<Animationnodeanimation >):Void
+}
+class XMLParser  extends Reference {
+    enum abstract NodeType(Int) {
+        NODE_NONE = 0;
+        NODE_TEXT = 3;
+        NODE_UNKNOWN = 6;
+        NODE_CDATA = 5;
+        NODE_ELEMENT = 1;
+        NODE_COMMENT = 4;
+        NODE_ELEMENT_END = 2;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Xmlparser>
+    public function read():Error
+    public function get_node_type():Xmlparsernodetype
+    public function get_node_name():String
+    public function get_node_data():String
+    public function get_node_offset():Int64_t
+    public function get_attribute_count():Int64_t
+    public function get_attribute_name(idx:Int64_t ):String
+    public function get_attribute_value(idx:Int64_t ):String
+    public function has_attribute(name:String ):Bool
+    public function get_named_attribute_value(name:String ):String
+    public function get_named_attribute_value_safe(name:String ):String
+    public function is_empty():Bool
+    public function get_current_line():Int64_t
+    public function skip_section():Void
+    public function seek(position:Int64_t ):Error
+    public function open(file:String ):Error
+    public function open_buffer(buffer:Poolbytearray ):Error
+    public function XMLParser():Void
+    public function XMLParser(arg0:cpp.Reference<Xmlparser >):Void
+}
+class Directory  extends Reference {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Directory>
+    public function open(path:String ):Error
+    public function list_dir_begin(skip_navigational:Bool , skip_hidden:Bool ):Error
+    public function get_next():String
+    public function current_is_dir():Bool
+    public function list_dir_end():Void
+    public function get_drive_count():Int64_t
+    public function get_drive(idx:Int64_t ):String
+    public function get_current_drive():Int64_t
+    public function change_dir(todir:String ):Error
+    public function get_current_dir():String
+    public function make_dir(path:String ):Error
+    public function make_dir_recursive(path:String ):Error
+    public function file_exists(path:String ):Bool
+    public function dir_exists(path:String ):Bool
+    public function get_space_left():Int64_t
+    public function copy(from:String , to:String ):Error
+    public function rename(from:String , to:String ):Error
+    public function remove(path:String ):Error
+    public function create():Directory
+    public function create(arg0:cpp.Reference<Directory >):Directory
+}
+class Shader  extends Resource {
+    enum abstract Mode(Int) {
+        MODE_CANVAS_ITEM = 1;
+        MODE_SPATIAL = 0;
+        MODE_PARTICLES = 2;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Shader>
+    public function get_mode():Shadermode
+    public function set_code(code:String ):Void
+    public function get_code():String
+    public function set_default_texture_param(param:String , texture:Ref<texture> ):Void
+    public function get_default_texture_param(param:String ):Ref<texture>
+    public function has_param(name:String ):Bool
+    public function create():Shader
+    public function create(arg0:cpp.Reference<Shader >):Shader
+}
+class AudioEffectEQ6  extends AudioEffectEQ {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Audioeffecteq6>
+    public function AudioEffectEQ6():Void
+    public function AudioEffectEQ6(arg0:cpp.Reference<Audioeffecteq6 >):Void
+}
+class RayCast  extends Spatial {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Raycast>
+    public function set_enabled(enabled:Bool ):Void
+    public function is_enabled():Bool
+    public function set_cast_to(local_point:Vector3 ):Void
+    public function get_cast_to():Vector3
+    public function is_colliding():Bool
+    public function force_raycast_update():Void
+    public function get_collider():cpp.Star<Object>
+    public function get_collider_shape():Int64_t
+    public function get_collision_point():Vector3
+    public function get_collision_normal():Vector3
+    public function add_exception_rid(rid:Rid ):Void
+    public function add_exception(node:cpp.Star<Object >):Void
+    public function remove_exception_rid(rid:Rid ):Void
+    public function remove_exception(node:cpp.Star<Object >):Void
+    public function clear_exceptions():Void
+    public function set_collision_mask(mask:Int64_t ):Void
+    public function get_collision_mask():Int64_t
+    public function set_collision_mask_bit(bit:Int64_t , value:Bool ):Void
+    public function get_collision_mask_bit(bit:Int64_t ):Bool
+    public function set_exclude_parent_body(mask:Bool ):Void
+    public function get_exclude_parent_body():Bool
+    public function RayCast():Void
+    public function RayCast(arg0:cpp.Reference<Raycast >):Void
+}
+class ProximityGroup  extends Spatial {
+    enum abstract DispatchMode(Int) {
+        MODE_SIGNAL = 1;
+        MODE_PROXY = 0;
+    }
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Proximitygroup>
+    public function set_group_name(name:String ):Void
+    public function get_group_name():String
+    public function set_dispatch_mode(mode:Int64_t ):Void
+    public function get_dispatch_mode():Proximitygroupdispatchmode
+    public function set_grid_radius(radius:Vector3 ):Void
+    public function get_grid_radius():Vector3
+    public function broadcast(name:String , parameters:Variant ):Void
+    public function _proximity_group_broadcast(name:String , params:Variant ):Void
+    public function ProximityGroup():Void
+    public function ProximityGroup(arg0:cpp.Reference<Proximitygroup >):Void
+}
+class VisualShaderNodeTransformCompose  extends VisualShaderNode {
+    public function ___get_class_name():cpp.Star<Char >
+    public function ___get_from_variant(a:Variant):cpp.Star<Object>
+    public function _new():cpp.Star<Visualshadernodetransformcompose>
+    public function VisualShaderNodeTransformCompose():Void
+    public function VisualShaderNodeTransformCompose(arg0:cpp.Reference<Visualshadernodetransformcompose >):Void
 }
